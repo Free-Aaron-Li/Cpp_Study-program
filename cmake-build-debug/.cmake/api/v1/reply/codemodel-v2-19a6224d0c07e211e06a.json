@@ -1,0 +1,86 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "Essential_Cpp",
+					"childIndexes" : 
+					[
+						2
+					],
+					"jsonFile" : "directory-Essential_Cpp-Debug-c347e094ce90235fb395.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "Essential_Cpp"
+				},
+				{
+					"build" : "Essential_Cpp/ChapterOne_BasicCppProgramming",
+					"jsonFile" : "directory-Essential_Cpp.ChapterOne_BasicCppProgramming-Debug-40f0b9abfe7ec2a7d8a6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "Essential_Cpp/ChapterOne_BasicCppProgramming"
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "Cpp_Workspace"
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "ChapterOne",
+					"parentIndex" : 0
+				}
+			],
+			"targets" : []
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/AaronLi/Cpp_Workspace/cmake-build-debug",
+		"source" : "/home/AaronLi/Cpp_Workspace"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}
