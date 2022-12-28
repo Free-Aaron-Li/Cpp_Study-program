@@ -5,3 +5,4 @@ set(CMAKE_CXX_STANDARD 17)
 
 add_executable(Test1_4 Test1_4.cpp)
 add_executable(Test1_5 Test1_5.cpp)
+add_executable(Test1_6 Test1_6.cpp)
