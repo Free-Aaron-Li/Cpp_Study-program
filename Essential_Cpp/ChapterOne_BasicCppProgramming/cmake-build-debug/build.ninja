@@ -164,6 +164,37 @@ build Test1_7: CXX_EXECUTABLE_LINKER__Test1_7_Debug CMakeFiles/Test1_7.dir/Test1
   TARGET_FILE = Test1_7
   TARGET_PDB = Test1_7.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target Test1_8
+
+
+#############################################
+# Order-only phony target for Test1_8
+
+build cmake_object_order_depends_target_Test1_8: phony || CMakeFiles/Test1_8.dir
+
+build CMakeFiles/Test1_8.dir/Test1_8.cpp.o: CXX_COMPILER__Test1_8_Debug /home/AaronLi/Cpp_Workspace/Essential_Cpp/ChapterOne_BasicCppProgramming/Test1_8.cpp || cmake_object_order_depends_target_Test1_8
+  DEP_FILE = CMakeFiles/Test1_8.dir/Test1_8.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++17
+  OBJECT_DIR = CMakeFiles/Test1_8.dir
+  OBJECT_FILE_DIR = CMakeFiles/Test1_8.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Test1_8
+
+
+#############################################
+# Link the executable Test1_8
+
+build Test1_8: CXX_EXECUTABLE_LINKER__Test1_8_Debug CMakeFiles/Test1_8.dir/Test1_8.cpp.o
+  FLAGS = -g
+  OBJECT_DIR = CMakeFiles/Test1_8.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = Test1_8
+  TARGET_PDB = Test1_8.dbg
+
 
 #############################################
 # Utility command for edit_cache
@@ -198,7 +229,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /home/AaronLi/Cpp_Workspace/Essential_Cpp/ChapterOne_BasicCppProgramming/cmake-build-debug
 
-build all: phony Test1_4 Test1_5 Test1_6 Test1_7
+build all: phony Test1_4 Test1_5 Test1_6 Test1_7 Test1_8
 
 # =============================================================================
 # Built-in targets
