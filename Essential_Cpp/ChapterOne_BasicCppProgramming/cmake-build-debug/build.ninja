@@ -41,66 +41,66 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = /home/AaronLi/Cpp_Workspace/Essential_Cpp/ChapterOne_BasicCppProgramming/cmake-build-debug/
 # =============================================================================
-# Object build statements for EXECUTABLE target test1_4
+# Object build statements for EXECUTABLE target Test1_4
 
 
 #############################################
-# Order-only phony target for test1_4
+# Order-only phony target for Test1_4
 
-build cmake_object_order_depends_target_test1_4: phony || CMakeFiles/test1_4.dir
+build cmake_object_order_depends_target_Test1_4: phony || CMakeFiles/Test1_4.dir
 
-build CMakeFiles/test1_4.dir/test1_4.cpp.o: CXX_COMPILER__test1_4_Debug /home/AaronLi/Cpp_Workspace/Essential_Cpp/ChapterOne_BasicCppProgramming/test1_4.cpp || cmake_object_order_depends_target_test1_4
-  DEP_FILE = CMakeFiles/test1_4.dir/test1_4.cpp.o.d
+build CMakeFiles/Test1_4.dir/Test1_4.cpp.o: CXX_COMPILER__Test1_4_Debug /home/AaronLi/Cpp_Workspace/Essential_Cpp/ChapterOne_BasicCppProgramming/Test1_4.cpp || cmake_object_order_depends_target_Test1_4
+  DEP_FILE = CMakeFiles/Test1_4.dir/Test1_4.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu++17
-  OBJECT_DIR = CMakeFiles/test1_4.dir
-  OBJECT_FILE_DIR = CMakeFiles/test1_4.dir
+  OBJECT_DIR = CMakeFiles/Test1_4.dir
+  OBJECT_FILE_DIR = CMakeFiles/Test1_4.dir
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target test1_4
+# Link build statements for EXECUTABLE target Test1_4
 
 
 #############################################
-# Link the executable test1_4
+# Link the executable Test1_4
 
-build test1_4: CXX_EXECUTABLE_LINKER__test1_4_Debug CMakeFiles/test1_4.dir/test1_4.cpp.o
+build Test1_4: CXX_EXECUTABLE_LINKER__Test1_4_Debug CMakeFiles/Test1_4.dir/Test1_4.cpp.o
   FLAGS = -g
-  OBJECT_DIR = CMakeFiles/test1_4.dir
+  OBJECT_DIR = CMakeFiles/Test1_4.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = test1_4
-  TARGET_PDB = test1_4.dbg
+  TARGET_FILE = Test1_4
+  TARGET_PDB = Test1_4.dbg
 
 # =============================================================================
-# Object build statements for EXECUTABLE target test1_5
+# Object build statements for EXECUTABLE target Test1_5
 
 
 #############################################
-# Order-only phony target for test1_5
+# Order-only phony target for Test1_5
 
-build cmake_object_order_depends_target_test1_5: phony || CMakeFiles/test1_5.dir
+build cmake_object_order_depends_target_Test1_5: phony || CMakeFiles/Test1_5.dir
 
-build CMakeFiles/test1_5.dir/test1_5.cpp.o: CXX_COMPILER__test1_5_Debug /home/AaronLi/Cpp_Workspace/Essential_Cpp/ChapterOne_BasicCppProgramming/test1_5.cpp || cmake_object_order_depends_target_test1_5
-  DEP_FILE = CMakeFiles/test1_5.dir/test1_5.cpp.o.d
+build CMakeFiles/Test1_5.dir/Test1_5.cpp.o: CXX_COMPILER__Test1_5_Debug /home/AaronLi/Cpp_Workspace/Essential_Cpp/ChapterOne_BasicCppProgramming/Test1_5.cpp || cmake_object_order_depends_target_Test1_5
+  DEP_FILE = CMakeFiles/Test1_5.dir/Test1_5.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu++17
-  OBJECT_DIR = CMakeFiles/test1_5.dir
-  OBJECT_FILE_DIR = CMakeFiles/test1_5.dir
+  OBJECT_DIR = CMakeFiles/Test1_5.dir
+  OBJECT_FILE_DIR = CMakeFiles/Test1_5.dir
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target test1_5
+# Link build statements for EXECUTABLE target Test1_5
 
 
 #############################################
-# Link the executable test1_5
+# Link the executable Test1_5
 
-build test1_5: CXX_EXECUTABLE_LINKER__test1_5_Debug CMakeFiles/test1_5.dir/test1_5.cpp.o
+build Test1_5: CXX_EXECUTABLE_LINKER__Test1_5_Debug CMakeFiles/Test1_5.dir/Test1_5.cpp.o
   FLAGS = -g
-  OBJECT_DIR = CMakeFiles/test1_5.dir
+  OBJECT_DIR = CMakeFiles/Test1_5.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = test1_5
-  TARGET_PDB = test1_5.dbg
+  TARGET_FILE = Test1_5
+  TARGET_PDB = Test1_5.dbg
 
 
 #############################################
@@ -136,7 +136,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /home/AaronLi/Cpp_Workspace/Essential_Cpp/ChapterOne_BasicCppProgramming/cmake-build-debug
 
-build all: phony test1_4 test1_5
+build all: phony Test1_4 Test1_5
 
 # =============================================================================
 # Built-in targets
