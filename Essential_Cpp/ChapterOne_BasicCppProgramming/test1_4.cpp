@@ -2,7 +2,11 @@
  * @file test1.cpp
  * @author AaronLi
  * @date 2022-12-25-下午10:44
- * @description 第一个代码,输入姓名
+ * @description
+ * <p>练习1.4 <p>
+ * <p>试着扩充这个程序的内容：<p>
+ * <p>（1）、要求用户同时输入名字（first name）和姓氏（last name），<p>
+ * <p>（2）、修改输出结果，同时打印姓氏和姓名。<p>
  * @link 
  */
 
