@@ -96,6 +96,161 @@ build Essential_Cpp/rebuild_cache: phony Essential_Cpp/CMakeFiles/rebuild_cache.
 # /home/AaronLi/Cpp_Workspace/Essential_Cpp/CMakeLists.txt
 # =============================================================================
 
+# =============================================================================
+# Object build statements for EXECUTABLE target Test1_4
+
+
+#############################################
+# Order-only phony target for Test1_4
+
+build cmake_object_order_depends_target_Test1_4: phony || Essential_Cpp/ChapterOne_BasicCppProgramming/CMakeFiles/Test1_4.dir
+
+build Essential_Cpp/ChapterOne_BasicCppProgramming/CMakeFiles/Test1_4.dir/Test1_4.cpp.o: CXX_COMPILER__Test1_4_Debug /home/AaronLi/Cpp_Workspace/Essential_Cpp/ChapterOne_BasicCppProgramming/Test1_4.cpp || cmake_object_order_depends_target_Test1_4
+  DEP_FILE = Essential_Cpp/ChapterOne_BasicCppProgramming/CMakeFiles/Test1_4.dir/Test1_4.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++17
+  OBJECT_DIR = Essential_Cpp/ChapterOne_BasicCppProgramming/CMakeFiles/Test1_4.dir
+  OBJECT_FILE_DIR = Essential_Cpp/ChapterOne_BasicCppProgramming/CMakeFiles/Test1_4.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Test1_4
+
+
+#############################################
+# Link the executable Essential_Cpp/ChapterOne_BasicCppProgramming/Test1_4
+
+build Essential_Cpp/ChapterOne_BasicCppProgramming/Test1_4: CXX_EXECUTABLE_LINKER__Test1_4_Debug Essential_Cpp/ChapterOne_BasicCppProgramming/CMakeFiles/Test1_4.dir/Test1_4.cpp.o
+  FLAGS = -g
+  OBJECT_DIR = Essential_Cpp/ChapterOne_BasicCppProgramming/CMakeFiles/Test1_4.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = Essential_Cpp/ChapterOne_BasicCppProgramming/Test1_4
+  TARGET_PDB = Test1_4.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target Test1_5
+
+
+#############################################
+# Order-only phony target for Test1_5
+
+build cmake_object_order_depends_target_Test1_5: phony || Essential_Cpp/ChapterOne_BasicCppProgramming/CMakeFiles/Test1_5.dir
+
+build Essential_Cpp/ChapterOne_BasicCppProgramming/CMakeFiles/Test1_5.dir/Test1_5.cpp.o: CXX_COMPILER__Test1_5_Debug /home/AaronLi/Cpp_Workspace/Essential_Cpp/ChapterOne_BasicCppProgramming/Test1_5.cpp || cmake_object_order_depends_target_Test1_5
+  DEP_FILE = Essential_Cpp/ChapterOne_BasicCppProgramming/CMakeFiles/Test1_5.dir/Test1_5.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++17
+  OBJECT_DIR = Essential_Cpp/ChapterOne_BasicCppProgramming/CMakeFiles/Test1_5.dir
+  OBJECT_FILE_DIR = Essential_Cpp/ChapterOne_BasicCppProgramming/CMakeFiles/Test1_5.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Test1_5
+
+
+#############################################
+# Link the executable Essential_Cpp/ChapterOne_BasicCppProgramming/Test1_5
+
+build Essential_Cpp/ChapterOne_BasicCppProgramming/Test1_5: CXX_EXECUTABLE_LINKER__Test1_5_Debug Essential_Cpp/ChapterOne_BasicCppProgramming/CMakeFiles/Test1_5.dir/Test1_5.cpp.o
+  FLAGS = -g
+  OBJECT_DIR = Essential_Cpp/ChapterOne_BasicCppProgramming/CMakeFiles/Test1_5.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = Essential_Cpp/ChapterOne_BasicCppProgramming/Test1_5
+  TARGET_PDB = Test1_5.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target Test1_6
+
+
+#############################################
+# Order-only phony target for Test1_6
+
+build cmake_object_order_depends_target_Test1_6: phony || Essential_Cpp/ChapterOne_BasicCppProgramming/CMakeFiles/Test1_6.dir
+
+build Essential_Cpp/ChapterOne_BasicCppProgramming/CMakeFiles/Test1_6.dir/Test1_6.cpp.o: CXX_COMPILER__Test1_6_Debug /home/AaronLi/Cpp_Workspace/Essential_Cpp/ChapterOne_BasicCppProgramming/Test1_6.cpp || cmake_object_order_depends_target_Test1_6
+  DEP_FILE = Essential_Cpp/ChapterOne_BasicCppProgramming/CMakeFiles/Test1_6.dir/Test1_6.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++17
+  OBJECT_DIR = Essential_Cpp/ChapterOne_BasicCppProgramming/CMakeFiles/Test1_6.dir
+  OBJECT_FILE_DIR = Essential_Cpp/ChapterOne_BasicCppProgramming/CMakeFiles/Test1_6.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Test1_6
+
+
+#############################################
+# Link the executable Essential_Cpp/ChapterOne_BasicCppProgramming/Test1_6
+
+build Essential_Cpp/ChapterOne_BasicCppProgramming/Test1_6: CXX_EXECUTABLE_LINKER__Test1_6_Debug Essential_Cpp/ChapterOne_BasicCppProgramming/CMakeFiles/Test1_6.dir/Test1_6.cpp.o
+  FLAGS = -g
+  OBJECT_DIR = Essential_Cpp/ChapterOne_BasicCppProgramming/CMakeFiles/Test1_6.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = Essential_Cpp/ChapterOne_BasicCppProgramming/Test1_6
+  TARGET_PDB = Test1_6.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target Test1_7
+
+
+#############################################
+# Order-only phony target for Test1_7
+
+build cmake_object_order_depends_target_Test1_7: phony || Essential_Cpp/ChapterOne_BasicCppProgramming/CMakeFiles/Test1_7.dir
+
+build Essential_Cpp/ChapterOne_BasicCppProgramming/CMakeFiles/Test1_7.dir/Test1_7.cpp.o: CXX_COMPILER__Test1_7_Debug /home/AaronLi/Cpp_Workspace/Essential_Cpp/ChapterOne_BasicCppProgramming/Test1_7.cpp || cmake_object_order_depends_target_Test1_7
+  DEP_FILE = Essential_Cpp/ChapterOne_BasicCppProgramming/CMakeFiles/Test1_7.dir/Test1_7.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++17
+  OBJECT_DIR = Essential_Cpp/ChapterOne_BasicCppProgramming/CMakeFiles/Test1_7.dir
+  OBJECT_FILE_DIR = Essential_Cpp/ChapterOne_BasicCppProgramming/CMakeFiles/Test1_7.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Test1_7
+
+
+#############################################
+# Link the executable Essential_Cpp/ChapterOne_BasicCppProgramming/Test1_7
+
+build Essential_Cpp/ChapterOne_BasicCppProgramming/Test1_7: CXX_EXECUTABLE_LINKER__Test1_7_Debug Essential_Cpp/ChapterOne_BasicCppProgramming/CMakeFiles/Test1_7.dir/Test1_7.cpp.o
+  FLAGS = -g
+  OBJECT_DIR = Essential_Cpp/ChapterOne_BasicCppProgramming/CMakeFiles/Test1_7.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = Essential_Cpp/ChapterOne_BasicCppProgramming/Test1_7
+  TARGET_PDB = Test1_7.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target Test1_8
+
+
+#############################################
+# Order-only phony target for Test1_8
+
+build cmake_object_order_depends_target_Test1_8: phony || Essential_Cpp/ChapterOne_BasicCppProgramming/CMakeFiles/Test1_8.dir
+
+build Essential_Cpp/ChapterOne_BasicCppProgramming/CMakeFiles/Test1_8.dir/Test1_8.cpp.o: CXX_COMPILER__Test1_8_Debug /home/AaronLi/Cpp_Workspace/Essential_Cpp/ChapterOne_BasicCppProgramming/Test1_8.cpp || cmake_object_order_depends_target_Test1_8
+  DEP_FILE = Essential_Cpp/ChapterOne_BasicCppProgramming/CMakeFiles/Test1_8.dir/Test1_8.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++17
+  OBJECT_DIR = Essential_Cpp/ChapterOne_BasicCppProgramming/CMakeFiles/Test1_8.dir
+  OBJECT_FILE_DIR = Essential_Cpp/ChapterOne_BasicCppProgramming/CMakeFiles/Test1_8.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Test1_8
+
+
+#############################################
+# Link the executable Essential_Cpp/ChapterOne_BasicCppProgramming/Test1_8
+
+build Essential_Cpp/ChapterOne_BasicCppProgramming/Test1_8: CXX_EXECUTABLE_LINKER__Test1_8_Debug Essential_Cpp/ChapterOne_BasicCppProgramming/CMakeFiles/Test1_8.dir/Test1_8.cpp.o
+  FLAGS = -g
+  OBJECT_DIR = Essential_Cpp/ChapterOne_BasicCppProgramming/CMakeFiles/Test1_8.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = Essential_Cpp/ChapterOne_BasicCppProgramming/Test1_8
+  TARGET_PDB = Test1_8.dbg
+
 
 #############################################
 # Utility command for edit_cache
@@ -122,6 +277,16 @@ build Essential_Cpp/ChapterOne_BasicCppProgramming/rebuild_cache: phony Essentia
 # =============================================================================
 # Target aliases.
 
+build Test1_4: phony Essential_Cpp/ChapterOne_BasicCppProgramming/Test1_4
+
+build Test1_5: phony Essential_Cpp/ChapterOne_BasicCppProgramming/Test1_5
+
+build Test1_6: phony Essential_Cpp/ChapterOne_BasicCppProgramming/Test1_6
+
+build Test1_7: phony Essential_Cpp/ChapterOne_BasicCppProgramming/Test1_7
+
+build Test1_8: phony Essential_Cpp/ChapterOne_BasicCppProgramming/Test1_8
+
 # =============================================================================
 # Folder targets.
 
@@ -144,7 +309,7 @@ build Essential_Cpp/all: phony Essential_Cpp/ChapterOne_BasicCppProgramming/all
 #############################################
 # Folder: /home/AaronLi/Cpp_Workspace/cmake-build-debug/Essential_Cpp/ChapterOne_BasicCppProgramming
 
-build Essential_Cpp/ChapterOne_BasicCppProgramming/all: phony
+build Essential_Cpp/ChapterOne_BasicCppProgramming/all: phony Essential_Cpp/ChapterOne_BasicCppProgramming/Test1_4 Essential_Cpp/ChapterOne_BasicCppProgramming/Test1_5 Essential_Cpp/ChapterOne_BasicCppProgramming/Test1_6 Essential_Cpp/ChapterOne_BasicCppProgramming/Test1_7 Essential_Cpp/ChapterOne_BasicCppProgramming/Test1_8
 
 # =============================================================================
 # Built-in targets

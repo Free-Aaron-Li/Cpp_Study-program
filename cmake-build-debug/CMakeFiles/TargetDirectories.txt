@@ -2,5 +2,10 @@
 /home/AaronLi/Cpp_Workspace/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 /home/AaronLi/Cpp_Workspace/cmake-build-debug/Essential_Cpp/CMakeFiles/edit_cache.dir
 /home/AaronLi/Cpp_Workspace/cmake-build-debug/Essential_Cpp/CMakeFiles/rebuild_cache.dir
+/home/AaronLi/Cpp_Workspace/cmake-build-debug/Essential_Cpp/ChapterOne_BasicCppProgramming/CMakeFiles/Test1_4.dir
+/home/AaronLi/Cpp_Workspace/cmake-build-debug/Essential_Cpp/ChapterOne_BasicCppProgramming/CMakeFiles/Test1_5.dir
+/home/AaronLi/Cpp_Workspace/cmake-build-debug/Essential_Cpp/ChapterOne_BasicCppProgramming/CMakeFiles/Test1_6.dir
+/home/AaronLi/Cpp_Workspace/cmake-build-debug/Essential_Cpp/ChapterOne_BasicCppProgramming/CMakeFiles/Test1_7.dir
+/home/AaronLi/Cpp_Workspace/cmake-build-debug/Essential_Cpp/ChapterOne_BasicCppProgramming/CMakeFiles/Test1_8.dir
 /home/AaronLi/Cpp_Workspace/cmake-build-debug/Essential_Cpp/ChapterOne_BasicCppProgramming/CMakeFiles/edit_cache.dir
 /home/AaronLi/Cpp_Workspace/cmake-build-debug/Essential_Cpp/ChapterOne_BasicCppProgramming/CMakeFiles/rebuild_cache.dir
