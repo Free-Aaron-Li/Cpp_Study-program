@@ -1,4 +1,4 @@
-# Install script for directory: /home/AaronLi/Cpp_Workspace/Essential_Cpp/ChapterOne_BasicCppProgramming
+# Install script for directory: /home/AaronLi/Source/Cpp_Workspace/Essential_Cpp/ChapterOne_BasicCppProgramming
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

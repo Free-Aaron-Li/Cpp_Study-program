@@ -46,7 +46,6 @@ int main() {
  * @description 使用array实现
  */
 /*
-
 int main() {
     const int array_size = 128;
     int num_array[array_size];
