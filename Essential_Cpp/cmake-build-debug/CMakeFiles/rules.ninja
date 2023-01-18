@@ -134,6 +134,7 @@ rule CXX_EXECUTABLE_LINKER__Chapter2.2e1_Debug
 
 
 #############################################
+<<<<<<< HEAD
 # Rule for compiling CXX files.
 
 rule CXX_COMPILER__Test2.2e1_Debug
@@ -172,6 +173,8 @@ rule CXX_EXECUTABLE_LINKER__Chapter2.2e2_Debug
 
 
 #############################################
+=======
+>>>>>>> a798eed5e555d4f746bb3905f93e0f2d195b2b70
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
