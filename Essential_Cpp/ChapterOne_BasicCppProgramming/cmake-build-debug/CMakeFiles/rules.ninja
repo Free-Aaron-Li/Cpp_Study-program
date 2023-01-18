@@ -118,7 +118,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /home/AaronLi/Software/JetBrains/CLion/clion-2022.1.3/bin/cmake/linux/bin/cmake --regenerate-during-build -S/home/AaronLi/Cpp_Workspace/Essential_Cpp/ChapterOne_BasicCppProgramming -B/home/AaronLi/Cpp_Workspace/Essential_Cpp/ChapterOne_BasicCppProgramming/cmake-build-debug
+  command = /home/AaronLi/Software/ToolBox/apps/CLion/ch-0/223.8214.51/bin/cmake/linux/bin/cmake --regenerate-during-build -S/home/AaronLi/Source/Cpp_Workspace/Essential_Cpp/ChapterOne_BasicCppProgramming -B/home/AaronLi/Source/Cpp_Workspace/Essential_Cpp/ChapterOne_BasicCppProgramming/cmake-build-debug
   description = Re-running CMake...
   generator = 1
 
@@ -127,7 +127,7 @@ rule RERUN_CMAKE
 # Rule for cleaning all built files.
 
 rule CLEAN
-  command = /home/AaronLi/Software/JetBrains/CLion/clion-2022.1.3/bin/ninja/linux/ninja $FILE_ARG -t clean $TARGETS
+  command = /home/AaronLi/Software/ToolBox/apps/CLion/ch-0/223.8214.51/bin/ninja/linux/ninja $FILE_ARG -t clean $TARGETS
   description = Cleaning all built files...
 
 
@@ -135,6 +135,6 @@ rule CLEAN
 # Rule for printing all primary targets available.
 
 rule HELP
-  command = /home/AaronLi/Software/JetBrains/CLion/clion-2022.1.3/bin/ninja/linux/ninja -t targets
+  command = /home/AaronLi/Software/ToolBox/apps/CLion/ch-0/223.8214.51/bin/ninja/linux/ninja -t targets
   description = All primary targets available:
 

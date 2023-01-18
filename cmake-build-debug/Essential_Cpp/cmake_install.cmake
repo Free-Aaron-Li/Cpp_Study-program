@@ -47,3 +47,8 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/AaronLi/Source/Cpp_Workspace/cmake-build-debug/Essential_Cpp/ChapterOne_BasicCppProgramming/cmake_install.cmake")
 endif()
 
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/AaronLi/Source/Cpp_Workspace/cmake-build-debug/Essential_Cpp/ChapterTwo_ProceduralProgramming/cmake_install.cmake")
+endif()
+
