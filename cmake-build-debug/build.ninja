@@ -310,6 +310,68 @@ build Essential_Cpp/ChapterTwo_ProceduralProgramming/Chapter2.1: CXX_EXECUTABLE_
   TARGET_FILE = Essential_Cpp/ChapterTwo_ProceduralProgramming/Chapter2.1
   TARGET_PDB = Chapter2.1.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target Test2.1
+
+
+#############################################
+# Order-only phony target for Test2.1
+
+build cmake_object_order_depends_target_Test2.1: phony || Essential_Cpp/ChapterTwo_ProceduralProgramming/CMakeFiles/Test2.1.dir
+
+build Essential_Cpp/ChapterTwo_ProceduralProgramming/CMakeFiles/Test2.1.dir/Chapter_2_1_Test.cpp.o: CXX_COMPILER__Test2.2e1_Debug /home/AaronLi/Source/Cpp_Workspace/Essential_Cpp/ChapterTwo_ProceduralProgramming/Chapter_2_1_Test.cpp || cmake_object_order_depends_target_Test2.1
+  DEP_FILE = Essential_Cpp/ChapterTwo_ProceduralProgramming/CMakeFiles/Test2.1.dir/Chapter_2_1_Test.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++17
+  OBJECT_DIR = Essential_Cpp/ChapterTwo_ProceduralProgramming/CMakeFiles/Test2.1.dir
+  OBJECT_FILE_DIR = Essential_Cpp/ChapterTwo_ProceduralProgramming/CMakeFiles/Test2.1.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Test2.1
+
+
+#############################################
+# Link the executable Essential_Cpp/ChapterTwo_ProceduralProgramming/Test2.1
+
+build Essential_Cpp/ChapterTwo_ProceduralProgramming/Test2.1: CXX_EXECUTABLE_LINKER__Test2.2e1_Debug Essential_Cpp/ChapterTwo_ProceduralProgramming/CMakeFiles/Test2.1.dir/Chapter_2_1_Test.cpp.o
+  FLAGS = -g
+  OBJECT_DIR = Essential_Cpp/ChapterTwo_ProceduralProgramming/CMakeFiles/Test2.1.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = Essential_Cpp/ChapterTwo_ProceduralProgramming/Test2.1
+  TARGET_PDB = Test2.1.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target Chapter2.2
+
+
+#############################################
+# Order-only phony target for Chapter2.2
+
+build cmake_object_order_depends_target_Chapter2.2: phony || Essential_Cpp/ChapterTwo_ProceduralProgramming/CMakeFiles/Chapter2.2.dir
+
+build Essential_Cpp/ChapterTwo_ProceduralProgramming/CMakeFiles/Chapter2.2.dir/Chapter_2_2_VectorSort.cpp.o: CXX_COMPILER__Chapter2.2e2_Debug /home/AaronLi/Source/Cpp_Workspace/Essential_Cpp/ChapterTwo_ProceduralProgramming/Chapter_2_2_VectorSort.cpp || cmake_object_order_depends_target_Chapter2.2
+  DEP_FILE = Essential_Cpp/ChapterTwo_ProceduralProgramming/CMakeFiles/Chapter2.2.dir/Chapter_2_2_VectorSort.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++17
+  OBJECT_DIR = Essential_Cpp/ChapterTwo_ProceduralProgramming/CMakeFiles/Chapter2.2.dir
+  OBJECT_FILE_DIR = Essential_Cpp/ChapterTwo_ProceduralProgramming/CMakeFiles/Chapter2.2.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Chapter2.2
+
+
+#############################################
+# Link the executable Essential_Cpp/ChapterTwo_ProceduralProgramming/Chapter2.2
+
+build Essential_Cpp/ChapterTwo_ProceduralProgramming/Chapter2.2: CXX_EXECUTABLE_LINKER__Chapter2.2e2_Debug Essential_Cpp/ChapterTwo_ProceduralProgramming/CMakeFiles/Chapter2.2.dir/Chapter_2_2_VectorSort.cpp.o
+  FLAGS = -g
+  OBJECT_DIR = Essential_Cpp/ChapterTwo_ProceduralProgramming/CMakeFiles/Chapter2.2.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = Essential_Cpp/ChapterTwo_ProceduralProgramming/Chapter2.2
+  TARGET_PDB = Chapter2.2.dbg
+
 
 #############################################
 # Utility command for edit_cache
@@ -338,6 +400,8 @@ build Essential_Cpp/ChapterTwo_ProceduralProgramming/rebuild_cache: phony Essent
 
 build Chapter2.1: phony Essential_Cpp/ChapterTwo_ProceduralProgramming/Chapter2.1
 
+build Chapter2.2: phony Essential_Cpp/ChapterTwo_ProceduralProgramming/Chapter2.2
+
 build Test1_4: phony Essential_Cpp/ChapterOne_BasicCppProgramming/Test1_4
 
 build Test1_5: phony Essential_Cpp/ChapterOne_BasicCppProgramming/Test1_5
@@ -347,6 +411,8 @@ build Test1_6: phony Essential_Cpp/ChapterOne_BasicCppProgramming/Test1_6
 build Test1_7: phony Essential_Cpp/ChapterOne_BasicCppProgramming/Test1_7
 
 build Test1_8: phony Essential_Cpp/ChapterOne_BasicCppProgramming/Test1_8
+
+build Test2.1: phony Essential_Cpp/ChapterTwo_ProceduralProgramming/Test2.1
 
 # =============================================================================
 # Folder targets.
@@ -377,7 +443,7 @@ build Essential_Cpp/ChapterOne_BasicCppProgramming/all: phony Essential_Cpp/Chap
 #############################################
 # Folder: /home/AaronLi/Source/Cpp_Workspace/cmake-build-debug/Essential_Cpp/ChapterTwo_ProceduralProgramming
 
-build Essential_Cpp/ChapterTwo_ProceduralProgramming/all: phony Essential_Cpp/ChapterTwo_ProceduralProgramming/Chapter2.1
+build Essential_Cpp/ChapterTwo_ProceduralProgramming/all: phony Essential_Cpp/ChapterTwo_ProceduralProgramming/Chapter2.1 Essential_Cpp/ChapterTwo_ProceduralProgramming/Test2.1 Essential_Cpp/ChapterTwo_ProceduralProgramming/Chapter2.2
 
 # =============================================================================
 # Built-in targets

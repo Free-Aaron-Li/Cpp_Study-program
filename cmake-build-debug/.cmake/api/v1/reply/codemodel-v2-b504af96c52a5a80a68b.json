@@ -46,11 +46,11 @@
 					"source" : "Essential_Cpp/ChapterOne_BasicCppProgramming",
 					"targetIndexes" : 
 					[
-						1,
 						2,
 						3,
 						4,
-						5
+						5,
+						6
 					]
 				},
 				{
@@ -65,7 +65,9 @@
 					"source" : "Essential_Cpp/ChapterTwo_ProceduralProgramming",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1,
+						7
 					]
 				}
 			],
@@ -105,11 +107,11 @@
 					"parentIndex" : 1,
 					"targetIndexes" : 
 					[
-						1,
 						2,
 						3,
 						4,
-						5
+						5,
+						6
 					]
 				},
 				{
@@ -121,7 +123,9 @@
 					"parentIndex" : 1,
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1,
+						7
 					]
 				}
 			],
@@ -132,6 +136,13 @@
 					"id" : "Chapter2.1::@1fbad771d6df148744d5",
 					"jsonFile" : "target-Chapter2.1-Debug-232137916e10aca876ea.json",
 					"name" : "Chapter2.1",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "Chapter2.2::@1fbad771d6df148744d5",
+					"jsonFile" : "target-Chapter2.2-Debug-88571a26a8e43fffb884.json",
+					"name" : "Chapter2.2",
 					"projectIndex" : 3
 				},
 				{
@@ -168,6 +179,13 @@
 					"jsonFile" : "target-Test1_8-Debug-16e5b2e58868e488aa71.json",
 					"name" : "Test1_8",
 					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "Test2.1::@1fbad771d6df148744d5",
+					"jsonFile" : "target-Test2.1-Debug-3e6d0d56af2c54a24d3b.json",
+					"name" : "Test2.1",
+					"projectIndex" : 3
 				}
 			]
 		}
