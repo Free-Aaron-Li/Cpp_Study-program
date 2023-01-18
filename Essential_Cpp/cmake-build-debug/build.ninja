@@ -282,6 +282,7 @@ build ChapterTwo_ProceduralProgramming/Chapter2.1: CXX_EXECUTABLE_LINKER__Chapte
   TARGET_FILE = ChapterTwo_ProceduralProgramming/Chapter2.1
   TARGET_PDB = Chapter2.1.dbg
 
+<<<<<<< HEAD
 # =============================================================================
 # Object build statements for EXECUTABLE target Test2.1
 
@@ -344,6 +345,8 @@ build ChapterTwo_ProceduralProgramming/Chapter2.2: CXX_EXECUTABLE_LINKER__Chapte
   TARGET_FILE = ChapterTwo_ProceduralProgramming/Chapter2.2
   TARGET_PDB = Chapter2.2.dbg
 
+=======
+>>>>>>> a798eed5e555d4f746bb3905f93e0f2d195b2b70
 
 #############################################
 # Utility command for edit_cache
@@ -372,8 +375,11 @@ build ChapterTwo_ProceduralProgramming/rebuild_cache: phony ChapterTwo_Procedura
 
 build Chapter2.1: phony ChapterTwo_ProceduralProgramming/Chapter2.1
 
+<<<<<<< HEAD
 build Chapter2.2: phony ChapterTwo_ProceduralProgramming/Chapter2.2
 
+=======
+>>>>>>> a798eed5e555d4f746bb3905f93e0f2d195b2b70
 build Test1_4: phony ChapterOne_BasicCppProgramming/Test1_4
 
 build Test1_5: phony ChapterOne_BasicCppProgramming/Test1_5
@@ -384,8 +390,11 @@ build Test1_7: phony ChapterOne_BasicCppProgramming/Test1_7
 
 build Test1_8: phony ChapterOne_BasicCppProgramming/Test1_8
 
+<<<<<<< HEAD
 build Test2.1: phony ChapterTwo_ProceduralProgramming/Test2.1
 
+=======
+>>>>>>> a798eed5e555d4f746bb3905f93e0f2d195b2b70
 # =============================================================================
 # Folder targets.
 
@@ -408,7 +417,11 @@ build ChapterOne_BasicCppProgramming/all: phony ChapterOne_BasicCppProgramming/T
 #############################################
 # Folder: /home/AaronLi/Source/Cpp_Workspace/Essential_Cpp/cmake-build-debug/ChapterTwo_ProceduralProgramming
 
+<<<<<<< HEAD
 build ChapterTwo_ProceduralProgramming/all: phony ChapterTwo_ProceduralProgramming/Chapter2.1 ChapterTwo_ProceduralProgramming/Test2.1 ChapterTwo_ProceduralProgramming/Chapter2.2
+=======
+build ChapterTwo_ProceduralProgramming/all: phony ChapterTwo_ProceduralProgramming/Chapter2.1
+>>>>>>> a798eed5e555d4f746bb3905f93e0f2d195b2b70
 
 # =============================================================================
 # Built-in targets

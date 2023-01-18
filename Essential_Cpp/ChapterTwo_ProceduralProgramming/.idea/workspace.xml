@@ -22,7 +22,76 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="432c752d-5532-44a8-b646-12855f4b1b74" name="变更" comment="" />
+=======
+    <list default="true" id="432c752d-5532-44a8-b646-12855f4b1b74" name="变更" comment="">
+      <change afterPath="$PROJECT_DIR$/../ChapterOne_BasicCppProgramming/cmake-build-debug/.cmake/api/v1/reply/cache-v2-6d04893f10f631726278.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ChapterOne_BasicCppProgramming/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-861d0698857296993141.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ChapterOne_BasicCppProgramming/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-2a2e900f6bbb7edc18fd.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ChapterOne_BasicCppProgramming/cmake-build-debug/.cmake/api/v1/reply/index-2023-01-16T15-23-28-0219.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chapter_2_1_Function.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chapter_2_1_Test.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Chapter_2_2_VectorSort.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cmake-build-debug/.cmake/api/v1/reply/cache-v2-49c4a5228ca16463e8e7.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-8009b8ef53e9259a2e30.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-9a0edfe9becea27667a3.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-f5ebdc15457944623624.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cmake-build-debug/.cmake/api/v1/reply/directory-ChapterOne_BasicCppProgramming-Debug-c0663453159af9118c05.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cmake-build-debug/.cmake/api/v1/reply/directory-ChapterTwo_ProceduralProgramming-Debug-4e68f07ab8d70ebba8d3.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cmake-build-debug/.cmake/api/v1/reply/index-2023-01-16T15-22-02-0326.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cmake-build-debug/.cmake/api/v1/reply/target-Chapter2.1-Debug-4de2250a2a7f7c98d777.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cmake-build-debug/.cmake/api/v1/reply/target-Test1_4-Debug-a27a218f06eda66d27ac.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cmake-build-debug/.cmake/api/v1/reply/target-Test1_5-Debug-b84366017bb327739b18.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cmake-build-debug/.cmake/api/v1/reply/target-Test1_6-Debug-053da64c8c10b6dba9c5.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cmake-build-debug/.cmake/api/v1/reply/target-Test1_7-Debug-3b174cc1b13f9a382e13.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cmake-build-debug/.cmake/api/v1/reply/target-Test1_8-Debug-3c3b7786a345ee3df410.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-7a91a3d8a65aafd58c30.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cmake-build-debug/ChapterOne_BasicCppProgramming/cmake_install.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cmake-build-debug/ChapterTwo_ProceduralProgramming/cmake_install.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cmake-build-debug/build.ninja" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-dacdaf839323796a3061.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../cmake-build-debug/.cmake/api/v1/reply/index-2023-01-16T15-21-56-0999.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../cmake-build-debug/.cmake/api/v1/reply/target-Chapter2.1-Debug-232137916e10aca876ea.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChapterOne_BasicCppProgramming/cmake-build-debug/.cmake/api/v1/reply/cache-v2-3a7f8b848e11973b0021.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChapterOne_BasicCppProgramming/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-f335133a4ea67f5d82a1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChapterOne_BasicCppProgramming/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-1657c077b47a8dab34a8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChapterOne_BasicCppProgramming/cmake-build-debug/.cmake/api/v1/reply/index-2022-12-28T11-31-36-0432.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChapterOne_BasicCppProgramming/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/../ChapterOne_BasicCppProgramming/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChapterOne_BasicCppProgramming/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../ChapterOne_BasicCppProgramming/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChapterOne_BasicCppProgramming/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/../ChapterOne_BasicCppProgramming/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChapterOne_BasicCppProgramming/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../ChapterOne_BasicCppProgramming/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChapterOne_BasicCppProgramming/cmake-build-debug/CMakeFiles/Test1_4.dir/Test1_4.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChapterOne_BasicCppProgramming/cmake-build-debug/CMakeFiles/Test1_5.dir/Test1_5.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChapterOne_BasicCppProgramming/cmake-build-debug/CMakeFiles/Test1_6.dir/Test1_6.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChapterOne_BasicCppProgramming/cmake-build-debug/CMakeFiles/Test1_7.dir/Test1_7.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChapterOne_BasicCppProgramming/cmake-build-debug/CMakeFiles/Test1_8.dir/Test1_8.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChapterOne_BasicCppProgramming/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../ChapterOne_BasicCppProgramming/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChapterOne_BasicCppProgramming/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../ChapterOne_BasicCppProgramming/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChapterOne_BasicCppProgramming/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../ChapterOne_BasicCppProgramming/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChapterOne_BasicCppProgramming/cmake-build-debug/CMakeFiles/test1.dir/test1.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChapterOne_BasicCppProgramming/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../ChapterOne_BasicCppProgramming/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChapterOne_BasicCppProgramming/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../ChapterOne_BasicCppProgramming/cmake-build-debug/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChapterOne_BasicCppProgramming/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../ChapterOne_BasicCppProgramming/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cmake-build-debug/.cmake/api/v1/reply/cache-v2-aa7f48b38cb7a184167f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-d9c0759bfdbee1245737.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-8d1643da89a728760417.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cmake-build-debug/.cmake/api/v1/reply/index-2023-01-16T04-20-02-0913.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../../cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cmake-build-debug/Essential_Cpp/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../cmake-build-debug/Essential_Cpp/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../../cmake-build-debug/build.ninja" afterDir="false" />
+    </list>
+>>>>>>> a798eed5e555d4f746bb3905f93e0f2d195b2b70
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,6 +117,7 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
+<<<<<<< HEAD
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -67,6 +137,26 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+=======
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/AaronLi/Source/Cpp_Workspace/Essential_Cpp/ChapterTwo_ProceduralProgramming&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+>>>>>>> a798eed5e555d4f746bb3905f93e0f2d195b2b70
   <component name="RunManager" selected="CMake 应用程序.Test2.1">
     <configuration default="true" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
       <texify-bibtex>
@@ -94,11 +184,14 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+<<<<<<< HEAD
     <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+=======
+>>>>>>> a798eed5e555d4f746bb3905f93e0f2d195b2b70
     <configuration default="true" type="EXTERNAL_TOOL_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
       <texify-external>
         <program>PYTHONTEX</program>
@@ -160,7 +253,11 @@
       <workItem from="1674011078415" duration="730000" />
       <workItem from="1674012303863" duration="54000" />
       <workItem from="1674012384244" duration="2442000" />
+<<<<<<< HEAD
       <workItem from="1674033503758" duration="319000" />
+=======
+      <workItem from="1674033503758" duration="9000" />
+>>>>>>> a798eed5e555d4f746bb3905f93e0f2d195b2b70
     </task>
     <servers />
   </component>
