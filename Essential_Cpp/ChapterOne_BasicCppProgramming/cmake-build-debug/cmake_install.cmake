@@ -1,4 +1,4 @@
-# Install script for directory: /home/AaronLi/Cpp_Workspace/Essential_Cpp/ChapterOne_BasicCppProgramming
+# Install script for directory: /home/AaronLi/Source/Cpp_Workspace/Essential_Cpp/ChapterOne_BasicCppProgramming
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/AaronLi/Cpp_Workspace/Essential_Cpp/ChapterOne_BasicCppProgramming/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/AaronLi/Source/Cpp_Workspace/Essential_Cpp/ChapterOne_BasicCppProgramming/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
