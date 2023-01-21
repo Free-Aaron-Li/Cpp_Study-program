@@ -13,6 +13,7 @@
 
 #include <iostream>
 #include <cstdlib>
+#include <vector>
 
 using namespace std;
 
@@ -30,22 +31,51 @@ bool fibon_elem(int pos, int &elem);
 
 bool print_sequence(int pos);
 
+bool is_size_ok(int size);
+
+void display_message(char);
+
+void display_message(const string &);
+
+void display_message(const string &, int);
+
 /**
- * @date 23-1-16 下午11:32
+ * @date 23-1-19 下午7:17
  * @description
- * 返回Fibonacci数列指定元素<br/>
- * pos：数列中的元素位置（由调用者指定）<br/>
- * n_2,n_1：持有前两个元素的值 <br/>
- * elem：持有即将返回的值 <br/>
+ * <p> 重载display_message() </P>
  */
 
-bool fibon_elem(int pos, int &elem) {
+void display_message(char ch) {
+    cout << ch << endl;
+}
+
+void display_message(const string &str) {
+    cout << str << endl;
+}
+
+void display_message(const string &str, int number) {
+    cout << "The message is: " << str
+         << " " << number
+         << endl;
+}
+
+/**
+ * @date 23-1-19 下午6:00
+ * @description
+ * <p> 判断用户输入的Fibonacci数列位置是否可计算 </P>
+ */
+
+bool is_size_ok(int size) {
+    const int max_size = 46;
+    const string msg("Requested size is not supported");
     /* 检查位置值是否合理 */
 
-    if (pos <= 0 || pos > 46) {
-        cerr << "Invalid position: " << pos
-             << " -- cannot handle request!\n\t";
-        elem = -1;
+    if (size <= 0 || size > max_size) {
+        /* 通过使用通用的display_message函数，取代原先让每个函数自行产生调试信息的方式 */
+
+        /* cerr << "Invalid position: " << size
+              << " -- cannot handle request!\n\t";*/
+        display_message(msg, size);
         return false;
     }
 
@@ -54,17 +84,35 @@ bool fibon_elem(int pos, int &elem) {
          exit(-1);
      }*/
 
-    elem = 1;
-    int n_2 = 1, n_1 = 1;
-    for (int i = 3; i <= pos; ++i) {
-        elem = n_1 + n_2;
-        n_2 = n_1;
-        n_1 = elem;
+    return true;
+}
+
+/**
+ * @date 23-1-19 下午6:03
+ * @description
+ * <p> 计算数列 </P>
+ * <p></p>
+ * <p>
+ *  计算Fibonacci数列中的size个元素，并返回持有这些元素的静态容器的地址
+ * </p>
+ */
+
+const vector<int> *
+fibon_seq(int size) {
+    static vector<int> elems;
+
+    if (!is_size_ok(size)) {
+        return nullptr;
+    }
+    for (int i = int(elems.size()); i < size; ++i) {
+        if (i == 0 || i == 1) {
+            elems.push_back(1);
+        } else {
+            elems.push_back(elems[i - 1] + elems[i - 2]);
+        }
     }
 
-    print_sequence(pos);
-
-    return true;
+    return &elems;
 }
 
 /**
@@ -79,8 +127,8 @@ bool print_sequence(int pos) {
              << "-- cannot handle request!\n" << endl;
         return false;
     }
-    cout << "The Fibonacci Sequence for "
-         << pos << " position:\n\t" << endl;
+    string str="The Fibonacci Sequence for";
+    display_message(str,pos);
 
     /* 无论调用者指定那个元素位置，都会输出1 1 。除非指定位置值为1 */
     switch (pos) {
@@ -107,6 +155,33 @@ bool print_sequence(int pos) {
     return true;
 }
 
+/**
+ * @date 23-1-16 下午11:32
+ * @description
+ * 返回Fibonacci数列指定元素<br/>
+ * pos：数列中的元素位置（由调用者指定）<br/>
+ * n_2,n_1：持有前两个元素的值 <br/>
+ * elem：持有即将返回的值 <br/>
+ * 通过使用inline关键字的方式使fibon_elem成为内联函数，将fibon_elem()调用的三个函数写入fibon_elem()内，但依然维持三个独立的运算单元。<br/>
+ * 以此保证在执行性能不够理想的情况下，依旧保证良好的编程规范。<br/>
+ */
+
+inline bool fibon_elem(int pos, int &elem) {
+
+    const vector<int> *pseq = fibon_seq(pos);
+
+    if (!pseq) {
+        elem = 0;
+        return false;
+    }
+
+    print_sequence(pos);
+
+    elem = (*pseq)[pos - 1];
+    return true;
+}
+
+
 int main() {
     int pos, elem;
     char sign = 'y';
@@ -123,15 +198,10 @@ int main() {
                  << endl;
         }
 
-        cout << "would you like to try again? (y/n)"
-             << endl;
+        display_message("would you like to try again? (y/n) ");
         cin >> sign;
         if (sign != 'y' && sign != 'Y') {
             flag = false;
         }
     }
 }
-
-
-
-
