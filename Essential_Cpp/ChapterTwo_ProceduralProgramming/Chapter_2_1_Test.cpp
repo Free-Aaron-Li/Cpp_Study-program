@@ -12,7 +12,9 @@
  */
 
 #include <iostream>
+/*
 #include <cstdlib>
+*/
 #include <vector>
 
 using namespace std;
@@ -33,8 +35,6 @@ bool print_sequence(int pos);
 
 bool is_size_ok(int size);
 
-void display_message(char);
-
 void display_message(const string &);
 
 void display_message(const string &, int);
@@ -45,9 +45,6 @@ void display_message(const string &, int);
  * <p> 重载display_message() </P>
  */
 
-void display_message(char ch) {
-    cout << ch << endl;
-}
 
 void display_message(const string &str) {
     cout << str << endl;
