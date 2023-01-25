@@ -11,7 +11,10 @@
   </component>
   <component name="CMakeRunConfigurationManager">
     <generated>
+      <config projectName="ChapterTwo" targetName="Test2.5" />
       <config projectName="ChapterTwo" targetName="Test2.1" />
+      <config projectName="ChapterTwo" targetName="Test2.2" />
+      <config projectName="ChapterTwo" targetName="Test2.4" />
       <config projectName="ChapterTwo" targetName="Chapter2.1" />
       <config projectName="ChapterTwo" targetName="Chapter2.2" />
     </generated>
@@ -22,14 +25,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="432c752d-5532-44a8-b646-12855f4b1b74" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2023-01-18T16-20-37-0669.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ChapterOne_BasicCppProgramming/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../ChapterOne_BasicCppProgramming/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2023-01-18T09-35-32-0641.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+    <list default="true" id="432c752d-5532-44a8-b646-12855f4b1b74" name="变更" comment="完成test2.4与2.5，无法解决test2.6">
+      <change afterPath="$PROJECT_DIR$/../ChapterThree_GenericProgramming/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ChapterThree_GenericProgramming/Chapter1_1_find.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../CMakeLists.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +39,9 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+  </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="nnocji6y" />
   </component>
@@ -56,26 +58,27 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/AaronLi/Source/Cpp_Workspace/Essential_Cpp/ChapterTwo_ProceduralProgramming&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "last_opened_file_path": "/home/AaronLi/Source/Cpp_Workspace/Essential_Cpp/ChapterTwo_ProceduralProgramming",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "structure.view.defaults.are.configured": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="CMake 应用程序.Chapter2.2">
+}]]></component>
+  <component name="RunManager" selected="CMake 应用程序.Test2.5">
     <configuration default="true" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
       <texify-bibtex>
         <compiler />
@@ -86,11 +89,6 @@
         <aux-dir>$USER_HOME$</aux-dir>
       </texify-bibtex>
       <method v="2" />
-    </configuration>
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
     </configuration>
     <configuration name="Chapter2.1" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ChapterTwo" TARGET_NAME="Chapter2.1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ChapterTwo" RUN_TARGET_NAME="Chapter2.1">
       <method v="2">
@@ -103,6 +101,21 @@
       </method>
     </configuration>
     <configuration name="Test2.1" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ChapterTwo" TARGET_NAME="Test2.1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ChapterTwo" RUN_TARGET_NAME="Test2.1">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test2.2" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ChapterTwo" TARGET_NAME="Test2.2" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ChapterTwo" RUN_TARGET_NAME="Test2.2">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test2.4" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ChapterTwo" TARGET_NAME="Test2.4" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ChapterTwo" RUN_TARGET_NAME="Test2.4">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test2.5" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ChapterTwo" TARGET_NAME="Test2.5" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ChapterTwo" RUN_TARGET_NAME="Test2.5">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -149,6 +162,9 @@
       <item itemvalue="CMake 应用程序.Chapter2.1" />
       <item itemvalue="CMake 应用程序.Chapter2.2" />
       <item itemvalue="CMake 应用程序.Test2.1" />
+      <item itemvalue="CMake 应用程序.Test2.2" />
+      <item itemvalue="CMake 应用程序.Test2.4" />
+      <item itemvalue="CMake 应用程序.Test2.5" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
@@ -177,7 +193,44 @@
       <workItem from="1674035515935" duration="203000" />
       <workItem from="1674035729151" duration="5203000" />
       <workItem from="1674058841453" duration="761000" />
+      <workItem from="1674060073166" duration="98000" />
+      <workItem from="1674060180405" duration="31000" />
+      <workItem from="1674098876847" duration="9664000" />
+      <workItem from="1674112989937" duration="2746000" />
+      <workItem from="1674119964017" duration="1542000" />
+      <workItem from="1674121587884" duration="8086000" />
+      <workItem from="1674184250551" duration="4687000" />
+      <workItem from="1674280984938" duration="4737000" />
+      <workItem from="1674391379843" duration="1232000" />
+      <workItem from="1674458952422" duration="10702000" />
+      <workItem from="1674529676533" duration="9295000" />
+      <workItem from="1674552639166" duration="4474000" />
+      <workItem from="1674561851970" duration="4485000" />
+      <workItem from="1674613607923" duration="1881000" />
+      <workItem from="1674636381827" duration="655000" />
     </task>
+    <task id="LOCAL-00001" summary="修改Chapter_2.1，完成Chapter_2.2">
+      <created>1674281040643</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1674281040643</updated>
+    </task>
+    <task id="LOCAL-00002" summary="完成test2.2与2.4">
+      <created>1674533116568</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1674533116568</updated>
+    </task>
+    <task id="LOCAL-00003" summary="完成test2.4与2.5，无法解决test2.6">
+      <created>1674624520309</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1674624520310</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,5 +238,25 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="修改Chapter_2.1，完成Chapter_2.2" />
+    <MESSAGE value="完成test2.2与2.4" />
+    <MESSAGE value="完成test2.4与2.5，无法解决test2.6" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成test2.4与2.5，无法解决test2.6" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="CMakeExceptionBreakpoint" />
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

@@ -24,9 +24,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cf84870-d19c-434f-b264-e4a3c9b11036" name="Changes" comment="完成练习题1.8">
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-    </list>
+    <list default="true" id="4cf84870-d19c-434f-b264-e4a3c9b11036" name="Changes" comment="完成练习题1.8" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -195,6 +193,7 @@
       <workItem from="1673882385295" duration="172000" />
       <workItem from="1673882608713" duration="335000" />
       <workItem from="1674058767981" duration="13000" />
+      <workItem from="1674100861126" duration="134000" />
     </task>
     <task id="LOCAL-00001" summary="第一个程序">
       <created>1672147269617</created>
