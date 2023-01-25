@@ -14,8 +14,9 @@
 #include <vector>
 using namespace std;
 
-const vector<int>* penta_seq(int num);
+const vector<int>* pentagonal_sequence(int num);
 bool calculation_is_ok(int num);
+bool pentagonal_element(int num,int &elem);
 
 bool calculation_is_ok(int num) {
     const int max_num=100;
@@ -28,7 +29,7 @@ bool calculation_is_ok(int num) {
     return true;
 }
 
-const vector<int>* penta_seq(int num){
+const vector<int>* pentagonal_sequence(int num){
     if(!calculation_is_ok(num)){
         return nullptr;
     }
@@ -41,8 +42,9 @@ const vector<int>* penta_seq(int num){
     return &elems;
 }
 
-bool penta_elem(int num,int &elem){
-    const vector<int> *pseq= penta_seq(num);
+bool pentagonal_element(int num,int &elem){
+    const vector<int>* pseq= pentagonal_sequence(num);
+
     if(!pseq){
         elem=0;
         return false;
@@ -53,8 +55,6 @@ bool penta_elem(int num,int &elem){
 
 int main(){
     int elem=0;
-    if ( penta_elem( 9, elem ))
-        cout << "element 8 is " << elem << '\n';
-
-
+    if ( pentagonal_element( 2, elem ))
+        cout << "element 4 is " << elem << '\n';
 }
