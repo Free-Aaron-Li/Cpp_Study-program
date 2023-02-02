@@ -14,17 +14,21 @@
       <config projectName="ChapterThree" targetName="chapter3.1" />
     </generated>
   </component>
-  <component name="CMakeSettings">
+  <component name="CMakeSettings" AUTO_RELOAD="true">
     <configurations>
       <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+      <configuration PROFILE_NAME="Debug-mingw" ENABLED="true" CONFIG_NAME="Debug" TOOLCHAIN_NAME="mingw" />
       <configuration PROFILE_NAME="Release" ENABLED="true" CONFIG_NAME="Release" />
     </configurations>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0b3bd6a-c845-40df-aaf8-44eb1cef7278" name="变更" comment="">
-      <change beforePath="$PROJECT_DIR$/../../CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.clang-format" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/easyx.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/graphics.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/libeasyx.a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Chapter1_1_find.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter3_1_find.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chapter3_1_find.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter3_1_find.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,23 +52,31 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "last_opened_file_path": "/home/AaronLi/Source/Cpp_Workspace",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.控制台字体",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/AaronLi/Source/Cpp_Workspace/Essential_Cpp/ChapterThree_GenericProgramming/include&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors&quot;,
+    &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/include" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
       <texify-bibtex>
@@ -115,12 +127,7 @@
       </texify-makeindex>
       <method v="2" />
     </configuration>
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="chapter3.1" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ChapterThree" TARGET_NAME="chapter3.1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ChapterThree" RUN_TARGET_NAME="chapter3.1">
+    <configuration name="chapter3.1" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ChapterThree" TARGET_NAME="chapter3.1" CONFIG_NAME="Debug-mingw" RUN_TARGET_PROJECT_NAME="ChapterThree" RUN_TARGET_NAME="chapter3.1">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -146,12 +153,19 @@
       <workItem from="1675259926928" duration="31000" />
       <workItem from="1675259974212" duration="334000" />
       <workItem from="1675260326428" duration="1523000" />
-      <workItem from="1675261864582" duration="2236000" />
+      <workItem from="1675261864582" duration="3714000" />
+      <workItem from="1675304476651" duration="573000" />
+      <workItem from="1675305070060" duration="101000" />
+      <workItem from="1675305175075" duration="9510000" />
+      <workItem from="1675316362262" duration="1000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
