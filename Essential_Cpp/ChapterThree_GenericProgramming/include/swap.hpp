@@ -9,3 +9,7 @@
 #define CHAPTERTHREE_SWAP_HPP
 
 #endif  // CHAPTERTHREE_SWAP_HPP
+
+#include <iostream>
+using namespace std;
+void swap(int a,int b);
