@@ -10,7 +10,10 @@ set(SOURCES
         src/swap.cpp
         src/main.cpp
         src/BubbleSort.cpp
-        src/Print.cpp)
+        src/Print.cpp
+        src/struct.cpp
+        src/menu.cpp
+        )
 
 #------------------------------------
 add_executable(ChapterThree ${SOURCES})
