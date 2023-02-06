@@ -4,4 +4,4 @@ project(Cpp_Workspace)
 set(CMAKE_CXX_STANDARD 17)
 
 add_subdirectory(Essential_Cpp)
-
+add_subdirectory(StudyNotes)
