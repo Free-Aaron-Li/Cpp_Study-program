@@ -10,10 +10,6 @@
 int main() {
     /* 初始化 */
     AddressBook addressBook;
-    addressBook.addressBook_Size=0;
-   menu();
+    addressBook.addressBook_Size = 0;
+    menu(&addressBook);
 }
-
-
-
-

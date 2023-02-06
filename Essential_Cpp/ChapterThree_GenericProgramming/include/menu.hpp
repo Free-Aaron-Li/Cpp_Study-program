@@ -24,16 +24,23 @@ struct ContactPerson {
     string person_Name;
     string person_Gender = "man";
     int    person_Age{};
-    int    person_PhoneNumber{};
+    string person_PhoneNumber{};
     string person_Address;
 };
 
 struct AddressBook {
     ContactPerson contactPerson[ADDRESSBOOK_MAXSIZE];
-    int           addressBook_Size;
+    int           addressBook_Size{};
 };
 
 void showMenu();
-void menu();
+void showTitle();
+void showDividingLine();
+void menu(AddressBook* addressBook);
 bool exit();
 void addPerson(AddressBook* person);
+void printPerson(AddressBook* person);
+int isExist(AddressBook* person,const string& name);
+void deletePerson(AddressBook* person);
+void modifyingPerson(AddressBook* person);
+void cleanPerson(AddressBook* person);
