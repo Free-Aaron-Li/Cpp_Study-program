@@ -11,7 +11,7 @@
   </component>
   <component name="CMakeRunConfigurationManager">
     <generated>
-      <config projectName="ChapterThree" targetName="chapter3.1" />
+      <config projectName="ChapterThree" targetName="ChapterThree" />
     </generated>
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
@@ -23,12 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0b3bd6a-c845-40df-aaf8-44eb1cef7278" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/.clang-format" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/include/easyx.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/include/graphics.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libeasyx.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Chapter3_1_find.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter3_1_find.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/menu.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/include/menu.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../StudyNotes/Phase3CoreProgramming/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../StudyNotes/Phase3CoreProgramming/src/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +63,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode&quot;,
     &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -75,6 +71,9 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/include" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
   <component name="RunManager">
@@ -127,7 +126,7 @@
       </texify-makeindex>
       <method v="2" />
     </configuration>
-    <configuration name="chapter3.1" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ChapterThree" TARGET_NAME="chapter3.1" CONFIG_NAME="Debug-mingw" RUN_TARGET_PROJECT_NAME="ChapterThree" RUN_TARGET_NAME="chapter3.1">
+    <configuration name="ChapterThree" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ChapterThree" TARGET_NAME="ChapterThree" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ChapterThree" RUN_TARGET_NAME="ChapterThree">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -157,7 +156,46 @@
       <workItem from="1675304476651" duration="573000" />
       <workItem from="1675305070060" duration="101000" />
       <workItem from="1675305175075" duration="9510000" />
-      <workItem from="1675316362262" duration="1000" />
+      <workItem from="1675316362262" duration="876000" />
+      <workItem from="1675317280044" duration="9157000" />
+      <workItem from="1675346199286" duration="4744000" />
+      <workItem from="1675392011193" duration="1079000" />
+      <workItem from="1675393094006" duration="32000" />
+      <workItem from="1675393138893" duration="548000" />
+      <workItem from="1675393698676" duration="44000" />
+      <workItem from="1675393755417" duration="766000" />
+      <workItem from="1675394535839" duration="14640000" />
+      <workItem from="1675438492031" duration="360000" />
+      <workItem from="1675440901587" duration="341000" />
+      <workItem from="1675441252579" duration="343000" />
+      <workItem from="1675441605194" duration="509000" />
+      <workItem from="1675442130306" duration="147000" />
+      <workItem from="1675442287644" duration="321000" />
+      <workItem from="1675442625918" duration="35000" />
+      <workItem from="1675442700247" duration="169000" />
+      <workItem from="1675442883359" duration="61000" />
+      <workItem from="1675442953889" duration="80000" />
+      <workItem from="1675478686914" duration="3064000" />
+      <workItem from="1675482115874" duration="4179000" />
+      <workItem from="1675507370250" duration="633000" />
+      <workItem from="1675514116837" duration="7977000" />
+      <workItem from="1675566021525" duration="2193000" />
+      <workItem from="1675568517785" duration="10223000" />
+      <workItem from="1675580370766" duration="3804000" />
+      <workItem from="1675597835552" duration="10380000" />
+      <workItem from="1675651296899" duration="303000" />
+      <workItem from="1675651633286" duration="1872000" />
+      <workItem from="1675660080602" duration="1000" />
+      <workItem from="1675665713202" duration="3798000" />
+      <workItem from="1675686996561" duration="4210000" />
+      <workItem from="1675695040512" duration="314000" />
+      <workItem from="1675696105004" duration="109000" />
+      <workItem from="1675696301585" duration="1098000" />
+      <workItem from="1675697438129" duration="479000" />
+      <workItem from="1675772344178" duration="50000" />
+      <workItem from="1675775641044" duration="76000" />
+      <workItem from="1675777168088" duration="13000" />
+      <workItem from="1675866720045" duration="474000" />
     </task>
     <servers />
   </component>
@@ -166,6 +204,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="CMakeExceptionBreakpoint" />
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

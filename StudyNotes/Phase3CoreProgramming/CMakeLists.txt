@@ -7,7 +7,7 @@ set(CMAKE_CXX_STANDARD 17)
 link_directories(${PROJECT_SOURCE_DIR}/lib)
 
 set(SOURCES
-        src/main.cpp
+        src/main.cc
         )
 
 #------------------------------------

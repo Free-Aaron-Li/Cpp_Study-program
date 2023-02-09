@@ -8,7 +8,7 @@
 #ifndef CHAPTERTHREE_MENU_HPP
 #define CHAPTERTHREE_MENU_HPP
 
-#endif  // CHAPTERTHREE_MENU_HPP
+
 #include <iostream>
 #include <string>
 #define ADDRESSBOOK_MAXSIZE 1000
@@ -44,3 +44,5 @@ int isExist(AddressBook* person,const string& name);
 void deletePerson(AddressBook* person);
 void modifyingPerson(AddressBook* person);
 void cleanPerson(AddressBook* person);
+
+#endif  // CHAPTERTHREE_MENU_HPP
