@@ -4,31 +4,36 @@
  * @license GPL-3.0
  */
 
+#include <fstream>
 #include <iostream>
-using namespace std;
+#include <string>
 
-class Base {
+class Person {
  public:
-    int m_A;
-
- protected:
-    int m_B;
-
- private:
-    int m_C;  // 私有成员只是被隐藏了，但是还是会继承下去
+    char m_Name[64];
+    int  m_Age;
 };
 
-// 公共继承
-class Son : public Base {
- public:
-    int m_D;
-};
+void test01() {
+    /* 创建流文件 */
+    std::ifstream ifs("person.txt", std::ios::in | std::ios::binary);
 
-void test01() { cout << "sizeof Son = " << sizeof(Son) << endl; }
+    /* 判断文件是否打开成功 */
+    if (!ifs.is_open()) { std::cout << "文件打开失败" << std::endl; }
+
+    /* 读文件 */
+    Person p;
+    ifs.read((char *)&p, sizeof(p));
+
+    /* 打印文件 */
+    std::cout << "姓名： " << p.m_Name << " 年龄： " << p.m_Age << std::endl;
+
+    /* 关闭文件 */
+    ifs.close();
+}
 
 int main() {
     test01();
-   Son* son=new Son();
 
     return 0;
 }
