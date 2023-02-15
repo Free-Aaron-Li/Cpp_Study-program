@@ -22,16 +22,21 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0b3bd6a-c845-40df-aaf8-44eb1cef7278" name="变更" comment="">
-      <change beforePath="$PROJECT_DIR$/include/menu.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/include/menu.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../StudyNotes/Phase3CoreProgramming/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../StudyNotes/Phase3CoreProgramming/src/main.cpp" afterDir="false" />
+    <list default="true" id="d0b3bd6a-c845-40df-aaf8-44eb1cef7278" name="变更" comment="1.配置CMake文件 2.完成第三阶段C++学习">
+      <change afterPath="$PROJECT_DIR$/../../StudyNotes/Phase4ManagementSystem/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../StudyNotes/Phase4ManagementSystem/src/main.cc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../StudyNotes/info/employee_management_system.xmind" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../StudyNotes/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../StudyNotes/CMakeLists.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug-mingw" />
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+  </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="ymbcaoi2" />
   </component>
@@ -63,7 +68,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CPPToolchains&quot;,
     &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -196,7 +201,25 @@
       <workItem from="1675775641044" duration="76000" />
       <workItem from="1675777168088" duration="13000" />
       <workItem from="1675866720045" duration="474000" />
+      <workItem from="1676022835437" duration="3096000" />
+      <workItem from="1676039323136" duration="133000" />
+      <workItem from="1676043294235" duration="757000" />
+      <workItem from="1676107838187" duration="38000" />
+      <workItem from="1676110205134" duration="17000" />
+      <workItem from="1676215000337" duration="62000" />
+      <workItem from="1676218881572" duration="1073000" />
+      <workItem from="1676255862244" duration="1364000" />
+      <workItem from="1676260858905" duration="2892000" />
+      <workItem from="1676266160863" duration="20000" />
     </task>
+    <task id="LOCAL-00001" summary="1.配置CMake文件 2.完成第三阶段C++学习">
+      <created>1676039429772</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1676039429772</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,6 +227,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="1.配置CMake文件 2.完成第三阶段C++学习" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.配置CMake文件 2.完成第三阶段C++学习" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
