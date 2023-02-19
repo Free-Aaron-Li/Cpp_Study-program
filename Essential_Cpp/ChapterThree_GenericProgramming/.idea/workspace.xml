@@ -23,17 +23,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0b3bd6a-c845-40df-aaf8-44eb1cef7278" name="变更" comment="1.配置CMake文件 2.完成第三阶段C++学习">
-      <change afterPath="$PROJECT_DIR$/../../StudyNotes/Phase4ManagementSystem/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../StudyNotes/Phase4ManagementSystem/src/main.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../StudyNotes/info/employee_management_system.xmind" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../StudyNotes/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../StudyNotes/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../StudyNotes/Phase4ManagementSystem/include/work_manager.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../StudyNotes/Phase4ManagementSystem/src/work_manager.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../StudyNotes/Phase4ManagementSystem/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../StudyNotes/Phase4ManagementSystem/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../StudyNotes/info/employee_management_system.xmind" beforeDir="false" afterPath="$PROJECT_DIR$/../../StudyNotes/info/employee_management_system.xmind" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug-mingw" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
   </component>
@@ -131,6 +132,11 @@
       </texify-makeindex>
       <method v="2" />
     </configuration>
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ChapterThree" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ChapterThree" TARGET_NAME="ChapterThree" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ChapterThree" RUN_TARGET_NAME="ChapterThree">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -211,6 +217,7 @@
       <workItem from="1676255862244" duration="1364000" />
       <workItem from="1676260858905" duration="2892000" />
       <workItem from="1676266160863" duration="20000" />
+      <workItem from="1676431269200" duration="645000" />
     </task>
     <task id="LOCAL-00001" summary="1.配置CMake文件 2.完成第三阶段C++学习">
       <created>1676039429772</created>
