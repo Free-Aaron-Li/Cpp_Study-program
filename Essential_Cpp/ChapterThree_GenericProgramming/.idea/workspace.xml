@@ -22,19 +22,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0b3bd6a-c845-40df-aaf8-44eb1cef7278" name="变更" comment="1.配置CMake文件 2.完成第三阶段C++学习">
-      <change afterPath="$PROJECT_DIR$/../../StudyNotes/Phase4ManagementSystem/.clang-format" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../StudyNotes/Phase4ManagementSystem/bin/data.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.clang-format" beforeDir="false" afterPath="$PROJECT_DIR$/../../.clang-format" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../StudyNotes/.clang-format" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../StudyNotes/Phase4ManagementSystem/bin/Phase4" beforeDir="false" afterPath="$PROJECT_DIR$/../../StudyNotes/Phase4ManagementSystem/bin/Phase4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../StudyNotes/Phase4ManagementSystem/include/work_manager.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../StudyNotes/Phase4ManagementSystem/include/work_manager.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../StudyNotes/Phase4ManagementSystem/src/boss.cc" beforeDir="false" afterPath="$PROJECT_DIR$/../../StudyNotes/Phase4ManagementSystem/src/boss.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../StudyNotes/Phase4ManagementSystem/src/employee.cc" beforeDir="false" afterPath="$PROJECT_DIR$/../../StudyNotes/Phase4ManagementSystem/src/employee.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../StudyNotes/Phase4ManagementSystem/src/main.cc" beforeDir="false" afterPath="$PROJECT_DIR$/../../StudyNotes/Phase4ManagementSystem/src/main.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../StudyNotes/Phase4ManagementSystem/src/manager.cc" beforeDir="false" afterPath="$PROJECT_DIR$/../../StudyNotes/Phase4ManagementSystem/src/manager.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../StudyNotes/Phase4ManagementSystem/src/work_manager.cc" beforeDir="false" afterPath="$PROJECT_DIR$/../../StudyNotes/Phase4ManagementSystem/src/work_manager.cc" afterDir="false" />
-    </list>
+    <list default="true" id="d0b3bd6a-c845-40df-aaf8-44eb1cef7278" name="变更" comment="1.配置CMake文件 2.完成第三阶段C++学习" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -221,6 +209,7 @@
       <workItem from="1676431269200" duration="645000" />
       <workItem from="1676792760947" duration="85000" />
       <workItem from="1676813932852" duration="13000" />
+      <workItem from="1676819110955" duration="12000" />
     </task>
     <task id="LOCAL-00001" summary="1.配置CMake文件 2.完成第三阶段C++学习">
       <created>1676039429772</created>
