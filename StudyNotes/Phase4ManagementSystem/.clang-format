@@ -52,7 +52,7 @@ BraceWrapping:
   # 控制语句后面
   AfterControlStatement: Never
   # enum定义后面
-  AfterEnum: false
+  AfterEnum: true
   # 函数定义后面
   AfterFunction: false
   # 命名空间定义后面
@@ -60,13 +60,13 @@ BraceWrapping:
   # ObjC定义后面
   AfterObjCDeclaration: false
   # struct定义后面
-  AfterStruct: false
+  AfterStruct: true
   # union定义后面
-  AfterUnion: false
+  AfterUnion: true
   # catch之前
   BeforeCatch: true
   # else之前
-  BeforeElse: true
+  BeforeElse: false
   # 缩进大括号
   IndentBraces: false
 
@@ -88,7 +88,7 @@ BreakAfterJavaFieldAnnotations: false
 # 打破字符串字面量
 BreakStringLiterals: true
 # 每行字符的限制，0表示没有限制
-ColumnLimit: 100
+ColumnLimit: 120
 # 描述具有特殊意义的注释的正则表达式，它不应该被分割为多行或以其它方式改变
 CommentPragmas: '^ IWYU pragma:'
 # 构造函数的初始化列表要么都在同一行，要么都各自一行

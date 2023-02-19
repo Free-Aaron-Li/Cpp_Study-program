@@ -21,20 +21,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5ad57b64-0e83-4799-8ac8-d2c82f749fef" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/bin/Phase4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/include/boss.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/include/employee.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/include/manager.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/include/work_manager.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/include/worker.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/boss.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/employee.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/manager.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/work_manager.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Essential_Cpp/ChapterThree_GenericProgramming/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Essential_Cpp/ChapterThree_GenericProgramming/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.clang-format" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/data.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.clang-format" beforeDir="false" afterPath="$PROJECT_DIR$/../../.clang-format" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.clang-format" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Phase4" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Phase4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/work_manager.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/work_manager.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/boss.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/boss.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/employee.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/employee.cc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../info/employee_management_system.xmind" beforeDir="false" afterPath="$PROJECT_DIR$/../info/employee_management_system.xmind" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/manager.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/manager.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/work_manager.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/work_manager.cc" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,10 +69,16 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Phase4" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Phase4" TARGET_NAME="Phase4" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Phase4" RUN_TARGET_NAME="Phase4">
       <method v="2">
@@ -97,7 +100,9 @@
       <workItem from="1676553896796" duration="7891000" />
       <workItem from="1676743529293" duration="1208000" />
       <workItem from="1676745741207" duration="43000" />
-      <workItem from="1676786338629" duration="392000" />
+      <workItem from="1676786338629" duration="1355000" />
+      <workItem from="1676787737424" duration="12326000" />
+      <workItem from="1676813948271" duration="4924000" />
     </task>
     <servers />
   </component>
@@ -106,5 +111,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

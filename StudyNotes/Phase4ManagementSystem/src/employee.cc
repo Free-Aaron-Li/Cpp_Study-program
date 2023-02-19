@@ -13,7 +13,7 @@ Employee::Employee(int id, std::string name, int dept_id) {
 
 void Employee::ShowInfo(){
     std::cout << "职工编号：" << this->worker_id_ << "\t职工姓名：" << this->worker_name_
-              << "\t职工岗位：" << this->get_DepartmentName() << "\t岗位职责：完成经理交代的任务。"
+              << "\t\t职工岗位：" << this->get_DepartmentName() << "\t\t岗位职责：完成经理交代的任务。"
               << std::endl;
 }
 
