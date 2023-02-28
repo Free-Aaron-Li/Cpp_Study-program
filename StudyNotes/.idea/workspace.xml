@@ -22,11 +22,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5eb00fb9-d643-407b-a3c9-b1d16c5789e3" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/Phase5Template/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Phase5Template/src/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-    </list>
+    <list default="true" id="5eb00fb9-d643-407b-a3c9-b1d16c5789e3" name="变更" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,7 +64,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.sourceCode",
+    "settings.editor.selected.configurable": "fileTemplates",
     "structure.view.defaults.are.configured": "true",
     "vue.rearranger.settings.migration": "true"
   }
@@ -143,7 +139,7 @@
       <workItem from="1676214986559" duration="76000" />
       <workItem from="1676290743857" duration="1260000" />
       <workItem from="1676425340396" duration="2188000" />
-      <workItem from="1677466780214" duration="862000" />
+      <workItem from="1677466780214" duration="1017000" />
     </task>
     <servers />
   </component>
