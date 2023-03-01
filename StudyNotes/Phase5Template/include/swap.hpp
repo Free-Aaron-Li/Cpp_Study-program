@@ -7,11 +7,14 @@
 
 #include <iostream>
 
-void SwapInt(int &a,int &b);
-void SwapDouble(double &a,double &b);
+template <typename T>
+void Swap(T &a, T &b);
 
-template<typename T>
-void Swap(T &a,T &b);
+template <typename T>
+void Print(T &array, int length);
+
+template <class T>
+void SelectionSort(T &array, int length);
 
 int Test();
 

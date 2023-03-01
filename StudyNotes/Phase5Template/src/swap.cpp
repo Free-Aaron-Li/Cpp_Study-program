@@ -5,42 +5,38 @@
  */
 #include "swap.hpp"
 
-void SwapInt(int &a, int &b) {
-    int temporary = a;
-    a             = b;
-    b             = temporary;
-}
-
-void SwapDouble(double &a, double &b) {
-    double temporary = a;
-    a                = b;
-    b                = temporary;
-}
-
-template <typename T> /* 声明一个模板，告诉编译器后面代码中紧跟着的T不要报错，T是一个通用数据类型 */
+template <typename T>
 void Swap(T &a, T &b) {
     T temporary = a;
     a           = b;
     b           = temporary;
 }
 
+template <typename T>
+void Print(T &array, int length) {
+    std::cout << "Original Array: " << std::endl;
+    for (int i = 0; i < length; ++i) { std::cout << " " << array[i] << " "; }
+}
+
+template <class T>
+void SelectionSort(T &array, int length) {
+    for (int i = 0; i < length-1; ++i) {
+        int maximum_subscript = i;
+        for (int j = i + 1; j < length; ++j) {
+            if (array[maximum_subscript] < array[j]) { maximum_subscript = j; }
+        }
+        if (maximum_subscript != i) { Swap(array[i], array[maximum_subscript]); }
+    }
+
+    Print(array, length);
+}
+
 int Test() {
-    int a = 10;
-    int b = 20;
-    SwapInt(a, b);
-    std::cout << "a is " << a << "\nb is " << b << "\n";
+    int array[] = {32,5234,2432,6784,97849,79056,25,142,54,6,3};
+    SelectionSort(array,sizeof(array)/sizeof(int));
 
-    double c = 20.1;
-    double d = 30.2;
-    SwapDouble(c, d);
-    std::cout << "c is " << c << "\nd is " << d << "\n";
-    std::cout << std::endl;
-
-    Swap(a, b);
-    std::cout << "a is " << a << "\nb is " << b << "\n";
-    Swap(c, d);
-    std::cout << "c is " << c << "\nd is " << d << "\n";
-    std::cout << std::endl;
-
+    std::cout<<std::endl;
+    char char_array[]="baourlafmasg";
+    SelectionSort(char_array,sizeof(char_array)/sizeof(char));
     return 0;
 }

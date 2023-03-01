@@ -3,9 +3,9 @@
  * @date 2023-02-27-上午11:26
  * @license GPL-3.0
  */
-#include "swap.hpp"
+#include "compare.hpp"
 
 int main() {
-    Test();
+    CompareTest();
     return 0;
 }

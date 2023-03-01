@@ -13,6 +13,7 @@ include_directories(${PROJECT_SOURCE_DIR}/include)
 set(SOURCES
         src/main.cpp
         src/swap.cpp
+        src/compare.cpp
         )
 
 #------------------------------------
