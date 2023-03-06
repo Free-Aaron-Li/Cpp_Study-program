@@ -14,6 +14,8 @@ set(SOURCES
         src/main.cpp
         src/swap.cpp
         src/compare.cpp
+        src/inherit.cpp
+        src/script.cpp
         )
 
 #------------------------------------
