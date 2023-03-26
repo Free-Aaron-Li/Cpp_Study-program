@@ -16,6 +16,7 @@ set(SOURCES
         src/compare.cpp
         src/inherit.cpp
         src/script.cpp
+        src/test.cpp
         )
 
 #------------------------------------
