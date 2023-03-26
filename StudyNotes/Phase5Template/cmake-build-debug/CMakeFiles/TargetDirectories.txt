@@ -1,3 +1,0 @@
-/home/AaronLi/Source/Cpp_Workspace/StudyNotes/Phase5Template/cmake-build-debug/CMakeFiles/Phase5.dir
-/home/AaronLi/Source/Cpp_Workspace/StudyNotes/Phase5Template/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/AaronLi/Source/Cpp_Workspace/StudyNotes/Phase5Template/cmake-build-debug/CMakeFiles/rebuild_cache.dir

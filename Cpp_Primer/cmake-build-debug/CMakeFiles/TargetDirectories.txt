@@ -1,5 +1,0 @@
-/home/AaronLi/Source/Cpp_Workspace/Cpp_Primer/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/AaronLi/Source/Cpp_Workspace/Cpp_Primer/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/AaronLi/Source/Cpp_Workspace/Cpp_Primer/cmake-build-debug/ChapterOne_Start/CMakeFiles/ChapterOne.dir
-/home/AaronLi/Source/Cpp_Workspace/Cpp_Primer/cmake-build-debug/ChapterOne_Start/CMakeFiles/edit_cache.dir
-/home/AaronLi/Source/Cpp_Workspace/Cpp_Primer/cmake-build-debug/ChapterOne_Start/CMakeFiles/rebuild_cache.dir

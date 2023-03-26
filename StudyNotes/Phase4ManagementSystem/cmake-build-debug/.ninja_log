@@ -1,7 +1,0 @@
-# ninja log v5
-1	272	1676800073342225804	CMakeFiles/Phase4.dir/src/employee.cc.o	5d3f8d1c566c09c4
-1	256	1676818625924144869	CMakeFiles/Phase4.dir/src/work_manager.cc.o	1515df967955b8cd
-1	253	1676800073322225509	CMakeFiles/Phase4.dir/src/manager.cc.o	370b9a9431e6a469
-256	364	1676818626036146341	/home/AaronLi/Source/Cpp_Workspace/StudyNotes/Phase4ManagementSystem/bin/Phase4	47b34385066e6208
-0	204	1676818625876144237	CMakeFiles/Phase4.dir/src/main.cc.o	74b785a132e9a4b
-1	250	1676800073322225509	CMakeFiles/Phase4.dir/src/boss.cc.o	2ec6a5498effcbbd

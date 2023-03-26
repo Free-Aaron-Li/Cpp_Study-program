@@ -1,8 +1,0 @@
-# ninja log v5
-0	20	1678107954696291688	CMakeFiles/Phase5.dir/src/test.cpp.o	be8c3adcba5ef216
-1	1602	1678027046203554202	CMakeFiles/Phase5.dir/src/script.cpp.o	caea2310b840ecad
-0	209	1677644444373259252	CMakeFiles/Phase5.dir/src/swap.cpp.o	edb6dd33535df261
-20	170	1678107954844294657	/home/AaronLi/Source/Cpp_Workspace/StudyNotes/Phase5Template/bin/Phase5	605c32f078e3da14
-0	34	1678107822757578560	CMakeFiles/Phase5.dir/src/main.cpp.o	dfcbd5c8ecaab0db
-1	234	1677651627895370264	CMakeFiles/Phase5.dir/src/compare.cpp.o	b9a57ce22429b744
-0	301	1678025705675370250	CMakeFiles/Phase5.dir/src/inherit.cpp.o	cd5e8d218c3aabcb
