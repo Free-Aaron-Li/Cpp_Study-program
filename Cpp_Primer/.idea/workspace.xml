@@ -20,10 +20,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3380947e-ac2c-447a-a087-05d145c2e56c" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/ChapterOne_Start/bin/ChapterOne" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChapterOne_Start/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ChapterOne_Start/src/main.cpp" afterDir="false" />
-    </list>
+    <list default="true" id="3380947e-ac2c-447a-a087-05d145c2e56c" name="变更" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -89,7 +86,7 @@
       <option name="presentableId" value="Default" />
       <updated>1679830486184</updated>
       <workItem from="1679830487278" duration="730000" />
-      <workItem from="1679831483052" duration="428000" />
+      <workItem from="1679831483052" duration="831000" />
     </task>
     <servers />
   </component>
