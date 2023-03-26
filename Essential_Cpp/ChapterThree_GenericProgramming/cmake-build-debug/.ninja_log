@@ -1,0 +1,11 @@
+# ninja log v5
+1	270	1675607913895208418	CMakeFiles/ChapterThree.dir/src/menu.cpp.o	eff149ecd78d9b5e
+1	224	1675481613725633645	CMakeFiles/ChapterThree.dir/src/BubbleSort.cpp.o	28201a28a170104b
+1	226	1675481613729633816	CMakeFiles/ChapterThree.dir/src/Print.cpp.o	cdd475addb006f68
+0	218	1675605705573789754	CMakeFiles/ChapterThree.dir/src/main.cpp.o	10526d391e4f273a
+0	269	1675585035383753898	CMakeFiles/ChapterThree.dir/src/swap.cpp.o	33a8ccf6e69e364
+0	217	1675398089251140682	CMakeFiles/ChapterThree.dir/src/Chapter3_1_find.cpp.o	afcfc01be050ed34
+0	486	1675585035599756058	CMakeFiles/ChapterThree.dir/src/struct.cpp.o	fec24d9be2fde906
+1	235	1675392237588654718	CMakeFiles/chapter3.1.dir/Chapter3_1_find.cpp.o	505ed7e695d5a057
+270	318	1675607913943209133	ChapterThree	b686f63759bffbf1
+235	281	1675392237632655078	chapter3.1	63b8edb51a058f7e

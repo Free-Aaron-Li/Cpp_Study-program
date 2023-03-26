@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "StudyNotes/Phase3CoreProgramming",
+		"source" : "StudyNotes/Phase3CoreProgramming"
+	}
+}

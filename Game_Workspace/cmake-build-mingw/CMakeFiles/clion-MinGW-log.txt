@@ -1,0 +1,4 @@
+/home/AaronLi/Software/Toolbox/apps/CLion/ch-0/223.8617.54/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_MAKE_PROGRAM=/home/AaronLi/Software/Toolbox/apps/CLion/ch-0/223.8617.54/bin/ninja/linux/x64/ninja -DCMAKE_C_COMPILER=/usr/bin/x86_64-w64-mingw32-gcc -DCMAKE_CXX_COMPILER=/usr/bin/x86_64-w64-mingw32-g++ -G Ninja -S /home/AaronLi/Source/Cpp_Workspace/Game_Workspace -B /home/AaronLi/Source/Cpp_Workspace/Game_Workspace/cmake-build-mingw
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/AaronLi/Source/Cpp_Workspace/Game_Workspace/cmake-build-mingw

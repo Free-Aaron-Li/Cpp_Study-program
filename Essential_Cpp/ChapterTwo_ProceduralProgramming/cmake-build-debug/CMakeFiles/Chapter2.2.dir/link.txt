@@ -1,0 +1,1 @@
+/usr/bin/g++-8 -g CMakeFiles/Chapter2.2.dir/Chapter_2_2_VectorSort.cpp.o -o Chapter2.2 

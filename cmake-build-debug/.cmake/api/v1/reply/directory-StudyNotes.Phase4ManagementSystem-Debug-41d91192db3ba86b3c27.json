@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "StudyNotes/Phase4ManagementSystem",
+		"source" : "StudyNotes/Phase4ManagementSystem"
+	}
+}

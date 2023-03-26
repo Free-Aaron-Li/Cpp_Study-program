@@ -1,0 +1,105 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "ChapterTwo",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Chapter2.1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Chapter2.1-Debug-83a95c3b00b39460c99f.json",
+					"name" : "Chapter2.1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Chapter2.2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Chapter2.2-Debug-1b89326709f60008552c.json",
+					"name" : "Chapter2.2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Test2.1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Test2.1-Debug-7f89e9789140cd52209e.json",
+					"name" : "Test2.1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Test2.2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Test2.2-Debug-9ac3e7fcf60a683f5fa0.json",
+					"name" : "Test2.2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Test2.4::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Test2.4-Debug-e9e14c402ee1fbb342b2.json",
+					"name" : "Test2.4",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Test2.5::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Test2.5-Debug-2cd1701dbefc7d291713.json",
+					"name" : "Test2.5",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/AaronLi/Source/Cpp_Workspace/Essential_Cpp/ChapterTwo_ProceduralProgramming/cmake-build-debug",
+		"source" : "/home/AaronLi/Source/Cpp_Workspace/Essential_Cpp/ChapterTwo_ProceduralProgramming"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}
