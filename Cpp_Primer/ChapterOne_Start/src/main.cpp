@@ -3,9 +3,9 @@
  * @date 2023-03-26-下午7:32
  * @license GPL-3.0
  */
-#include <iostream>
+#include "test.hpp"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    test();
     return 0;
 }
