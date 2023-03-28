@@ -53,7 +53,7 @@ Status ListInsert(SqList* sqList, int subscript, ElemType element);
  *  sqList 顺序表
  */
 
-Status SortDescending(SqList* sqList);
+void SortDescending(SqList* sqList);
 
 /**
  * @description

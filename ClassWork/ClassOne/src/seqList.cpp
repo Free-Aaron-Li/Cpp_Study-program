@@ -51,7 +51,7 @@ Status ListInsert(SqList* sqList, int subscript, ElemType element) {
     return OK;
 }
 
-Status SortDescending(SqList* sqList){
+void SortDescending(SqList* sqList){
     int temporary;
     for (int i = 0; i < sqList->length-1; ++i) {
         for (int j = 0; j < sqList->length-1; ++j) {
