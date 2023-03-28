@@ -5,7 +5,7 @@
  */
 #include "sequenceList.hpp"
 
-void InitList(SqList* sqList) {
+void SequenceList::InitList(SqList* sqList) {
     char choose = ' ';
     std::cout << "是否自定义数组？(y/n) ";
     std::cin >> choose;
@@ -27,7 +27,7 @@ void InitList(SqList* sqList) {
     }
 }
 
-Status ListInsert(SqList* sqList, int subscript, ElemType element) {
+Status SequenceList::ListInsert(SqList* sqList, int subscript, ElemType element) {
     if (sqList->length == SPACE_INITIAL_SIZE) { /* 顺序表已满 */
         std::cerr << "顺序表已满！" << std::endl;
         return ERROR;
@@ -46,12 +46,12 @@ Status ListInsert(SqList* sqList, int subscript, ElemType element) {
     sqList->data[subscript - 1] = element; /*将新元素插入*/
     sqList->length++;                      /*表长加1*/
 
-    SortDescending(sqList);
-    Output(sqList);
+    SequenceList::SortDescending(sqList);
+    SequenceList::Output(sqList);
     return OK;
 }
 
-void SortDescending(SqList* sqList){
+void SequenceList::SortDescending(SqList* sqList){
     int temporary;
     for (int i = 0; i < sqList->length-1; ++i) {
         for (int j = 0; j < sqList->length-1; ++j) {
@@ -64,7 +64,7 @@ void SortDescending(SqList* sqList){
     }
 }
 
-Status SearchIndex(SqList* sqList, ElemType element) {
+Status SequenceList::SearchIndex(SqList* sqList, ElemType element) {
     for (int i = 0; i < sqList->length; ++i) {
         if (element == sqList->data[i]) {
             std::cout << "成功找到元素" << element << "所处位置：" << i + 1 << std::endl;
@@ -75,7 +75,7 @@ Status SearchIndex(SqList* sqList, ElemType element) {
     return ERROR;
 }
 
-Status ListDelete(SqList* sqList, int subscript) {
+Status SequenceList::ListDelete(SqList* sqList, int subscript) {
     if (subscript - 1 < 0 || subscript > sqList->length) {
         std::cerr << "删除元素地址过大或过小" << std::endl;
         return ERROR;
@@ -84,11 +84,11 @@ Status ListDelete(SqList* sqList, int subscript) {
     for (int j = subscript - 1; j < sqList->length; j++) { sqList->data[j] = sqList->data[j+1]; }
     sqList->length--;
 
-    Output(sqList);
+    SequenceList::Output(sqList);
     return OK;
 }
 
-void Output(SqList* sqList) {
+void SequenceList::Output(SqList* sqList) {
     std::cout << "当前顺序表的长度为：" << sqList->length << " 数组为：" << std::endl;
     for (int i = 0; i < sqList->length; ++i) { std::cout << sqList->data[i] << " "; }
     std::cout << std::endl;

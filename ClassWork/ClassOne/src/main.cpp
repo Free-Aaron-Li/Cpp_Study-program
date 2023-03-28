@@ -7,10 +7,10 @@
 
 void test_sequenceList() {
     SqList sqList;
-    InitList(&sqList);
-    ListInsert(&sqList, 7, 23);
-    SearchIndex(&sqList, 23);
-    ListDelete(&sqList, 7);
+    SequenceList::InitList(&sqList);
+    SequenceList::ListInsert(&sqList, 7, 23);
+    SequenceList::SearchIndex(&sqList, 23);
+    SequenceList::ListDelete(&sqList, 7);
 }
 
 int main() {

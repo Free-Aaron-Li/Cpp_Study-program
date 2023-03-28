@@ -24,6 +24,8 @@ typedef struct {
     ElemType length;                   /*线性表当前长度*/
 } SqList;
 
+class SequenceList{
+ public:    
 /**
  * @description
  * <p> 初始化 </P>
@@ -31,7 +33,7 @@ typedef struct {
  *  sqList 顺序表
  */
 
-void InitList(SqList* sqList);
+static void InitList(SqList* sqList);
 
 /**
  * @description
@@ -44,7 +46,7 @@ void InitList(SqList* sqList);
  *  element 插入元素
  */
 
-Status ListInsert(SqList* sqList, int subscript, ElemType element);
+static Status ListInsert(SqList* sqList, int subscript, ElemType element);
 
 /**
  * @description 
@@ -53,7 +55,7 @@ Status ListInsert(SqList* sqList, int subscript, ElemType element);
  *  sqList 顺序表
  */
 
-void SortDescending(SqList* sqList);
+static void SortDescending(SqList* sqList);
 
 /**
  * @description
@@ -64,7 +66,7 @@ void SortDescending(SqList* sqList);
  *  element 查找元素
  */
 
-Status SearchIndex(SqList* sqList, ElemType element);
+static Status SearchIndex(SqList* sqList, ElemType element);
 
 /**
  * @description
@@ -75,7 +77,7 @@ Status SearchIndex(SqList* sqList, ElemType element);
  *  subscript 删除位置下标
  */
 
-Status ListDelete(SqList* sqList, int subscript);
+static Status ListDelete(SqList* sqList, int subscript);
 
 /**
  * @description
@@ -84,5 +86,7 @@ Status ListDelete(SqList* sqList, int subscript);
  *  sqList 顺序表
  */
 
-void Output(SqList* sqList);
+static void Output(SqList* sqList);
+
+};
 #endif  // CLASSWORK_SEQUENCELIST_HPP
