@@ -14,7 +14,13 @@ int Io_Test() {
     return 0;
 }
 
+int hello() {
+    std::cout << "Hello World!" << std::endl;
+    return 0;
+}
+
 int test() {
-    Io_Test();
+    //Io_Test();
+    //hello();
     return 0;
 }

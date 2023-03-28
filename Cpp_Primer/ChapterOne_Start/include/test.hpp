@@ -19,4 +19,10 @@ int test();
  */
 int Io_Test();
 
+/**
+ * @description 
+ * <p> 1.2_test_Hello, World </P>
+ */
+int hello();  
+
 #endif  // ESSENTIAL_CPP_TEST_HPP
