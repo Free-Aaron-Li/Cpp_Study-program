@@ -10,11 +10,11 @@
  * <p> 顺序表操作 </P>
  */
 
-#define OK                 0
-#define ERROR              (-1)
-#define SPACE_INITIAL_SIZE 20 /* 存储空间初始化分配大小 */
-typedef int ElemType;         /* ElemType的类型，默认为int */
-typedef int Status;           /* 顺序表状态，1正确 0错误 */
+#define OK                 0    /** {@value} 状态值*/
+#define ERROR              (-1) /** {@value} 状态值*/
+#define SPACE_INITIAL_SIZE 20   /** {@value}存储空间初始化分配大小 */
+typedef int ElemType;           /** ElemType的类型，默认为int */
+typedef int Status;             /** 顺序表状态，1正确 0错误 */
 
 #include <iostream>
 #include <vector>
