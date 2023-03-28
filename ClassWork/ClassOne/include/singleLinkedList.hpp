@@ -6,11 +6,10 @@
 #define CLASSWORK_SINGLELINKEDLIST_HPP
 
 /**
- * @description 
+ * @description
  * <p> 单链表操作 </P>
  */
 
 #include <iostream>
-
 
 #endif  // CLASSWORK_SINGLELINKEDLIST_HPP

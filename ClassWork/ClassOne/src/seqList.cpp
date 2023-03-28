@@ -51,14 +51,14 @@ Status SequenceList::ListInsert(SqList* sqList, int subscript, ElemType element)
     return OK;
 }
 
-void SequenceList::SortDescending(SqList* sqList){
+void SequenceList::SortDescending(SqList* sqList) {
     int temporary;
-    for (int i = 0; i < sqList->length-1; ++i) {
-        for (int j = 0; j < sqList->length-1; ++j) {
-            if (sqList->data[j+1]>sqList->data[j]){
-                temporary= sqList->data[j+1];
-                sqList->data[j+1]= sqList->data[j];
-                sqList->data[j]=temporary;                
+    for (int i = 0; i < sqList->length - 1; ++i) {
+        for (int j = 0; j < sqList->length - 1; ++j) {
+            if (sqList->data[j + 1] > sqList->data[j]) {
+                temporary           = sqList->data[j + 1];
+                sqList->data[j + 1] = sqList->data[j];
+                sqList->data[j]     = temporary;
             }
         }
     }
@@ -81,7 +81,7 @@ Status SequenceList::ListDelete(SqList* sqList, int subscript) {
         return ERROR;
     }
 
-    for (int j = subscript - 1; j < sqList->length; j++) { sqList->data[j] = sqList->data[j+1]; }
+    for (int j = subscript - 1; j < sqList->length; j++) { sqList->data[j] = sqList->data[j + 1]; }
     sqList->length--;
 
     SequenceList::Output(sqList);

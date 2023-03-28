@@ -4,4 +4,3 @@
  * @license GPL-3.0
  */
 #include "singleLinkedList.hpp"
-

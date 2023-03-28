@@ -24,69 +24,57 @@ typedef struct {
     ElemType length;                   /*线性表当前长度*/
 } SqList;
 
-class SequenceList{
- public:    
-/**
- * @description
- * <p> 初始化 </P>
- * @param
- *  sqList 顺序表
- */
-
-static void InitList(SqList* sqList);
-
-/**
- * @description
- * <p> 插入 </P>
- * @param
- *  sqList 顺序表
- * @param
- *  subscript 插入数组位置下标
- * @param
- *  element 插入元素
- */
-
-static Status ListInsert(SqList* sqList, int subscript, ElemType element);
-
-/**
- * @description 
- * <p> 降序 </P>
- * @param
- *  sqList 顺序表
- */
-
-static void SortDescending(SqList* sqList);
-
-/**
- * @description
- * <p> 查找 </P>
- * @param
- *  sqList 顺序表
- * @param
- *  element 查找元素
- */
-
-static Status SearchIndex(SqList* sqList, ElemType element);
-
-/**
- * @description
- * <p> 删除 </P>
- * @param
- *  sqList 顺序表
- * @param
- *  subscript 删除位置下标
- */
-
-static Status ListDelete(SqList* sqList, int subscript);
-
-/**
- * @description
- * <p> 遍历输出 </P>
- * @param
- *  sqList 顺序表
- */
-
-static void Output(SqList* sqList);
-
+class SequenceList {
+ public:
+    /**
+     * @description
+     * <p> 初始化 </P>
+     * @param
+     *  sqList 顺序表
+     */
+    static void   InitList(SqList* sqList);
+    /**
+     * @description
+     * <p> 插入 </P>
+     * @param
+     *  sqList 顺序表
+     * @param
+     *  subscript 插入数组位置下标
+     * @param
+     *  element 插入元素
+     */
+    static Status ListInsert(SqList* sqList, int subscript, ElemType element);
+    /**
+     * @description
+     * <p> 降序 </P>
+     * @param
+     *  sqList 顺序表
+     */
+    static void   SortDescending(SqList* sqList);
+    /**
+     * @description
+     * <p> 查找 </P>
+     * @param
+     *  sqList 顺序表
+     * @param
+     *  element 查找元素
+     */
+    static Status SearchIndex(SqList* sqList, ElemType element);
+    /**
+     * @description
+     * <p> 删除 </P>
+     * @param
+     *  sqList 顺序表
+     * @param
+     *  subscript 删除位置下标
+     */
+    static Status ListDelete(SqList* sqList, int subscript);
+    /**
+     * @description
+     * <p> 遍历输出 </P>
+     * @param
+     *  sqList 顺序表
+     */
+    static void   Output(SqList* sqList);
 };
 #endif  // CLASSWORK_SEQUENCELIST_HPP
