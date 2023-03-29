@@ -24,6 +24,10 @@ class Node {
 };
 
 class LinkList {
+ private:
+    Node* head;   /* 单链表头结点指针 */
+    int   length; /* 单链表长度 */
+
  public:
     /**
      * @description
@@ -82,10 +86,6 @@ class LinkList {
      *  value 查找值
      */
     Status GetElement_Value(ElemType value);
-
- private:
-    Node* head;   /* 单链表头结点指针 */
-    int   length; /* 单链表长度 */
 };
 
 #endif  // CLASSWORK_SINGLELINKEDLIST_HPP

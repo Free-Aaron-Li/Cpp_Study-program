@@ -13,6 +13,8 @@ set(SOURCES
         src/main.cpp
         src/seqList.cpp
         src/LinkedList.cpp
+        src/LinearList.cpp
+        src/LinkList.cpp
         )
 
 #------------------------------------

@@ -3,6 +3,7 @@
  * @date 2023-03-27-下午7:42
  * @license GPL-3.0
  */
+#include "List.hpp"
 #include "sequenceList.hpp"
 #include "singleLinkedList.hpp"
 
@@ -22,8 +23,30 @@ void test_singleLinkedList() {
     linkList.InsertNode_Index(3, 22);
     linkList.GetElement_Value(13);
 }
+
+void test_SeqList() {
+    SeqList seqList_a, seqList_b, seqList;
+    std::cout << "seqList_a: " << std::endl;
+    List::CreatSeqList(seqList_a);
+    std::cout << "seqList_b: " << std::endl;
+    List::CreatSeqList(seqList_b);
+    List::MergeList_SeqList(seqList_a, seqList_b, seqList);
+    std::cout << "***************************" << std::endl;
+}
+
+void test_LinkedList() {
+    Node_List node_list1{}, node_list2{};
+    List      list{};
+    list.InitiateLinkedList();
+    list.CreateLinked(node_list1);
+    list.CreateLinked(node_list2);
+    list.MergeList_Link(&node_list1, &node_list2);
+}
+
 int main() {
     // test_sequenceList();
-    test_singleLinkedList();
+    // test_singleLinkedList();
+    // test_SeqList();
+    test_LinkedList();
     return 0;
 }
