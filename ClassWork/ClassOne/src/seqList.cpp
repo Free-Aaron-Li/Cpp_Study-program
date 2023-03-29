@@ -10,7 +10,7 @@ void SequenceList::InitList(SqList* sqList) {
     std::cout << "是否自定义数组？(y/n) ";
     std::cin >> choose;
     if (choose == 'y' || choose == 'Y') {
-        std::cout << "输入递减数组：" << std::endl;
+        std::cout << "输入递减数组：";
         int i      = 0;
         int number = 0;
         while (std::cin >> number) {

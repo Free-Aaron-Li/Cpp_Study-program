@@ -7,7 +7,7 @@
 
 void List::CreatSeqList(SeqList &seqList) {
     seqList.data = new ElemType[SPACE_INITIAL_SIZE];
-    std::cout << "请输入顺序表的值：（默认大小为20）" << std::endl;
+    std::cout << "请输入顺序表的值：（默认大小为20）";
     ElemType value;
     int      i = 0;
     while (std::cin >> value) {
@@ -57,6 +57,7 @@ void List::MergeList_SeqList(SeqList &seqList1, SeqList &seqList2, SeqList &seqL
     while (seqList1_pointer <= seqList1_pointer_last) *first_pointer++ = *seqList1_pointer++;
     while (seqList2_pointer <= seqList2_pointer_last) *first_pointer++ = *seqList2_pointer++;
 
+    std::cout << "合并的顺序表：" << std::endl;
     Traverse(seqList);
 }
 
