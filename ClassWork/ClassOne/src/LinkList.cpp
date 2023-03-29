@@ -73,7 +73,7 @@ void List::MergeList_Link(Node_List *node_list1, Node_List *node_list2) {
     if (node2) node3->next = node2;
 
     Sort_Link(node_list1->next);
-    std::cout << "链表值为：" << std::endl;
+    std::cout << "合并后的链表值为：" << std::endl;
     Traverse_Node(node_list1->next);
     std::cout << std::endl;
 }

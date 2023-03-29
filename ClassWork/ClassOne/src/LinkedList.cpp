@@ -64,12 +64,14 @@ Status LinkList::DeleteNode_Index(int index) {
         node_number++;
     }
 
+    std::cout<<"成功删除索引为"<<index<<"的节点元素"<<next_node->next->data<<std::endl;
     temporary_node  = next_node->next;
     next_node->next = temporary_node->next;
     delete temporary_node;
 
     std::cout << "当前链表的数据：" << std::endl;
     TraversalLinkList(head->next);
+    std::cout<<std::endl;
     return OK;
 }
 
@@ -85,13 +87,14 @@ Status LinkList::DeleteNode_Value(ElemType value) {
             return ERROR;
         }
     }
-
+    std::cout<<"成功删除节点元素为"<<value<<"的元素，其索引值为"<<node_number+1<<std::endl;
     temporary_node  = next_node->next;
     next_node->next = temporary_node->next;
     delete temporary_node;
 
     std::cout << "当前链表的数据：" << std::endl;
     TraversalLinkList(head->next);
+    std::cout<<std::endl;
     return OK;
 }
 
@@ -112,7 +115,7 @@ Status LinkList::InsertNode_Index(int index, ElemType value) {
     new_node->next  = next_node->next;
     next_node->next = new_node;
 
-    std::cout << "当前插入节点后的数据：" << std::endl;
+    std::cout << "当前插入节点值为"<<value<<"，其节点后的数据为：" << std::endl;
     TraversalLinkList(new_node);
     std::cout << std::endl;
     return OK;

@@ -81,6 +81,7 @@ Status SequenceList::ListDelete(SqList* sqList, int subscript) {
         return ERROR;
     }
 
+    std::cout<<"成功删除"<<"位于"<<subscript<<"的元素"<<sqList->data[subscript-1]<<"！"<<std::endl;
     for (int j = subscript - 1; j < sqList->length; j++) { sqList->data[j] = sqList->data[j + 1]; }
     sqList->length--;
 
