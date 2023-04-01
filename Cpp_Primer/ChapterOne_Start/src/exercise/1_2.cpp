@@ -5,9 +5,9 @@
  */
 #include "1_2.hpp"
 
-void Exercise::Hello() { std::cout << "Hello,World" << std::endl; }
+void Exercise_1_2::Hello() { std::cout << "Hello,World" << std::endl; }
 
-void Exercise::Multiplication() {
+void Exercise_1_2::Multiplication() {
     ElemType value_1 = 0;
     ElemType value_2 = 0;
     ElemType result;
@@ -23,7 +23,7 @@ void Exercise::Multiplication() {
     IsolationZone();
 }
 
-void Exercise::Output() {
+void Exercise_1_2::Output() {
     ElemType value_1 = 0;
     ElemType value_2 = 0;
 
@@ -47,7 +47,7 @@ void Exercise::Output() {
  * 2、在第二条和第三条语句前添加@code std::cout
  */
 
-void Exercise::legal() {
+void Exercise_1_2::legal() {
     ElemType v1 = 1;
     ElemType v2 = 2;
     /* 方法一 */
@@ -58,4 +58,4 @@ void Exercise::legal() {
     std::cout << " is " << v1 + v2 << std::endl;
 }
 
-void Exercise::IsolationZone() { std::cout << "**************************" << std::endl; }
+void Exercise_1_2::IsolationZone() { std::cout << "**************************" << std::endl; }
