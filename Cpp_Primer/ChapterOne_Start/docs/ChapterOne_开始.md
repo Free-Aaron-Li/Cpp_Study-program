@@ -196,9 +196,66 @@ while语句的执行过程是交替地检测condition条件和执行关联的语
 ：一个初始化语句（init-statement）、一个循环条件（condition）以及一个表达式（expression）
 。
 
+#### 1.4.3 读取数量不定的输入数据
+
+如题：  
+编写程序，实线对用户输入的一组数求和。
+
+```c++
+#include <iostream>
+
+int main(){
+    int sum=0,value=0;
+    /* 读取数据直到遇到文件尾，计算所有读入的值的和 */
+    while(std::cin>>value){
+        sum+=value;
+    }
+    std::cout<<"Sum is: "<<sum<<std::endl;
+    return 0;
+}
+```
+
+while语句中的表达式表示从标准输入读取下一个数，并赋值（保存在）给value。输入运算符返回其左侧运算对象，即`std::cin`
+。因此，其循环条件其实检测的是`std::cin`。
+
+> 当我们使用一个istream对象作为条件时，其效果是检测流的状态。如果流是有效的，那么检测成功。就可以通过while检测。
+> 而当遇见遇见文件解释符（EOF end-of-while），流状态就变为无效。while判断便无法通过。
+
+其实还可以写成这种情况,就可以使用回车结束当前循环：
+
+```c++
+#include <iostream>
+
+void Exercise_1_4::OutputSum() {
+    int sum = 0, value = 0;
+
+    while (std::cin >> value) {
+        sum += value;
+        if (std::cin.get()=='\n'){
+            break;
+        }
+    }
+    std::cout << "Sum is: " << sum << std::endl;
+}
+```
+
+> PS:  
+> 
+> 编译器其实无法检测代码是否符合开发者要求，编译器能做的是检测代码形式(form)或者说语法上的错误。  
+> 
+> 常见的编译器错误：
+>> 1、语法错误（syntax error）  
+>> 2、类型错误（type error）  
+>> 3、声明错误（declaration error）
+> 
+> 明白了编译器提供的错误提示就应该**马上修改**，因为错误往往具有传递效应。同时还需要做到错误修改完成立刻重新
+> 编译。即“编辑-编译-调试”（edit-compile-debug）周期。
 
 
+#### 1.4.4 if语句
 
+如题：  
+统计输入的每个值连续出现了多少次：
 
 
 

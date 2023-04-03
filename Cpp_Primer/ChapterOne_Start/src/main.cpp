@@ -21,11 +21,13 @@ void test_1_3() {
 
 void test_1_4() {
     /** 1.4.1节练习 */
-    Exercise_1_4::SumFiftyToHundred();
-    Exercise_1_4::Decline();
-    Exercise_1_4::Integer();
-    Exercise_1_4::Sum();
-    Exercise_1_4::ForAndWhile();
+    //Exercise_1_4::SumFiftyToHundred();
+    //Exercise_1_4::Decline();
+    //Exercise_1_4::Integer();
+    //Exercise_1_4::Sum();
+    //Exercise_1_4::ForAndWhile();
+    /** 1.4.3节练习 */
+    Exercise_1_4::OutputSum();
 }
 
 int main() {

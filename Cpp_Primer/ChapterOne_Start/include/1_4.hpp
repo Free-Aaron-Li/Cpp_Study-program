@@ -70,6 +70,30 @@ public:
      *  对比for循环和while循环，两种形式的优缺点各是什么？
      */
     static void ForAndWhile();
+    
+    /**
+     * @description 
+     * <p> 1.4.3练习——读取数量不定的输入数据 </P>
+     */
+
+    /**
+     * @description 
+     * <p> 练习1.16 </P>
+     * @def
+     *  编写程序，从cin读取一组数，输出其和。
+     */
+     static void OutputSum();
+     
+    /**
+     * @description 
+     * <p> 1.4.4例题 </P>
+     */
+
+    /**
+     * @description 
+     * <p> 例题1——统计输入值次数 </P>
+     */
+    static void StatisticalFrequency();
 };
 
 #endif //CPP_PRIMER_1_4_HPP
