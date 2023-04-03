@@ -54,7 +54,7 @@ void test_LinkedList() {
     std::cout << "测试线性表之单链表：" << std::endl;
     std::cout << "***************************" << std::endl;
     Node_List node_list1{}, node_list2{};
-    List      list{};
+    List list{};
     list.InitiateLinkedList();
     std::cout << "List_a: " << std::endl;
     list.CreateLinked(node_list1);
