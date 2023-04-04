@@ -25,3 +25,27 @@ void Exercise_1_4::StatisticalFrequency() {
                   << cnt << " times " << std::endl;
     }
 }
+
+
+void Exercise_1_4::IntegerPlus() {
+    ElemType value_1 = 0;
+    ElemType value_2 = 0;
+
+    std::cout << "请输入两个整数：";
+    std::cin >> value_1;
+    std::cin >> value_2;
+
+    std::cout << "两个整数之间的值为：" << std::endl;
+    if (value_1 <= value_2) {
+        while (value_1 <= value_2) {
+            std::cout << value_1 << " ";
+            value_1++;
+        }
+    } else {
+        while (value_2 <= value_1) {
+            std::cout << value_2 << " ";
+            value_2++;
+        }
+    }
+}
+

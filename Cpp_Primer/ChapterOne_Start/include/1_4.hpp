@@ -70,7 +70,7 @@ public:
      *  对比for循环和while循环，两种形式的优缺点各是什么？
      */
     static void ForAndWhile();
-    
+
     /**
      * @title 
      * <p> 1.4.3练习——读取数量不定的输入数据 </P>
@@ -82,7 +82,7 @@ public:
      * @description
      *  编写程序，从cin读取一组数，输出其和。
      */
-     static void OutputSum();
+    static void OutputSum();
     /**
      * @title 
      * <p> 1.4.4例题 </P>
@@ -93,6 +93,35 @@ public:
      * <p> 例题1——统计输入值次数 </P>
      */
     static void StatisticalFrequency();
+    /**
+     * @title
+     * <p> 1.4.4练习——if语句 </P>
+     */
+    /**
+     * @title
+     * <p> 练习1.17 </P>
+     * @description
+     *  如果输入的所有值都是相等的，本节的程序（即例题1）的程序会输出什么？如果没有重复值，输出又会怎么样？
+     */
+
+    // 问题①：输入多少个值，便会输出多少个值数目
+    // 问题②：输入多少个值，便会输出多少个输入值
+    
+    /**
+     * @title
+     * <p> 练习1.18 </P>
+     * @description
+     *  编译并运行本节的程序（即例题1），给它输入全都相等的值。再次运行程序，输入没有重复的值。
+     */
+    // 结论如上     
+    
+    /**
+     * @title
+     * <p> 练习1.19 </P>
+     * @description
+     *  修改你为1.4.1节练习1.11所编写的程序（打印一个范围内的数），使其能处理用户输入的第一个数比第二个数小的情况。
+     */
+    static void IntegerPlus();    
 };
 
 #endif //CPP_PRIMER_1_4_HPP
