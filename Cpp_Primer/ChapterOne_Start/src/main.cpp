@@ -27,7 +27,9 @@ void test_1_4() {
     //Exercise_1_4::Sum();
     //Exercise_1_4::ForAndWhile();
     /** 1.4.3节练习 */
-    Exercise_1_4::OutputSum();
+    //Exercise_1_4::OutputSum();
+    /** 1.4.4节例题*/
+    Exercise_1_4::StatisticalFrequency();
 }
 
 int main() {

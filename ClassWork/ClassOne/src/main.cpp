@@ -64,6 +64,7 @@ void test_LinkedList() {
     std::cout << "***************************" << std::endl;
 }
 
+/*
 int main() {
     // test_sequenceList();
     // test_singleLinkedList();
@@ -71,3 +72,4 @@ int main() {
     test_LinkedList();
     return 0;
 }
+*/
