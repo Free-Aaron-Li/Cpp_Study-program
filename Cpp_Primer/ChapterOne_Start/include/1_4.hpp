@@ -24,7 +24,7 @@ public:
     /**
      * @title 
      * <p> 练习1.9 </P>
-     * @def
+     * @description
      *  编写程序，使用while循环将50到100的整数相加。
      */
     static void SumFiftyToHundred();
@@ -32,7 +32,7 @@ public:
     /**
      * @title 
      * <p> 练习1.10 </P>
-     * @def
+     * @description
      *  除了++运算符（前缀递增运算符）将运算对象的值增加1以外，还有一个递减运算符（--）
      *  实线将值减少1。编写程序，使用递减运算符在循环中按递减顺序打印出10到0之间的整数。
      */
@@ -41,7 +41,7 @@ public:
 /**
  * @title 
  * <p> 练习1.11 </P>
- * @def
+ * @description
  *  编写程序，提示用户输入两个整数，打印出这两个整数所指定的范围内的所有整数。
  */
     static void Integer();
@@ -54,7 +54,7 @@ public:
 /**
  * @title 
  * <p> 练习1.12 </P>
- * @def
+ * @description
  *  下面的for循环完成了什么功能？sum的终值是多少？
  *  @code
  *  int sum = 0;  
@@ -66,7 +66,7 @@ public:
     /**
      * @title 
      * <p> 练习1.14 </P>
-     * @def
+     * @description
      *  对比for循环和while循环，两种形式的优缺点各是什么？
      */
     static void ForAndWhile();
@@ -79,7 +79,7 @@ public:
     /**
      * @title 
      * <p> 练习1.16 </P>
-     * @def
+     * @description
      *  编写程序，从cin读取一组数，输出其和。
      */
      static void OutputSum();
