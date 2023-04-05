@@ -38,14 +38,15 @@ void Exercise_1_5::BooksSum() {
 }
 
 void Exercise_1_5::SalesRecordSum() {
-    Sales_item item, target_item;
+    Sales_item target_item;
     ElemType sum = 1;
     std::cout << "请输入销售记录：" << std::endl;
     if (std::cin >> target_item) {
+        Sales_item item;
         while (std::cin >> item) {
             if (target_item.isbn() == item.isbn()) {
                 ++sum;
-            }else {
+            } else {
                 std::cout << "ISBN为：" << target_item.isbn() << "的销售记录有：" << sum << "条" << std::endl;
                 target_item = item;
                 sum = 1;
@@ -53,5 +54,7 @@ void Exercise_1_5::SalesRecordSum() {
             }
         }
         std::cout << "ISBN为：" << target_item.isbn() << "的销售记录有：" << sum << "条" << std::endl;
+    } else {
+        std::cerr << "并未读取到任何数据" << std::endl;
     }
 }
