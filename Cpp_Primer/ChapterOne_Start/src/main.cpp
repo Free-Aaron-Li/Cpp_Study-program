@@ -6,6 +6,7 @@
 #include "1_2.hpp"
 #include "1_3.hpp"
 #include "1_4.hpp"
+#include "1_5.hpp"
 
 void test_1_2() {
     Exercise_1_2::Hello();
@@ -32,9 +33,17 @@ void test_1_4() {
     Exercise_1_4::StatisticalFrequency();
 }
 
+void test_1_5() {
+    //Exercise_1_5::Book();
+    //Exercise_1_5::BookSum();
+    //Exercise_1_5::BooksSum();
+    Exercise_1_5::SalesRecordSum();
+}
+
 int main() {
     //test_1_2();
     //test_1_3();
-    test_1_4();
+    //test_1_4();
+    test_1_5();
     return 0;
 }
