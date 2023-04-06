@@ -39,6 +39,35 @@ public:
      */
     //对于计算这类数据，应该选择浮点型数据类型，所以确定选项为float和double,同时由于双精度浮点数和单精度浮点数的计算代价差别不大，应选择double类型。
     
+    /**
+     * @title
+     * <p> 2.1.2节练习——类型转换 </P>
+     */
+
+    /**
+     * @title
+     * <p> 练习2.3 </P>
+     * @description
+     *  读程序写结果
+     *  @code 
+     *  unsigned u = 10, u2 = 42;
+     *  std::count &lt;&lt; u2 -u &lt;&lt; std::endl;
+     *  std::count &lt;&lt; u - u2 &lt;&lt; std::endl;
+     *  
+     *  int i = 10, i2 = 42;
+     *  std::count &lt;&lt; i2 - i &lt;&lt; std::endl;
+     *  std::count &lt;&lt; i - i2 &lt;&lt; std::endl;
+     *  std::count &lt;&lt; i - u &lt;&lt; std::endl;
+     *  std::count &lt;&lt; u - i &lt;&lt; std::endl; 
+     */
+    static void TypeConversion();    
+    /**
+     * @title
+     * <p> 练习2.4 </P>
+     * @description
+     *  编写程序检查你的估计是否正确，如果不正确，请仔细研读本节直到弄明白问题所在
+     */
+    /* 关键点：当算术表达式中既有无符号又有int值，int将自动转为无符号数 */     
 };
 
 #endif //CPP_PRIMER_2_1_HPP
