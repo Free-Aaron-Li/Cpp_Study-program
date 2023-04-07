@@ -7,6 +7,11 @@
 
 /**
  * @title
+ * <p> 2.1 基本内置类型 </P>
+ */
+
+/**
+ * @title
  * <p> 2.1节练习——基本内置类型 </P>
  * @description
  */
@@ -123,7 +128,7 @@ public:
      * 问题c：错误，float类型用于表示浮点数，1024为整型
      * 问题d：long double类型的3.14
      * */
-    
+
     /**
      * @title
      * <p> 练习2.8 </P>
@@ -132,6 +137,50 @@ public:
      */
 
     static void Escape();
+
+    /**
+     * @title
+     * <p> 2.2 变量 </P>
+     */
+
+    /**
+     * @title
+     * <p> 2.2.1节练习——变量定义 </P>
+     */
+
+    /**
+     * @title
+     * <p> 练习2.9 </P>
+     * @description
+     *  解释下列定义的含义。对于非法的定义，请说明错在何处并将其改正。
+     * @code
+     *  (a) std::cin &gt;&gt; int input_value;        (b) int i = {3.14};
+     *  (c) double salary = wage = 9999,99;     (d) int i = 3.14;
+     */
+
+    /* 问题①：非法，input_value未被定义即使用
+     * 问题②：错误，存在丢失信息风险
+     * 问题③：非法，并不能在一个运算式中对多个变量初始化，其中wage并未定义，而salary才被定义
+     * 问题④：并不会报错，但是信息会被截断，仅保留整数部分
+     * */
+
+    /**
+     * @title
+     * <p> 练习2.10 </P>
+     * @description
+     *  下列变量的初值分别是什么？
+     * @code
+     *  std::string global_str;
+     *  int global_int;
+     *  int main(){
+     *      int local_int;
+     *      std::string local_str;
+     *  }
+     */
+
+    /* global_int 是全局变量，所以初值为 0 。 local_int 是局部变量并且没有初始化，它的初值是未定义的。 
+     * global_str 和 local_str 是 string 类的对象，该对象定义了默认的初始化方式，即初始化为空字符串。 
+     * */
 };
 
 #endif //CPP_PRIMER_2_1_HPP
