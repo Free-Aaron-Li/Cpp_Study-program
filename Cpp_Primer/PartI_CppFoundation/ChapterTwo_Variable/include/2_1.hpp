@@ -181,6 +181,28 @@ public:
     /* global_int 是全局变量，所以初值为 0 。 local_int 是局部变量并且没有初始化，它的初值是未定义的。 
      * global_str 和 local_str 是 string 类的对象，该对象定义了默认的初始化方式，即初始化为空字符串。 
      * */
+    
+    /**
+     * @title
+     * <p> 2.2.2节练习——变量声明和定义的关系 </P>
+     */
+
+    /**
+     * @title
+     * <p> 练习2.11 </P>
+     * @description
+     *  指出下面的语句是声明还是定义：
+     * @code
+     *  (a) extern int ix = 1024;
+     *  (b) int iy;
+     *  (c) extern int iz;
+     */
+    /* a：定义
+     * b：定义
+     * c：声明
+     * */     
+    
+    
 };
 
 #endif //CPP_PRIMER_2_1_HPP
