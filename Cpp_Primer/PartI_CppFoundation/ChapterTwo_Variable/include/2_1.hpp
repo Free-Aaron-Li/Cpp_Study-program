@@ -197,12 +197,34 @@ public:
      *  (b) int iy;
      *  (c) extern int iz;
      */
+     
     /* a：定义
      * b：定义
      * c：声明
      * */     
     
-    
+    /**
+     * @title
+     * <p> 2.2.3节练习——标识符 </P>
+     */
+
+    /**
+     * @title
+     * <p> 练习2.12 </P>
+     * @description
+     *  请指出下面的名字中哪些是非法的？
+     * @code
+     *  (a)int double = 3.14;       (b)int _;
+     *  (c)int catch-22;            (d)int 1_or_2=1;
+     *  (e)double Double =3.14;
+     */
+     
+    /* a：非法，double为C++关键字
+     * b：合法，标识符运行下划线
+     * c：非法，标识符只能由字母、数字和下划线构成
+     * d：非法，标识符开头只能为字母、下划线
+     * e：合法，标识符对字母大小写敏感
+     * */     
 };
 
 #endif //CPP_PRIMER_2_1_HPP
