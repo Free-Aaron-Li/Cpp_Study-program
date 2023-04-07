@@ -225,6 +225,41 @@ public:
      * d：非法，标识符开头只能为字母、下划线
      * e：合法，标识符对字母大小写敏感
      * */     
+    
+    /**
+     * @title
+     * <p> 2.2.4节练习——名字的作用域 </P>
+     */
+
+    /**
+     * @title
+     * <p> 练习2.13 </P>
+     * @description
+     *  下面程序中j的值是多少？
+     * @code
+     *  int i = 42;
+     *  int main(){
+     *      int i = 100;
+     *      int j = i;
+     *  }
+     */
+     
+    /* j为100，内层嵌套定义域重写外层作用域的定义 */     
+    
+    /**
+     * @title
+     * <p> 练习2.14 </P>
+     * @description
+     *  下面的程序合法吗？如果合法，它将输出什么？
+     * @code
+     *  int i =100,sum = 0;
+     *  for (int i =0; i!= 10; ++i){
+     *   sum+=i;
+     *  }
+     *  std::cout &lt;&lt; i &lt;&lt; " " &lt;&lt; sum &lt;&lt; std::endl;
+     */
+
+    /* 合法，输出55 */
 };
 
 #endif //CPP_PRIMER_2_1_HPP
