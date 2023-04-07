@@ -259,7 +259,7 @@ public:
      *  std::cout &lt;&lt; i &lt;&lt; " " &lt;&lt; sum &lt;&lt; std::endl;
      */
 
-    /* 合法，输出55 */
+    /* 合法，输出 100 45 */
 };
 
 #endif //CPP_PRIMER_2_1_HPP
