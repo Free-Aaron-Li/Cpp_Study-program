@@ -6,7 +6,8 @@
 #include "2_1.hpp"
 
 void test_2_1_2() {
-    Exercise_2_1::TypeConversion();
+    //Exercise_2_1::TypeConversion();
+    Exercise_2_1::Escape();
 }
 
 int main() {

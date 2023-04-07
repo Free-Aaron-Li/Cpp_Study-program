@@ -18,3 +18,10 @@ void Exercise_2_1::TypeConversion() {
     std::cout << i - u << std::endl; /* 0 */
     std::cout << u - i << std::endl; /* 0 */
 }
+
+void Exercise_2_1::Escape() {
+    std::cout << "*******************" << std::endl;
+    std::cout << "2M\012";
+    std::cout << "2\012M\012";
+    std::cout << "*******************" << std::endl;
+}
