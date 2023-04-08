@@ -169,6 +169,26 @@ public:
         /* void*是一种特殊的指针类型，可以存放任意对象的地址，所以p指针合法。但是lp指针类型为long，而对象i类型为int，无法将对象i地址赋值给lp指针。
          * */
     }
+    
+    /**
+     * @title
+     * <p> 2.3.3节练习——理解复合类型的声明 </P>
+     */
+     
+    /**
+     * @title
+     * <p> 练习2.25 </P>
+     * @description
+     *  说明下列变量的类型和值。
+     * @code
+     *  (a) int* ip,i, &r = i;      (b) int i, *ip = 0;     (c) int* ip, ip2;
+     */
+    void test_2_25() {
+        /* a：int类型指针ip，未初始化；int类型变量i；引用变量i的引用r
+         * b：int类型变量i；int类型空指针ip
+         * c：int类型指针ip，未初始化；int类型变量ip2
+         * */
+    }
 };
 
 #endif //CPP_PRIMER_2_3_HPP
