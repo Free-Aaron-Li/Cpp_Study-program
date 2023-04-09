@@ -4,3 +4,4 @@ project(ClassWork)
 set(CMAKE_CXX_STANDARD 11)
 
 add_subdirectory(ClassOne)
+add_subdirectory(ClassTwo)
