@@ -52,7 +52,7 @@ void test_SeqList() {
 void test_LinkedList() {
     std::cout << "***************************" << std::endl;
     std::cout << "测试线性表之单链表：" << std::endl;
-    std::cout << "***************************" << std::endl;
+    std::cout << "***********************k***" << std::endl;
     Node_List node_list1{}, node_list2{};
     List list{};
     list.InitiateLinkedList();
@@ -64,12 +64,10 @@ void test_LinkedList() {
     std::cout << "***************************" << std::endl;
 }
 
-/*
 int main() {
-    // test_sequenceList();
-    // test_singleLinkedList();
-    // test_SeqList();
+    test_sequenceList();
+    test_singleLinkedList();
+    test_SeqList();
     test_LinkedList();
     return 0;
 }
-*/

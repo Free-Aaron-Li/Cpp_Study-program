@@ -15,7 +15,6 @@ set(SOURCES
         src/LinkedList.cpp
         src/LinearList.cpp
         src/LinkList.cpp
-        src/exercise/test.cpp
         )
 
 #------------------------------------
