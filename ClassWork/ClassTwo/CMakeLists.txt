@@ -11,7 +11,12 @@ link_directories(${PROJECT_SOURCE_DIR}/lib)
 
 set(SOURCES
         src/main.cpp
-        src/stackAndQueue.cpp
+        src/algorithm/baseconversion.cpp
+        src/algorithm/orderofjudgment.cpp
+        src/algorithm/sharestack.cpp
+        src/algorithm/stack.cpp
+        src/algorithm/queue.cpp
+        src/UI/menu.cpp
         )
 
 #------------------------------------
