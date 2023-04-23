@@ -357,7 +357,44 @@ extern const int BUFFERSIZE;        /* 在头文件中也使用extern关键字�
 > 
 > 如果想要在多个文件之间共享const对象，必须在变量的定义之前添加extern关键字
 
+### 2.4.1 const的引用
 
+可以将引用绑定到const对象上，称为**对常量的引用**(reference to const)。==对常量的引用不能被用作修改它所绑定的对象==。
+
+```cpp
+int i =23;
+const int &v1=i;        /* 允许将const int&绑定到一个普通int对象上 */
+const int &v2=23;       /* 正确，允许为一个常量引用绑定非常量的对象、字面值，甚至是个一般表达式 */
+const int &v3 = v1*2;   /* 正确 */
+int &v4=v1*2;           /* 错误，无法将常量赋值给普通变量 */
+```
+
+常量引用**仅对引用可参与的操作做出限定**，对于引用的对象本身是不是一个常量未作限定。
+
+```cpp
+int i = 23;
+int &v1 =i;         
+const int &v2=i;    /* 绑定常量 其实际步骤为：const int temporary = i; const int &v2 = temporary; */
+v1 = 0;             /* 正确*/
+v2=0;               /* 错误，v2作为一个常量引用 */
+```
+### 2.4.2 指针和const
+
+与引用类似，存在**指向常量的指针**（pointer to const），其不能改变所指对象的值。
+
+```cpp
+const double pi = 3.14;    
+double &ptr= &pi;           /* 错误，无法将指向常量的指针指向非常量 */
+const double *cptr=&pi;     /* 正确 */
+*cptr=3.15;                 /* 错误，无法修改常量的值 */
+```
+
+与对常量的引用一样并未规定所指的对象必须是一个常量。仅作出不能通过该指针修改对象的值。
+
+```cpp
+double dval = 3.14;
+cptr = &dval;               /* 合法 */
+```
 
 
 
