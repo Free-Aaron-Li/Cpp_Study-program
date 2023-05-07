@@ -11,6 +11,8 @@ link_directories(${PROJECT_SOURCE_DIR}/lib)
 
 set(SOURCES
         src/main.cpp
+        src/algorithm/adjacencymatrix.cpp
+        src/algorithm/adjacencylist.cpp
         )
 
 #------------------------------------
