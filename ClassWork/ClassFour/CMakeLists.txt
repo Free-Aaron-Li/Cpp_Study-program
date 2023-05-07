@@ -13,6 +13,7 @@ set(SOURCES
         src/main.cpp
         src/algorithm/adjacencymatrix.cpp
         src/algorithm/adjacencylist.cpp
+        src/ui/panel.cpp
         )
 
 #------------------------------------
