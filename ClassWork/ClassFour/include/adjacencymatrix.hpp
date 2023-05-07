@@ -72,8 +72,7 @@ typedef struct {
 
 /**
  * @title
- * <p> 邻接矩阵图 </P>
- * @description
+ * <p> 邻接矩阵图表示法无向图 </P>
  */
 class Graph_AM {
 public:
