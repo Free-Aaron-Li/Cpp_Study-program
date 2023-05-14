@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/ChapterThree_GenericProgramming.iml" filepath="$PROJECT_DIR$/.idea/ChapterThree_GenericProgramming.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Cpp_Primer.iml" filepath="$PROJECT_DIR$/.idea/Cpp_Primer.iml" />
     </modules>
   </component>
 </project>

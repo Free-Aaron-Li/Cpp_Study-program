@@ -60,7 +60,24 @@ public:
      * b：
      * */
   
-    
+    /**
+     * @title
+     * <p> 练习2.28 </P>
+     * @description
+     *  说明下面的这些定义是什么意思，挑出其中不合法的。
+     * @code
+     *  (a) int i, *const cp;       (b) int *p1,*const p2;
+     *  (c) const int ic, &r = ic;  (d) const int *const p3;
+     *  (e) const int *p;
+     */
+     
+    /*
+     * 不合法，常量指针cp未初始化
+     * 不合法，常量指针p2未初始化
+     * 不合法，常量ic并未初始化
+     * 不合法，常量指针p3未初始化
+     * 合法，指向常量的指针可以不初始化
+     * */
 };
 
 #endif //CPP_PRIMER_2_4_HPP
