@@ -11,7 +11,7 @@ link_directories(${PROJECT_SOURCE_DIR}/lib)
 
 set(SOURCES
         src/main.cpp
-        src/hashtable.cpp
+        src/algorithm/hashtable.cpp
         )
 
 #------------------------------------

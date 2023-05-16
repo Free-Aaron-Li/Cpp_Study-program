@@ -10,11 +10,7 @@
  * <p> 2.4 const限定符 </P>
  */
 
-#include <iostream>
-
-typedef int ElemType;
-
-class Exercise_2_3 {
+class Exercise_2_4 {
 public:
     /**
      * @title
@@ -78,6 +74,76 @@ public:
      * 不合法，常量指针p3未初始化
      * 合法，指向常量的指针可以不初始化
      * */
+
+    /**
+     * @title
+     * 练习2.29
+     * @description
+     *  假设已有上一个练习中定义的那些变量，则下面的哪些语句是合法的？请说明原因。
+     * @code
+     *  (a)i = ic;  (b) p1=p3;
+     *  (c)p1=&ic;  (d)p3=&ic;
+     *  (e)p2=p1;   (f)ic=*p3;
+     */
+
+    /* a. 合法
+     * b. 不合法，p3指向int常量
+     * c. 不合法，p1位普通指针，无法指向常量。应当采用const int *p1
+     * d. 不合法，p3已经被赋值，其为常指针常量，无法再次被赋值
+     * e. 不合法，p2为常量指针，无法再次被赋值
+     * f. 不合法，ic为int常量，无法再次赋值
+     * */
+
+    /**
+     * @title
+     *  2.4.3节练习
+     */
+
+    /**
+     * @title
+     * 练习2.30
+     * @description
+     * 对于下面的这些语句，请说明对象被声明成了顶层const还是底层const
+     * @code
+     *  (a) const int v2=0;     (b) int v1=v2;
+     *  (c) int *p1=&v1,&r1=v1; (d) const int *p2=&v2,*const p3=&i,&r2=v2;
+     */
+    /* a. 底层const
+     * b. 都不是
+     * c. p1都不是，r1都不是
+     * d. p2是底层const，p3既是顶层const也是底层const，r2是底层const
+     * */
+
+    /**
+     * @title
+     * 练习2.31
+     * @description
+     *  假设已有上一个练习中所做的那些声明，则下面的哪些语句是合法的？请说明顶层const和底层const在每个例子中有何体现。
+     * @code
+     *  (a) r1=v2;
+     *  (b) p1=p2;p2=p1;
+     *  (c) p1=p3;p2=p3;
+     */
+    /* a. 合法，v2是顶层const，r1是普通int类型引用
+     * b. 不合法，p2拥有底层const，p1为普通指针；合法
+     * c. 不合法，p3拥有底层const，p1为普通指针；合法
+     * */
+
+    /**
+     * @title
+     *  2.4.4节练习
+     */
+
+    /**
+     * @title
+     * 练习2.32
+     * @description
+     *  下面的代码是否合法？如果非法请设法将其修改正确。
+     * @code
+     *  int null=0,*p=null;
+     */
+     /* 非法，应该改为：int null=0,*p=&null
+      * */
 };
 
 #endif //CPP_PRIMER_2_4_HPP

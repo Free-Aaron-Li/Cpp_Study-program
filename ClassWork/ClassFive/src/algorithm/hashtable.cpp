@@ -27,23 +27,22 @@ int HashTable::insert(int key) {
         if (!linear_probe(key)) {
             std::cout << "散列表已满！";
         }
+        return ERROR;
     }
-
-    return ERROR;
 }
 
 int HashTable::linear_probe(int key) {
     int next_index, count = 0;
     /** H<sub>i</sub>=(H(key)+d<sub>i</sub>%m i=1,2,...,k(k\<=m-1) */
     for (int i = 1; i < _hash_table_size; ++i) {
-        next_index = ((key % count) + i) % _hash_table_size;
+        next_index = (hash(key) + i) % _hash_table_size;
         if (_hash_table[next_index] == NULL_NUMBER) {
             _hash_table[next_index] = key;
             return OK;
         }
         count++;
         /* 散列表已满 */
-        if (count == _hash_table.size())return ERROR;
+        if (count == _hash_table.size() - 2)return ERROR;
     }
     return OK;
 }
@@ -54,7 +53,12 @@ int HashTable::printHashTable() {
         return ERROR;
     }
     for (int i = 0; i < _hash_table_size; ++i) {
-        std::cout << _hash_table[i] << " ";
+        int number = _hash_table[i];
+        if (number != NULL_NUMBER) {
+            std::cout << number << " ";
+        } else {
+            std::cout << "NULL" << " ";
+        }
     }
     return OK;
 }

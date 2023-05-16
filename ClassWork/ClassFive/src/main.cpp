@@ -7,7 +7,8 @@
 #include "hashtable.hpp"
 
 int search_for_function() {
-    std::cout << "请输入您想要查找的字符串：\n";
+    std::cout << "-----------------------------\n"
+                 "请输入您想要查找的字符串：\n";
     int number;
     std::vector<int> array;
     while (std::cin >> number) {
@@ -46,10 +47,17 @@ int search_for_function() {
 }
 
 int hash_table_for_function() {
+    std::cout << "-----------------------------\n"
+                 "请输入您想要关键词组（例如：38 17）：\n";
+    std::vector<int> array;
+    int number;
+    while (std::cin >> number) {
+        array.push_back(number);
+        if (std::cin.get() == '\n')break;
+    }
     HashTable hashTable;
-    hashTable.initHashTable(13);
-    int array[] = {19, 8};
-    for (int i : array) {
+    hashTable.initHashTable((int) array.size() + 2);
+    for (int i: array) {
         hashTable.insert(i);
     }
     hashTable.printHashTable();
@@ -57,6 +65,21 @@ int hash_table_for_function() {
 }
 
 int main() {
-    hash_table_for_function();
+    std::cout << "-----------------------------\n"
+                 "1.查找操作\n"
+                 "2.构建哈希表操作\n"
+                 "请选择您的操作：";
+    int option;
+    std::cin >> option;
+    switch (option) {
+        case 1:
+            search_for_function();
+            break;
+        case 2:
+            hash_table_for_function();
+            break;
+        default:
+            std::cout << "结束\n";
+    }
     return 0;
 }

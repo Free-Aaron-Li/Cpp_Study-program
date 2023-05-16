@@ -22,8 +22,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3380947e-ac2c-447a-a087-05d145c2e56c" name="变更" comment="更新">
+      <change afterPath="$PROJECT_DIR$/PartI_CppFoundation/ChapterTwo_Variable/include/2_5.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PartI_CppFoundation/ChapterTwo_Variable/include/2_6.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PartI_CppFoundation/ChapterTwo_Variable/include/Sales_item.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ClassWork/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ClassWork/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ClassWork/ClassFive/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../ClassWork/ClassFive/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ClassWork/ClassFive/bin/ClassFive" beforeDir="false" afterPath="$PROJECT_DIR$/../ClassWork/ClassFive/bin/ClassFive" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ClassWork/ClassFive/src/hashtable.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../ClassWork/ClassFive/src/algorithm/hashtable.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ClassWork/ClassFive/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../ClassWork/ClassFive/src/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PartI_CppFoundation/ChapterTwo_Variable/docs/ChapterTwo_变量和基本类型.md" beforeDir="false" afterPath="$PROJECT_DIR$/PartI_CppFoundation/ChapterTwo_Variable/docs/ChapterTwo_变量和基本类型.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PartI_CppFoundation/ChapterTwo_Variable/include/2_4.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/PartI_CppFoundation/ChapterTwo_Variable/include/2_4.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PartI_CppFoundation/ChapterTwo_Variable/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/PartI_CppFoundation/ChapterTwo_Variable/src/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,30 +74,32 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/AaronLi/Source/Cpp_Workspace&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.nasller.CodeGlancePro&quot;,
-    &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.advertisement.text.has.clang-format": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/home/AaronLi/Source/Cpp_Workspace/Cpp_Primer/PartI_CppFoundation/ChapterTwo_Variable/include",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "editing.templates",
+    "structure.view.defaults.are.configured": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/PartI_CppFoundation/ChapterTwo_Variable/include" />
       <recent name="$PROJECT_DIR$/docs" />
       <recent name="$PROJECT_DIR$/ChapterOne_Start/include" />
     </key>
@@ -166,6 +178,13 @@
       <workItem from="1683550312764" duration="1492000" />
       <workItem from="1683700170400" duration="2460000" />
       <workItem from="1683796921096" duration="253000" />
+      <workItem from="1684150964350" duration="5792000" />
+      <workItem from="1684160496902" duration="8593000" />
+      <workItem from="1684213327046" duration="3841000" />
+      <workItem from="1684248951692" duration="2064000" />
+      <workItem from="1684251028323" duration="205000" />
+      <workItem from="1684251246264" duration="759000" />
+      <workItem from="1684252019100" duration="2998000" />
     </task>
     <task id="LOCAL-00001" summary="测试">
       <created>1679833782569</created>

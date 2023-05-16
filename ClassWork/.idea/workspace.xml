@@ -25,32 +25,12 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="628fbca9-a56d-46d5-9c5e-0d584a206d83" name="变更" comment="优化">
-      <change afterPath="$PROJECT_DIR$/../.idea/Cpp_Workspace.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/ClassWork.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/file.template.settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClassFive/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClassFive/bin/ClassFive" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClassFive/include/hashtable.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClassFive/include/search.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClassFive/src/hashtable.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClassFive/src/main.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClassOne/.idea/ClassOne.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClassThree/.idea/ClassThree.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Cpp_Primer/.idea/Cpp_Primer.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cpp_Primer/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Cpp_Primer/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cpp_Primer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Cpp_Primer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cpp_Primer/PartI_CppFoundation/ChapterTwo_Variable/docs/ChapterTwo_变量和基本类型.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Cpp_Primer/PartI_CppFoundation/ChapterTwo_Variable/docs/ChapterTwo_变量和基本类型.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cpp_Primer/PartI_CppFoundation/ChapterTwo_Variable/include/2_4.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Cpp_Primer/PartI_CppFoundation/ChapterTwo_Variable/include/2_4.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/Essential_Cpp/ChapterThree_GenericProgramming/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/Essential_Cpp/ChapterThree_GenericProgramming/.idea/ChapterThree_GenericProgramming.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/Essential_Cpp/ChapterThree_GenericProgramming/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/Essential_Cpp/ChapterThree_GenericProgramming/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/Essential_Cpp/ChapterThree_GenericProgramming/.idea/workspace.xml" beforeDir="false" />
+    <list default="true" id="628fbca9-a56d-46d5-9c5e-0d584a206d83" name="变更" comment="update">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClassFive/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ClassFive/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClassFive/bin/ClassFive" beforeDir="false" afterPath="$PROJECT_DIR$/ClassFive/bin/ClassFive" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClassFive/src/hashtable.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ClassFive/src/algorithm/hashtable.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClassFive/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ClassFive/src/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,30 +69,30 @@
     <option name="showVisibilityIcons" value="true" />
     <option name="sortByType" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "cf.advertisement.text.has.clang-format": "true",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/AaronLi/Source/Cpp_Workspace/ClassWork",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "structure.view.defaults.are.configured": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.advertisement.text.has.clang-format&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/AaronLi/Source/Cpp_Workspace/ClassWork&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/ClassOne/docs" />
@@ -122,6 +102,7 @@
       <recent name="$PROJECT_DIR$/ClassThree/src/algorithm" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ClassFive/src/algorithm" />
       <recent name="$PROJECT_DIR$/ClassFour/src/algorithm" />
       <recent name="$PROJECT_DIR$/ClassFour/docs" />
       <recent name="$PROJECT_DIR$/ClassThree" />
@@ -129,6 +110,11 @@
     </key>
   </component>
   <component name="RunManager" selected="CMake 应用程序.ClassFive">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ClassFive" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ClassWork" TARGET_NAME="ClassFive" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ClassWork" RUN_TARGET_NAME="ClassFive">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -150,11 +136,6 @@
       </method>
     </configuration>
     <configuration name="ClassTwo" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ClassWork" TARGET_NAME="ClassTwo" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ClassWork" RUN_TARGET_NAME="ClassTwo">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -239,7 +220,8 @@
       <workItem from="1683537297019" duration="2227000" />
       <workItem from="1683635474025" duration="1386000" />
       <workItem from="1684057852139" duration="1124000" />
-      <workItem from="1684058990875" duration="14906000" />
+      <workItem from="1684058990875" duration="14972000" />
+      <workItem from="1684129093348" duration="4396000" />
     </task>
     <task id="LOCAL-00001" summary="课后作业——顺序表操作完成">
       <created>1680002684888</created>
@@ -381,7 +363,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683476229959</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="update">
+      <created>1684081589836</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1684081589836</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -410,7 +399,8 @@
     <MESSAGE value="垃圾代码准则" />
     <MESSAGE value="图的建立与遍历——邻接表表示法无向图的深度/广度优先搜索遍历" />
     <MESSAGE value="优化" />
-    <option name="LAST_COMMIT_MESSAGE" value="优化" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
