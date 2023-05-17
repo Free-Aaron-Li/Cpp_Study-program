@@ -8,7 +8,7 @@
 void Exercise_2_1::TypeConversion() {
     unsigned u = 10, u2 = 42;
     std::cout << u2 - u << std::endl; /* 32 */
-    /* 得到的无符号数为负数，那么负数会被自动转换为一个合法的无符号数 */
+    /* 得到的无符号数为负数，那么负数会被自动转换为一个合法无符号数 */
     std::cout << u - u2 << std::endl; /* 4294967264 */
 
     int i = 10, i2 = 42;
