@@ -80,3 +80,66 @@ void Exercise_3_2::connectionStrings_1() {
     }
     std::cout << "最终的字符串，用空格隔开：" << str_1 << "\n";
 }
+
+void Exercise_3_2::characterInstead() {
+    std::cout << "请输入一串字符于下方\n";
+    std::string str;
+    getline(std::cin, str);
+
+    for (auto &c: str) {
+        if (!std::isspace(c))
+            c = 'X';
+    }
+
+    std::cout << "字符全部替换为X后的字符串为：" << str << "\n";
+}
+
+void Exercise_3_2::characterInstead_1() {
+    std::cout << "请输入一串字符于下方\n";
+    std::string str;
+    getline(std::cin, str);
+
+    for (char c: str) {
+        if (!std::isspace(c))
+            c = 'X';
+    }
+
+    std::cout << "字符全部替换为X后的字符串为：" << str << "\n";
+}
+
+void Exercise_3_2::characterInstead_2() {
+    /**
+     * 使用while循环和for循环重写characterInstead()方法
+     * */
+    std::cout << "请输入一串字符于下方\n";
+    std::string str;
+    getline(std::cin, str);
+
+    decltype(str.size()) index = 0;
+
+    while (index < str.size()) {
+        if (!std::isspace(str[index]))
+            str[index] = 'X';
+        ++index;
+    }
+
+    for (index = 0; index < str.size(); ++index) {
+        if (!std::isspace(str[index])) str[index] = 'X';
+    }
+
+    std::cout << "字符全部替换为X后的字符串为：" << str << "\n";
+}
+
+void Exercise_3_2::punctuationRemoval() {
+    std::cout << "请输入一串字符于下方\n";
+    std::string str;
+    getline(std::cin, str);
+    std::string new_string;
+
+    for (char &c: str) {
+        if (!std::ispunct(c))
+            new_string += c;
+    }
+
+    std::cout << "标点符号全部删除后的字符串为：" << new_string << "\n";
+}

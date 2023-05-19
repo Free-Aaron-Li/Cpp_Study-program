@@ -14,7 +14,11 @@ void exercise_3_2(){
     //Exercise_3_2::readInWords();
     //Exercise_3_2::compareStrings();
     //Exercise_3_2::connectionStrings();
-    Exercise_3_2::connectionStrings_1();
+    //Exercise_3_2::connectionStrings_1();
+    //Exercise_3_2::characterInstead();
+    //Exercise_3_2::characterInstead_1();
+    //Exercise_3_2::characterInstead_2();
+    Exercise_3_2::punctuationRemoval();
 }
 
 int main() {
