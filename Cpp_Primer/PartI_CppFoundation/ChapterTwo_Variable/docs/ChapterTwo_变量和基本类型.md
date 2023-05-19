@@ -542,7 +542,23 @@ using ElemType=int;     /* int的别名为ElemType */
 
 auto，C++ 11新特性。auto是C++的一个特殊类型声明，它在声明时标识一个自动变量。通过编译器区分析此时表达式所属的类型。类似于JavaScript的`var`。
 
-需要注意的是：auto会忽略顶层const而保留底层const，若需顶层const则要手动加上。
+需要注意的是：
+- 编译器推断出来的auto类型有时候和初始值的类型是不完全一样的，编译器会适当地改变结果类型使其更符号初始化规则。
+- 当引用被用作初始值时，编译器会以引用对象的类型作为auto的类型。
+- auto会一般会忽略顶层const而保留底层const，若需顶层const则要手动加上。
+
+一个典型的例子：
+
+```cpp
+const std::string str="hello";
+for(auto &c:str){
+    /* ... */
+}
+```
+在这个例子中，c的类型是`const char &`，编译器会将引用对象的类型作为auto的类型，所以auto类型为`const char`，不会忽略顶层const。
+
+所以，在一般的定义类型上尽量少用auto语句，我们较难以发现auto的类型。若想要实现类似auto的效果，可以使用下方的decltype类型说明符。
+
 
 ### 2.5.3 decltype类型说明符
 
