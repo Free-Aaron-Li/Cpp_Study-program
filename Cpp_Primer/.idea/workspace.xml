@@ -22,14 +22,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3380947e-ac2c-447a-a087-05d145c2e56c" name="变更" comment="update">
+    <list default="true" id="3380947e-ac2c-447a-a087-05d145c2e56c" name="变更" comment="补充关于auto内容">
+      <change afterPath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/include/3_3.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/bin/ChapterThree" beforeDir="false" afterPath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/bin/ChapterThree" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/docs/ChapterThree_字符串_向量和数组.md" beforeDir="false" afterPath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/docs/ChapterThree_字符串_向量和数组.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/include/3_2.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/include/3_2.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/src/exercise/3_2.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/src/exercise/3_2.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/src/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PartI_CppFoundation/ChapterTwo_Variable/docs/ChapterTwo_变量和基本类型.md" beforeDir="false" afterPath="$PROJECT_DIR$/PartI_CppFoundation/ChapterTwo_Variable/docs/ChapterTwo_变量和基本类型.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,8 +40,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="CMakeLists.txt" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -53,6 +50,9 @@
   </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/src/main.cpp" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -84,13 +84,13 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/AaronLi/Source/Python_Workspace",
+    "last_opened_file_path": "/home/AaronLi/Source/Cpp_Workspace",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editing.templates",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "structure.view.defaults.are.configured": "true",
     "vue.rearranger.settings.migration": "true"
   }
@@ -200,7 +200,13 @@
       <workItem from="1684368085995" duration="33000" />
       <workItem from="1684395343445" duration="138000" />
       <workItem from="1684409470885" duration="1699000" />
-      <workItem from="1684465109766" duration="11372000" />
+      <workItem from="1684465109766" duration="12118000" />
+      <workItem from="1684498582225" duration="42000" />
+      <workItem from="1684498636335" duration="3640000" />
+      <workItem from="1684506260431" duration="4582000" />
+      <workItem from="1684584534250" duration="589000" />
+      <workItem from="1684587092490" duration="3210000" />
+      <workItem from="1684654266170" duration="249000" />
     </task>
     <task id="LOCAL-00001" summary="测试">
       <created>1679833782569</created>
@@ -447,7 +453,21 @@
       <option name="project" value="LOCAL" />
       <updated>1684395379793</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="完成字符串内容学习">
+      <created>1684479705313</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1684479705313</updated>
+    </task>
+    <task id="LOCAL-00037" summary="补充关于auto内容">
+      <created>1684479736558</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1684479736558</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -461,8 +481,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="完成1.3节——注释简介" />
-    <MESSAGE value="修改bug及优化" />
     <MESSAGE value="完成1.4.3节——读取数量不定的输入数据" />
     <MESSAGE value="修改" />
     <MESSAGE value="更新——1.4.4 if语句" />
@@ -486,7 +504,9 @@
     <MESSAGE value="updata" />
     <MESSAGE value="完成第三章构建" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="完成字符串内容学习" />
+    <MESSAGE value="补充关于auto内容" />
+    <option name="LAST_COMMIT_MESSAGE" value="补充关于auto内容" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

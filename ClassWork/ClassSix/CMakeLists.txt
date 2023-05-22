@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.24)
-project(Primer_ChapterThree)
+project(ClassSix)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 11)
 
 set(CMAKE_EXE_LINKER_FLAGS "-static-libgcc -static-libstdc++")
 
@@ -11,8 +11,8 @@ link_directories(${PROJECT_SOURCE_DIR}/lib)
 
 set(SOURCES
         src/main.cpp
-        src/exercise/3_1.cpp
-        src/exercise/3_2.cpp
+        src/algorithm/mergesorting.cpp
+        src/algorithm/quicksorting.cpp
         )
 
 #------------------------------------

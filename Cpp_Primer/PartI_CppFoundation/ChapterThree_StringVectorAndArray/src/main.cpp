@@ -5,6 +5,7 @@
  */
 #include "3_1.hpp"
 #include "3_2.hpp"
+#include "3_3.hpp"
 
 void exercise_3_1() {
     Exercise_3_1::range();
