@@ -26,21 +26,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="628fbca9-a56d-46d5-9c5e-0d584a206d83" name="变更" comment="update">
-      <change afterPath="$PROJECT_DIR$/ClassSix/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClassSix/bin/ClassSix" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClassSix/include/mergesorting.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClassSix/include/quicksorting.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClassSix/src/algorithm/mergesorting.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClassSix/src/algorithm/quicksorting.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClassSix/src/main.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Cpp_Primer/PartI_CppFoundation/ChapterThree_StringVectorAndArray/include/3_3.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cpp_Primer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Cpp_Primer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cpp_Primer/PartI_CppFoundation/ChapterThree_StringVectorAndArray/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Cpp_Primer/PartI_CppFoundation/ChapterThree_StringVectorAndArray/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cpp_Primer/PartI_CppFoundation/ChapterThree_StringVectorAndArray/docs/ChapterThree_字符串_向量和数组.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Cpp_Primer/PartI_CppFoundation/ChapterThree_StringVectorAndArray/docs/ChapterThree_字符串_向量和数组.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cpp_Primer/PartI_CppFoundation/ChapterThree_StringVectorAndArray/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Cpp_Primer/PartI_CppFoundation/ChapterThree_StringVectorAndArray/src/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +84,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "fileTemplates",
+    "settings.editor.selected.configurable": "preferences.keymap",
     "structure.view.defaults.are.configured": "true",
     "vue.rearranger.settings.migration": "true"
   }
@@ -146,11 +132,6 @@
       </method>
     </configuration>
     <configuration name="ClassTwo" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ClassWork" TARGET_NAME="ClassTwo" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ClassWork" RUN_TARGET_NAME="ClassTwo">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -238,7 +219,8 @@
       <workItem from="1684057852139" duration="1124000" />
       <workItem from="1684058990875" duration="14972000" />
       <workItem from="1684129093348" duration="4396000" />
-      <workItem from="1684722084571" duration="9706000" />
+      <workItem from="1684722084571" duration="10772000" />
+      <workItem from="1684757065088" duration="197000" />
     </task>
     <task id="LOCAL-00001" summary="课后作业——顺序表操作完成">
       <created>1680002684888</created>
@@ -387,7 +369,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684081589836</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="update">
+      <created>1684741510078</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1684741510078</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
