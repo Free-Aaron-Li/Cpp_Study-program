@@ -22,4 +22,4 @@
 /**/.idea/**/libraries
 
 # CMake
-cmake-build-*/
+/**/cmake-build-*/
