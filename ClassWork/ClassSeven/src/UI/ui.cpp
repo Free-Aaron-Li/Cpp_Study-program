@@ -82,7 +82,7 @@ int UI::inputInformation(Students *students) {
         std::cout << "学生" << flag + 1 << "的信息：\n";
 
         NUMBER:
-        std::cout << "学号（格式：00x，12位以内）：";   /* TODO 23-5-29 添加学号和姓名的判断 */
+        std::cout << "学号（格式：00x，12位以内）：";
         std::cin >> number;
         if (std::cin.fail())return -1;
         if (!checkNumber(number)) {
