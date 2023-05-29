@@ -11,6 +11,9 @@
  * @title
  * 3.3 标准库类型vector
  */
+#include <iostream>
+#include <vector>
+
 class Exercise_3_3{
 public:
     /**
@@ -50,6 +53,25 @@ public:
        * g：10个值为“hi”的string类型元素
        * */
 
-      
+      /**
+       * @title
+       * 3.3.2节练习
+       */
+
+       /**
+        * @title
+        * 练习3.14
+        * @description
+        * 编写一段程序，用cin读入一组整数并把它们存入一个vector对象。
+        */
+        static void inputVector();
+
+        /**
+         * @title
+         * 练习3.15
+         * @description
+         * 改写上题的程序，不过这次读入的是字符串。
+         */
+        static void inputVector_1();
 };
 #endif //CPP_PRIMER_3_3_HPP

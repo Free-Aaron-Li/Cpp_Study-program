@@ -25,7 +25,16 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="628fbca9-a56d-46d5-9c5e-0d584a206d83" name="变更" comment="update" />
+    <list default="true" id="628fbca9-a56d-46d5-9c5e-0d584a206d83" name="变更" comment="update">
+      <change afterPath="$PROJECT_DIR$/../Cpp_Primer/PartI_CppFoundation/ChapterThree_StringVectorAndArray/bin/Primer_ChapterThree" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cpp_Primer/PartI_CppFoundation/ChapterThree_StringVectorAndArray/src/exercise/3_3.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cpp_Primer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Cpp_Primer/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cpp_Primer/PartI_CppFoundation/ChapterThree_StringVectorAndArray/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Cpp_Primer/PartI_CppFoundation/ChapterThree_StringVectorAndArray/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cpp_Primer/PartI_CppFoundation/ChapterThree_StringVectorAndArray/docs/ChapterThree_字符串_向量和数组.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Cpp_Primer/PartI_CppFoundation/ChapterThree_StringVectorAndArray/docs/ChapterThree_字符串_向量和数组.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cpp_Primer/PartI_CppFoundation/ChapterThree_StringVectorAndArray/include/3_3.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Cpp_Primer/PartI_CppFoundation/ChapterThree_StringVectorAndArray/include/3_3.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cpp_Primer/PartI_CppFoundation/ChapterThree_StringVectorAndArray/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Cpp_Primer/PartI_CppFoundation/ChapterThree_StringVectorAndArray/src/main.cpp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -82,7 +91,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
     &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -130,6 +139,11 @@
       </method>
     </configuration>
     <configuration name="ClassTwo" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ClassWork" TARGET_NAME="ClassTwo" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ClassWork" RUN_TARGET_NAME="ClassTwo">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -220,6 +234,8 @@
       <workItem from="1684722084571" duration="10772000" />
       <workItem from="1684757065088" duration="745000" />
       <workItem from="1684757978131" duration="160000" />
+      <workItem from="1684758168247" duration="2480000" />
+      <workItem from="1685333436960" duration="2000" />
     </task>
     <task id="LOCAL-00001" summary="课后作业——顺序表操作完成">
       <created>1680002684888</created>

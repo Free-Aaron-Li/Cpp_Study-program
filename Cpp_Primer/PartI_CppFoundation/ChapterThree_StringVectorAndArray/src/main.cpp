@@ -11,7 +11,7 @@ void exercise_3_1() {
     Exercise_3_1::range();
 }
 
-void exercise_3_2(){
+void exercise_3_2() {
     //Exercise_3_2::readInWords();
     //Exercise_3_2::compareStrings();
     //Exercise_3_2::connectionStrings();
@@ -22,8 +22,14 @@ void exercise_3_2(){
     Exercise_3_2::punctuationRemoval();
 }
 
+void exercise_3_3() {
+    //Exercise_3_3::inputVector();
+    Exercise_3_3::inputVector_1();
+}
+
 int main() {
     //exercise_3_1();
-    exercise_3_2();
+    //exercise_3_2();
+    exercise_3_3();
     return 0;
 }
