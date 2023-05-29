@@ -46,7 +46,6 @@ int Graph_AL::LocateVex(ALGraph &graph, VertexType &vertex) {
     return -1;
 }
 
-/* TODO 23-5-7:  打印邻接表 */
 void Graph_AL::PrintAMGraph(ALGraph &graph) {
 
 }

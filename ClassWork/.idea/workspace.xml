@@ -26,17 +26,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="628fbca9-a56d-46d5-9c5e-0d584a206d83" name="变更" comment="update">
-      <change afterPath="$PROJECT_DIR$/ClassSeven/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClassSeven/bin/ClassSeven" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClassSeven/doc/概要设计.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClassSeven/include/student.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClassSeven/include/ui.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClassSeven/src/UI/ui.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClassSeven/src/algorithm/student.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClassSeven/src/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+    <list default="true" id="628fbca9-a56d-46d5-9c5e-0d584a206d83" name="变更" comment="最后一个实验">
       <change beforePath="$PROJECT_DIR$/ClassFour/src/algorithm/adjacencylist.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ClassFour/src/algorithm/adjacencylist.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -243,7 +233,7 @@
       <workItem from="1685333436960" duration="12961000" />
       <workItem from="1685359587237" duration="8913000" />
       <workItem from="1685369590952" duration="1571000" />
-      <workItem from="1685371177832" duration="10000" />
+      <workItem from="1685371177832" duration="385000" />
     </task>
     <task id="LOCAL-00001" summary="课后作业——顺序表操作完成">
       <created>1680002684888</created>
@@ -413,7 +403,21 @@
       <option name="project" value="LOCAL" />
       <updated>1685333614304</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="最后一个实验">
+      <created>1685371539686</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1685371539686</updated>
+    </task>
+    <task id="LOCAL-00026" summary="最后一个实验">
+      <created>1685371557448</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1685371557448</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -443,7 +447,8 @@
     <MESSAGE value="图的建立与遍历——邻接表表示法无向图的深度/广度优先搜索遍历" />
     <MESSAGE value="优化" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="最后一个实验" />
+    <option name="LAST_COMMIT_MESSAGE" value="最后一个实验" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
