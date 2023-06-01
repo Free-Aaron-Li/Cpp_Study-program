@@ -12,6 +12,7 @@
   <component name="CMakeRunConfigurationManager">
     <generated>
       <config projectName="Cpp_Primer" targetName="ChapterOne" />
+      <config projectName="Cpp_Primer" targetName="ThreeTest" />
       <config projectName="Cpp_Primer" targetName="ChapterTwo" />
       <config projectName="Cpp_Primer" targetName="Primer_ChapterThree" />
     </generated>
@@ -23,13 +24,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3380947e-ac2c-447a-a087-05d145c2e56c" name="变更" comment="补充关于auto内容">
-      <change afterPath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/bin/Primer_ChapterThree" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/src/exercise/3_3.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/include/3_4.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/src/exercise/3_4.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/test/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/test/bin/ThreeTest" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/test/src/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ClassWork/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ClassWork/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/bin/Primer_ChapterThree" beforeDir="false" afterPath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/bin/Primer_ChapterThree" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/docs/ChapterThree_字符串_向量和数组.md" beforeDir="false" afterPath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/docs/ChapterThree_字符串_向量和数组.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/include/3_3.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/include/3_3.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/src/exercise/3_3.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/src/exercise/3_3.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/src/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,8 +50,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CMakeLists.txt" />
         <option value="HTML File" />
+        <option value="CMakeLists.txt" />
       </list>
     </option>
   </component>
@@ -94,7 +100,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.editor&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -106,6 +112,7 @@
       <recent name="$PROJECT_DIR$/ChapterOne_Start/include" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/test/src" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/docs" />
       <recent name="$PROJECT_DIR$/ChapterOne_Start/src" />
@@ -128,10 +135,16 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ThreeTest" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Cpp_Primer" TARGET_NAME="ThreeTest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Cpp_Primer" RUN_TARGET_NAME="ThreeTest">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="CMake 应用程序.ChapterOne" />
-      <item itemvalue="CMake 应用程序.Primer_ChapterThree" />
       <item itemvalue="CMake 应用程序.ChapterTwo" />
+      <item itemvalue="CMake 应用程序.Primer_ChapterThree" />
+      <item itemvalue="CMake 应用程序.ThreeTest" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
@@ -214,6 +227,29 @@
       <workItem from="1684760735202" duration="96000" />
       <workItem from="1684854640781" duration="3779000" />
       <workItem from="1684973578688" duration="477000" />
+      <workItem from="1685422266787" duration="10907000" />
+      <workItem from="1685435213914" duration="153000" />
+      <workItem from="1685435382481" duration="3737000" />
+      <workItem from="1685440813360" duration="30000" />
+      <workItem from="1685441011427" duration="50000" />
+      <workItem from="1685441316527" duration="50000" />
+      <workItem from="1685441441561" duration="34000" />
+      <workItem from="1685441618674" duration="14000" />
+      <workItem from="1685441730971" duration="32000" />
+      <workItem from="1685441985895" duration="505000" />
+      <workItem from="1685442507818" duration="42000" />
+      <workItem from="1685442574409" duration="31000" />
+      <workItem from="1685442635593" duration="63000" />
+      <workItem from="1685442913042" duration="150000" />
+      <workItem from="1685445270888" duration="288000" />
+      <workItem from="1685445561613" duration="4994000" />
+      <workItem from="1685464834656" duration="57000" />
+      <workItem from="1685529618970" duration="2036000" />
+      <workItem from="1685593520182" duration="637000" />
+      <workItem from="1685594257791" duration="3711000" />
+      <workItem from="1685618281004" duration="1421000" />
+      <workItem from="1685630541744" duration="360000" />
+      <workItem from="1685630912746" duration="6654000" />
     </task>
     <task id="LOCAL-00001" summary="测试">
       <created>1679833782569</created>

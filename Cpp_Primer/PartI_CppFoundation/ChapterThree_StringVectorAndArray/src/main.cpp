@@ -6,6 +6,7 @@
 #include "3_1.hpp"
 #include "3_2.hpp"
 #include "3_3.hpp"
+#include "3_4.hpp"
 
 void exercise_3_1() {
     Exercise_3_1::range();
@@ -24,12 +25,25 @@ void exercise_3_2() {
 
 void exercise_3_3() {
     //Exercise_3_3::inputVector();
-    Exercise_3_3::inputVector_1();
+    //Exercise_3_3::inputVector_1();
+    //Exercise_3_3::outputVector();
+    //Exercise_3_3::inputVector_2();
+    Exercise_3_3::inputVector_3();
 }
+
+void exercise_3_4() {
+    //Exercise_3_4::outputVector();
+    //Exercise_3_4::outputText();
+    //Exercise_3_4::iterateVector();
+    //Exercise_3_4::outputVector2();
+    Exercise_3_4::exercise_3_25();
+};
+
 
 int main() {
     //exercise_3_1();
     //exercise_3_2();
-    exercise_3_3();
+    //exercise_3_3();
+    exercise_3_4();
     return 0;
 }
