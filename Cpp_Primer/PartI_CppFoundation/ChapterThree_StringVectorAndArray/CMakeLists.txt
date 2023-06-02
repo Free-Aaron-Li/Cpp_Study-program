@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.24)
 project(Primer_ChapterThree)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 11)
 
 set(CMAKE_EXE_LINKER_FLAGS "-static-libgcc -static-libstdc++")
 
@@ -15,6 +15,7 @@ set(SOURCES
         src/exercise/3_2.cpp
         src/exercise/3_3.cpp
         src/exercise/3_4.cpp
+        src/exercise/3_5.cpp
         )
 
 #------------------------------------

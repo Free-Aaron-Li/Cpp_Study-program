@@ -16,7 +16,7 @@ AlignConsecutiveDeclarations: AcrossComments
 AlignEscapedNewlines: Left
 # 水平对齐二元和三元表达式的操作数
 AlignOperands: true
-# 对齐连续的尾随的注释
+# 对齐连续尾随的注释
 AlignTrailingComments: true
 # 允许函数声明的所有参数在放在下一行
 AllowAllParametersOfDeclarationOnNextLine: true
@@ -88,7 +88,7 @@ BreakAfterJavaFieldAnnotations: false
 # 打破字符串字面量
 BreakStringLiterals: true
 # 每行字符的限制，0表示没有限制
-ColumnLimit: 80
+ColumnLimit: 120
 # 描述具有特殊意义的注释的正则表达式，它不应该被分割为多行或以其它方式改变
 CommentPragmas: '^ IWYU 
 pragma:'

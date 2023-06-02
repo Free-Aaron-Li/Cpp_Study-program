@@ -4,6 +4,7 @@
  * @license GPL-3.0
  */
 #include <iostream>
+#include <iterator>
 #include <vector>
 
 void test_add() {
@@ -29,14 +30,26 @@ void test_add() {
     std::cout << (iterator_1 > iterator_2) << "\n";
 }
 
-
 void test_iterator_add() {
     std::vector<int> vector_1{1, 2, 3, 4, 5, 6, 7};
-    auto iterator_1 = vector_1.begin();
-    auto iterator_2 = vector_1.end();
+    auto             iterator_1 = vector_1.begin();
+    auto             iterator_2 = vector_1.end();
+}
+
+void test_array() {
+    int array[2 * 7 - 14];
+
+    constexpr size_t array_size = 10;
+    int              ia[array_size];
+    for (size_t i = 0; i <= array_size; ++i) { ia[i] = i; }
+    for (int i = 0; i <= 10; ++i) { std::cout << ia[i] << " "; }
 }
 
 int main() {
-    test_add();
+    // test_add();
+    test_array();
+    int        i[] = {1, 2, 3};
+    const int *p   = std::end(i);
+    std::cout << *(--p) << "\n";
     return 0;
 }

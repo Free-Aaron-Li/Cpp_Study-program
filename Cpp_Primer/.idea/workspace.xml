@@ -23,28 +23,23 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3380947e-ac2c-447a-a087-05d145c2e56c" name="变更" comment="补充关于auto内容">
-      <change afterPath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/include/3_4.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/src/exercise/3_4.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/test/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/test/bin/ThreeTest" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/test/src/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ClassWork/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ClassWork/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="3380947e-ac2c-447a-a087-05d145c2e56c" name="变更" comment="update">
+      <change afterPath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/include/3_5.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/src/exercise/3_5.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.clang-format" beforeDir="false" afterPath="$PROJECT_DIR$/../.clang-format" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/bin/Primer_ChapterThree" beforeDir="false" afterPath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/bin/Primer_ChapterThree" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/docs/ChapterThree_字符串_向量和数组.md" beforeDir="false" afterPath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/docs/ChapterThree_字符串_向量和数组.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/include/3_3.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/include/3_3.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/src/exercise/3_3.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/src/exercise/3_3.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/src/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/test/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/test/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/test/bin/ThreeTest" beforeDir="false" afterPath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/test/bin/ThreeTest" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/test/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/test/src/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="ClangdSettings">
-    <option name="formatViaClangd" value="false" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileTemplateManagerImpl">
@@ -54,6 +49,9 @@
         <option value="CMakeLists.txt" />
       </list>
     </option>
+  </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -80,31 +78,31 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;TODO_SCOPE&quot;: &quot;所有位置&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;cf.advertisement.text.has.clang-format&quot;: &quot;true&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/AaronLi/Source/Cpp_Workspace&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "TODO_SCOPE": "所有位置",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.advertisement.text.has.clang-format": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/home/AaronLi/Source/Cpp_Workspace",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.nasller.CodeGlancePro",
+    "structure.view.defaults.are.configured": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/PartI_CppFoundation/ChapterTwo_Variable/include" />
@@ -120,6 +118,11 @@
     </key>
   </component>
   <component name="RunManager" selected="CMake 应用程序.Primer_ChapterThree">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ChapterOne" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Cpp_Primer" TARGET_NAME="ChapterOne" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Cpp_Primer" RUN_TARGET_NAME="ChapterOne">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -249,7 +252,11 @@
       <workItem from="1685594257791" duration="3711000" />
       <workItem from="1685618281004" duration="1421000" />
       <workItem from="1685630541744" duration="360000" />
-      <workItem from="1685630912746" duration="6654000" />
+      <workItem from="1685630912746" duration="7073000" />
+      <workItem from="1685676878694" duration="1041000" />
+      <workItem from="1685680876079" duration="2645000" />
+      <workItem from="1685683554580" duration="509000" />
+      <workItem from="1685684080014" duration="15730000" />
     </task>
     <task id="LOCAL-00001" summary="测试">
       <created>1679833782569</created>
@@ -510,7 +517,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684479736558</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="update">
+      <created>1685637710096</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1685637710096</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -546,10 +560,10 @@
     <MESSAGE value="更新" />
     <MESSAGE value="updata" />
     <MESSAGE value="完成第三章构建" />
-    <MESSAGE value="update" />
     <MESSAGE value="完成字符串内容学习" />
     <MESSAGE value="补充关于auto内容" />
-    <option name="LAST_COMMIT_MESSAGE" value="补充关于auto内容" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
