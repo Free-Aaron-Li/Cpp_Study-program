@@ -11,7 +11,9 @@
  * 3.5 数组
  */
 
+#include <cstring>
 #include <iostream>
+#include <string>
 #include <vector>
 
 class Exercise_3_5 {
@@ -151,5 +153,55 @@ class Exercise_3_5 {
      * 编写一段程序，比较两个数组是否相等。再写一段程序，比较两个vector对象是否相等。
      */
     static void exercise_3_36();
+
+    /**
+     * @title
+     * 3.54节练习
+     */
+
+    /**
+     * @title
+     * 练习3.37
+     * @description
+     * 下面的程序是何含义，程序的输出结果是什么？
+     * @code
+     * const char ca[] {'h','e','l','l','o'};
+     * const char *cp =ca;
+     * while(*cp){
+     *      cout << *cp <<endl;
+     *      ++cp;
+     * }
+     */
+    /* 读取ca字符数组中的元素并打印，结果为：h e l l o � � � �   */
+    static void meaninglessFunction_7();
+
+    /**
+     * @title
+     * 练习3.38
+     * @description
+     * 在本节中我们提到，将两个指针相加不但是非法的，而且也没有什么意义。请问为什么两个指针相加没什么意义？
+     */
+    /*
+     * ①：通常程序为数组分配内存是连续的，如果是两个指向同一数组的指针，它们分别指向数组的不同/相同元素位置，那么它们的差值应当是合法的。但是，如果两个指针分别指向不同的数组，那么它们的差值没有任何意义，因为你无法通过差值得到任何有效的信息。
+     * ②：指针的类型决定了它们所指向的内存区域的大小和类型。若两个指针的类型不同，那么它们指向的内存区域的大小和类型可能不同，因此它们相加没有任何意义。
+     * ③：指针可能指向不同的数据结构或变量，将两个指向不同的指针相加有可能得到一个意外的结果，所以没有任何意义。
+     * */
+    static void meaninglessFunction_8();
+
+    /**
+     * @title
+     * 练习3.39
+     * @description
+     * 编写一段程序，比较两个string对象。再编写一段程序，比较两个C风格字符串的内容。
+     */
+    static void exercise_3_39();
+
+    /**
+     * @title
+     * 练习3.40
+     * @description
+     * 编写一段程序，定义两个字符数组并用字符串字面值初始化它们；接着再定义一个字符数组存放前两个数组连接后的结果。使用strcpy和strcat把前两个数组的内容拷贝到第三个数组中。
+     */
+    static void exercise_3_40();
 };
 #endif  // CPP_PRIMER_3_5_HPP

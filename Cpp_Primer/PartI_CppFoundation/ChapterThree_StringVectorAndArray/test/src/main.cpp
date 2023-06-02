@@ -45,11 +45,25 @@ void test_array() {
     for (int i = 0; i <= 10; ++i) { std::cout << ia[i] << " "; }
 }
 
+void test_interface() {
+    const char  str_1[]   = {'1', '2', '3', '\0'};
+    const char  str_1_c[] = {'9', '8', '7'};
+    std::string str_2;
+    str_2 = str_1;
+    std::cout << str_2 << "\n";
+    std::string str_3 = str_1 + str_2;
+    std::cout << str_3 << "\n";
+    std::string str_4 = str_3;
+    str_4 += str_1;
+    std::cout << str_4 << "\n";
+
+    std::string str_5 = "this is good time";
+    const char *str_6 = str_5.c_str();
+    for (auto i = str_6; *i != '\0'; ++i) { std::cout << *i; }
+}
+
 int main() {
     // test_add();
-    test_array();
-    int        i[] = {1, 2, 3};
-    const int *p   = std::end(i);
-    std::cout << *(--p) << "\n";
+    test_interface();
     return 0;
 }

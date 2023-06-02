@@ -24,15 +24,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3380947e-ac2c-447a-a087-05d145c2e56c" name="变更" comment="update">
-      <change afterPath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/include/3_5.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/src/exercise/3_5.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.clang-format" beforeDir="false" afterPath="$PROJECT_DIR$/../.clang-format" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/bin/Primer_ChapterThree" beforeDir="false" afterPath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/bin/Primer_ChapterThree" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/docs/ChapterThree_字符串_向量和数组.md" beforeDir="false" afterPath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/docs/ChapterThree_字符串_向量和数组.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/include/3_5.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/include/3_5.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/src/exercise/3_5.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/src/exercise/3_5.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/src/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/test/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/test/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/test/bin/ThreeTest" beforeDir="false" afterPath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/test/bin/ThreeTest" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/test/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/PartI_CppFoundation/ChapterThree_StringVectorAndArray/test/src/main.cpp" afterDir="false" />
     </list>
@@ -82,6 +79,8 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "DefaultHtmlFileTemplate": "HTML File",
+    "Notification.DisplayName-DoNotAsk-Build Log": "构建日志",
+    "Notification.DoNotAsk-Build Log": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
@@ -117,7 +116,7 @@
       <recent name="$PROJECT_DIR$/ChapterOne_Start" />
     </key>
   </component>
-  <component name="RunManager" selected="CMake 应用程序.Primer_ChapterThree">
+  <component name="RunManager" selected="CMake 应用程序.ThreeTest">
     <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="CLION.EXTERNAL.BUILD" enabled="true" />
@@ -256,7 +255,7 @@
       <workItem from="1685676878694" duration="1041000" />
       <workItem from="1685680876079" duration="2645000" />
       <workItem from="1685683554580" duration="509000" />
-      <workItem from="1685684080014" duration="15730000" />
+      <workItem from="1685684080014" duration="22685000" />
     </task>
     <task id="LOCAL-00001" summary="测试">
       <created>1679833782569</created>
@@ -524,7 +523,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685637710096</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="update">
+      <created>1685702062215</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1685702062215</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -4,12 +4,16 @@
  * @license GPL-3.0
  */
 #include "3_5.hpp"
+
+#include <cstring>
 void Exercise_3_5::meaninglessFunction_1() {}
 void Exercise_3_5::meaninglessFunction_2() {}
 void Exercise_3_5::meaninglessFunction_3() {}
 void Exercise_3_5::meaninglessFunction_4() {}
 void Exercise_3_5::meaninglessFunction_5() {}
 void Exercise_3_5::meaninglessFunction_6() {}
+void Exercise_3_5::meaninglessFunction_7() {}
+void Exercise_3_5::meaninglessFunction_8() {}
 
 void Exercise_3_5::exercise_3_31() {
     int array[10] = {};
@@ -85,4 +89,29 @@ void Exercise_3_5::exercise_3_36() {
     }
     if (flag == 0) std::cout << "二者数组相同";
     else if (flag == 1) std::cout << "二者数组不相同";
+}
+
+void Exercise_3_5::exercise_3_39() {
+    std::string str_1 = "this is good time!";
+    std::string str_2 = "this is good time!";
+
+    if (str_1 == str_2) std::cout << "两个字符串相同！";
+    else std::cout << "两个字符串不相同！";
+
+    std::cout << "\n使用C风格字符串：\n";
+
+    const char str_3[] = "this is gooj time!";
+    const char str_4[] = "this is good time!";
+
+    if (strcmp(str_3, str_4) == 0) std::cout << "两个字符串相同";
+    else std::cout << "两个字符串不相同";
+}
+
+void Exercise_3_5::exercise_3_40() {
+    const char str_1[] = "this is";
+    const char str_2[] = " good time!";
+    char       str_3[strlen(str_1) + strlen(str_2) + 1];
+    strcpy(str_3, str_1);
+    strcat(str_3, str_2);
+    for (auto c : str_3) { std::cout << c; }
 }

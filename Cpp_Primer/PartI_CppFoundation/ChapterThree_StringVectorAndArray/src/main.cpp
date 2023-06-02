@@ -42,7 +42,9 @@ void exercise_3_5() {
     // Exercise_3_5::exercise_3_31();
     // Exercise_3_5::exercise_3_32();
     // Exercise_3_5::exercise_3_35();
-    Exercise_3_5::exercise_3_36();
+    // Exercise_3_5::exercise_3_36();
+    // Exercise_3_5::exercise_3_39();
+    Exercise_3_5::exercise_3_40();
 }
 
 int main() {
