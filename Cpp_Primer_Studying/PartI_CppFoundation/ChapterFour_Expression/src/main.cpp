@@ -4,4 +4,4 @@
 
 // Copyright (C) 2023 AaronLi
 // This program is under the GPL-3.0 license,if you have not received it or the program has a bug,
-// please let me know:<Free_Aaron.Li@outlook.com>.
+// please let me know:<Strong_Aaron.Li@outlook.com>.
