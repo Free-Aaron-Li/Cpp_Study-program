@@ -5,3 +5,4 @@ set(CMAKE_CXX_STANDARD 11)
 
 add_subdirectory(ChapterTwo_Variable)
 add_subdirectory(ChapterThree_StringVectorAndArray)
+add_subdirectory(ChapterFour_Expression)

@@ -203,5 +203,26 @@ class Exercise_3_5 {
      * 编写一段程序，定义两个字符数组并用字符串字面值初始化它们；接着再定义一个字符数组存放前两个数组连接后的结果。使用strcpy和strcat把前两个数组的内容拷贝到第三个数组中。
      */
     static void exercise_3_40();
+
+    /**
+     * @title
+     * 3.5.5节练习
+     */
+
+    /**
+     * @title
+     * 练习3.41
+     * @description
+     * 编写一段程序，用整型数组初始化一个vector对象。
+     */
+    static void exercise_3_41();
+
+    /**
+     * @title
+     * 练习3.42
+     * @description
+     * 编写一段程序，将含有整数元素的vector对象拷贝给一个整型数组。
+     */
+    static void exercise_3_42();
 };
 #endif  // CPP_PRIMER_3_5_HPP

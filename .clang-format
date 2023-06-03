@@ -16,7 +16,7 @@ AlignConsecutiveDeclarations: AcrossComments
 AlignEscapedNewlines: Left
 # 水平对齐二元和三元表达式的操作数
 AlignOperands: true
-# 对齐连续尾随的注释
+# 对齐连续地尾随的注释
 AlignTrailingComments: true
 # 允许函数声明的所有参数在放在下一行
 AllowAllParametersOfDeclarationOnNextLine: true
@@ -32,8 +32,8 @@ AllowShortIfStatementsOnASingleLine: AllIfsAndElse
 AllowShortLoopsOnASingleLine: true
 # 总是在定义返回类型后换行(deprecated)
 AlwaysBreakAfterDefinitionReturnType: None
-# 总是在返回类型后换行: None, All, TopLevel(顶级函数，不包括在类中的函数), 
-# AllDefinitions(所有的定义，不包括声明), TopLevelDefinitions(所有的顶级函数的定义)
+# 总是在返回类型后换行: None, All, TopLevel(顶级函数，不包括在类中的函数), AllDefinitions(所有的定义，不包括声明),
+# TopLevelDefinitions(所有的顶级函数的定义)
 AlwaysBreakAfterReturnType: None
 # 总是在多行string字面量前换行
 AlwaysBreakBeforeMultilineStrings: false
@@ -66,16 +66,15 @@ BraceWrapping:
   # catch之前
   BeforeCatch: true
   # else之前
-  BeforeElse: false
+  BeforeElse: true
   # 缩进大括号
   IndentBraces: false
 
 # 在二元运算符前换行: None(在操作符后换行), NonAssignment(在非赋值的操作符前换行), All(在操作符前换行)
 BreakBeforeBinaryOperators: NonAssignment
-# 在大括号前换行: Attach(始终将大括号附加到周围的上下文), Linux(除函数、命名空间和类定义，与Attach类似), 
-#   Mozilla(除枚举、函数、记录定义，与Attach类似), Stroustrup(除函数定义、catch、else，与Attach类似), 
-#   Allman(总是在大括号前换行), GNU(总是在大括号前换行，并对于控制语句的大括号增加额外的缩进), WebKit(在函数前换行), Custom
-#   注：这里认为语句块也属于函数
+# 在大括号前换行: Attach(始终将大括号附加到周围的上下文), Linux(除函数、命名空间和类定义，与Attach类似),
+#   Mozilla(除枚举、函数、记录定义，与Attach类似), Stroustrup(除函数定义、catch、else，与Attach类似), Allman(总是在大括号前换行),
+#   GNU(总是在大括号前换行，并对于控制语句的大括号增加额外的缩进), WebKit(在函数前换行), Custom 注：这里认为语句块也属于函数
 BreakBeforeBraces: Custom
 # 在三元运算符前换行
 BreakBeforeTernaryOperators: true
@@ -90,8 +89,7 @@ BreakStringLiterals: true
 # 每行字符的限制，0表示没有限制
 ColumnLimit: 120
 # 描述具有特殊意义的注释的正则表达式，它不应该被分割为多行或以其它方式改变
-CommentPragmas: '^ IWYU 
-pragma:'
+CommentPragmas: '^ IWYU pragma:'
 # 构造函数的初始化列表要么都在同一行，要么都各自一行
 ConstructorInitializerAllOnOneLineOrOnePerLine: false
 # 构造函数的初始化列表的缩进宽度
@@ -131,8 +129,8 @@ IncludeCategories:
     Priority: 3
   - Regex: '.*'
     Priority: 1
-IncludeIsMainRegex: "([-_](test|unittest))?$"
-IncludeIsMainSourceRegex: ""
+    #IncludeIsMainRegex: "([-_](test|unittest))?$"
+    #IncludeIsMainSourceRegex: ""
 # 缩进case标签
 IndentCaseLabels: false
 # 缩进goto标签
@@ -188,31 +186,16 @@ RawStringFormats:
   - Language: Cpp
     # 分隔符
     Delimiters:
-      - cc
-      - CC
-      - cpp
-      - Cpp
-      - CPP
-      - "c++"
-      - "C++"
+      - cc - CC - cpp - Cpp - CPP - "c++" - "C++"
     # 规范分隔符
     CanonicalDelimiter: ""
     BasedOnStyle: google
   - Language: TextProto
     Delimiters:
-      - pb
-      - PB
-      - proto
-      - PROTO
+      - pb - PB - proto - PROTO
     # 封闭功能
     EnclosingFunctions:
-      - EqualsProto
-      - EquivToProto
-      - PARSE_PARTIAL_TEXT_PROTO
-      - PARSE_TEST_PROTO
-      - PARSE_TEXT_PROTO
-      - ParseTextOrDie
-      - ParseTextProtoOrDie
+      - EqualsProto - EquivToProto - PARSE_PARTIAL_TEXT_PROTO - PARSE_TEST_PROTO - PARSE_TEXT_PROTO -ParseTextOrDie - ParseTextProtoOrDie
     CanonicalDelimiter: ""
     BasedOnStyle: google
 # 允许重新排版注释
@@ -263,8 +246,9 @@ Standard: Auto
 TabWidth: 4
 # 声明中的宏
 StatementMacros:
-  - Q_UNUSED
-  - QT_REQUIRE_VERSION
+  - Q_UNUSED - QT_REQUIRE_VERSION
 # 使用tab字符: Never, ForIndentation, ForContinuationAndIndentation, Always
 UseTab: Never
-...
+
+
+

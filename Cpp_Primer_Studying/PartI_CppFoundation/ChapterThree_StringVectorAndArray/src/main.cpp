@@ -8,6 +8,7 @@
 #include "3_3.hpp"
 #include "3_4.hpp"
 #include "3_5.hpp"
+#include "3_6.hpp"
 
 void exercise_3_1() { Exercise_3_1::range(); }
 
@@ -44,14 +45,23 @@ void exercise_3_5() {
     // Exercise_3_5::exercise_3_35();
     // Exercise_3_5::exercise_3_36();
     // Exercise_3_5::exercise_3_39();
-    Exercise_3_5::exercise_3_40();
+    // Exercise_3_5::exercise_3_40();
+    // Exercise_3_5::exercise_3_41();
+    Exercise_3_5::exercise_3_42();
 }
+
+void exercise_3_6() {
+    // Exercise_3_6::exercise_3_43();
+    // Exercise_3_6::exercise_3_44();
+    Exercise_3_6::exercise_3_45();
+};
 
 int main() {
     // exercise_3_1();
     // exercise_3_2();
     // exercise_3_3();
     // exercise_3_4();
-    exercise_3_5();
+    // exercise_3_5();
+    exercise_3_6();
     return 0;
 }
