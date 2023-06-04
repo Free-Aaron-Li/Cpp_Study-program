@@ -64,7 +64,56 @@ void test_RvalueAndLvalue() {
     decltype(&p_2) k   = &p_3;     /* int**，取地址符号生成的是右值 */
 }
 
+
+int test_number = 1;
+
+int test_evaluationOrder_test_1() { return test_number++; }
+int test_evaluationOrder_test_2() { return test_number += 3; }
+
+
+/**
+ * 求值顺序的探讨
+ */
+void test_evaluationOrder() {
+    int i = 0;
+    /**
+     * <<运算符并未明确规定何时以及如何对运算对象进行求值，没有明确的执行顺序，那么该表达式就是错误的。因为您无法确定是i先执行还是++i先执行，得到的答案不论如何都是错误的
+     * */
+    std::cout << i << " " << ++i << "\n";
+
+    /**
+     * 同理：这下面一句也是错误的。
+     * 你无法判断是test_1()先执行还是test_2()先执行。
+     */
+    int number = test_evaluationOrder_test_1() * test_evaluationOrder_test_2();
+    std::cout << number << "\n";
+}
+
+/**
+ * 对算术运算异常和溢出的探讨
+ */
+void test_ArithmeticOperations() {
+    /* 若short类型占16位，那么short最大数值为32767 */
+    short value = 32767;
+    value++;
+    std::cout << value << "\n"; /* -32768 */
+    /**
+     * 由于值溢出，发生“环绕（wrapped around）”，然符号位由0变为1，导致结果为负数
+     */
+}
+
+void test_assignmentOperation() {
+    int k = {};
+    /**
+     * 无论左侧运算对象的类型是什么，初始值列表都可以为空。此时，编译器创建一个值初始化的临时量并将其赋给左侧运算对象。
+     */
+    std::cout << k << "\n";
+}
+
 int main() {
-    test_RvalueAndLvalue();
+    // test_RvalueAndLvalue();
+    // test_evaluationOrder();
+    // test_ArithmeticOperations();
+    test_assignmentOperation();
     return 0;
 }

@@ -152,9 +152,9 @@ MacroBlockBegin: ''
 # 结束一个块的宏的正则表达式
 MacroBlockEnd: ''
 # 连续空行的最大数量
-MaxEmptyLinesToKeep: 1
+MaxEmptyLinesToKeep: 3
 # 命名空间的缩进: None, Inner(缩进嵌套的命名空间中的内容), All
-NamespaceIndentation: Inner
+# NamespaceIndentation: None
 # 使用Objc包协议列表
 ObjCBinPackProtocolList: Never
 # 使用ObjC块时缩进宽度
@@ -186,16 +186,30 @@ RawStringFormats:
   - Language: Cpp
     # 分隔符
     Delimiters:
-      - cc - CC - cpp - Cpp - CPP - "c++" - "C++"
+      - cc
+      - CC
+      - cpp
+      - Cpp
+      - "c++"
+      - "C++"
     # 规范分隔符
     CanonicalDelimiter: ""
     BasedOnStyle: google
   - Language: TextProto
     Delimiters:
-      - pb - PB - proto - PROTO
+      - pb
+      - PB
+      - proto
+      - PROTO
     # 封闭功能
     EnclosingFunctions:
-      - EqualsProto - EquivToProto - PARSE_PARTIAL_TEXT_PROTO - PARSE_TEST_PROTO - PARSE_TEXT_PROTO -ParseTextOrDie - ParseTextProtoOrDie
+      - EqualsProto
+      - EquivToProto
+      - PARSE_PARTIAL_TEXT_PROTO
+      - PARSE_TEST_PROTO
+      - PARSE_TEXT_PROTO
+      - ParseTextOrDie
+      - ParseTextProtoOrDie
     CanonicalDelimiter: ""
     BasedOnStyle: google
 # 允许重新排版注释
@@ -249,6 +263,3 @@ StatementMacros:
   - Q_UNUSED - QT_REQUIRE_VERSION
 # 使用tab字符: Never, ForIndentation, ForContinuationAndIndentation, Always
 UseTab: Never
-
-
-
