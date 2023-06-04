@@ -9,6 +9,7 @@
 #include "4_1.hpp"
 #include "4_2.hpp"
 #include "4_3.hpp"
+#include "4_4.hpp"
 
 void test_4_2() {
     // Exercise_4_2::exercise_4_4();
@@ -22,8 +23,11 @@ void test_4_3() {
     Exercise_4_3::exercise_4_12();
 }
 
+void test_4_4() { Exercise_4_4::exercise_4_13(); }
+
 int main() {
     // test_4_2();
-    test_4_3();
+    // test_4_3();
+    test_4_4();
     return 0;
 }

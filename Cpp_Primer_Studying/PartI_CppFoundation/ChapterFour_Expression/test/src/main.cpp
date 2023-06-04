@@ -108,7 +108,15 @@ void test_assignmentOperation() {
      * 无论左侧运算对象的类型是什么，初始值列表都可以为空。此时，编译器创建一个值初始化的临时量并将其赋给左侧运算对象。
      */
     std::cout << k << "\n";
+
+    /**
+     * 赋值运算符的返回值
+     */
+    int i;
+    if (i = 1024) std::cout << "true";
+    else std::cout << "false";
 }
+
 
 int main() {
     // test_RvalueAndLvalue();
