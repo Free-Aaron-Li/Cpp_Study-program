@@ -19,7 +19,7 @@ AlignOperands: true
 # 对齐连续地尾随的注释
 AlignTrailingComments: true
 # 允许函数声明的所有参数在放在下一行
-AllowAllParametersOfDeclarationOnNextLine: true
+AllowAllParametersOfDeclarationOnNextLine: false
 # 允许短的块放在同一行
 AllowShortBlocksOnASingleLine: Always
 # 允许短的case标签放在同一行
@@ -33,7 +33,6 @@ AllowShortLoopsOnASingleLine: true
 # 总是在定义返回类型后换行(deprecated)
 AlwaysBreakAfterDefinitionReturnType: None
 # 总是在返回类型后换行: None, All, TopLevel(顶级函数，不包括在类中的函数), AllDefinitions(所有的定义，不包括声明),
-# TopLevelDefinitions(所有的顶级函数的定义)
 AlwaysBreakAfterReturnType: None
 # 总是在多行string字面量前换行
 AlwaysBreakBeforeMultilineStrings: false
@@ -56,7 +55,7 @@ BraceWrapping:
   # 函数定义后面
   AfterFunction: false
   # 命名空间定义后面
-  AfterNamespace: false
+  AfterNamespace: true
   # ObjC定义后面
   AfterObjCDeclaration: false
   # struct定义后面
@@ -91,7 +90,7 @@ ColumnLimit: 120
 # 描述具有特殊意义的注释的正则表达式，它不应该被分割为多行或以其它方式改变
 CommentPragmas: '^ IWYU pragma:'
 # 构造函数的初始化列表要么都在同一行，要么都各自一行
-ConstructorInitializerAllOnOneLineOrOnePerLine: false
+ConstructorInitializerAllOnOneLineOrOnePerLine: true
 # 构造函数的初始化列表的缩进宽度
 ConstructorInitializerIndentWidth: 4
 # 延续的行的缩进宽度
@@ -132,7 +131,7 @@ IncludeCategories:
     #IncludeIsMainRegex: "([-_](test|unittest))?$"
     #IncludeIsMainSourceRegex: ""
 # 缩进case标签
-IndentCaseLabels: false
+IndentCaseLabels: true
 # 缩进goto标签
 IndentGotoLabels: true
 # 缩进PP指令
@@ -154,7 +153,7 @@ MacroBlockEnd: ''
 # 连续空行的最大数量
 MaxEmptyLinesToKeep: 3
 # 命名空间的缩进: None, Inner(缩进嵌套的命名空间中的内容), All
-# NamespaceIndentation: None
+NamespaceIndentation: None
 # 使用Objc包协议列表
 ObjCBinPackProtocolList: Never
 # 使用ObjC块时缩进宽度
@@ -219,7 +218,7 @@ SortIncludes: CaseSensitive
 # 允许使用声明排序
 SortUsingDeclarations: false
 # 在C风格类型转换后添加空格
-SpaceAfterCStyleCast: false
+SpaceAfterCStyleCast: true
 # 逻辑为not后空格
 SpaceAfterLogicalNot: false
 # 模板后空格关键字

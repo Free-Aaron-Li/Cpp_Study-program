@@ -15,7 +15,8 @@
  * @description
  * 在4.1基础中提到左值和右值，虽然其本身概念继承于C语言，但是其概念在C++中得以扩展。
  */
-void test_RvalueAndLvalue() {
+void
+test_RvalueAndLvalue() {
     /**
      * 广义上的左右值指的是运算符左侧对象称为左值，运算符右侧对象称为右值。其目的本质上是为了帮助程序员记忆。<br>
      * 在C++中提到左值表达式的求值结果是一个对象或者一个函数，但凡是必有例外：某些左值，例如常量对象实际上不能作为赋值语句的左侧运算对象。<br>
@@ -67,14 +68,21 @@ void test_RvalueAndLvalue() {
 
 int test_number = 1;
 
-int test_evaluationOrder_test_1() { return test_number++; }
-int test_evaluationOrder_test_2() { return test_number += 3; }
+int
+test_evaluationOrder_test_1() {
+    return test_number++;
+}
+int
+test_evaluationOrder_test_2() {
+    return test_number += 3;
+}
 
 
 /**
  * 求值顺序的探讨
  */
-void test_evaluationOrder() {
+void
+test_evaluationOrder() {
     int i = 0;
     /**
      * <<运算符并未明确规定何时以及如何对运算对象进行求值，没有明确的执行顺序，那么该表达式就是错误的。因为您无法确定是i先执行还是++i先执行，得到的答案不论如何都是错误的
@@ -92,7 +100,8 @@ void test_evaluationOrder() {
 /**
  * 对算术运算异常和溢出的探讨
  */
-void test_ArithmeticOperations() {
+void
+test_ArithmeticOperations() {
     /* 若short类型占16位，那么short最大数值为32767 */
     short value = 32767;
     value++;
@@ -102,7 +111,8 @@ void test_ArithmeticOperations() {
      */
 }
 
-void test_assignmentOperation() {
+void
+test_assignmentOperation() {
     int k = {};
     /**
      * 无论左侧运算对象的类型是什么，初始值列表都可以为空。此时，编译器创建一个值初始化的临时量并将其赋给左侧运算对象。
@@ -117,11 +127,34 @@ void test_assignmentOperation() {
     else std::cout << "false";
 }
 
+void
+test_iterator() {
+    std::vector<std::string>           vector{10, "1"};
+    std::vector<int>                   vector_1{10, 1};
+    std::vector<std::string>::iterator i = vector.begin();
+    std::vector<int>::iterator         j = vector_1.begin();
+    // vector.empty();
+    // i.empty();   迭代器中并没有empty方法
+    // i->empty();
+    // std::cout << ++*i << "\n";
+    std::cout << ++*j << "\n";
+    std::cout << i++->empty() << "\n";
+}
 
-int main() {
+void
+test_4_23() {
+    std::string s  = "word";
+    std::string p1 = s + ((s[s.size() - 1] == 's') ? "" : "s");
+    std::cout << p1;
+}
+
+int
+main() {
     // test_RvalueAndLvalue();
     // test_evaluationOrder();
     // test_ArithmeticOperations();
-    test_assignmentOperation();
+    // test_assignmentOperation();
+    // test_iterator();
+    test_4_23();
     return 0;
 }
