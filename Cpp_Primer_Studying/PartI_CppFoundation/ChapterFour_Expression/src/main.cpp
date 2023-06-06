@@ -7,11 +7,13 @@
 // please let me know:<fly_aaron.li@outlook.com>.
 
 #include "4_10.hpp"
+#include "4_11.hpp"
 #include "4_2.hpp"
 #include "4_3.hpp"
 #include "4_7.hpp"
 #include "4_8.hpp"
 #include "4_9.hpp"
+
 
 void test_4_2() {
     // Exercise_4_2::exercise_4_4();
@@ -46,6 +48,8 @@ void test_4_10() {
     Exercise_4_10::exercise_4_33();
 }
 
+void test_4_11() { Exercise_4_11::exercise_4_34(); }
+
 int main() {
     // test_4_2();
     // test_4_3();
@@ -54,5 +58,6 @@ int main() {
     // test_4_8();
     // test_4_9();
     // test_4_10();
+    test_4_11();
     return 0;
 }

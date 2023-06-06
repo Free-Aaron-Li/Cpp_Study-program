@@ -1,0 +1,62 @@
+// This file is part of Cpp_Primer_Studying project.
+// This program is called:4_11.
+// If there are no special instructions, this file is used as an exercise and test file.
+
+// Copyright (C) 2023 AaronLi
+// This program is under the GPL-3.0 license,if you have not received it or the program has a bug,
+// please let me know: <fly_aaron.li@outlook.com>.
+
+#ifndef CPP_PRIMER_STUDYING_4_11_HPP
+#define CPP_PRIMER_STUDYING_4_11_HPP
+
+/**
+ * @title
+ * 4.11 类型转换
+ */
+
+#include "4.hpp"
+
+class Exercise_4_11 {
+ public:
+    /**
+     * @title
+     * 4.11.1节练习
+     */
+
+    /**
+     * @title
+     * 练习4.34
+     * @description
+     * 根据本节给出的变量定义，说明在下面的表达式中将发生什么样的类型转换：
+     * @code
+     * float fval; double dval; int ival; char cval;
+     * (a) if (fval)                (b) dval=fval+ival;
+     * (c) dval+ival*cval;
+     */
+    /* a：fval如果为0，则转换为布尔类型，且值为false；否则转换为布尔类型，值为true。
+     * b：ival将转换为float类型，与fval值相加得到float类型的初始值，初始值类型转换为double类型并赋值给dval。
+     * c：cval将提示为int类型，并与ival相加得到int类型值，再转换为double类型与dval相加。
+     * */
+    static void exercise_4_34();
+
+    /**
+     * @title
+     * 练习4.35
+     * @description
+     * 假设有如下的定义，<br>
+     * char cval;&emsp;int ival;&emsp;unsigned int ui;<br>
+     * float fval;&emsp;double dval;<br>
+     * 请回答在下面的表达式中发生了隐式类型转换吗？如果有，指出来。
+     * @code
+     * (a) cval='a'+3;             (b) fval=ui-ival*1.0;
+     * (c) dval=ui*fval;           (d) cval=ival+fval+dval;
+     */
+    /* a：发生了，'a'字面值转为int类型并与3相加得到初始值，初始值再转换为char类型赋值给cval。
+     * b：发生了，ival转换为double类型，ui转换为double类型，得到的初始值转换为float类型。
+     * c：发生了，ui转换为float类型，初始值转换为double类型。
+     * d：发生了，ival、fval转换为double类型，初始值转换为char类型。
+     * */
+    static void meaninglessFunction_1();
+
+};
+#endif  // CPP_PRIMER_STUDYING_4_11_HPP
