@@ -58,5 +58,47 @@ class Exercise_4_11 {
      * */
     static void meaninglessFunction_1();
 
+    /**
+     * @title
+     * 4.11.3节练习
+     */
+
+    /**
+     * @title
+     * 练习4.36
+     * @description
+     * 假设i是int类型，d是double类型，书写表达式i*=d使其执行整数类型的乘法而非浮点类型的乘法。
+     */
+     /* i*=static_cast<int>d */
+    static void meaninglessFunction_2();
+
+    /**
+     * @title
+     * 练习4.37
+     * @description
+     * 用命名的强制类型转换改写下列旧式的转换语句。
+     * @code
+     * int i; double d; const string *ps; char *pc; void *pv;
+     * (a) pv=(void*)ps;                (b) i=int(*pc);
+     * (c) pv=&d;                       (d) pc=(char *)pv;
+     */
+     /* a：pv=static_cast<void *>ps;
+      * b：i=static_cast<int>*pc;
+      * c：pv=static_cast<void *>d;
+      * d：pc=static_cast<char *>pv;
+      * */
+    static void meaninglessFunction_3();
+
+    /**
+     * @title
+     * 练习4.38
+     * @description
+     * 说明下面这条表达式的含义。
+     * @code
+     * double slope=static_cast<double>(j/i);
+     */
+     /* 将j/i得到的字面值强制类型转换为double类型赋值给slope */
+    static void meaninglessFunction_4();
+
 };
 #endif  // CPP_PRIMER_STUDYING_4_11_HPP

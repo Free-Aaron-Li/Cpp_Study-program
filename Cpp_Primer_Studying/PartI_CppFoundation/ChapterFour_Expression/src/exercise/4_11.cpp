@@ -9,6 +9,9 @@
 #include "4_11.hpp"
 
 void Exercise_4_11::meaninglessFunction_1() {}
+void Exercise_4_11::meaninglessFunction_2() {}
+void Exercise_4_11::meaninglessFunction_3() {}
+void Exercise_4_11::meaninglessFunction_4() {}
 
 void Exercise_4_11::exercise_4_34() {
     float  fval = 10.0;
