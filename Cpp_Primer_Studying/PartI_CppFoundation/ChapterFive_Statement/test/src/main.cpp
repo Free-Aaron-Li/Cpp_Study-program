@@ -22,7 +22,31 @@ void test_switch() {
     std::cout << "number is " << number << "\n";
 }
 
+void test_switch_Internal_definition() {
+    bool index = false;
+    // switch (index) {
+    //     case true:
+    //         std::string file_name;
+    //         int         ival = 0;
+    //         int         jval;
+    //         break;
+    //     case false: /* 错误！ */
+    //         jval = 0;
+    //         if (file_name.empty()) {};
+    //         break;
+    //     default: break;
+    // }
+}
+
+void test_statement() {
+    int ix, sz = 10;
+    for (; ix != sz; ++ix) {}
+    std::cout << ix;
+}
+
 int main() {
-    test_switch();
+    // test_switch();
+    // test_switch_Internal_definition();
+    test_statement();
     return 0;
 }

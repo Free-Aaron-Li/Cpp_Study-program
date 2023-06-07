@@ -8,15 +8,24 @@
 
 #include "5_1.hpp"
 #include "5_3.hpp"
+#include "5_4.hpp"
 
 void test_5_1() { Exercise_5_1::exercise_5_3(); }
 
 void test_5_3() {
     // Exercise_5_3::exercise_5_5();
-    Exercise_5_3::exercise_5_6();
+    // Exercise_5_3::exercise_5_6();
+    // Exercise_5_3::exercise_5_9();
+    // Exercise_5_3::exercise_5_10();
+    // Exercise_5_3::exercise_5_11();
+    Exercise_5_3::exercise_5_12();
 }
+
+void test_5_4() { Exercise_5_4::exercise_5_14(); }
+
 int main() {
     // test_5_1();
-    test_5_3();
+    // test_5_3();
+    test_5_4();
     return 0;
 }

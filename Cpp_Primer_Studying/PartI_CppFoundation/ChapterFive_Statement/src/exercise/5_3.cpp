@@ -10,6 +10,7 @@
 
 void Exercise_5_3::meaninglessFunction_1() {}
 void Exercise_5_3::meaninglessFunction_2() {}
+void Exercise_5_3::meaninglessFunction_3() {}
 
 void Exercise_5_3::exercise_5_5() {
     /**
@@ -63,4 +64,97 @@ Start:
       ? ((achievement % 10 >= 7) ? (result += "+") : ((achievement % 10 <= 3) ? (result += "-") : result))
       : result;
     std::cout << "你的成绩等级为：" << result << "\n";
+}
+
+void Exercise_5_3::exercise_5_9() {
+    std::string line;
+    int         sum = 0;
+    std::cout << "请输入一串字母：";
+    getline(std::cin, line);
+
+    for (auto character : line) {
+        switch (character) {
+            case 'a':
+            case 'e':
+            case 'i':
+            case 'o':
+            case 'u': sum++; break;
+            default: break;
+        }
+    }
+    std::cout << "输入的元音字母有" << sum << "个\n";
+}
+
+void Exercise_5_3::exercise_5_10() {
+    std::string line;
+    int         sum = 0;
+    std::cout << "请输入一串字母：";
+    getline(std::cin, line);
+
+    for (auto character : line) {
+        switch (character) {
+            case 'a':
+            case 'e':
+            case 'i':
+            case 'o':
+            case 'u':
+            case 'A':
+            case 'E':
+            case 'I':
+            case 'O':
+            case 'U': sum++; break;
+            default: break;
+        }
+    }
+    std::cout << "输入的元音字母有" << sum << "个\n";
+}
+
+void Exercise_5_3::exercise_5_11() {
+    int  sum = 0;
+    char character;
+    std::cout << "请输入一串字母：";
+    /* 操作符noskipws会令输入运算符读取空白符，而不是跳过它们。为了恢复默认行为，可以使用skipws操作符。*/
+    while (std::cin >> std::noskipws >> character) {
+        switch (character) {
+            case 'a':
+            case 'e':
+            case 'i':
+            case 'o':
+            case 'u':
+            case 'A':
+            case 'E':
+            case 'I':
+            case 'O':
+            case 'U':
+            case '\t':
+            case ' ':
+            case '\n': sum++; break;
+            default: break;
+        }
+    }
+    std::cout << "\n输入的元音字母有" << sum << "个\n";
+}
+
+void Exercise_5_3::exercise_5_12() {
+    std::string line;
+    char        element;
+    auto        iter_begin = line.begin();
+    int         sum        = 1;
+    std::cout << "请输入一段字符串：";
+    getline(std::cin, line);
+    while (iter_begin != line.end()) {
+        switch (*iter_begin) {
+            case 'f': {
+                switch (*(iter_begin + 1)) {
+                    case 'f':
+                    case 'l':
+                    case 'i': sum++; break;
+                    default:; break;
+                }
+            }
+            default:; break;
+        }
+        iter_begin += 2;
+    }
+    std::cout << "\n输入的包含ff、fl和fi的个数有" << sum << "个\n";
 }

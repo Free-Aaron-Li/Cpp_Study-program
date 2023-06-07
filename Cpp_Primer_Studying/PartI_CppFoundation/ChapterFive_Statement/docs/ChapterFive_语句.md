@@ -39,6 +39,7 @@ while(cin>>s && s!='\n')
 C++提供两种按条件执行的语句。一种是if语句，另一种是switch语句。
 
 ### if语句
+
 if语句的形式：
 
 ```cpp
@@ -75,4 +76,87 @@ switch(condition){
 
 注意点：case标签必须为整型常量表达式，且任意的两个case标签不能相同；default属于特殊的case标签。
 
-有关case的一个特点，可以将几个case标签写在同一行，用于强调这些case代表的是某个范围的值：》
+有关case的一个特点，可以将几个case标签写在同一行，用于强调这些case代表的是某个范围的值：
+
+```cpp
+char character;
+int  number = 0;
+std::cin >> character;
+switch (character) {
+    case 'a':
+    case 'b':
+    case 'c': number++; break;
+    default: std::cout << "error!\n"; break;
+}
+/* 如果输入的是“a”、“b”、“c”，则返回1，否则返回0 */
+std::cout << "number is " << number << "\n";    
+```
+
+> 建议
+>
+> 一般不要遗忘在最后一个case分支上添加break语句，如果有需要，请用注释注明。
+>
+> 即便不使用default语句，也请定义一个default标签。这样做的目的：表明对switch语句的case分支情况我们已经考虑全面。
+>
+> 无论是case还是default标签，我们都不应该让其内容为空，哪怕这个分支并未起作用，我们也应该使用空语句或者空块填充内容。
+
+
+还有个关于在switch内部的变量定义讨论：
+
+例如：
+
+```cpp
+bool index = false;
+switch (index) {
+    case true:
+        std::string file_name;
+        int         ival = 0;
+        int         jval;
+        break;
+    case false: /* 错误！ */
+        jval = 0;
+        if (file_name.empty()) {};
+        break;
+    default: break;
+}
+```
+
+C++规定：不允许跨过变量的初始化语句直接跳转到该变量作用域内的另一个位置。
+
+## 5.4 迭代语句
+
+迭代语句又叫循环，在之前我们了解过三种循环语句：
+
+- while()
+- for()
+- do-while()
+
+---
+
+### 5.4.1 while语句
+
+其形式：
+
+```cpp
+while(condition)
+    statement
+```
+
+其条件部分与if语句类型：可以是一个表达式，也可以是一个带初始化的变量声明。
+
+### 5.4.2 传统for语句
+
+其形式：
+
+```cpp
+for(init-statement;condition;expression)
+    statement
+```
+注意点：
+1. for循环语句中定义的变量仅在该循环语句中有效
+2. init-statement仅存在一条声明语句，但可以有多个对象
+3. for语句头能够省略任何一个语句，即便是全部省略也可以
+
+
+
+
