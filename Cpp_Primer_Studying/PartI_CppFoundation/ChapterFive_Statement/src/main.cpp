@@ -21,7 +21,11 @@ void test_5_3() {
     Exercise_5_3::exercise_5_12();
 }
 
-void test_5_4() { Exercise_5_4::exercise_5_14(); }
+void test_5_4() {
+    Exercise_5_4::exercise_5_14();
+    // Exercise_5_4::exercise_4_16();
+    // Exercise_5_4::exercise_5_17();
+}
 
 int main() {
     // test_5_1();

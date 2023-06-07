@@ -152,10 +152,37 @@ while(condition)
 for(init-statement;condition;expression)
     statement
 ```
+
 注意点：
+
 1. for循环语句中定义的变量仅在该循环语句中有效
-2. init-statement仅存在一条声明语句，但可以有多个对象
+2. init-statement仅存在一条声明语句（注意不是仅能声明一个对象），但可以有多个对象
 3. for语句头能够省略任何一个语句，即便是全部省略也可以
+
+### 5.4.3 范围for语句
+
+其形式：
+
+```cpp
+for (declaration:expression)
+    statement
+```
+
+### 5.4.4 do while语句
+
+其形式：
+
+```cpp
+do
+    statement
+while(condition);
+```
+
+相较于while语句，
+
+- do-while语句会在进行判断语句之前执行一次statement
+- do-while语句在括号后会添加一个分号
+
 
 
 

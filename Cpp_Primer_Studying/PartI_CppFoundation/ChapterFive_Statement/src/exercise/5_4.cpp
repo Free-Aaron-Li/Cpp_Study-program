@@ -11,30 +11,35 @@
 void Exercise_5_4::meaninglessFunction_1() {}
 
 void Exercise_5_4::exercise_5_14() {
-    unsigned int number = 1, max_number = 1;
-    std::string  element, same_string, max_number_string;
+    /* TODO 23-6-7 当前的求解思路无法解决，留在后续使用数据结构解决。
+     * */
+}
 
-    std::cout << "请输入一串字母：";          /* TODO 23-6-7 无法对单词进行全局统计 */
-    while (std::cin >> element) {
-        if (element == same_string) ++number; /* 相同单词，增加单词数 */
-        else {
-            if (number > max_number) {        /* 新的最大相同单词数 */
-                max_number        = number;
-                max_number_string = same_string;
-            }
-            number = 1;
-        }
-        same_string = element;
-        if (std::cin.get() == '\n') break;
+void Exercise_5_4::exercise_4_16() {
+    int value = 10;
+
+    std::cout << "这是使用for循环语句输出0~9：";
+    for (int i = 0; i < value; ++i) { std::cout << i << " "; }
+
+    std::cout << "\n这是使用while循环改写：";
+    int i = 0;
+    while (i < value) {
+        std::cout << i << " ";
+        ++i;
     }
 
-    if (number > max_number) {
-        max_number        = number;
-        max_number_string = same_string;
+    std::cout << "\n这是使用while循环输出一串字符：";
+    std::string string       = "this is good time!";
+    auto        string_index = string.begin();
+    while (string_index != string.end()) {
+        std::cout << *string_index << " ";
+        ++string_index;
     }
 
-    (max_number > 1) ? (
-      std::cout << "the max number of word is: ' " << max_number_string << " ' and this number is " << max_number
-                << "\n")
-                     : (std::cout << "sorry! no max number of word.");
+    std::cout << "\n这是使用for循环改写：";
+    for (auto index = string.begin(); index != string.end(); ++index) std::cout << *index << " ";
+}
+
+void Exercise_5_4::exercise_5_17() {
+    /* TODO 23-6-7 当前的求解思路无法解决，留给后续使用其他方法解决 */
 }
