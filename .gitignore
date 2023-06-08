@@ -1,5 +1,12 @@
 # all
 /**/.idea/
+
+# docs
+/**/docs/
+
+# CMake
+/**/cmake-build-*/
+
 # User-specific stuff
 /**/.idea/**/workspace.xml
 /**/.idea/**/tasks.xml
@@ -23,5 +30,3 @@
 /**/ idea/**/gradle.xml
 /**/.idea/**/libraries
 
-# CMake
-/**/cmake-build-*/
