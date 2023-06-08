@@ -10,6 +10,7 @@
 #include "5_3.hpp"
 #include "5_4.hpp"
 #include "5_5.hpp"
+#include "5_6.hpp"
 
 void test_5_1() { Exercise_5_1::exercise_5_3(); }
 
@@ -34,10 +35,17 @@ void test_5_5() {
     Exercise_5_5::exercise_5_21();
 }
 
+void test_5_6() {
+    // Exercise_5_6::exercise_5_23();
+    // Exercise_5_6::exercise_5_24();
+    Exercise_5_6::exercise_5_25();
+}
+
 int main() {
     // test_5_1();
     // test_5_3();
     // test_5_4();
-    test_5_5();
+    // test_5_5();
+    test_5_6();
     return 0;
 }
