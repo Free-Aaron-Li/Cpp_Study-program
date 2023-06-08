@@ -22,9 +22,10 @@ void test_5_3() {
 }
 
 void test_5_4() {
-    Exercise_5_4::exercise_5_14();
-    // Exercise_5_4::exercise_4_16();
-    // Exercise_5_4::exercise_5_17();
+    // Exercise_5_4::exercise_5_14();
+    //  Exercise_5_4::exercise_4_16();
+    //  Exercise_5_4::exercise_5_17();
+    Exercise_5_4::exercise_5_19();
 }
 
 int main() {

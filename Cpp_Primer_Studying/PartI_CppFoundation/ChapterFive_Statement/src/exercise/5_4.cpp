@@ -40,6 +40,15 @@ void Exercise_5_4::exercise_4_16() {
     for (auto index = string.begin(); index != string.end(); ++index) std::cout << *index << " ";
 }
 
-void Exercise_5_4::exercise_5_17() {
-    /* TODO 23-6-7 当前的求解思路无法解决，留给后续使用其他方法解决 */
+void Exercise_5_4::exercise_5_17() { /* TODO 23-6-7 当前的求解思路无法解决，留给后续使用其他方法解决 */
+}
+
+void Exercise_5_4::exercise_5_19() {
+    std::string string_1, string_2;
+
+    do {
+        std::cout << "Please enter two strings:";
+        if (std::cin >> string_1 >> string_2)
+            (string_1.size() >= string_2.size()) ? (std::cout << string_2 << "\n") : (std::cout << string_1 << "\n");
+    } while (std::cin);
 }

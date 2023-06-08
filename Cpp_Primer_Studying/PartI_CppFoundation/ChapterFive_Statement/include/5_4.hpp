@@ -101,6 +101,17 @@ class Exercise_5_4 {
       *         int ival=get_response();
       *     } while (ival);
       */
-      /*  */
+      /* a：输入两个数据并进行加法运算，将结果输出（如果输入正确，进行迭代执行语句）。应该在do和while之间添加作用域，否则v1v2无法在输入流中运用。
+       * b：C++不允许在条件部分定义变量，因为如果变量的使用在定义之前，则显然是不合理的。应该将ival定义在do-while之前。
+       * c：ival的作用域在do后面的块中，while中使用的ival在其作用域之外，无效。应该将ival定义在do-while之前。
+       * */
+
+     /**
+      * @title
+      * 练习5.19
+      * @description
+      * 编写一段程序，使用do while循环重复地执行下述任务：首先提示用户输入两个string对象，然后挑出较短的那个并输出它。
+      */
+      static void exercise_5_19();
 };
 #endif  // CPP_PRIMER_STUDYING_5_4_HPP
