@@ -7,11 +7,11 @@ AccessModifierOffset: -3
 # 开括号(开圆括号、开尖括号、开方括号)后的对齐: Align, DontAlign, AlwaysBreak(总是在开括号后换行)
 AlignAfterOpenBracket: AlwaysBreak
 # 连续宏定义时，对齐所有宏
-AlignConsecutiveMacros: AcrossEmptyLines
+AlignConsecutiveMacros: AcrossComments
 # 连续赋值时，对齐所有等号
-AlignConsecutiveAssignments: AcrossEmptyLines
+AlignConsecutiveAssignments: AcrossComments
 # 连续声明时，对齐所有声明的变量名
-AlignConsecutiveDeclarations: AcrossEmptyLines
+AlignConsecutiveDeclarations: AcrossComments
 # 左对齐逃脱换行(使用反斜杠换行)的反斜杠
 AlignEscapedNewlines: Left
 # 水平对齐二元和三元表达式的操作数
@@ -21,7 +21,7 @@ AlignTrailingComments: true
 # 允许函数声明的所有参数在放在下一行
 AllowAllParametersOfDeclarationOnNextLine: false
 # 允许短的块放在同一行
-AllowShortBlocksOnASingleLine: Empty
+AllowShortBlocksOnASingleLine: Always
 # 允许短的case标签放在同一行
 AllowShortCaseLabelsOnASingleLine: true
 # 允许短的函数放在同一行: None, InlineOnly(定义在类中), Empty(空函数), Inline(定义在类中，空函数), All
