@@ -126,6 +126,7 @@ void calculate(char command) {
                     /** 对运算符减号和负号进行判断，如果为负号则存储于运算符栈中 */
                     if (command == '-' && operations.top() == '|') {
                         operations.push('-');
+
                         break;
                     }
 
