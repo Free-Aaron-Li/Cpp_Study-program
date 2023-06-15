@@ -113,6 +113,7 @@ void calculate(char command) {
 
             /** 若前一运算符优先级高于输入运算符，进行运算符计算 */
             else {
+
                 while (priority(command) <= priority(operations.top())) {
 
                     /** 括号运算符实现，删除左括号且读取下一字符 */
