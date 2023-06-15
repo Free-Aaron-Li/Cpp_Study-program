@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.24)
-project(Primer_ChapterSix)
+project(CourseDesign)
 
 set(CMAKE_CXX_STANDARD 11)
 
@@ -11,7 +11,6 @@ link_directories(${PROJECT_SOURCE_DIR}/lib)
 
 set(SOURCES
         src/main.cpp
-        src/exercise/6_1.cpp
         )
 
 #------------------------------------
@@ -21,5 +20,3 @@ target_include_directories(${PROJECT_NAME}
         PRIVATE
         ${PROJECT_SOURCE_DIR}/include
         )
-
-add_subdirectory(test)
