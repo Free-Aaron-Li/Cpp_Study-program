@@ -218,7 +218,7 @@ Chapter6.hpp  fact.cpp  factMain.cpp  factMain.o  fact.o  main*
 其中，`.hpp`表示C++头文件，`.cpp`表示C++源文件，`.o`表示Linux平台下的中间代码文件（Windows下为`.obj`），`mian*`
 表示Linux平台下的可执行文件（Windows下为`.exe`）
 
-## 参数传递
+## 6.2 参数传递
 
 形参初始化的机理和变量初始化一致。
 
@@ -259,5 +259,302 @@ int main(){
 > 补充
 >
 > 对于熟悉C的程序员来说，其常常使用指针类型的形参来访问函数外部的对象。建议在C++中，使用引用类型的指针来代替指针。
+
+### 传引用参数
+
+引用实际上是为对象起别名。
+
+所以在函数形参中使用引用方式，这样可以利用形参改变实参，同时使用引用方式还可以避免拷贝。
+
+
+> 实际开发
+>
+> 使用引用参数时，如果函数无须改变形参的值（例如读取形参内容），最后将其声明为常量引用。
+>
+> 虽然函数仅能够返回一个值，但是可以通过引用参数的方式返回额外的值。
+
+## const 形参和实参
+
+在前文提到过，顶层const和底层const，其中顶层const作用于对象本身，同样和其他初始化过程一样，当实参初始化形参时会忽略掉顶层const。也就是说形参的const忽略掉了。
+
+```cpp
+#include <iostream>
+
+void functinon(int a){
+    a=20;       /* 我们可以修改a的值，但是如果形参为 const int a，则函数仅能够读取a，无法向a写值 */
+}
+
+void functinon();
+int main(){
+  const int b=10;
+  functinon(b);
+}
+```
+
+由于形参的初始化具有这种特性，所以如果形参为const，那么传给它的实参无论是否是const都可以。但是，这种特性也会出现一种意想不到的效果：
+
+```cpp
+void function(const int a){ ... }
+void function(int a){ ... } /* 错误：重复定义function(int) */
+```
+
+因为，形参中的const被忽略，那么传入它的实参可以为const也可以为普通对象，那么对于上述两个函数，其本质是一样的。所以第二个函数会报重复定义错误。
+
+关于指针或引用的底层const，提到过可以使用非常量初始化一个底层const对象，但是不能使用一个底层const对象初始化一个非常量对象。
+
+```cpp
+int i=42;
+const int *ip=&i;   //true
+const int &ir=i;    //true
+const int &ir_2=42; //true
+int *ip_2=ip;       //false
+int &ir_3=ir;       //false
+int &ir_4=42;       //false
+```
+
+这样的规则同样适用于形参的参数传递上：
+
+```cpp
+int i=0;
+const int ci=i;     // 顶层const
+string::size_type str=0;
+reset(&i);          // 形参类型是int指针类型
+reset(&ci);         // 错误，无法使用const int 对象的指针初始化int *
+reset(i);           // 调用形参类型为int&的reset对象
+reset(ci);          // 错误，无法将普通引用绑定到const对象ci上
+reset(42);          // 错误，无法引用字面值
+reset(ctr);         // 错误，类型不匹配，ctr属于无符号类型
+```
+
+在实际开发中，我们应该尽量使用常量引用，将函数不会改变的形参定义为常量引用是一个很好的习惯，这样不会误导调用者认为该值可以被修改。
+
+同时，使用普通引用而非常量引用也会极大地限制函数所能够接受的实参类型，例如：无法将const对象、字面值或者需要类型转换的对象传递给普通地引用形参。
+
+除此之外，还存在一个问题，如果在一个形参为const对象的函数中调用将该形参作为实参传给普通引用的函数，那么编译则会失败：
+
+```cpp
+void function_1(string &s){ ... }
+
+void function(const string &s){
+function_1(s);      /* 编译失败 */
+}
+```
+
+### 数组形参
+
+数组相较于我们之前看到的对象具有两个特殊性：
+
+- 不允许拷贝数组
+- 使用数组（通常）会将其转换为指针（且该指针指向数组首元素）
+
+因此，使用数组参数时，无法使用值传递的方式使用数组参数、传递数组时，实际上传递的是指向数组首元素的指针。
+
+```cpp
+void print(const int *)
+void print(const int[])
+void print(const int[10])
+```
+
+虽然C++中无法直接将数组进行拷贝，但是可以写成类型形式（如上式）方便调用者理解。上述的三种方式函数均是等价的，其函数的形参都是const
+int *类型。我们写成const int[]或者const int[10]形式只是我们的意图和期望。
+在编译器处理过程中，只检查传入的参数是否是const int *类型。
+
+由于我们使用数组作为形参，那么我们也要考虑将数组的越界问题。
+
+针对这种情况，管理指针形参有三种常见的技术：
+
+1. 使用标记指定数组长度
+
+    ```cpp
+    void print(const char *point_array){
+    if(point_array)                 /* 判断是否是空指针 */
+    while(*point_array)         /* 判断指针所指向的对象是否为空 */
+            cout<<*point_array++;   /* 输出 */
+    }
+    ```
+
+   这种方式要求数组的末尾存在一个结束标记，典型便是：C风格字符串，C风格字符串在结尾处包含一个空字符。
+
+2. 使用标准库规范
+
+    ```cpp
+        void print(const int *begin,const int *end){
+            while(begin!=end)
+                cout<<*begin++<<endl;
+        }
+        
+        int main(){
+            int array[2]={1,2};
+            print(begin(array),end(array);
+        }
+    ```
+
+   通过使用数组的首元素指针和尾元素指针来确定数组的大小
+
+3. 显式传递一个表示数组大小的形参
+
+    ```cpp
+        void print(const int array[],size_t size){
+            for(size_t i=0;i!=size;++i)
+                cout<<array[i]<<endl;
+        }    
+    ```
+
+   这种方式在C程序中很常见，笔者开始也是从这种方式描述数组大小。当然，为了方便直接确定数组大小，也可以将`size_t size`
+   的实参写为`end(array)-begin(array)`。
+
+在之前介绍引用的时候，提到过数组引用。数组本身是对象，所以可以对数组进行引用：
+
+```cpp
+void print(int (&arr)[10]){
+    for(auto elem:arr)
+        cout<<elem<<" ";
+}
+```
+
+其相当于为数组起一个别名，但是注意一定要将引用名括起来。如果不括起来相当于将arr声明成了引用的数组。
+
+但是这种引用本身包含数组的维度，也就是大小。所以当调用者输入的实参数组的维度不等于10时，编译错误。
+
+### main：处理命令行选项
+
+在大多数时候，我们在之前的练习中main()函数只有空形参列表。
+
+在某些时候，我们确定需要给main传递实参，一种常见的情况是用户通过设置一组选项来确定函数所要执行的操作，那么我们通过两个可选形参传递给main()
+函数：
+
+```cpp
+int main(int argc,char *argv[]){ ... }
+int main(int argc,char **argv){ ... }
+```
+
+第一个形参argc表示数组中字符串的数量，第二个形参argv是一个数组，其元素指向C风格字符串的指针。
+
+由于argv是一个数组，所以也可以写成第二种方式。
+
+假设存在一个可执行文件print，其main函数在其可执行文件之内，其存在下面命令：
+
+```bash
+print -o -x hello home
+```
+
+那么，根据上面命令，得到argc等于5，argv为：
+
+```markdown
+argv[0]="print"; 
+argv[1]="-o";
+argv[2]="-x";
+argv[3]="hello";
+argv[4]="home";
+argv[5]=0;
+```
+
+其可选的参数便是从argv[1]开始到argv[4];
+
+### 含有可变参数的函数
+
+函数的参数在某些时候，我们并不能够准确预知正确数目，或者某些时候，我们需要输出特定的但是并未明确写出的参数。这种使用环境下，我们就可以使用可变参数的函数。
+
+可变参数函数在C++11标准下提供两种主要的方法：
+
+- initializer-list
+    - 如果传入的所有实参类型相同
+- 可变参数模型
+    - 实参类型不同
+
+除此之外，C++还存在一种特殊的形参类型：省略符。但请注意：该类型一般只用于与C函数交互的接口程序。
+
+#### initializer_list形参
+
+该类型定义在同名头文件下，其具体用法：
+
+```cpp
+initializer_list<T> list;  /* 默认初始化：T类型的空列表 */ 
+initializer_list<T> list{a,b,c ... };  /* list的元素数量和初始值一样多；list的元素是对应初始值的副本；列表中的元素是const */
+list_2(list)   /* 拷贝或赋值一个initializer_list对象不会拷贝列表中的元素。拷贝后，原始列表和副本共享元素 */
+list_2=list    /* 与上述一致 */
+list.size()    /* 获得列表中的元素 */
+list.begin()   /* 返回指向list中首元素的指针 */
+list.end()     /* 返回指向list中尾元素下一位置的指针 */
+```
+
+initializer_list本身也是模板类型，所以其和vector类型一致，在定义该类型时，必须说明列表中所含元素的类型：
+
+```cpp
+initializer_list<int> list;   /* 其元素类型为int */
+```
+
+与vector不同是，initializer_list中**所有元素都为常量**！
+
+当然，initializer_list可以通过使用begin()和end()方法获得其内参数：
+
+```cpp
+void print(initializer_list<int> list){
+    for(auto begin=list.begin();begin!=list.end();++begin)
+        cout<<*begin<<" ";
+    cout<<"\n";
+}
+```
+
+在使用initializer_list形参时，我们可以这样使用：
+
+```cpp
+/* 打印信息 */
+void print(ID id，initializer_list<string> list){    /* 假设存在一个类ID，其中meg()函数用于输出id值 */
+    cout<<id.meg()<<": ";
+    for(auto &elem : list)
+        cout<<elem<<" ";
+    cout<<"\n";
+}
+
+void error(ID id,const int i,const int j){
+    if(i!=j)
+        print(id,{"hello","well"}); /* 使用大括号包住值序列 */
+    else
+        print(id,{"okay"});
+```
+
+注意点：
+
+- 如果想要在initializer_list形参中传入值**序列**，那么必须使用大括号括起来。
+- 由于列表中的元素为const，所以只能读取initializer_list对象中元素，无法修改。
+- initializer_list队形中只能传入同一类型元素
+
+#### 省略符形参
+
+我们需要注意的是：省略符形参是为了便于C++程序能欧访问某些特殊C代码而设定的（这些代码使用varargs的C标准库功能）。所以，**大多数类类型的对象在传递给省略符形参时都无法正确拷贝**。
+
+省略符形参只能出现在形参列表的最后一个位置：
+
+```cpp
+void print_1(List list,...);
+void print_2(...);
+```
+
+其无外乎只有上述两种形式。省略符形参所对应的实参无需进行类型检查。
+
+
+## 6.3 返回类型和return语句
+
+在前面我们提到过，return语句实际上是终止当前正在执行的函数并将控制权返回到调用该函数的地方。
+return语句的形式有两种：
+```cpp
+return;
+return expression;
+```
+
+### 无返回值函数
+
+只有在返回类型为void的函数中才能实现没有返回值的return语句，返回类型为void的函数非必须添加return语句，该函数会在最后一条语句后隐式执行return。
+
+如果想要使用`return expression`形式，则`expression`必须为返回类型为void的函数，否则编译失败。
+
+### 有返回值函数
+
+
+
+
+
+
 
 

@@ -13,12 +13,12 @@
 /** 存储操作数 */
 std::stack<double> numbers;
 /** 存储运算符 */
-std::stack<char> operations;
+std::stack<char>   operations;
 /** 绝对值符标记 */
-int label = 0;
+int                label = 0;
 /** 优先级表单<br>
  * 优先级规则：绝对值符号>平方号>(* /)>(+ -)>(# 换行符) */
-int priority(char operate) {
+int                priority(char operate) {
     switch (operate) {
             /** #作为栈顶元素，用于确定栈底 */
         case '#':
@@ -33,16 +33,19 @@ int priority(char operate) {
         case '|': return 5;
         default:;
     }
-    return 0;
+    /** 如果运算符非指定值，返回错误状态 */
+    return -1;
 }
 
 /** 定义calculate函数 */
 void calculate(char);
 
-int  main() {
-    std::cout << "计算器\n"
-              << "欢迎使用本程序，您可以输入基础运算符+-*/、绝对值符号|、括号()和平方号^。如果您想要退出，请输入q。\n"
-              << ": ";
+int main() {
+    std::cout
+      << "Calculator\n"
+      << "Welcome to this program, you can enter the basic operator +-,\n "
+         "the absolute value symbol |, parentheses (), and the square sign ^. If you want to opt out, enter q.\n"
+      << ": ";
     /** 强制类型转换，get()方法获取的是int类型值，强制类型转换为char类型 */
     char command = static_cast<char>(std::cin.get());
     while (command != 'q') {
@@ -50,6 +53,8 @@ int  main() {
         if (command == '\n') /** 计算式输入口 */
             std::cout << "\n: ";
         command = static_cast<char>(std::cin.get());
+        /** 输入未知值，程序结束 */
+        if (label == -1) return -1;
     }
     return 0;
 }
@@ -93,7 +98,6 @@ void calculate(char command) {
         case '*':
         case '/':
         case '\n': {
-
             /** 初始化运算符栈 */
             if (operations.empty()) operations.push('#');
 
@@ -113,9 +117,7 @@ void calculate(char command) {
 
             /** 若前一运算符优先级高于输入运算符，进行运算符计算 */
             else {
-
                 while (priority(command) <= priority(operations.top())) {
-
                     /** 括号运算符实现，删除左括号且读取下一字符 */
                     if (operations.top() == '(' && command == ')') {
                         operations.pop();
@@ -159,9 +161,7 @@ void calculate(char command) {
                             case '^': {
                                 int temporary   = static_cast<int>(leftNum);
                                 int last_number = 1;
-                                for (int i = 0; i < static_cast<int>(rightNum); ++i) {
-                                    last_number *= temporary;
-                                }
+                                for (int i = 0; i < static_cast<int>(rightNum); ++i) { last_number *= temporary; }
                                 numbers.push(static_cast<int>(last_number));
                                 operations.pop();
                                 break;
@@ -185,11 +185,17 @@ void calculate(char command) {
             }
             break;
         }
-        default:
+        default: {
             /** 对不属于操作数和运算符的值进行报错 */
-            if (priority(command) == -1) {
-                std::cout << "您输入有误！";
-                return;
+            try {
+                if (priority(command) == -1)
+                    throw std::runtime_error(
+                      "You made a mistake! The characters you entered are not within the specified characters.\n");
+                label = -1;
             }
+            catch (std::runtime_error &error) {
+                std::cout << error.what() << "Please re-execute the procedure.";
+            }
+        }
     }
 }

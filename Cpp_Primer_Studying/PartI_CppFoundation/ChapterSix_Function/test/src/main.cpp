@@ -8,7 +8,8 @@
 
 #include <iostream>
 
-int test_1_subFunction(int value) {
+int
+test_1_subFunction(int value) {
     bool        i;
     char        j;
     wchar_t     k;
@@ -37,7 +38,8 @@ int test_1_subFunction(int value) {
 }
 
 /* 对局部对象的探索 */
-void test_1() {
+void
+test_1() {
     int value = 10;
     /* 函数体是一个语句块，自构成一个作用域，其形参和函数体内变量为局部变量，对函数外层作用域同名声明具有隐藏性 */
     test_1_subFunction(value);
@@ -45,7 +47,8 @@ void test_1() {
     /* 自动对象的默认初始值探索 */
 }
 
-int main() {
-    test_1();
+int
+main() {
+    // test_1();
     return 0;
 }
