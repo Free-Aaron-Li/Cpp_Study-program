@@ -522,7 +522,8 @@ void error(ID id,const int i,const int j){
 
 #### 省略符形参
 
-我们需要注意的是：省略符形参是为了便于C++程序能欧访问某些特殊C代码而设定的（这些代码使用varargs的C标准库功能）。所以，**大多数类类型的对象在传递给省略符形参时都无法正确拷贝**。
+我们需要注意的是：省略符形参是为了便于C++程序能欧访问某些特殊C代码而设定的（这些代码使用varargs的C标准库功能）。所以，*
+*大多数类类型的对象在传递给省略符形参时都无法正确拷贝**。
 
 省略符形参只能出现在形参列表的最后一个位置：
 
@@ -533,11 +534,11 @@ void print_2(...);
 
 其无外乎只有上述两种形式。省略符形参所对应的实参无需进行类型检查。
 
-
 ## 6.3 返回类型和return语句
 
 在前面我们提到过，return语句实际上是终止当前正在执行的函数并将控制权返回到调用该函数的地方。
 return语句的形式有两种：
+
 ```cpp
 return;
 return expression;
@@ -551,10 +552,55 @@ return expression;
 
 ### 有返回值函数
 
+只要函数的返回类型不是void，那么必须在该函数中存在return语句且必须返回一个值。（但是有例外：main函数可以不写return语句，编译器会隐式插入一条返回值为0的return语句）
 
+注意：在含有return语句的循环中也必须存在一条return语句，也就是说：必须考虑所有情况下return语句都能够被执行。
 
+**不要返回局部变量的引用或指针**：在函数完成后，其所占的存储空间也被释放掉。因此，函数终止意味着局部变量所占的内存区域不再有效，使用局部变量的引用则是无效的，使用局部变量的指针则是“野指针”。
 
+**函数的返回类型决定函数调用是否是左值**：调用返回引用的函数得到左值，其他类型得到右值。特别的，我们能够将非常量引用的函数结果赋值：
 
+```cpp
+char & get_value(string &str,string::size_type i){
+    return str[i];
+}
+
+int main(){
+    string str="hello";
+    get_value(str,0)=b;     /* str变为bello */
+```
+
+#### 列表初始化返回值
+
+C++11 规定，函数可以返回花括号包围的值的列表。此处的列表用来对表示函数返回的临时量进行初始化。
+
+```cpp
+vector<string> print(const string &str1,const string &str2){
+   if(str1.size()!=str2.size()) return {"no"};
+   else return {"yes","equal","size"};
+}
+```
+
+在这个例子中，使用vector对象来存储返回信息。
+
+当然，列表初始化返回值其实也是有条件的，如果函数返回的是内置类型，那么列表中仅存在一个值，且该值所占空间不应该大于目标类型的空间：
+
+```cpp
+#include <iostream>
+#include <string>
+
+int print(const int & i){
+  return {i};   /* 不能返回return {i,10} */
+}
+
+int main(){
+  std::string str="hello";
+  int i=10;
+  std::cout<<print(i);
+}
+```
+
+如果返回类型为类类型，则根据类本身定义初始值如何使用。
 
 
 
