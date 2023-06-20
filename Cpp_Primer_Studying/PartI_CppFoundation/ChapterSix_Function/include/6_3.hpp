@@ -92,6 +92,11 @@ class Exercise_6_3 {
 
     /**
      * @title
+     * 6.3.3节练习
+     */
+
+    /**
+     * @title
      * 练习6.36
      * @description
      * 编写一个函数的声明，使其返回数组的引用并且该数组包含10个string对象。不要使用尾置返回类型、decltype或者类型别名。
