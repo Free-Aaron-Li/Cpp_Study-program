@@ -13,6 +13,7 @@ set(SOURCES
         src/main.cpp
         src/exercise/6_1.cpp
         src/exercise/6_2.cpp
+        src/exercise/6_3.cpp
         )
 
 #------------------------------------
