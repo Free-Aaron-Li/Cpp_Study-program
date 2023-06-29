@@ -1,0 +1,54 @@
+// This file is part of Cpp_Primer_Studying project.
+// This program is called:6_5.
+// If there are no special instructions, this file is used as an exercise and test file.
+
+// Copyright (C) 2023 Aaron
+// This program is under the GPL-3.0 license,if you have not received it or the program has a bug,
+// please let me know: <fly_aaron.li@outlook.com>.
+#ifndef CPP_PRIMER_STUDYING_6_5_HPP
+#define CPP_PRIMER_STUDYING_6_5_HPP
+
+/**
+ * @title
+ * 6.5 特殊用途语言特性
+ */
+
+#include "6.hpp"
+
+class Exercise_6_5 {
+ public:
+    /**
+     * @title
+     * 练习6.40
+     * @description
+     * 下面的哪个声明是错误的？为什么？
+     * @code
+     * (a) int ff(int a,int b=0,int c=0);
+     * (b) char *init(int ht=24,int wd,char bckgrnd);
+     */
+    /* b是错误的，为形参赋予默认值，其后所有形参都必须被赋予默认值 */
+    static void meaninglessFunction_1();
+
+    /**
+     * @title
+     * 练习6.41
+     * @description
+     * 下面的哪个调用是非法的？为什么？哪个调用虽然合法但显然与程序员的初衷不符？为什么？
+     * @code
+     * char *init(int ht, int wd = 80, char bckgrnd = ' ');
+     * (a) init();              (b) init(24,10);                (c) init(14,'*');
+     */
+    /* a的调用是非法的，init函数的第一个形参并没有被赋予默认值，必须在调用时传入实参;
+     * c的调用是与程序员的初衷不符，init被调用时第二个形参传入的实参为char类型，不是int类型，实参值将会经过隐式转换赋给形参
+     * */
+    static void meaninglessFunction_2();
+
+    /**
+     * @title
+     * 练习6.42
+     * @description
+     * 给make_plural函数（参见6.3.2节）的第二个形参赋予默认实参's'，利用新版本的函数输出单词success和failure的单词的单数和复数形式。
+     */
+    static void exercise_6_42();
+};
+#endif  // CPP_PRIMER_STUDYING_6_5_HPP
