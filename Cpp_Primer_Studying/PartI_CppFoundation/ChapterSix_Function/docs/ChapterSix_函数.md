@@ -758,11 +758,43 @@ assert宏常用于检查“不能发生”的条件。
 >
 > 注意：assert是用来避免显而易见的错误，而非处理异常。注意这一点！**错误是不应该出现的，异常是不可避免的**。assert一般都是在方法或者函数的最开始使用，如果在一个功能过程执行中出现的问题几乎都是异常。
 
-
-
 #### NDEBUG预处理变量
 
 assert行为依赖于预处理变量NDEBUG的状态。如果定义了NDEBUG，则assert什么也不做。默认状态下没有定义DEBUG，此时assert将执行运行时检查。（即当将“`#define NDEBUG`”定义在`#include <cassert>`之前，assert宏的定义为空）。
+
+assert在为假的时候，输出调试信息，类似于：
+
+```markdown
+Primer_ChapterSix: 6_5.cpp:38: void exercise_47_sub(std::vector<int>::const_iterator, std::vector<int>::const_iterator): Assertion `0' failed.
+```
+当然，我们也可以自己定义调试信息，编写自己的条件调试代码，例如：
+
+```cpp
+/* 输出vector的大小 */
+#ifndef NDEBUG
+    std::cerr << iterator_end - iterator_begin << " function: " << __func__ << " file: " << __FILE__ << " on "
+              << __DATE__ << " at " << __TIME__ << "\n";
+#endif
+```
+如果DEBUG没有定义，那么将会输出#ifndef和#endif中的语句，其中我们使用道路编译器定义的一些局部静态变量：
+
+- __func__ ：存放函数名的字符串字面值
+- __FILE__ ：存放文件名的字符串字面值 
+- __LINE__ ：存放当前行号的字符串字面值
+- __TIME__ ：存放文件编译时间的字符串字面值
+- __DATE__ ：存放文件编译日期的字符串字面值
+
+例如，上述自定义的条件调试代码便会输出：
+
+```markdown
+5 function: exercise_47_sub file: 6_5.cpp on Jun 30 2023 at 14:32:26
+4 function: exercise_47_sub file: 6_5.cpp on Jun 30 2023 at 14:32:26
+3 function: exercise_47_sub file: 6_5.cpp on Jun 30 2023 at 14:32:26
+2 function: exercise_47_sub file: 6_5.cpp on Jun 30 2023 at 14:32:26
+1 function: exercise_47_sub file: 6_5.cpp on Jun 30 2023 at 14:32:26
+0 function: exercise_47_sub file: 6_5.cpp on Jun 30 2023 at 14:32:26
+```
+
 
 
 
