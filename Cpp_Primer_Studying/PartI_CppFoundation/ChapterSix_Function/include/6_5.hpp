@@ -50,5 +50,49 @@ class Exercise_6_5 {
      * 给make_plural函数（参见6.3.2节）的第二个形参赋予默认实参's'，利用新版本的函数输出单词success和failure的单词的单数和复数形式。
      */
     static void exercise_6_42();
+
+    /**
+     * @title
+     * 6.5.2节练习
+     */
+
+    /**
+     * @title
+     * 练习6.43
+     * @description
+     * 你会把下面当哪个声明和定义放在头文件中？哪个放在源文件中？为什么？
+     * (a) inline bool eq(const BigInt&,const BigInt&) { ... }
+     * (b) void putValues(int *arr,int size);
+     */
+     /* 将a放在源文件中，b放在头文件中。因为a函数存在定义，b仅有声明，没有定义。 */
+    static void meaninglessFunction_3();
+
+
+    /**
+     * @title
+     * 练习6.44
+     * @description
+     * 将6.2.2节当isShorter函数改写成内联函数。
+     */
+     static void exercise_6_44();
+
+     /**
+      * @title
+      * 练习6.45
+      * @description
+      * 回顾在前面当练习中你编写当那些函数，它们应该是内联函数吗？如果是，将它们改写成内联函数；如果不是，说明原因。
+      */
+      /* 是 */
+     static void meaninglessFunction_4();
+
+     /**
+      * @title
+      * 练习6.46
+      * @description
+      * 能把isShorter函数定义成constexpr函数吗？如果能，将它改写成constexpr函数；如果不能，说明原因。
+      */
+      /*  不能够，string对象的size方法并不是contempt函数 */
+     static void meaninglessFunction_5();
+
 };
 #endif  // CPP_PRIMER_STUDYING_6_5_HPP

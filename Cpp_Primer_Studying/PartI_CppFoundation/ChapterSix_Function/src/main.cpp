@@ -35,7 +35,10 @@ void test_6_3() {
     Exercise_6_3::exercise_6_38();
 }
 
-void test_6_5() { Exercise_6_5::exercise_6_42(); }
+void test_6_5() {
+    // Exercise_6_5::exercise_6_42();
+    Exercise_6_5::exercise_6_44();
+}
 
 int main() {
     // test_6_1();

@@ -9,11 +9,22 @@
 
 void Exercise_6_5::meaninglessFunction_1() {}
 void Exercise_6_5::meaninglessFunction_2() {}
+void Exercise_6_5::meaninglessFunction_3() {}
+void Exercise_6_5::meaninglessFunction_4() {}
+void Exercise_6_5::meaninglessFunction_5() {}
 
-std::string exercise_42_sub(size_t ctr, const std::string &word, const std::string &ending ="s") {
+inline std::string exercise_42_sub(size_t ctr, const std::string &word, const std::string &ending = "s") {
     return ((ctr > 1) ? word + ending : word);
 }
 void Exercise_6_5::exercise_6_42() {
-    std::cout<<exercise_42_sub(2,"success","es")<<"\n";
-    std::cout<<exercise_42_sub(2,"failure")<<"\n";
+    std::cout << exercise_42_sub(2, "success", "es") << "\n";
+    std::cout << exercise_42_sub(2, "failure") << "\n";
+}
+
+inline bool exercise_44_sub(const std::string &s1, const std::string &s2) { return s1.size() < s2.size(); }
+
+void Exercise_6_5::exercise_6_44() {
+    std::string s1 = "hello";
+    std::string s2 = "hello !";
+    std::cout << exercise_44_sub(s1, s2);
 }
