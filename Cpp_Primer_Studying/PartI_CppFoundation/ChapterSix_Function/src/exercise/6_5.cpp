@@ -28,3 +28,23 @@ void Exercise_6_5::exercise_6_44() {
     std::string s2 = "hello !";
     std::cout << exercise_44_sub(s1, s2);
 }
+
+void exercise_47_sub(std::vector<int>::const_iterator iterator_begin, std::vector<int>::const_iterator iterator_end) {
+    /* 如果没有定义DEBUG，那么将会执行#ifndef和#endif中语句 */
+#ifndef NDEBUG
+    std::cerr << iterator_end - iterator_begin << " function: " << __func__ << " file: " << __FILE__ << " on "
+              << __DATE__ << " at " << __TIME__ << "\n";
+#endif
+    if (iterator_begin != iterator_end) {
+        std::cout << *iterator_begin << " ";
+        return exercise_47_sub(++iterator_begin, iterator_end);
+    } else {
+        std::cout << "\n";
+        return;
+    }
+}
+
+void Exercise_6_5::exercise_6_47() {
+    std::vector<int> vector{1, 2, 3, 4, 5};
+    exercise_47_sub(vector.begin(), vector.end());
+}

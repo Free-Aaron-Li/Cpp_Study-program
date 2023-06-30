@@ -37,7 +37,8 @@ void test_6_3() {
 
 void test_6_5() {
     // Exercise_6_5::exercise_6_42();
-    Exercise_6_5::exercise_6_44();
+    // Exercise_6_5::exercise_6_44();
+    Exercise_6_5::exercise_6_47();
 }
 
 int main() {

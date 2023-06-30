@@ -17,5 +17,6 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <cassert>
 
 #endif  // CPP_PRIMER_STUDYING_6_HPP

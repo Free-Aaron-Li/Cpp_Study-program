@@ -94,5 +94,27 @@ class Exercise_6_5 {
       /*  不能够，string对象的size方法并不是contempt函数 */
      static void meaninglessFunction_5();
 
+     /**
+      * @title
+      * 6.5.3节练习
+      * @description
+      * 改写6.3.2节练习中使用递归输出vector内容的程序，使其有条件地输出与执行过程有关的信息。例如，每次调用时输出vector对象的大小。分别在打开和
+      * 关闭调试器的情况下编译并执行这个程序。
+      */
+      static void exercise_6_47();
+
+      /**
+       * @title
+       * 练习5.48
+       * @description
+       * 说明下面这个循环的含义，它对assert的使用合理吗？
+       * @code
+       * string s;
+       * while(cin >> s && s != sought) { }      // 空函数体
+       * assert(cin);
+       */
+       /* 用于判断输入值是否为sought或者输入值是否为EOF，如果判断失败，则会执行assert函数。但是，这是不合理的，应该改成：
+        * assert(!cin);assert(s==sought);
+        * */
 };
 #endif  // CPP_PRIMER_STUDYING_6_5_HPP
