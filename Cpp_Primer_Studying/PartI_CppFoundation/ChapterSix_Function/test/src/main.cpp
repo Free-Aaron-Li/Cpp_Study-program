@@ -7,9 +7,9 @@
 // please let me know: <fly_aaron.li@outlook.com>.
 
 #include <iostream>
+#include <string>
 
-int
-test_1_subFunction(int value) {
+int test_1_subFunction(int value) {
     bool        i;
     char        j;
     wchar_t     k;
@@ -38,8 +38,7 @@ test_1_subFunction(int value) {
 }
 
 /* 对局部对象的探索 */
-void
-test_1() {
+void test_1() {
     int value = 10;
     /* 函数体是一个语句块，自构成一个作用域，其形参和函数体内变量为局部变量，对函数外层作用域同名声明具有隐藏性 */
     test_1_subFunction(value);
@@ -47,8 +46,23 @@ test_1() {
     /* 自动对象的默认初始值探索 */
 }
 
-int
-main() {
+/* 对函数指针形参简化的探索 */
+std::string view(const std::string &str) { return str + "~~\n"; }
+
+typedef decltype(view) name;
+// typedef decltype(view) *name;
+// typedef std::string name(const std::string &);
+// typedef std::string (*name)(const std::string &);
+// using name=std::string(const std::string &);
+// using name=std::string(*)(const std::string &);
+
+
+std::string print(const std::string &str, name name1) { return str + name1(" world"); }
+
+void test_2() { std::cout << print("hello", view); }
+
+int main() {
     // test_1();
+    test_2();
     return 0;
 }
