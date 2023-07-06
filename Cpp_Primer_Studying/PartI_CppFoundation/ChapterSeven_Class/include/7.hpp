@@ -1,15 +1,20 @@
 // This file is part of Cpp_Primer_Studying project.
-// This program is called:main.
+// This program is called:7.
 // If there are no special instructions, this file is used as an exercise and test file.
 
 // Copyright (C) 2023 Aaron
 // This program is under the GPL-3.0 license,if you have not received it or the program has a bug,
 // please let me know: <fly_aaron.li@outlook.com>.
-#include "7_1.hpp"
+#ifndef CPP_PRIMER_STUDYING_7_HPP
+#define CPP_PRIMER_STUDYING_7_HPP
 
-void test_7_1() { Exercise_7_1::exercise_7_1(); }
+/**
+ * @title
+ * 第7章 类
+ */
 
-int main() {
-    test_7_1();
-    return 0;
-}
+#include <iostream>
+#include <vector>
+#include <string>
+
+#endif  // CPP_PRIMER_STUDYING_7_HPP
