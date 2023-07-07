@@ -7,42 +7,108 @@
 // please let me know: <fly_aaron.li@outlook.com>.
 #include "7_1.hpp"
 
+void Exercise_7_1::meaninglessFunction_1() {}
+void Exercise_7_1::meaninglessFunction_2() {}
+void Exercise_7_1::meaninglessFunction_3() {}
+void Exercise_7_1::meaninglessFunction_4() {}
+void Exercise_7_1::meaninglessFunction_5() {}
+void Exercise_7_1::meaninglessFunction_6() {}
+
 void Exercise_7_1::exercise_7_1() {
-    Sales_data total;
-    double sold_price;       /* 销售单价 */
+    SalesData total;
+    double    sold_price; /* 销售单价 */
 
-    if (std::cin >> total.bookNo >> total.units_sold >> sold_price) {
-        total.revenue = total.units_sold * sold_price;
+    if (std::cin >> total._bookNo >> total._units_sold >> sold_price) {
+        total._revenue = total._units_sold * sold_price;
 
-        Sales_data trans;
-        while (std::cin >> trans.bookNo >> trans.units_sold >> sold_price) {
-            trans.revenue = trans.units_sold * sold_price;
-            if (total.bookNo == trans.bookNo) {
-                total.units_sold += trans.units_sold;
-                total.revenue += trans.revenue;
+        SalesData trans;
+        while (std::cin >> trans._bookNo >> trans._units_sold >> sold_price) {
+            trans._revenue = trans._units_sold * sold_price;
+            if (total._bookNo == trans._bookNo) {
+                total._units_sold += trans._units_sold;
+                total._revenue += trans._revenue;
             } else {
                 std::cout << "********************\n"
-                          << total.bookNo << "\t" << total.units_sold << "\t" << total.revenue << "\t";
-                if (total.units_sold != 0)
-                    std::cout << total.revenue / total.units_sold << "\n"
+                          << total._bookNo << "\t" << total._units_sold << "\t" << total._revenue << "\t";
+                if (total._units_sold != 0)
+                    std::cout << total._revenue / total._units_sold << "\n"
                               << "********************\n";
                 else
                     std::cout << "no sales!\n"
                               << "********************\n";
-                total.bookNo     = trans.bookNo;
-                total.units_sold = trans.units_sold;
-                total.revenue    = trans.revenue;
+                total = trans;
             }
         }
 
         std::cout << "********************\n"
-                  << total.bookNo << "\t" << total.units_sold << "\t" << total.revenue << "\t";
-        if (total.units_sold != 0)
-            std::cout << total.revenue / total.units_sold << "\n"
+                  << total._bookNo << "\t" << total._units_sold << "\t" << total._revenue << "\t";
+        if (total._units_sold != 0)
+            std::cout << total._revenue / total._units_sold << "\n"
                       << "********************\n";
         else
             std::cout << "no sales!\n"
                       << "********************\n";
+    } else
+        std::cerr << "no data?!\n";
+}
+
+
+void Exercise_7_1::exercise_7_3() {
+    SalesData total;
+    double    sales_price; /* 销售单价 */
+
+    if (std::cin >> total._bookNo >> total._units_sold >> sales_price) {
+        total._revenue = total._units_sold * sales_price;
+
+        SalesData trans;
+
+        while (std::cin >> trans._bookNo >> trans._units_sold >> sales_price) {
+            trans._revenue = trans._units_sold * sales_price;
+
+            if (total.isbn() == trans.isbn())
+                total.combine(trans);
+            else {
+                std::cout << "********************\n"
+                          << total._bookNo << "\t" << total._units_sold << "\t" << total._revenue << "\t";
+                if (total._units_sold != 0)
+                    std::cout << total._revenue / total._units_sold << "\n"
+                              << "********************\n";
+                else
+                    std::cout << "no sales!\n"
+                              << "********************\n";
+                total = trans;
+            }
+        }
+
+        std::cout << "********************\n"
+                  << total._bookNo << "\t" << total._units_sold << "\t" << total._revenue << "\t";
+        if (total._units_sold != 0)
+            std::cout << total._revenue / total._units_sold << "\n"
+                      << "********************\n";
+        else
+            std::cout << "no sales!\n"
+                      << "********************\n";
+    } else
+        std::cerr << "no data?!\n";
+}
+
+void Exercise_7_1::exercise_7_7() {
+    SalesData total;
+    if (read(std::cin, total)) {
+        SalesData trans;
+        while (read(std::cin, trans)) {
+            if (trans.isbn() == total.isbn())
+                total.combine(trans);
+            else {
+                std::cout << "********************\n";
+                print(std::cout, total);
+                std::cout << "\n********************\n";
+                total = trans;
+            }
+        }
+        std::cout << "********************\n";
+        print(std::cout, total);
+        std::cout << "\n********************\n";
     } else
         std::cerr << "no data?!\n";
 }

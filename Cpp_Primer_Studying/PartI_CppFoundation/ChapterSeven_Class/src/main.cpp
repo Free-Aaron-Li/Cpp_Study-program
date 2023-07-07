@@ -7,7 +7,11 @@
 // please let me know: <fly_aaron.li@outlook.com>.
 #include "7_1.hpp"
 
-void test_7_1() { Exercise_7_1::exercise_7_1(); }
+void test_7_1() {
+    // Exercise_7_1::exercise_7_1();
+    // Exercise_7_1::exercise_7_3();
+    Exercise_7_1::exercise_7_7();
+}
 
 int main() {
     test_7_1();
