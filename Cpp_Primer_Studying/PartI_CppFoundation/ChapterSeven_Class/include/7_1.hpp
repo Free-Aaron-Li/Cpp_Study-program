@@ -14,7 +14,7 @@
  */
 
 #include "7.hpp"
-#include "sales_data.hpp"
+#include "sales_data_public.hpp"
 
 class Exercise_7_1 {
  public:
