@@ -12,6 +12,7 @@ link_directories(${PROJECT_SOURCE_DIR}/lib)
 set(SOURCES
         src/main.cpp
         src/exercise/7_1.cpp
+        src/exercise/7_2.cpp
         )
 
 #------------------------------------

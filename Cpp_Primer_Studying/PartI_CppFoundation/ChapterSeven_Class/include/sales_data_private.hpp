@@ -30,9 +30,9 @@ class SalesData {
  public:
     std::string isbn() const { return _bookNo; }
     SalesData  &combine(const SalesData &);
-    double      avg_price() const;
 
  private:
+    double      avg_price() const { return _units_sold != 0 ? (_revenue / _units_sold) : 0.0; };
     std::string _bookNo;           /* ISBN number */
     unsigned    _units_sold = 0;   /* the number of sales of a book */
     double      _revenue    = 0.0; /* the total of sales of a book */
@@ -42,13 +42,6 @@ inline SalesData &SalesData::combine(const SalesData &trans) {
     _units_sold += trans._units_sold;
     _revenue += trans._revenue;
     return *this; /* returns the object that calls the function */
-}
-
-inline double SalesData::avg_price() const {
-    if (_units_sold)
-        return _revenue / _units_sold;
-    else
-        return 0.0;
 }
 
 inline SalesData add(const SalesData &left_data, const SalesData &right_data) {

@@ -19,6 +19,9 @@
  */
 
 class Person {
+    friend std::istream &read(std::istream &, Person &);
+    friend std::ostream &print(std::ostream &, const Person &);
+
  public:
     Person() = default;
     Person(std::string &name, std::string &address) : _user_name(std::move(name)), _user_address(std::move(address)){};
@@ -27,7 +30,7 @@ class Person {
     std::string get_name() const { return _user_name; }
     std::string get_address() const { return _user_address; }
 
- public:
+ private:
     std::string _user_name;
     std::string _user_address;
 };
