@@ -10,3 +10,6 @@
 void Exercise_7_2::meaninglessFunction_1() {}
 void Exercise_7_2::meaninglessFunction_2() {}
 void Exercise_7_2::meaninglessFunction_3() {}
+void Exercise_7_2::meaninglessFunction_4() {}
+void Exercise_7_2::meaninglessFunction_5() {}
+void Exercise_7_2::meaninglessFunction_6() {}

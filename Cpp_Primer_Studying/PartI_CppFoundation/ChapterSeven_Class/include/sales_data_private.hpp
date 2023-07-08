@@ -11,6 +11,12 @@
 #include <iostream>
 #include <string>
 
+class SalesData;
+
+SalesData     add(const SalesData &, const SalesData &);
+std::ostream &print(std::ostream &, const SalesData &);
+std::istream &read(std::istream &, SalesData &);
+
 class SalesData {
     /* 类相关的非成员函数 */
     friend SalesData     add(const SalesData &, const SalesData &);
