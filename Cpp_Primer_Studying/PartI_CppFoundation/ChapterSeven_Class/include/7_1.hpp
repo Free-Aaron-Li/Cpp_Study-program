@@ -117,6 +117,47 @@ class Exercise_7_1 {
      */
     /* 读取输入流数据并将其流中数据初始化data1和data2对象，同时判断返回状态 */
     static void meaninglessFunction_6();
+
+    /**
+     * @title
+     * 练习7.11
+     * @description
+     * 在你的Sales_data类中添加构造函数，然后编写一段程序令其用到每个构造函数。
+     */
+     static void exercise_7_11();
+
+     /**
+      * @title
+      * 练习7.12
+      * @description
+      * 把只接受一个istream作为参数的构造函数定义移到类的内部。
+      */
+      /* 详情查看include/sales_data.hpp文件 */
+     static void meaninglessFunction_7();
+
+     /**
+      * @title
+      * 练习7.13
+      * @description
+      * 使用istream构造函数重写第229页的程序。
+      */
+      static void exercise_7_13();
+
+      /**
+       * @title
+       * 练习7.14
+       * @description
+       * 编写一个构造函数，令其用我们提供的类内初始值显式地初始化成员。
+       */
+      /* 详情查看include/sales_data.hpp文件 */
+
+      /**
+       * @title
+       * 练习7.15
+       * @description
+       * 为你的Person类添加正确的构造函数。
+       */
+       /* 详情查看include/person.hpp文件 */
 };
 
 #endif  // CPP_PRIMER_STUDYING_7_1_HPP

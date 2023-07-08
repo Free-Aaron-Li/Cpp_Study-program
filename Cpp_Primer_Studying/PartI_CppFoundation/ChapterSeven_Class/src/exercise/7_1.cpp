@@ -13,6 +13,7 @@ void Exercise_7_1::meaninglessFunction_3() {}
 void Exercise_7_1::meaninglessFunction_4() {}
 void Exercise_7_1::meaninglessFunction_5() {}
 void Exercise_7_1::meaninglessFunction_6() {}
+void Exercise_7_1::meaninglessFunction_7() {}
 
 void Exercise_7_1::exercise_7_1() {
     SalesData total;
@@ -104,6 +105,64 @@ void Exercise_7_1::exercise_7_7() {
                 print(std::cout, total);
                 std::cout << "\n********************\n";
                 total = trans;
+            }
+        }
+        std::cout << "********************\n";
+        print(std::cout, total);
+        std::cout << "\n********************\n";
+    } else
+        std::cerr << "no data?!\n";
+}
+
+void exercise_11_sub_1() {
+    SalesData salesData;
+    print(std::cout, salesData);
+}
+
+void exercise_11_sub_2() {
+    std::string str = "12";
+    SalesData   salesData(str, 2, 2.3);
+    print(std::cout, salesData);
+}
+
+void exercise_11_sub_3() {
+    std::string str = "123";
+    SalesData   salesData(str);
+    print(std::cout, salesData);
+}
+
+void exercise_11_sub_4() {
+    SalesData salesData(std::cin);
+    print(std::cout, salesData);
+}
+
+
+void Exercise_7_1::exercise_7_11() {
+    std::cout << "默认构造函数：\n";
+    exercise_11_sub_1();
+    std::cout << "\n****************\n";
+    std::cout << "包含三个数据成员初始化的构造函数：\n";
+    exercise_11_sub_2();
+    std::cout << "\n****************\n";
+    std::cout << "仅包含string类型的数据成员初始化的构造函数：\n";
+    exercise_11_sub_3();
+    std::cout << "\n****************\n";
+    std::cout << "自定义数据成员初始化的构造函数：\n";
+    exercise_11_sub_4();
+    std::cout << "\n****************\n";
+}
+
+void Exercise_7_1::exercise_7_13() {
+    SalesData total(std::cin);
+    if (!total.isbn().empty()) {
+        SalesData trans;
+        while (read(std::cin, trans)) {
+            if (total.isbn() == trans.isbn())
+                total.combine(trans);
+            else {
+                std::cout << "********************\n";
+                print(std::cout, total);
+                std::cout << "\n********************\n";
             }
         }
         std::cout << "********************\n";

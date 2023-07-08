@@ -20,12 +20,16 @@
 
 class Person {
  public:
-    std::string _user_name;
-    std::string _user_address;
+    Person() = default;
+    Person(std::string &name, std::string &address) : _user_name(std::move(name)), _user_address(std::move(address)){};
 
  public:
     std::string get_name() const { return _user_name; }
     std::string get_address() const { return _user_address; }
+
+ public:
+    std::string _user_name;
+    std::string _user_address;
 };
 
 inline std::istream &read(std::istream &istream, Person &item) {

@@ -10,7 +10,9 @@
 void test_7_1() {
     // Exercise_7_1::exercise_7_1();
     // Exercise_7_1::exercise_7_3();
-    Exercise_7_1::exercise_7_7();
+    // Exercise_7_1::exercise_7_7();
+    // Exercise_7_1::exercise_7_11();
+    Exercise_7_1::exercise_7_13();
 }
 
 int main() {
