@@ -22,3 +22,19 @@ void Exercise_7_3::exercise_7_27() {
     myScreen.display(std::cout);
     std::cout << "\n";
 }
+
+class Y;
+
+class X {
+ public:
+    Y *y;
+};
+
+class Y {
+ public:
+    X x;
+};
+void Exercise_7_3::exercise_7_31() {
+    X x{};
+    Y y{};
+}

@@ -133,5 +133,18 @@ class Exercise_7_3 {
      * 3.降低代码的可读性：显式地使用指针可能会降低代码的可读性，因为读者需要额外地理解每个指针所指向的对象。
      * */
     static void meaninglessFunction_7();
+
+    /**
+     * @title
+     * 7.3.3节练习
+     */
+
+    /**
+     * @title
+     * 练习7.31
+     * @description
+     * 定义一对类X和Y，其中X包含一个指向Y的指针，而Y包含一个类型为X的对象。
+     */
+     static void exercise_7_31();
 };
 #endif  // CPP_PRIMER_STUDYING_7_3_HPP
