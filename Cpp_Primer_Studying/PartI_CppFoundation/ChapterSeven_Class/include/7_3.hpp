@@ -145,6 +145,19 @@ class Exercise_7_3 {
      * @description
      * 定义一对类X和Y，其中X包含一个指向Y的指针，而Y包含一个类型为X的对象。
      */
-     static void exercise_7_31();
+    static void exercise_7_31();
+
+    /**
+     * @title
+     * 7.3.4节练习
+     */
+
+    /**
+     * @title
+     * 练习7.32
+     * @description
+     * 定义你自己的Screen和Window_mgr，其中clear是Window_mgr的成员，是Screen的友元。
+     */
+    /* 具体查看src/exercise/friend.cpp文件 */
 };
 #endif  // CPP_PRIMER_STUDYING_7_3_HPP

@@ -1,22 +1,23 @@
-// This file is part of Cpp_Primer_Studying project.
-// This program is called:Screen.
-// If there are no special instructions, this file is used as an exercise and test file.
-
-// Copyright (C) 2023 Aaron
-// This program is under the GPL-3.0 license,if you have not received it or the program has a bug,
-// please let me know: <fly_aaron.li@outlook.com>.
-#ifndef CPP_PRIMER_STUDYING_SCREEN_HPP
-#define CPP_PRIMER_STUDYING_SCREEN_HPP
-
-/**
- * @title
- * 显示器一个窗口
- */
-
+// 可以通过命令 "g++ -o main -g friend.cpp”运行程序
+#include <iostream>
+#include <vector>
 #include <string>
 
+class Screen;
+
+class Window_manager {
+ public:
+    typedef std::vector<Screen>::size_type screen_index; /* 窗口中每个屏幕的编号 */
+
+ public:
+    void Clear(screen_index); /* 将指定屏幕内容清除 */
+
+ private:
+    std::vector<Screen> screens;
+};
+
 class Screen {
-    friend class Window_manager;
+    friend void Window_manager::Clear(screen_index);
 
  public:
     typedef std::string::size_type pos;
@@ -50,35 +51,49 @@ class Screen {
 inline char Screen::get(Screen::pos height, Screen::pos width) const {
     Screen::pos row = height * _width;
     return _contents[row + width];
-}
+};
 
 inline Screen& Screen::set(char character) {
     _contents[_cursor] = character;
     return *this;
-}
+};
 
 inline Screen& Screen::set(Screen::pos height, Screen::pos width, char character) {
     _contents[height * _width + width] = character;
     return *this;
-}
+};
 
 inline Screen& Screen::move(Screen::pos height, Screen::pos width) {
     pos row = height * _width;
     _cursor = row + width;
     return *this;
-}
+};
 
 /* 记录成员函数被调用次数 */
-inline void Screen::some_member() const { ++_access_times; }
+inline void Screen::some_member() const { ++_access_times; };
 
 inline Screen& Screen::display(std::ostream& ostream) {
     do_display(ostream);
     return *this;
-}
+};
 
 inline const Screen& Screen::display(std::ostream& ostream) const {
     do_display(ostream);
     return *this;
-}
+};
 
-#endif  // CPP_PRIMER_STUDYING_SCREEN_HPP
+void Window_manager::Clear(Window_manager::screen_index index) {
+    Screen &screen   = Window_manager::screens[index];
+    screen._contents = std::string(screen._height * screen._width, ' ');
+};
+
+int main() {
+    Screen my(5,5,'X');
+    my.move(4, 0).set('#').display(std::cout);
+    std::cout << "\n";
+    my.display(std::cout);
+    std::cout << "\n";
+    Window_manager test;
+    test.Clear(0);
+    my.display(std::cout);
+};
