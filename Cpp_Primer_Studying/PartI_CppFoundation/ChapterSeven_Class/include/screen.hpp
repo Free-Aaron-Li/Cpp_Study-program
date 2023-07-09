@@ -22,13 +22,21 @@ class Screen {
  public:
     Screen() = default;
     Screen(pos height, pos width) : _height(height), _width(width) {}
-    Screen(pos height, pos width, char c) : _height(height), _width(width), _contents(height * width, c) {}
+    Screen(pos height, pos width, char character) :
+        _height(height), _width(width), _contents(height * width, character) {}
 
  public:
-    char    get() const { return _contents[_cursor]; } /* 读取光标处的字符 */
-    char    get(pos height, pos width) const;
-    Screen& move(pos height, pos width);               /* 移动光标 */
-    void    some_member() const;
+    char          get() const { return _contents[_cursor]; } /* 读取光标处的字符 */
+    char          get(pos height, pos width) const;
+    Screen&       set(char character);
+    Screen&       set(pos height, pos width, char character);
+    Screen&       move(pos height, pos width); /* 移动光标 */
+    void          some_member() const;
+    Screen&       display(std::ostream& ostream);
+    const Screen& display(std::ostream& ostream) const;
+
+ private:
+    void do_display(std::ostream& ostream) const { ostream << _contents; }
 
  private:
     pos            _cursor = 0;     /* 光标位置 */
@@ -37,18 +45,37 @@ class Screen {
     mutable size_t _access_times{}; /* Screen的成员函数被调用次数 */
 };
 
+inline char Screen::get(Screen::pos height, Screen::pos width) const {
+    Screen::pos row = height * _width;
+    return _contents[row + width];
+}
+
+inline Screen& Screen::set(char character) {
+    _contents[_cursor] = character;
+    return *this;
+}
+
+inline Screen& Screen::set(Screen::pos height, Screen::pos width, char character) {
+    _contents[height * _width + width] = character;
+    return *this;
+}
+
 inline Screen& Screen::move(Screen::pos height, Screen::pos width) {
     pos row = height * _width;
     _cursor = row + width;
     return *this;
 }
 
-inline char Screen::get(Screen::pos height, Screen::pos width) const {
-    Screen::pos row = height * _width;
-    return _contents[row + width];
-}
-
 /* 记录成员函数被调用次数 */
 inline void Screen::some_member() const { ++_access_times; }
+
+inline Screen& Screen::display(std::ostream& ostream) {
+    do_display(ostream);
+    return *this;
+}
+inline const Screen& Screen::display(std::ostream& ostream) const {
+    do_display(ostream);
+    return *this;
+}
 
 #endif  // CPP_PRIMER_STUDYING_SCREEN_HPP

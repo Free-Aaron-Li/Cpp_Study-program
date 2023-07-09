@@ -323,8 +323,76 @@ class Window_manager {
 >
 > 当我们提供一个类内初始值时，必须以符号=或者大括号表示。
 
+### 返回*this的成员函数
 
+```cpp
+Screen& Screen::set(Screen::pos height, Screen::pos width, char character) {
+    _contents[height * _width + width] = character;
+    return *this;
+}
 
+inline Screen& Screen::move(Screen::pos height, Screen::pos width) {
+    pos row = height * _width;
+    _cursor = row + width;
+    return *this;
+}
 
+myScreen.move(4,0).set('#');
+```
+
+在我们定义set()函数时其返回值是调用set的对象的引用。返回引用的函数是左值的，意味着**函数返回的是对象本身而非对象的副本**
+。假如我们定义的返回类型不是引用，那么move的返回值将会是*this的副本，那么调用set只能临时改变副本，并不能改变myScreen的值。
+
+#### 基于const的重载
+
+通过区分成员函数是否是const的，我们可以进行重载。存在一种情况，非常量版本的函数对常量对象是不可用的，所以我们只能在一个常量对象上调用const成员函数。另一方面，虽然可以在非常量对象上调用常量版本或者非常量版本，但是显然此时非常量版本是一个更好的匹配。
+
+例如，display函数，我们通过定义一个do_display的私有成员，由它负责打印Screen操作（保证安全性），重载display函数，实现常量版本和非常量版本。
+
+```cpp
+class Screen{
+ public:
+    Screen&       display(std::ostream& ostream);
+    const Screen& display(std::ostream& ostream) const;
+
+ private:
+    void do_display(std::ostream& ostream) const { ostream << _contents; }
+
+}
+
+inline Screen& Screen::display(std::ostream& ostream) {
+    do_display(ostream);
+    return *this;
+}
+inline const Screen& Screen::display(std::ostream& ostream) const {
+    do_display(ostream);
+    return *this;
+}
+
+/* ****************** */
+
+Screen myScreen(5,3);
+const Screen replica(5,3);
+myScreen.set('#').display(cout);        /* 调用非常量版本 */
+blank.display(cout);                    /* 调用常量版本 */
+``` 
+
+当一个成员调用另一个成员时，this指针在其中隐式地传递。当display调用do_display时，它的this指针隐式地传递给do_display。而当display的非常量版本调用do_display时，他的this指针将隐式得从指向非常量的指针转换为指向常量的指针。
+
+而当do_display完成后，display函数各自返回解引用this所得的对象。在非常量版本中，this指向一个非常量对象，因此display返回一个普通引用；而const成员返回一个常量引用。
+
+也就是说，我们将do_display封装起来，不影响display的工作。
+
+> 建议
+>
+> 对于公共代码使用私有功能函数
+>
+> 原因：
+> 
+> - 避免在多出使用同样的代码
+> - 随着预期发展，公共代码可能愈加复杂，那么将操作进行模块化处理显得非常有必要
+> - 在某些时候，为某些模块添加调试信息，那么在最终版本中，对于调试信息的位置有个明确的概念
+> - 通过使用内联的方式，额外的函数调用不会增加任何开销
+> - 出于安全考虑，隐藏实现细节
 
 

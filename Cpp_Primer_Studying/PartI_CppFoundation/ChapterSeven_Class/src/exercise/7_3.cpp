@@ -11,3 +11,14 @@ void Exercise_7_3::meaninglessFunction_1() {}
 void Exercise_7_3::meaninglessFunction_2() {}
 void Exercise_7_3::meaninglessFunction_3() {}
 void Exercise_7_3::meaninglessFunction_4() {}
+void Exercise_7_3::meaninglessFunction_5() {}
+void Exercise_7_3::meaninglessFunction_6() {}
+void Exercise_7_3::meaninglessFunction_7() {}
+
+void Exercise_7_3::exercise_7_27() {
+    Screen myScreen(5, 5, 'X');
+    myScreen.move(4, 0).set('#').display(std::cout);
+    std::cout << '\n';
+    myScreen.display(std::cout);
+    std::cout << "\n";
+}
