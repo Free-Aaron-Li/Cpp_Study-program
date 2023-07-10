@@ -8,3 +8,4 @@
 #include "7_4.hpp"
 
 void Exercise_7_4::meaninglessFunction_1() {}
+void Exercise_7_4::meaninglessFunction_2() {}
