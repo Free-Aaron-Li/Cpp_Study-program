@@ -22,15 +22,21 @@ class Window_manager {
     typedef std::vector<Screen>::size_type screen_index; /* 窗口中每个屏幕的编号 */
 
  public:
-    void Clear(screen_index); /* 将指定屏幕内容清除 */
+    void         clear(screen_index); /* 将指定屏幕内容清除 */
+    screen_index addScreen(const Screen &);
 
  private:
     std::vector<Screen> screens{Screen(24, 80, ' ')};
 };
 
-void Window_manager::Clear(Window_manager::screen_index index) {
+void Window_manager::clear(Window_manager::screen_index index) {
     Screen &screen   = Window_manager::screens[index];
     screen._contents = std::string(screen._height * screen._width, ' ');
+}
+
+Window_manager::screen_index Window_manager::addScreen(const Screen &screen) {
+    screens.push_back(screen);
+    return screens.size() - 1;
 }
 
 #endif  // CPP_PRIMER_STUDYING_WINDOW_MGR_HPP

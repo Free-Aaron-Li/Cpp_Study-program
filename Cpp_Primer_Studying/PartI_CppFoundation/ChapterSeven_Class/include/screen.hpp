@@ -47,7 +47,7 @@ class Screen {
     mutable size_t _access_times{}; /* Screen的成员函数被调用次数 */
 };
 
-inline char Screen::get(Screen::pos height, Screen::pos width) const {
+inline char Screen::get(pos height, pos width) const {
     Screen::pos row = height * _width;
     return _contents[row + width];
 }
@@ -57,12 +57,12 @@ inline Screen& Screen::set(char character) {
     return *this;
 }
 
-inline Screen& Screen::set(Screen::pos height, Screen::pos width, char character) {
+inline Screen& Screen::set(pos height, pos width, char character) {
     _contents[height * _width + width] = character;
     return *this;
 }
 
-inline Screen& Screen::move(Screen::pos height, Screen::pos width) {
+inline Screen& Screen::move(pos height, pos width) {
     pos row = height * _width;
     _cursor = row + width;
     return *this;

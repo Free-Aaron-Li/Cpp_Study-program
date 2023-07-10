@@ -485,6 +485,43 @@ class Screen{
 
 也就是说，就算是在类内部定义该函数，那么我们也必须在类外提供相应的声明从而使得函数可见。
 
+## 7.4 类的作用域
+
+对类类型成员必须使用作用域运算符进行访问。不论那种情况，跟在运算符后面的名字必须是对应类的成员。
+
+#### 作用域和定义在类外部的成员
+
+**一个类便是一个作用域**，当我们在类的外部使用类成员，该成员将会被隐藏。
+
+当我们使用了类名，那么定义的剩余部分（包括参数列表、函数体）就已经在类的作用域内了，所以不需要再次授权类作用域。因为编译器在处理参数列表之前已经明知我们位于Screen类的作用域之中。
+
+```cpp
+inline Screen& Screen::move(pos height, pos width) {    /* pos类型属于Screen */
+    pos row = height * _width;  /* _width属于Screen */
+    _cursor = row + width;      /* _cursor属于Screen */
+    return *this;
+}
+```
+
+> 注意
+> 
+> 函数的返回类型通常出现在类名之前，所以如果返回类型中使用的名字属于类成员，那么则需要单独为返回类型添加类名。因为如果不添加，返回类型中使用的名字在类的作用域之外。
+> 
+> ```cpp
+> class Window_manager{
+> public:
+>   screen_index addScreen(const Screen &);
+> }
+> 
+> Window_manager::screen_index Window_manager::addScreen(const Screen &screen) {
+>   screens.push_back(screen);
+>   return screens.size() - 1;
+> }
+> ```
+
+
+
+
 
 
 
