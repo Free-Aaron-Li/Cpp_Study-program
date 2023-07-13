@@ -739,6 +739,21 @@ SalesData(std::string s = "") : _bookNo(std::move(s)){}; /* 形式等同默认�
 > 为构造函数中所有参数提供默认实参应该从实际出发，在某些时候我们就是希望user提供初始化值，这个时候就不应该为参数添加默认实参。
 
 
+### 委托构造函数
+
+在C++新标准下扩展了构造函数初始化值的功能，使得可以定义**委托构造函数**（delegating constructor）。何谓委托构造函数，其函数可以使用它所属类的其他构造函数执行它自己的初始化过程，也就是说，这类函数可以将自己的一些（或者全部）职责由其他构造函数代劳。（听起来是不是方便了开发者😄）。
+
+```cpp
+/* 非委托构造函数 */
+SalesData(std::string str, unsigned number, double price) :
+    _bookNo(std::move(str)), _units_sold(number), _revenue(price * number) {}
+/* 委托构造函数 */
+SalesData() : SalesData("", 0, 0.0){};
+SalesData(std::istream &istream) : SalesData() { read(istream, *this); } 
+```
+
+当一个构造函数委托给另一个构造函数时，受委托的构造函数的初始值列表和函数体被一次执行，最后将控制权返回给委托者，委托者这个时候执行函数体。
+
 
 
 

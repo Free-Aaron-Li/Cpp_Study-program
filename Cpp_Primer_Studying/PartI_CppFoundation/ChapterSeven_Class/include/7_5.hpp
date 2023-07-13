@@ -14,6 +14,7 @@
  */
 
 #include "7.hpp"
+#include "sales_data_private.hpp"
 
 class Exercise_7_5 {
  public:
@@ -82,7 +83,7 @@ class Exercise_7_5 {
      * @description
      * 如果接受string的构造函数和接受istream&的构造函数都使用默认实参，这种行为合法吗？如果不，为什么？
      */
-     /* 不合法，这个时候重载构造函数将会不明确，存在二义性，编译器无法确认是选择使用string对象还是istream对象 */
+    /* 不合法，这个时候重载构造函数将会不明确，存在二义性，编译器无法确认是选择使用string对象还是istream对象 */
     static void meaninglessFunction_4();
 
     /**
@@ -94,17 +95,51 @@ class Exercise_7_5 {
      * (a) Book         (b) Date        (c) Employee
      * (d) Vehicle      (e) Object      (d) Tree
      */
-     /*
-      * 我选择a项。
-      * 作为Book，其必然少不了ISBN编码、同时还可以加入单价、出版社、作者、版次等等
-      * 那么数据成员可以有：_isbn、_unit_price、_publishing_house、_author、_edition_number。
-      * 构造函数可以有：
-      * Book(std::istream& is){read(is,*this);}
-      * Book(std::string isbn bookNo,unsigned long price,std::string house,std::string author,std::string number):
-      *     _isbn(bookNo),_unit_price(price),_publishing_house(house),_author(author),_edition_number(number){};
-      * Book(std::string isbn bookNo,unsigned long price,std::string house,std::string author="xxx",std::string number):
-*     *     _isbn(bookNo),_unit_price(price),_publishing_house(house),_author(author),_edition_number(number){};
-      * */
+    /*
+     * 我选择a项。
+     * 作为Book，其必然少不了ISBN编码、同时还可以加入单价、出版社、作者、版次等等
+     * 那么数据成员可以有：_isbn、_unit_price、_publishing_house、_author、_edition_number。
+     * 构造函数可以有：
+     * Book(std::istream& is){read(is,*this);}
+     * Book(std::string bookNo,unsigned long price,std::string house,std::string author,std::string number):
+     *     _isbn(bookNo),_unit_price(price),_publishing_house(house),_author(author),_edition_number(number){};
+     * Book(std::string bookNo,unsigned long price,std::string house,std::string author="xxx",std::string number):
+     *     *     _isbn(bookNo),_unit_price(price),_publishing_house(house),_author(author),_edition_number(number){};
+     * */
     static void meaninglessFunction_5();
+
+    /**
+     * @title
+     * 7.5.2节练习
+     */
+
+    /**
+     * @title
+     * 练习7.41
+     * @description
+     * 使用委托构造函数重写编写你的Sales_data类，给每个构造函数体添加一条语句，令其一旦执行就打印这条信息。
+     * 用各种可能的方式分别创建Sales_data对象，认真研究每种输出的信息直到确实理解了构造函数的执行顺序。
+     */
+    /* 具体查看include/sales_data_private.hpp文件 */
+    static void exercise_7_41();
+
+    /**
+     * @title
+     * 练习7.42
+     * @description
+     * 对于你在练习7.40中编写的类，确定哪些构造函数可以使用委托。如果可以的话，编写委托构造函数。
+     * 如果不可以，从抽象概念列表中重新选择一个你认为可以使用委托构造函数的，为挑选出的这个概念编写类定义。
+     */
+    /*
+     * 构造函数可以写成：
+     * Book(std::string bookNo,unsigned long price,std::string house,std::string author,std::string number):
+     *     _isbn(bookNo),_unit_price(price),_publishing_house(house),_author(author),_edition_number(number){};
+     * Book():Book("",0,"","",""){};
+     * Book(std::istream& is):Book(){read(is,*this);}
+     * Book(std::string bookNo,unsigned long price,std::string house,std::string author="xxx",std::string number):
+     *     Book(bookNo,price,house,author,number){};
+     * */
+    static void meaninglessFunction_6();
+
 };
 #endif  // CPP_PRIMER_STUDYING_7_5_HPP

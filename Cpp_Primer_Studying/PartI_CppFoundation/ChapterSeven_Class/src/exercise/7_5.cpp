@@ -12,3 +12,10 @@ void Exercise_7_5::meaninglessFunction_2() {}
 void Exercise_7_5::meaninglessFunction_3() {}
 void Exercise_7_5::meaninglessFunction_4() {}
 void Exercise_7_5::meaninglessFunction_5() {}
+void Exercise_7_5::meaninglessFunction_6() {}
+void Exercise_7_5::exercise_7_41() {
+    std::string str="123";
+   SalesData_pr data;
+   SalesData_pr data1(str);
+   SalesData_pr data2(std::cin);
+}

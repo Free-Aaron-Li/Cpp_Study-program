@@ -29,12 +29,12 @@ class Window_manager {
     std::vector<Screen> screens{Screen(24, 80, ' ')};
 };
 
-void Window_manager::clear(Window_manager::screen_index index) {
+inline void Window_manager::clear(Window_manager::screen_index index) {
     Screen &screen   = Window_manager::screens[index];
     screen._contents = std::string(screen._height * screen._width, ' ');
 }
 
-Window_manager::screen_index Window_manager::addScreen(const Screen &screen) {
+inline Window_manager::screen_index Window_manager::addScreen(const Screen &screen) {
     screens.push_back(screen);
     return screens.size() - 1;
 }
