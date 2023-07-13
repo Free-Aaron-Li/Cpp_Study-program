@@ -10,6 +10,7 @@
 
 #include <iostream>
 #include <string>
+#include <utility>
 
 class SalesData;
 
@@ -24,7 +25,8 @@ class SalesData {
     friend std::istream &read(std::istream &, SalesData &);
 
  public:
-    SalesData() = default; /* 默认构造函数，希望这个函数的作用等同于合成默认构造函数 */
+    //SalesData() = default; /* 默认构造函数，希望这个函数的作用等同于合成默认构造函数 */
+    SalesData(std::string s = "") : _bookNo(std::move(s)){}; /* 形式等于默认构造函数 */
     SalesData(std::string &str) : _bookNo(std::move(str)) {}
     /* std::move()将对象的状态或者所有权从一个对象转移到另一个对象，只是转移，没有内存的搬迁或者内存拷贝，因此，通过std::move()，可以避免不必要的拷贝操作
      */
