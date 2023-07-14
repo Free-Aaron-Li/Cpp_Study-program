@@ -16,6 +16,12 @@ void Exercise_7_5::meaninglessFunction_6() {}
 void Exercise_7_5::meaninglessFunction_7() {}
 void Exercise_7_5::meaninglessFunction_8() {}
 void Exercise_7_5::meaninglessFunction_9() {}
+void Exercise_7_5::meaninglessFunction_10() {}
+void Exercise_7_5::meaninglessFunction_11() {}
+void Exercise_7_5::meaninglessFunction_12() {}
+void Exercise_7_5::meaninglessFunction_13() {}
+void Exercise_7_5::meaninglessFunction_14() {}
+
 
 void Exercise_7_5::exercise_7_41() {
     std::string  str = "123";
@@ -37,7 +43,4 @@ class C {
     NoDefault _noDefault;
 };
 
-void Exercise_7_5::exercise_7_43() {
-    C c;
-    int a=10;
-}
+void Exercise_7_5::exercise_7_43() { C c; }

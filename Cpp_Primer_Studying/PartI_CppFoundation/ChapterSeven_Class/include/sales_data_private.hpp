@@ -7,7 +7,6 @@
 // please let me know: <fly_aaron.li@outlook.com>.
 #ifndef CPP_PRIMER_STUDYING_SALES_DATA_PRIVATE_HPP
 #define CPP_PRIMER_STUDYING_SALES_DATA_PRIVATE_HPP
-
 #include <iostream>
 #include <string>
 #include <utility>
@@ -25,20 +24,24 @@ class SalesData_pr {
     friend std::istream &read(std::istream &, SalesData_pr &);
 
  public:
-    SalesData_pr(std::string str, unsigned number, double price) :
-        /*
-         * std::move()将对象的状态或者所有权从一个对象转移到另一个对象，只是转移，没有内存的搬迁或者内存拷贝，因此，通过std::move()，可以避免不必要的拷贝操作
-         */
-        _bookNo(std::move(str)), _units_sold(number), _revenue(price * number) {
+    SalesData_pr(std::string str, unsigned number, double price)
+        : /*
+           * std::move()将对象的状态或者所有权从一个对象转移到另一个对象，只是转移，没有内存的搬迁或者内存拷贝，因此，通过std::move()，可以避免不必要的拷贝操作
+           */
+          _bookNo(std::move(str)),
+          _units_sold(number),
+          _revenue(price * number) {
         std::cout << "这是含有三个参数的受委托构造函数\n";
     }
     // SalesData_pr() = default; /* 默认构造函数，希望这个函数的作用等同于合成默认构造函数 */
     SalesData_pr() : SalesData_pr("", 0, 0.0) { /* 形式等于默认构造函数，C++11新特性：委托构造函数 */
         std::cout << " 这是重写的默认构造函数\n";
     };
-    SalesData_pr(std::string &str) : SalesData_pr(str, 0, 0.0) { std::cout << "这是自定义isbn编码的委托函数\n"; }
+    explicit SalesData_pr(std::string &str) : SalesData_pr(str, 0, 0.0) {
+        std::cout << "这是自定义isbn编码的委托函数\n";
+    }
     /* 委托给重写的默认构造函数，默认构造函数又委托给具有三个参数的构造函数，接着执行函数体内内容 */
-    SalesData_pr(std::istream &istream) : SalesData_pr() {
+    explicit SalesData_pr(std::istream &istream) : SalesData_pr() {
         std::cout << "这是需要全部自定义的委托函数\n";
         read(istream, *this);
     }

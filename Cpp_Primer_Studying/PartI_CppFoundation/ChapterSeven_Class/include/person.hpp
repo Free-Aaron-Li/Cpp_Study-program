@@ -25,6 +25,7 @@ class Person {
  public:
     Person() = default;
     Person(std::string &name, std::string &address) : _user_name(std::move(name)), _user_address(std::move(address)){};
+    explicit Person(std::istream &is) { read(is, *this); }
 
  public:
     std::string get_name() const { return _user_name; }
