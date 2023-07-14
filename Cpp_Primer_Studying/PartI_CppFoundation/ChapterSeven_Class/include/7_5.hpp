@@ -141,5 +141,60 @@ class Exercise_7_5 {
      * */
     static void meaninglessFunction_6();
 
+    /**
+     * @title
+     * 7.5.3节练习
+     */
+
+    /**
+     * @title
+     * 练习7.43
+     * @description
+     * 假定有一个名为NoDefault的类，它有一个接受int的构造函数，但是没有默认构造函数。
+     * 定义类C,C有一个NoDefault类型的成员，定义C的默认构造函数。
+     */
+    static void exercise_7_43();
+
+    /**
+     * @title
+     * 练习7.44
+     * @description
+     * 下面这条声明合法吗？如果不，为什么？
+     * vector<NoDefault> vec(10);
+     */
+    /* 不合法，NoDefault没有默认构造函数，无法对NoDefault进行值初始化 */
+    static void meaninglessFunction_7();
+
+    /**
+     * @title
+     * 练习7.45
+     * @description
+     * 如果在上一条练习中定义的vector的元素类型是C,则声明合法吗？为什么？
+     */
+    /* 合法，C类具有默认构造函数 */
+    static void meaninglessFunction_8();
+
+    /**
+     * @title
+     * 练习7.46
+     * @description
+     * 下面哪些论断是不正确的？为什么？
+     * @code
+     * (a) 一个类必须至少提供一个构造函数
+     * (b) 默认构造函数是参数列表为空的构造函数
+     * (c) 如果对于类来说不存在有意义的默认值，则类不应该提供默认构造函数
+     * (d) 如果类没有定义默认构造函数，则编译器将为其生成一个并把每个数据成员初始化成相应类型的默认值
+     */
+    /* TODO 23-7-14 如果对于类来说不存在有意义的默认值，则类不应该提供默认构造函数？对与否 */
+    /*
+     * a. 错误，类可以存在一个构造函数不写，类隐式提供默认构造函数
+     * b.
+     * 错误，如果一个构造函数在初始化列表中包含该类的所有数据成员并且都提供默认值，则该构造函数也可以被认为是默认构造函数
+     * c.
+     * 错误，在正常的情况下都应该为类提供默认值，哪怕其默认值没有意义（但是，在这里我认为存在争议，在我看来既然默认值没有意义，那么该默认构造函数还有意义吗？）
+     * d. 错误，当类没有显式定义构造函数时，编译器才会隐式生成一个默认构造函数
+     * */
+    static void meaninglessFunction_9();
 };
+
 #endif  // CPP_PRIMER_STUDYING_7_5_HPP
