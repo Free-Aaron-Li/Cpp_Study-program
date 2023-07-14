@@ -300,6 +300,26 @@ class Exercise_7_5 {
      * 而字符串没有定义为explicit是为了保持其在参数传递和构造函数定义上的灵活性和可读性。
      */
     static void meaninglessFunction_14();
+
+    /**
+     * @title
+     * 7.5.5节练习
+     * @description
+     * 使用 2.6.1节的Sales_data类，解释下面的初始化过程。如果存在问题，尝试修改它。
+     * @code
+     * Sales_data item={"978-0590353403",25,15.99};
+     * 彩蛋：isbn对应的书为：《 Harry Potter and the Sorcerer's Stone 》
+     */
+    /*
+     * 2.6.1节的Sales_data中units_sold和revenue两个数据成员均被类内初始化，需要删除掉类内初始化值
+     * 修改为：
+     * struct Sales_data{
+     *     std::string     bookNo;
+     *     unsigned        units_sold;
+     *     double          revenue;
+     * };
+     * */
+    static void meaninglessFunction_15();
 };
 
 #endif  // CPP_PRIMER_STUDYING_7_5_HPP

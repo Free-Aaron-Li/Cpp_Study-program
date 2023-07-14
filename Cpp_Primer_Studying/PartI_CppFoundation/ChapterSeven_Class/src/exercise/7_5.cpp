@@ -21,6 +21,7 @@ void Exercise_7_5::meaninglessFunction_11() {}
 void Exercise_7_5::meaninglessFunction_12() {}
 void Exercise_7_5::meaninglessFunction_13() {}
 void Exercise_7_5::meaninglessFunction_14() {}
+void Exercise_7_5::meaninglessFunction_15() {}
 
 
 void Exercise_7_5::exercise_7_41() {
