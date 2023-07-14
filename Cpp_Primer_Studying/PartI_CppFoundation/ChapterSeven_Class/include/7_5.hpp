@@ -320,6 +320,35 @@ class Exercise_7_5 {
      * };
      * */
     static void meaninglessFunction_15();
+
+    /**
+     * @title
+     * 7.5.6节练习
+     */
+
+    /**
+     * @title
+     * 练习7.53
+     * @description
+     * 定义你自己的Debug
+     */
+    static void exercise_7_53();
+
+    /**
+     * @title
+     * 练习7.54
+     * @description
+     * Debug中以set_开头的成员应该被声明成constexpr吗？如果不，为什么？
+     */
+     /* 在C++11中，constexpr成员函数将会隐式成为const，无法修改数据成员，所以不应该声明 */
+
+    /**
+     * @title
+     * 练习7.55
+     * @description
+     * 7.5.5节的Data类是字面值常量类吗？请解释原因。
+     */
+     /* 不是，std::string类型不是字面值类型 */
 };
 
 #endif  // CPP_PRIMER_STUDYING_7_5_HPP

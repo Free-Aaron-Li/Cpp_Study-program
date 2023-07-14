@@ -45,3 +45,22 @@ class C {
 };
 
 void Exercise_7_5::exercise_7_43() { C c; }
+
+class Debug {
+ private:
+    bool _hw;    /* 硬件错误 */
+    bool _io;    /* io错误 */
+    bool _other; /* 其他错误 */
+
+ public:
+    constexpr Debug(bool b = true) : _hw(b), _io(b), _other(b) {}
+    constexpr Debug(bool h, bool i, bool o) : _hw(h), _io(i), _other(o) {}
+
+ public:
+    constexpr bool any() { return _hw || _io || _other; }
+    void           set_io(bool b) { _io = b; }
+    void           set_hw(bool b) { _hw = b; }
+    void           set_other(bool b) { _other = b; }
+};
+
+void Exercise_7_5::exercise_7_53() { Debug debug; }
