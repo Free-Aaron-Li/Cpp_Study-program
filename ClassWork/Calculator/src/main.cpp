@@ -16,9 +16,11 @@ std::stack<double> numbers;
 std::stack<char>   operations;
 /** 绝对值符标记 */
 int                label = 0;
-/** 优先级表单<br>
- * 优先级规则：绝对值符号>平方号>(* /)>(+ -)>(# 换行符) */
-int                priority(char operate) {
+/** 
+ * 优先级表单<br> 
+ * 优先级规则：绝对值符号>平方号>(* /)>(+ -)>(# 换行符)
+ * * */ 
+int priority(char operate) {
     switch (operate) {
             /** #作为栈顶元素，用于确定栈底 */
         case '#':

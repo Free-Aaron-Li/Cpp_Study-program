@@ -1,7 +1,6 @@
 // This file is part of Cpp_Primer_Studying project.
 // This program is called:sales_data_private.
 // If there are no special instructions, this file is used as an exercise and test file.
-
 // Copyright (C) 2023 Aaron
 // This program is under the GPL-3.0 license,if you have not received it or the program has a bug,
 // please let me know: <fly_aaron.li@outlook.com>.
@@ -50,6 +49,7 @@ class SalesData_pr {
  public:
     std::string   isbn() const { return _bookNo; }
     SalesData_pr &combine(const SalesData_pr &);
+
 
  private:
     double      avg_price() const { return _units_sold != 0 ? (_revenue / _units_sold) : 0.0; };
