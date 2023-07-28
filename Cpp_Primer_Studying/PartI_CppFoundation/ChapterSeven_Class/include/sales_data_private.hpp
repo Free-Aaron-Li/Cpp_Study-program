@@ -36,9 +36,7 @@ class SalesData_pr {
     SalesData_pr() : SalesData_pr("", 0, 0.0) { /* 形式等于默认构造函数，C++11新特性：委托构造函数 */
         std::cout << " 这是重写的默认构造函数\n";
     };
-    explicit SalesData_pr(std::string &str) : SalesData_pr(str, 0, 0.0) {
-        std::cout << "这是自定义isbn编码的委托函数\n";
-    }
+    explicit SalesData_pr(std::string &str) : SalesData_pr(str, 0, 0.0) { std::cout << "这是自定义isbn编码的委托函数\n"; }
     /* 委托给重写的默认构造函数，默认构造函数又委托给具有三个参数的构造函数，接着执行函数体内内容 */
     explicit SalesData_pr(std::istream &istream) : SalesData_pr() {
         std::cout << "这是需要全部自定义的委托函数\n";

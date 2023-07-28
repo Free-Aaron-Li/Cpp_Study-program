@@ -14,7 +14,6 @@
 #include "4_8.hpp"
 #include "4_9.hpp"
 
-
 void test_4_2() {
     // Exercise_4_2::exercise_4_4();
     // Exercise_4_2::exercise_4_6();
