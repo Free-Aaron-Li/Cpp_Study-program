@@ -7,15 +7,32 @@
 // please let me know: <fly_aaron.li@outlook.com>.
 #include <iostream>
 
-void test() { /* Displays IO operation errors */
+void test_1() { /* Displays IO operation errors */
     int i_val_1;
     std::cin >> i_val_1; /* if enter character */
 
-    std::cout << std::cin.rdstate() << "\n"; /* Displays the current condition state of the stream */
+   std::cout << std::cin.rdstate() << "\n"; /* Displays the current condition state of the stream */
 
     /* Reset condition state of the failbit */
     std::cin.clear(std::cin.rdstate() & ~std::istream::failbit);
     std::cout << std::cin.rdstate();
 }
 
-int main() { test(); }
+void test_2() { /* Associative input and output streams */
+    std::cout << "test\n";
+    std::cout << std::cin.tie() << "\n"; /* Display cout address */
+    std::cout << &std::cout << "\n";     /* Consistent with the previous line */
+    std::cout << &std::cin << "\n";      /* Display cin address */
+}
+
+/** @brief hello
+ * @param this
+ * @return about
+ *
+ */
+
+int main() {
+    // test_1();
+    test_2();
+    return 0;
+}
