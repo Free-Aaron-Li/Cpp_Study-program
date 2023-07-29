@@ -162,3 +162,26 @@ cin.tie(nullptr); /* cin不再和其他流关联 */
 cin.tie(&cerr); /* cin与cerr关联 */
 ```
 
+## 8.2 文件输入输出
+
+在IO库中，头文件fstream定义了三个类型来支持文件IO操作。
+
+- ifstream，从给定文件读取数据
+- ofstream，向给定文件写入数据
+- fstream，向给定文件读写数据
+
+ifstream继承于iostream，所以常规操作与cin和cout对象操作类似，同样可以使用IO运算符（<<和>>)来读写文件，也可以使用getline从一个ifstream读取数据。
+
+除此之外，fstream还具有一些自己独特的操作：
+
+|             操作             |                                               解释                                               |
+|:--------------------------:|:----------------------------------------------------------------------------------------------:|
+|     **fstream** fstrm;     |                                          创建一个未绑定的文件流                                           |
+|   **fstream** fstrm(s);    | 创建一个fstream，并打开名为s的文件。s可以是string类型，也可以是指向C风格字符串的指针。同时其构造函数都是explicit的。默认的文件模式mode依赖于fstream的类型 |
+| **fstream** fstrm(s,mode); |                                      与上述类似，但是按照指定mode打开文件                                      |
+|       fstrm.open(s)        |                 打开名为s的文件，并将文件与fstrm绑定。s的类型与上述类似，默认的文件mode依赖于fstream的类型。返回void                  |
+|       fstrm.close()        |                                      关闭与fstrm绑定的文件。返回void                                      |
+|      fstrm.is_open()       |                               返回一个bool值，指出与fstrm关联的文件是否成功打开且尚未关闭                               |
+
+
+
