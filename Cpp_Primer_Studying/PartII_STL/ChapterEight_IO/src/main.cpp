@@ -7,6 +7,7 @@
 // please let me know: <fly_aaron.li@outlook.com>.
 #include "8_1.hpp"
 #include "8_2.hpp"
+#include "8_3.hpp"
 
 void test_8_1() {
     /* redirect std::cin,so enter linux command:
@@ -23,6 +24,13 @@ void test_8_2(const std::string& str_1, const std::string& str_2) {
     Exercise_8_2::exercise_8_8(str_1, str_2);
 }
 
+void test_8_3() {
+    // Exercise_8_3::exercise_8_9();
+    // Exercise_8_3::exercise_8_10();
+    // Exercise_8_3::exercise_8_11();
+    Exercise_8_3::exercise_8_13();
+}
+
 /* if you use CLion and want the main program is capable of handling command-line options
  * you could:
  * Run -> Edit Configuration -> Program arguments
@@ -31,6 +39,7 @@ void test_8_2(const std::string& str_1, const std::string& str_2) {
  * */
 int main(int argc, char* argv[]) {
     // test_8_1();
-    test_8_2(argv[1], argv[2]);
+    // test_8_2(argv[1], argv[2]);
+    test_8_3();
     return 0;
 }

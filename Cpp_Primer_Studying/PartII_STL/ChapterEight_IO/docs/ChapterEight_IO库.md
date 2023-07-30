@@ -251,3 +251,31 @@ input.open(ifile_1); /* 关联另一个文件 */
 
 在上文我们提到out模式默认会截断，即清空文件已有数据。所以如果希望保留则需要**显式指定app或者in模式**。
 
+## 8.3 string流
+
+sstream头文件定义了三种类型来支持内存IO。
+
+和fstream和iostream类似，sstream的三种类型分别对string读取数据、写入数据和读取写入数据：istringstream、ostringstream、stringstream。
+
+当然，除了继承iostream的操作，sstream也具有对内存IO类型的特殊操作：
+
+|          操作          |               解释                |
+|:--------------------:|:-------------------------------:|
+|  **sstream** strm;   |      strm是一个未绑定的sstream对象       |
+| **sstream** strm(s); | strm作为sstream对象，保存string s的一个拷贝 |
+|      strm.str()      |       返回strm所保存的string的拷贝       |
+|     strm.str(s)      |    将string s拷贝到strm中。，返回void    |
+
+
+当我们的某些工作是对整行文本进行处理，而其他工作是处理行内的单个单词时，通常考虑使用istringstream。
+
+当我们逐步构造输出，希望最后一起打印时，ostringstream通常是我们的一般解。
+
+## 总结
+
+fstream和sstream都继承于iostream，所以在操作上三者具有很多相同点。
+
+对于声明在语句外的流，可以通过在语句块内部使用clear函数解决EOF问题。
+
+条件状态的特性需要记牢！
+

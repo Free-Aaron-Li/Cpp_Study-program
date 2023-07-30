@@ -1,1 +1,3 @@
 hello,world!
+welcome to China!
+have a good time!

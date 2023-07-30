@@ -14,7 +14,6 @@
  */
 
 #include <iostream>
-#include <fstream>
 #include <vector>
 
 #endif  // CPP_PRIMER_STUDYING_8_HPP

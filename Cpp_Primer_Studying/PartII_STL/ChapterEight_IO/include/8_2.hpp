@@ -14,6 +14,7 @@
  */
 
 #include "8.hpp"
+#include <fstream>
 
 class Exercise_8_2{
  public:
