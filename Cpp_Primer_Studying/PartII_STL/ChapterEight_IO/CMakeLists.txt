@@ -9,9 +9,13 @@ SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 
 link_directories(${PROJECT_SOURCE_DIR}/lib)
 
+set_directory_properties(${PROJECT_SOURCE_DIR}/assert)
+
+
 set(SOURCES
         src/main.cpp
         src/exercise/8_1.cpp
+        src/exercise/8_2.cpp
         )
 
 #------------------------------------
