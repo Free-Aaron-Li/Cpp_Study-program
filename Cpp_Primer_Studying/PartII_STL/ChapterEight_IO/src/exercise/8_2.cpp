@@ -45,13 +45,58 @@ void Exercise_8_2::exercise_8_5() {
     }
 }
 
-void Exercise_8_2::exercise_8_6() {
-    std::string   input_file("../assert/sales.txt");
-    std::string   output_file("../assert/output.txt");
-    std::ifstream input(input_file);
-    std::ofstream output(output_file);
+void Exercise_8_2::exercise_8_6(const std::string &str) {
+    std::ifstream input(str);
 
-    if (!input) std::cerr << "couldn't open: " + input_file;
+    if (!input) std::cerr << "couldn't open: " + str;
+
+    SalesData total(input);
+    if (total.isbn().empty()) {
+        std::cerr << "no data!\n";
+    } else {
+        SalesData trans;
+        while (read(input, trans)) {
+            if (total.isbn() == trans.isbn())
+                total.combine(trans);
+            else {
+                print(std::cout, total);
+                std::cout << "\n";
+                total = trans;
+            }
+        }
+        print(std::cout, total);
+        std::cout << "\n";
+    }
+}
+void Exercise_8_2::exercise_8_7(const std::string &str_1, const std::string &str_2) {
+    std::ifstream input(str_1);
+    std::ofstream output(str_2);
+
+    if (!input) std::cerr << "couldn't open: " + str_1;
+
+    SalesData total(input);
+    if (total.isbn().empty()) {
+        std::cerr << "no data!\n";
+    } else {
+        SalesData trans;
+        while (read(input, trans)) {
+            if (total.isbn() == trans.isbn())
+                total.combine(trans);
+            else {
+                print(output, total);
+                output << "\n";
+                total = trans;
+            }
+        }
+        print(output, total);
+        output << "\n";
+    }
+}
+void Exercise_8_2::exercise_8_8(const std::string &str_1, const std::string &str_2) {
+    std::ifstream input(str_1);
+    std::ofstream output(str_2, std::ofstream::app);
+
+    if (!input) std::cerr << "couldn't open: " + str_1;
 
     SalesData total(input);
     if (total.isbn().empty()) {

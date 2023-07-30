@@ -15,14 +15,22 @@ void test_8_1() {
     Exercise_8_1::exercise_8_1();
 }
 
-void test_8_2() {
+void test_8_2(const std::string& str_1, const std::string& str_2) {
     // Exercise_8_2::exercise_8_4();
     // Exercise_8_2::exercise_8_5();
-    Exercise_8_2::exercise_8_6();
+    // Exercise_8_2::exercise_8_6(str_1);
+    // Exercise_8_2::exercise_8_7(str_1, str_2);
+    Exercise_8_2::exercise_8_8(str_1, str_2);
 }
 
-int main() {
+/* if you use CLion and want the main program is capable of handling command-line options
+ * you could:
+ * Run -> Edit Configuration -> Program arguments
+ * for example:
+ * my program arguments is : ../assert/sales.txt ../assert/output.txt
+ * */
+int main(int argc, char* argv[]) {
     // test_8_1();
-    test_8_2();
+    test_8_2(argv[1], argv[2]);
     return 0;
 }
