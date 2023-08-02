@@ -7,4 +7,44 @@
 // please let me know: <fly_aaron.li@outlook.com>.
 #include "9_2.hpp"
 
+void Exercise_9_2::meaninglessFunction_1() {}
+
 void Exercise_9_2::exercise_9_2() { std::list<std::deque<int>> list; }
+
+bool exercise_4_sub(std::vector<int>& vector, int target) {
+    auto begin = vector.begin();
+    auto end   = vector.cend();
+    while (begin != end) {
+        if (*begin == target)
+            return true;
+        else
+            ++begin;
+    }
+    return false;
+}
+
+void Exercise_9_2::exercise_9_4() {
+    std::vector<int> vector{1, 2, 3, 4, 5, 6, 7, 8, 9};
+    std::cout << exercise_4_sub(vector, 9);
+}
+
+int exercise_5_sub(std::vector<int>& vector, int target) {
+    auto begin = vector.begin();
+    auto end   = vector.cend();
+    while (begin != end) {
+        if (*begin == target)
+            return *begin;
+        else
+            ++begin;
+    }
+    return -1;
+}
+
+void Exercise_9_2::exercise_9_5() {
+    std::vector<int> vector{1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
+    int              result = exercise_5_sub(vector, 1);
+    if (result == -1)
+        std::cout << "no number in this vector!";
+    else
+        std::cout << result;
+}
