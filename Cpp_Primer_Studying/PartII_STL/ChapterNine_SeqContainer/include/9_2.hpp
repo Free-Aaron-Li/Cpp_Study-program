@@ -91,6 +91,31 @@ class Exercise_9_2 {
      * 而在list中，两个指针的大小关系与它们指向的元素的前后关系并不一定是吻合的，实现<运算将会非常困难和低效。
      */
 
+    /**
+     * @title
+     * 9.2.2 容器类型成员 练习
+     */
 
+    /**
+     * @title
+     * 练习9.7
+     * @description
+     * 为了索引int的vector中的元素，应该使用什么类型？
+     */
+    /* std::vector<int>::size_type */
+    static void exercise_9_7();
+
+    /**
+     * @title
+     * 练习9.8
+     * @description
+     * 为了读取string的list中的元素，应该使用什么类型？如果写入list，又该使用什么类型？
+     *
+     */
+    /*
+     * list<string>::const_iterator		//read
+     * list<string>::iterator				//write
+     */
+    static void meaninglessFunction_2();
 };
 #endif  // CPP_PRIMER_STUDYING_9_2_HPP

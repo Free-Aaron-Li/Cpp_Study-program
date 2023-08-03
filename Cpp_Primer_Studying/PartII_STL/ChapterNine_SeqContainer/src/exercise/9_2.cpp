@@ -8,6 +8,7 @@
 #include "9_2.hpp"
 
 void Exercise_9_2::meaninglessFunction_1() {}
+void Exercise_9_2::meaninglessFunction_2() {}
 
 void Exercise_9_2::exercise_9_2() { std::list<std::deque<int>> list; }
 
@@ -47,4 +48,14 @@ void Exercise_9_2::exercise_9_5() {
         std::cout << "no number in this vector!";
     else
         std::cout << result;
+}
+
+void Exercise_9_2::exercise_9_7() {
+    std::vector<int>           vector{1, 2, 3, 4, 5};
+    std::vector<int>::iterator i;
+    for (i = vector.begin(); i != vector.end(); ++i) {
+        std::cout << *i << " ";
+    }
+    std::cout << "\n";
+    std::cout << typeid(i).name() << "\n";
 }

@@ -151,7 +151,17 @@ while(begin!=end){
 ```
 从上例可以看出：在此循环之内都可以安全的解引用begin，begin必定指向一个元素，同时我们也能确定该循环最终必定会结束。
 
+### 容器类型成员
 
+在前面的章节中我们遇见过size_type、iterator和const_iterator三种类型。后两种类型都是迭代器类型，加上前面介绍的反向迭代器的reverse_iterator和const_reverse_iterator两种类型，我们现在总共认识五种容器类型。
+
+上述类型均为类型别名。类型别名的作用是在不了解容器中元素类型的情况下使用它，比如，需要元素类型，可以使用value_type，如果需要元素类型的引用使用reference或者const_reference。这在泛型编程中很有作用。
+
+例如：
+
+```cpp
+
+```
 
 
 
