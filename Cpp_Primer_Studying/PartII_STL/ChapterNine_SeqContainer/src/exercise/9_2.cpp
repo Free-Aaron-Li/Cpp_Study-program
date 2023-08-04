@@ -9,6 +9,8 @@
 
 void Exercise_9_2::meaninglessFunction_1() {}
 void Exercise_9_2::meaninglessFunction_2() {}
+void Exercise_9_2::meaninglessFunction_3() {}
+void Exercise_9_2::meaninglessFunction_4() {}
 
 void Exercise_9_2::exercise_9_2() { std::list<std::deque<int>> list; }
 

@@ -160,11 +160,21 @@ while(begin!=end){
 例如：
 
 ```cpp
-
+std::vector<int>::iterator it;
+std::vector<int>::difference_type df;
 ```
 
+### begin和end成员
 
+begin和end存在多个版本，其中：
 
+- 带r版本返回反向迭代器
+- 带c版本返回const迭代器
 
+当对const对象调用这些成员时，获得的是const版本迭代器。
 
+比较常用的是将auto和begin与end结合，获得的迭代器依赖于容器类型（C++11支持），这样我们可以不用显式声明迭代器类型。
 
+> 开发
+> 
+> 在不需要进行访问操作时，应该使用cbegin和cend。

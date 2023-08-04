@@ -117,5 +117,42 @@ class Exercise_9_2 {
      * list<string>::iterator				//write
      */
     static void meaninglessFunction_2();
+
+    /**
+     * @title
+     * 9.2.3 begin和end成员 练习
+     */
+
+    /**
+     * @title
+     * 练习9.9
+     * @description
+     * begin和cbegin两个函数有什么不同？
+     */
+    /*
+     * 二者均返回指向容器第一个元素的迭代器，但是
+     * begin成员返回非常量迭代器，
+     * cbegin成员返回常量迭代器
+     * */
+    static void meaninglessFunction_3();
+
+    /**
+     * @title
+     * 练习9.10
+     * @description
+     * 下面4个对象分别是什么类型？
+     * @code
+     * vector<int> v1;
+     * const vector<int> v2;
+     * auto it1=v1.begin(),it2=v2.begin();
+     * auto it3=v1.cbegin(),it4=v2.cbegin();
+     */
+    /*
+     * it1：std::vector<int>::iterator
+     * it2：std::vector<int>::const_iterator
+     * it3：std::vector<int>::const_iterator
+     * it4：std::vector<int>::const_iterator
+     * */
+    static void meaninglessFunction_4();
 };
 #endif  // CPP_PRIMER_STUDYING_9_2_HPP
