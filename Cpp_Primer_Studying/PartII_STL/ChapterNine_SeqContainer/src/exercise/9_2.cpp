@@ -63,10 +63,41 @@ void Exercise_9_2::exercise_9_7() {
 }
 
 void Exercise_9_2::exercise_9_11() {
-    std::vector<int> v1; /* v1 is empty */
-    std::vector<int> v2(v1); /* v2 is empty */
-    std::vector<int> v3=v1; /* v3 is empty */
-    std::vector<int> v4{1,2,3}; /* v4 has three elements,they are 1,2,3 */
-    std::vector<int> v5(3,2); /* v5 has three elements,they are 3,3,3 */
-    std::vector<int> v6(v5.cbegin(),v5.cend()); /* v6 has three elements,they are 3,3,3 */
+    std::vector<int> v1;                         /* v1 is empty */
+    std::vector<int> v2(v1);                     /* v2 is empty */
+    std::vector<int> v3 = v1;                    /* v3 is empty */
+    std::vector<int> v4{1, 2, 3};                /* v4 has three elements,they are 1,2,3 */
+    std::vector<int> v5(3, 2);                   /* v5 has three elements,they are 3,3,3 */
+    std::vector<int> v6(v5.cbegin(), v5.cend()); /* v6 has three elements,they are 3,3,3 */
+}
+
+void Exercise_9_2::exercise_9_13() {
+    std::vector<int> vector_int(5, 1);
+    std::list<int>   list_int(5, 2);
+
+    /* from std::vector<int> to std::vector<double> */
+    std::vector<double> vector_double_1(vector_int.cbegin(), vector_int.cend());
+    std::cout << "std::vector<int> elements is: ";
+    for (const auto& i : vector_int) {
+        std::cout << " " << i;
+    }
+    std::cout << "\n";
+    std::cout << "std::vector<double> elements is: ";
+    for (const auto& i : vector_double_1) {
+        std::cout << " " << i;
+    }
+    std::cout << "\n";
+
+    /* from std::list<int> to std::vector<double> */
+    std::vector<double> vector_double_2(list_int.cbegin(), list_int.cend());
+    std::cout << "std::list<int> elements is: ";
+    for (const auto& i : list_int) {
+        std::cout << " " << i;
+    }
+    std::cout << "\n";
+    std::cout << "std::vector<double> elements is: ";
+    for (const auto& i : vector_double_2) {
+        std::cout << " " << i;
+    }
+    std::cout << "\n";
 }
