@@ -61,3 +61,12 @@ void Exercise_9_2::exercise_9_7() {
     std::cout << "\n";
     std::cout << typeid(i).name() << "\n";
 }
+
+void Exercise_9_2::exercise_9_11() {
+    std::vector<int> v1; /* v1 is empty */
+    std::vector<int> v2(v1); /* v2 is empty */
+    std::vector<int> v3=v1; /* v3 is empty */
+    std::vector<int> v4{1,2,3}; /* v4 has three elements,they are 1,2,3 */
+    std::vector<int> v5(3,2); /* v5 has three elements,they are 3,3,3 */
+    std::vector<int> v6(v5.cbegin(),v5.cend()); /* v6 has three elements,they are 3,3,3 */
+}
