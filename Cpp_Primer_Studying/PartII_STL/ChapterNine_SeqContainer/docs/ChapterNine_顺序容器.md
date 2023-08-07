@@ -272,20 +272,20 @@ begin和end存在多个版本，其中：
 - array容器
   - 和内置数组不一样的，array容器允许赋值，但是赋值符号左右两边的运算对象类型必须一致
   - 由于有运算对象的大小可能和左边对象不一致，所以array类型不支持assign，也不允许使用花括号包围的值列表进行赋值
-- 使用assign（仅顺序容器支持）
-  - 赋值运算要求左右两边运算对象必须具有相同类型，那么顺序容器还提供另外一种方式，通过assign成员允许我们及那个不同但是相容的类型赋值。类似于seq成员之于容器初始化
-   ```cpp
-    list<string> name;
-    vector<const char*> oldstyle;
-    name=oldstyle; /* error */
-    name.assign(oldstyle.cbegin(),oldstyle.cend()); /* ok */
-   ```
-  - 由于其旧元素被替换，所以**传递给assign的迭代器不能指向调用assign的容器**
-  - 除了上述的方式外，assign还接受一个整数值和一个元素值
-    ```cpp
-      list<string> name(1); /* 1个元素，为空string */    
-      list<string> name.assign(10,"hi"); /* 10个元素，每个都是hi */
-    ```
+  - 使用assign（仅顺序容器支持）
+    - 赋值运算要求左右两边运算对象必须具有相同类型，那么顺序容器还提供另外一种方式，通过assign成员允许我们及那个不同但是相容的类型赋值。类似于seq成员之于容器初始化
+      ```cpp
+        list<string> name;
+        vector<const char*> oldstyle;
+        name=oldstyle; /* error */
+        name.assign(oldstyle.cbegin(),oldstyle.cend()); /* ok */
+      ```
+    - 由于其旧元素被替换，所以**传递给assign的迭代器不能指向调用assign的容器**
+    - 除了上述的方式外，assign还接受一个整数值和一个元素值
+      ```cpp
+        list<string> name(1); /* 1个元素，为空string */    
+        list<string> name.assign(10,"hi"); /* 10个元素，每个都是hi */
+      ```
 - 使用swap
   - swap操作交换两个相同类型容器的内容。
     ```cpp
@@ -293,5 +293,6 @@ begin和end存在多个版本，其中：
       vector<string> v2(20);
       swap(v1,v2); /* 交换元素，v1将会有20个元素，v2将会有10个元素 */    
     ```
-  - swap本质上交换的是两个容器内部数据结构，元素本身并未交换。所以除了array之外，swap不会对任何元素进行拷贝、删除或者插入操作，因此可以保证在常数时间内完成。
-- 
+  - swap本质上交换的是两个容器内部数据结构，元素本身并未交换。所以除了array之外，swap不会对任何元素进行拷贝、删除或者插入操作，因此可以保证在常数时间内完成。那么就表示指向容器的迭代器、引用和指针在swap操作之后都不会失效，但是**在swap之后，已经属于不同的容器了**。
+  - 当然，array又是一个例外，swap操作对于两个array是真正交换对应元素。所以，交换两个array所需时间与array中元素数目成正比。
+    

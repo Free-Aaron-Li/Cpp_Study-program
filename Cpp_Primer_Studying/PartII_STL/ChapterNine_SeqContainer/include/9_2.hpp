@@ -195,5 +195,18 @@ class Exercise_9_2 {
      * 如何从一个list<int>初始化一个vector<double>？从一个vector<int>又该如何创建？编写代码验证你的答案。
      */
     static void exercise_9_13();
+
+    /**
+     * @title
+     * 9.2.5 赋值和swap 练习
+     */
+
+    /**
+     * @title
+     * 练习9.14
+     * @description
+     * 编写程序，将一个list中的char *指针（指向C风格字符串）元素赋值给一个vector中的string。
+     */
+    static void exercise_9_14();
 };
 #endif  // CPP_PRIMER_STUDYING_9_2_HPP

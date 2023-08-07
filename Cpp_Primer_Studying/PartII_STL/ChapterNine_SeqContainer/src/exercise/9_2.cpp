@@ -101,3 +101,15 @@ void Exercise_9_2::exercise_9_13() {
     }
     std::cout << "\n";
 }
+
+void Exercise_9_2::exercise_9_14() {
+    std::list<char*> list{"1", "2"};
+
+    std::vector<std::string> vector;
+
+    vector.assign(list.cbegin(), list.cend());
+
+    for (const auto& w : vector) {
+        std::cout << w << " ";
+    }
+}
