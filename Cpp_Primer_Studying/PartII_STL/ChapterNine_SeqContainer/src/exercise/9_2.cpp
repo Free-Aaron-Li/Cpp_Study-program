@@ -104,7 +104,7 @@ void Exercise_9_2::exercise_9_13() {
 }
 
 void Exercise_9_2::exercise_9_14() {
-    std::list<char*> list{"1", "2"};
+    std::list<char*> list{'1', reinterpret_cast<char* const>('2')};
 
     std::vector<std::string> vector;
 

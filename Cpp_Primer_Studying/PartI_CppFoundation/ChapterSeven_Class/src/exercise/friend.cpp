@@ -51,23 +51,23 @@ class Screen {
 inline char Screen::get(Screen::pos height, Screen::pos width) const {
     Screen::pos row = height * _width;
     return _contents[row + width];
-};
+}
 
 inline Screen& Screen::set(char character) {
     _contents[_cursor] = character;
     return *this;
-};
+}
 
 inline Screen& Screen::set(Screen::pos height, Screen::pos width, char character) {
     _contents[height * _width + width] = character;
     return *this;
-};
+}
 
 inline Screen& Screen::move(Screen::pos height, Screen::pos width) {
     pos row = height * _width;
     _cursor = row + width;
     return *this;
-};
+}
 
 /* 记录成员函数被调用次数 */
 inline void Screen::some_member() const { ++_access_times; };
@@ -75,17 +75,17 @@ inline void Screen::some_member() const { ++_access_times; };
 inline Screen& Screen::display(std::ostream& ostream) {
     do_display(ostream);
     return *this;
-};
+}
 
 inline const Screen& Screen::display(std::ostream& ostream) const {
     do_display(ostream);
     return *this;
-};
+}
 
 void Window_manager::Clear(Window_manager::screen_index index) {
     Screen &screen   = Window_manager::screens[index];
     screen._contents = std::string(screen._height * screen._width, ' ');
-};
+}
 
 int main() {
     Screen my(5,5,'X');
@@ -96,4 +96,4 @@ int main() {
     Window_manager test;
     test.Clear(0);
     my.display(std::cout);
-};
+}

@@ -573,7 +573,7 @@ private:
 > 建议
 >
 > 1. 不建议使用其他成员的名字作为某个成员函数的参数。
-     >   ```cpp
+>   ```cpp
 >    int height;
 >    class Test(){
 >    public:
@@ -587,7 +587,7 @@ private:
 >   ```
 >
 > 2. 不建议成员函数中的名字隐藏同名的成员。
-     >   ```cpp
+>    ```cpp
 >    int height;
 >    class Test(){
 >    public:
@@ -600,8 +600,8 @@ private:
 >      int result=0;
 >      int height=10;
 >   ```
-     >   可以显式的使用this指针强制访问成员或者加上类名的方式，将`result=height*2;`修改为`result=this->height*2`或者`result=Test::height*2`以此绕过上述的名字查找规则
->
+>   可以显式的使用this指针强制访问成员或者加上类名的方式，将`result=height*2;`修改为`result=this->height*2`或者`result=Test::height*2`以此绕过上述的名字查找规则
+> 
 > 3. 建议我们在使用成员函数中给形参起一个不会重名的名字。
      >
      >   ```cpp
