@@ -11,6 +11,7 @@ void Exercise_9_2::meaninglessFunction_1() {}
 void Exercise_9_2::meaninglessFunction_2() {}
 void Exercise_9_2::meaninglessFunction_3() {}
 void Exercise_9_2::meaninglessFunction_4() {}
+void Exercise_9_2::meaninglessFunction_5() {}
 
 void Exercise_9_2::exercise_9_2() { std::list<std::deque<int>> list; }
 
@@ -111,5 +112,27 @@ void Exercise_9_2::exercise_9_14() {
 
     for (const auto& w : vector) {
         std::cout << w << " ";
+    }
+}
+
+void Exercise_9_2::exercise_9_15() {
+    std::vector<int> v1{1, 2, 3, 4};
+    std::vector<int> v2{1, 2, 3, 6};
+
+    if (v1 < v2)
+        std::cout << "v1<v2,it's a fact";
+    else
+        std::cout << "it's impossible";
+}
+
+void Exercise_9_2::exercise_9_16() {
+    std::vector<int> v1{1, 2, 3, 4};
+    std::list<int>   v2{1, 2, 3, 4};
+
+    try {
+        if (v1 < v2) std::cout << "it's impossible";
+    }
+    catch (std::runtime_error& error) {
+        std::cout << "it's a fact!";
     }
 }

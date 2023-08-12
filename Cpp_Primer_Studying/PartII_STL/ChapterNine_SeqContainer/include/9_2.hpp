@@ -208,5 +208,37 @@ class Exercise_9_2 {
      * 编写程序，将一个list中的char *指针（指向C风格字符串）元素赋值给一个vector中的string。
      */
     static void exercise_9_14();
+
+    /**
+     * @title
+     * 9.2.7 关系运算符 练习
+     */
+
+    /**
+     * @title
+     * 练习9.15
+     * @description
+     * 编写程序，判定两个vector<int>是否相等。
+     */
+    static void exercise_9_15();
+
+    /**
+     * @title
+     * 练习9.16
+     * @description
+     * 重写上一题的程序，比较一个list<int>中的元素和一个vector<int>中的元素。
+     */
+    static void exercise_9_16();
+
+    /**
+     * @title
+     * 练习9.17
+     * @description
+     * 假定c1和c2是两个容器，下面的比较操作有何限制（如果有的话）？
+     * @code
+     * if (c1<c2)
+     */
+    /* c1和c2两个容器的类型和容器中元素类型必须一致 */
+    static void meaninglessFunction_5();
 };
 #endif  // CPP_PRIMER_STUDYING_9_2_HPP
