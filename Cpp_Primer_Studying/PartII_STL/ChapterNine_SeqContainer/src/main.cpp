@@ -6,6 +6,7 @@
 // This program is under the GPL-3.0 license,if you have not received it or the program has a bug,
 // please let me know: <fly_aaron.li@outlook.com>.
 #include "9_2.hpp"
+#include "9_3.hpp"
 
 void test_9_2() {
     // Exercise_9_2::exercise_9_4();
@@ -17,7 +18,15 @@ void test_9_2() {
     // Exercise_9_2::exercise_9_16();
 }
 
+void test_9_3() {
+    // Exercise_9_3::exercise_9_19();
+    // Exercise_9_3::exercise_9_20();
+    // Exercise_9_3::exercise_9_21();
+    Exercise_9_3::exercise_9_22();
+}
+
 int main() {
-    test_9_2();
+    // test_9_2();
+    test_9_3();
     return 0;
 }

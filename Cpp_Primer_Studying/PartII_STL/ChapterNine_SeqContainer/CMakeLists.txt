@@ -16,6 +16,7 @@ set(SOURCES
         src/main.cpp
         src/exercise/9_1.cpp
         src/exercise/9_2.cpp
+        src/exercise/9_3.cpp
 )
 
 #------------------------------------

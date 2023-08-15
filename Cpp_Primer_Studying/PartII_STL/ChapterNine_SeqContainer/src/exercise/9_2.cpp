@@ -130,7 +130,7 @@ void Exercise_9_2::exercise_9_16() {
     std::list<int>   v2{1, 2, 3, 4};
 
     try {
-        if (v1 < v2) std::cout << "it's impossible";
+        // if (v1 < v2) std::cout << "it's impossible";
     }
     catch (std::runtime_error& error) {
         std::cout << "it's a fact!";
