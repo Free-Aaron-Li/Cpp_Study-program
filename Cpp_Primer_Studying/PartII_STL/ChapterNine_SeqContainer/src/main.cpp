@@ -22,7 +22,9 @@ void test_9_3() {
     // Exercise_9_3::exercise_9_19();
     // Exercise_9_3::exercise_9_20();
     // Exercise_9_3::exercise_9_21();
-    Exercise_9_3::exercise_9_22();
+    // Exercise_9_3::exercise_9_22();
+    // Exercise_9_3::exercise_9_23();
+    Exercise_9_3::exercise_9_24();
 }
 
 int main() {

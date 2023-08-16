@@ -71,5 +71,34 @@ class Exercise_9_3 {
      */
     /* 由于迭代器发生变化，程序将会一直运行直至内存溢出。具体修改参见下方程序 */
     static void exercise_9_22();
+
+    /**
+     * @title
+     * 9.3.2 访问元素 练习
+     */
+
+    /**
+     * @title
+     * 练习9.23
+     * @description
+     * 在本节第一个程序中，若c.size()为1,则val、val2、val3和val4的值会是什么？
+     */
+    /*
+     * 假设c第一个元素值为x,则
+     * val为x，val2为x，val3为x，val4为x
+     *
+     * 但是其前提是容器不能是forward_list
+     * */
+    static void exercise_9_23();
+
+    /**
+     * @title
+     * 练习9.24
+     * @description
+     * 编写程序，分别使用at、下标运算符、front和begin提取一个vector中的第一个元素。
+     * 在一个空vector上测试你的程序。
+     */
+     static void exercise_9_24();
+
 };
 #endif  // CPP_PRIMER_STUDYING_9_3_HPP

@@ -86,3 +86,27 @@ void Exercise_9_3::exercise_9_22() {
         std::cout << c << " ";
     }
 }
+
+void Exercise_9_3::exercise_9_23() {
+    std::vector<int> vector{1};
+    std::cout << vector.size() << "\n";
+    if (!vector.empty()) {
+        auto val = *vector.begin(), val2 = vector.front();
+        auto last = vector.end();
+        auto val3 = *(--last);
+        auto val4 = vector.back();
+        std::cout << "val is: " << val << "\n"
+                  << "val2 is: " << val2 << "\n"
+                  << "val3 is: " << val3 << "\n"
+                  << "val4 is: " << val4 << "\n";
+    }
+}
+
+void Exercise_9_3::exercise_9_24() {
+    std::vector<int> vector{};
+
+    std::cout << vector.at(0) << "\n"; /* the exception is out_of_range */
+    std::cout << vector[0] << "\n"; /* error number is :139 (interrupted by signal 11: SIGSEGV) */
+    std::cout << vector.front() << "\n"; /* error number is :139 (interrupted by signal 11: SIGSEGV) */
+    std::cout << *vector.begin() << "\n"; /* error number is :139 (interrupted by signal 11: SIGSEGV) */
+}
