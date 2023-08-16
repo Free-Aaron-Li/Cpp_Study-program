@@ -100,5 +100,34 @@ class Exercise_9_3 {
      */
      static void exercise_9_24();
 
+     /**
+      * @title
+      * 9.3.3 删除元素 练习
+      */
+
+     /**
+      * @title
+      * 练习9.25
+      * @description
+      * 对于第312页中删除一个范围内的元素的程序，如果elem1与elem2相等会发生什么？
+      * 如果elem2是尾后迭代器，或者elem1和elem2皆为尾后迭代器，又会发生什么？
+      */
+      /*
+       * 当elem1和elem2相同时，并不会删除容器中元素
+       * 当elem2为尾后迭代器，而elem1不是时，会删除从elem1至elem2中所有元素
+       * */
+     static void exercise_9_25();
+
+     /**
+      * @title
+      * 练习9.26
+      * @description
+      * 使用下面代码定义的ia,将ia拷贝到一个vector和一个list中。使用单迭代器版本的erase从list中删除奇数元素，
+      * 从vector中删除偶数元素。
+      * @code
+      * int ia[]={0,1,1,2,3,5,8,13,21,55,89};
+      */
+      static void exercise_9_26();
+
 };
 #endif  // CPP_PRIMER_STUDYING_9_3_HPP

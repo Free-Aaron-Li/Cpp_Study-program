@@ -105,8 +105,75 @@ void Exercise_9_3::exercise_9_23() {
 void Exercise_9_3::exercise_9_24() {
     std::vector<int> vector{};
 
-    std::cout << vector.at(0) << "\n"; /* the exception is out_of_range */
-    std::cout << vector[0] << "\n"; /* error number is :139 (interrupted by signal 11: SIGSEGV) */
-    std::cout << vector.front() << "\n"; /* error number is :139 (interrupted by signal 11: SIGSEGV) */
+    std::cout << vector.at(0) << "\n";    /* the exception is out_of_range */
+    std::cout << vector[0] << "\n";       /* error number is :139 (interrupted by signal 11: SIGSEGV) */
+    std::cout << vector.front() << "\n";  /* error number is :139 (interrupted by signal 11: SIGSEGV) */
     std::cout << *vector.begin() << "\n"; /* error number is :139 (interrupted by signal 11: SIGSEGV) */
+}
+
+void Exercise_9_3::exercise_9_25() {
+    std::vector<int> vector{1, 2, 3, 4, 5, 6, 7, 8, 9};
+
+    auto elem1 = vector.begin();
+    auto elem2 = vector.begin();
+
+    elem1 = vector.erase(elem1, elem2);
+    std::cout << *elem1 << "\n";
+    for (auto const& c : vector) {
+        std::cout << c << " ";
+    }
+
+    elem1 = vector.end();
+    elem2 = vector.end();
+    elem1 = vector.erase(elem1, elem2);
+    std::cout << "\n" << *elem1 << "\n";
+    for (auto const& c : vector) {
+        std::cout << c << " ";
+    }
+
+    elem1 = vector.begin();
+    elem2 = vector.end();
+    elem1 = vector.erase(elem1, elem2);
+    std::cout << "\n" << *elem1 << "\n";
+    for (auto const& c : vector) {
+        std::cout << c << " ";
+    }
+}
+
+void Exercise_9_3::exercise_9_26() {
+    int              ia[] = {0, 1, 1, 2, 3, 5, 8, 13, 21, 55, 89};
+    std::vector<int> vector;
+    std::list<int>   list;
+
+    for (auto const& c : ia) {
+        vector.emplace_back(c);
+        list.emplace_back(c);
+    }
+
+    auto iter_vector_begin = vector.begin();
+    auto iter_list_begin   = list.begin();
+
+    /* delete even number */
+    while (iter_vector_begin != vector.end())
+        if (!(*iter_vector_begin % 2))
+            iter_vector_begin = vector.erase(iter_vector_begin);
+        else
+            ++iter_vector_begin;
+
+    /* delete odd number */
+    while (iter_list_begin != list.end())
+        if (*iter_list_begin % 2)
+            iter_list_begin = list.erase(iter_list_begin);
+        else
+            ++iter_list_begin;
+
+    std::cout << "the vector is:(no even number)\n";
+    for (auto const& c : vector) {
+        std::cout << c << " ";
+    }
+    std::cout << "\n";
+    std::cout << "the list is:(no odd number)\n";
+    for (auto const& c : list) {
+        std::cout << c << " ";
+    }
 }
