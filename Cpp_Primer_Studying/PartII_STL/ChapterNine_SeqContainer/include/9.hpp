@@ -17,5 +17,6 @@
 #include <list>
 #include <deque>
 #include <vector>
+#include <forward_list>
 
 #endif  // CPP_PRIMER_STUDYING_9_HPP

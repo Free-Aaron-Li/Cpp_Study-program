@@ -129,5 +129,28 @@ class Exercise_9_3 {
       */
       static void exercise_9_26();
 
+      /**
+       * @title
+       * 9.3.4 特殊的forward_list操作 练习
+       */
+
+      /**
+       * @title
+       * 练习9.27
+       * @description
+       * 编写程序，查找并删除forward_list<int>中的奇数元素
+       */
+      static void exercise_9_27();
+
+      /**
+       * @title
+       * 练习9.28
+       * @description
+       * 编写函数，接受一个forward_list<string>和两个string共三个参数。
+       * 函数应在链表中查找第一个string,并将第二个string插入到紧接着第一个string之后的位置。
+       * 若第一个string未在链表中，则将第二个string插入到链表末尾。
+       */
+       static void exercise_9_28();
+
 };
 #endif  // CPP_PRIMER_STUDYING_9_3_HPP

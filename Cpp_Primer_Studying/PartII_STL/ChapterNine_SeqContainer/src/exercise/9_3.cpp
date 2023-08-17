@@ -177,3 +177,44 @@ void Exercise_9_3::exercise_9_26() {
         std::cout << c << " ";
     }
 }
+
+void Exercise_9_3::exercise_9_27() {
+    std::forward_list<int> list{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    auto                   previous_node = list.before_begin();
+    auto                   current_node  = list.begin();
+
+    while (current_node != list.end())
+        if (*current_node % 2)
+            current_node = list.erase_after(previous_node);
+        else {
+            previous_node = current_node;
+            ++current_node;
+        }
+    for (auto const& c : list) {
+        std::cout << c << " ";
+    }
+}
+
+std::forward_list<std::string>& exercise_28_sub(std::forward_list<std::string>& list, std::string str_1, std::string str_2) {
+    auto previous_node = list.before_begin();
+    auto current_node  = list.begin();
+    while (current_node != list.end()) {
+        if (*current_node == str_1) {
+            list.insert_after(current_node, str_2);
+            return list;
+        }
+        previous_node = current_node;
+        ++current_node;
+    }
+    list.insert_after(previous_node, str_2);
+    return list;
+}
+
+
+void Exercise_9_3::exercise_9_28() {
+    std::forward_list<std::string> list{"hello", "world"};
+    exercise_28_sub(list, "hello", "!");
+    for (auto const& c : list) {
+        std::cout << c << " ";
+    }
+}

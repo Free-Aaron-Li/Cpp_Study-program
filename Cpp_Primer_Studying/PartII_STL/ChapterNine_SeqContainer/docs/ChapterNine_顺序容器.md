@@ -479,7 +479,7 @@ a2<a5，二者在第三个元素比较上，a5第三个元素更大且二者容�
 
 如果希望下标合法，可以使用at成员函数，如果下标越界，at将会抛出一个out_of_range异常。
 
-### 9.3.3 删除元素
+### 删除元素
 
 和添加元素方法类似，容器也存在多种删除元素的方式。（当然array除外😅）
 
@@ -511,21 +511,54 @@ a2<a5，二者在第三个元素比较上，a5第三个元素更大且二者容�
     - 成员函数erase从容器中指定位置删除元素，既可以删除一个迭代器指定的单个元素，也可以删除由一对迭代器指定范围内的所有元素。这两种形式的erase都返回指向删除的（最后一个）元素之后位置的迭代器。
     - 除了通过一组迭代器方式删除指定范围元素，也可以调用clear函数删除容器中所有元素。
 
-### 9.3.4 特殊的forward_list操作
+### 特殊的forward_list操作
 
 forward_list容器是由单链表组成的，所以其对容器的操作与其他容器（vector、list、deque等）不同，所以C++专门定义了其特殊版本的forward_list操作。
 
+<div style="text-align: center;">
+
 ```mermaid
 flowchart LR
-    tlem1-->elem2-->elem3-->elem4
+    elem1-->elem2-->elem3-->elem4
 ```
 
+</div>
 当删除elem3会改变elem2的值
+<div style="text-align: center;">
 
 ```mermaid
 flowchart LR
-    tlem1-->elem2--->elem4
+    elem1-->elem2--->elem4
 ```
 
-其特殊的原因在于，
+</div>
 
+单链表中对元素的增删下，假设我们删除elem3
+其元素之前的元素（elem4）的后继将会改变，同时其元素之前的元素（elem2）的前驱也会发生改变。这就导致我们没有简单的方式来获取一个元素的前驱，所以在forward_list中添加或者删除元素实质上是通过改变给定元素之后的元素（elem2）来完成的。
+
+所以这就是forward_list的特殊之处，其操作的实现方式与其他容器的不同导致该容器并没有定义insert、emplace和erase，而是对应定义的insert_after、emplace_after和erase_after。
+
+|                                      forward_list插入或删除元素操作                                      |                                                           解释                                                            |
+|:-----------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------------------:|
+|                             c.before_begin()<br/>c.cbefore_begin()                              |                                          返回指向链表首元素之前不存在的元素的迭代器。**此迭代器不能解引用**。                                           |
+| c.insert_after(p,t)<br/>c.insert_after(p,n,t)<br/>c.insert_after(p,b,e)<br/>c.insert_after(p,i) | 在迭代器p**之后的位置**插入元素。<br/>t表示对象，n表示数量，b和e表示一组迭代器（其不能指向c内元素），i表示一个花括号列表。<br/>返回一个指向最后一个插入元素的迭代器。如果范围为空则返回p。若p为尾后迭代器，则函数未定义 |
+|                                  emplace_after(p,<i>args</i>)                                   |                               使用<i>args</i>在p指定位置之后创建一个元素。返回指向这个新元素的迭代器。若p为尾后迭代器，则函数行为未定义                               | |                            c.erase_after(p)  <br/>c.erase_after(p,e)                            |                删除p指向的位置之后的元素，或删除从p到e之间的元素。返回一个指向被删除元素之后元素的迭代器，若不存在则返回尾后迭代器。如果p指向c的尾元素或者是一个尾后迭代器，则函数行为未定义                |
+
+在处理forward_list中增删元素时，我们需要关注两个迭代器——一个指向我们要处理的元素，另一个指向其前驱。
+
+例如：
+
+```cpp
+/* 删除forward_list容器中的奇数 */
+std::forward_list<int> list{0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+auto                   prev = list.before_begin(); /* this is previous node */
+auto                   curr = list.begin(); /* this is current node */
+while (curr != list.end()) {
+    if (*curr % 2) {
+        curr = list.erase_after(prev); /* update current node */
+    } else {
+        prev = curr; /* move previous node */
+        ++curr; /* move current node */
+    }
+}
+```
