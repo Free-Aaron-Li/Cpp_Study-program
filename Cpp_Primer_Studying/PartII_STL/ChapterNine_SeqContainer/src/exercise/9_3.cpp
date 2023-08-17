@@ -9,6 +9,7 @@
 
 void Exercise_9_3::meaninglessFunction_1() {}
 void Exercise_9_3::meaninglessFunction_2() {}
+void Exercise_9_3::meaninglessFunction_3() {}
 
 void Exercise_9_3::exercise_9_18() {
     std::deque<std::string> deque;
@@ -218,6 +219,74 @@ void Exercise_9_3::exercise_9_28() {
     std::forward_list<std::string> list{"hello", "world"};
     exercise_28_sub(list, "hello", "!");
     for (auto const& c : list) {
+        std::cout << c << " ";
+    }
+}
+
+std::list<int>& exercise_31_sub_list(std::list<int>& list) {
+    auto iter_begin = list.begin();
+    while (iter_begin != list.end())
+        if (*iter_begin % 2) {
+            iter_begin = list.insert(iter_begin, *iter_begin++);
+            ++iter_begin;
+            ++iter_begin;
+        } else
+            iter_begin = list.erase(iter_begin);
+    return list;
+}
+
+std::forward_list<int>& exercise_31_sub_forward_list(std::forward_list<int>& list) {
+    auto previous_iter = list.before_begin();
+    auto current_iter  = list.begin();
+    while (current_iter != list.end())
+        if (*current_iter % 2) {
+            current_iter  = list.insert_after(current_iter, *current_iter);
+            previous_iter = current_iter; /* One position before current_iter */
+            ++current_iter;
+        } else {
+            current_iter = list.erase_after(previous_iter);
+        }
+    return list;
+}
+
+
+void Exercise_9_3::exercise_9_31() {
+    std::list<int>         list{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    std::forward_list<int> forward_list{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+    exercise_31_sub_list(list);
+    exercise_31_sub_forward_list(forward_list);
+
+    for (auto const& c : list) {
+        std::cout << c << " ";
+    }
+    std::cout << "\n";
+    for (auto const& c : forward_list) {
+        std::cout << c << " ";
+    }
+}
+void Exercise_9_3::exercise_9_33() {
+    std::list<int> list{1, 2, 3, 4};
+    auto           begin = list.begin();
+    while (begin != list.end()) {
+        ++begin;
+        list.insert(begin, 42);
+        ++begin;
+    }
+
+    for (auto const& c : list) {
+        std::cout << c << " ";
+    }
+}
+
+void Exercise_9_3::exercise_9_34() {
+    std::vector<int> vector{1, 2, 3, 4, 5, 6, 7, 8, 9};
+    auto             iter = vector.begin();
+    while (iter != vector.end()) {
+        if (*iter % 2) iter = vector.insert(iter, *iter);
+        ++iter;
+    }
+    for (auto const& c : vector) {
         std::cout << c << " ";
     }
 }

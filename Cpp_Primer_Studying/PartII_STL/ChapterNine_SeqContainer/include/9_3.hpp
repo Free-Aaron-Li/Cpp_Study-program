@@ -98,86 +98,149 @@ class Exercise_9_3 {
      * 编写程序，分别使用at、下标运算符、front和begin提取一个vector中的第一个元素。
      * 在一个空vector上测试你的程序。
      */
-     static void exercise_9_24();
+    static void exercise_9_24();
 
-     /**
-      * @title
-      * 9.3.3 删除元素 练习
-      */
+    /**
+     * @title
+     * 9.3.3 删除元素 练习
+     */
 
-     /**
-      * @title
-      * 练习9.25
-      * @description
-      * 对于第312页中删除一个范围内的元素的程序，如果elem1与elem2相等会发生什么？
-      * 如果elem2是尾后迭代器，或者elem1和elem2皆为尾后迭代器，又会发生什么？
-      */
-      /*
-       * 当elem1和elem2相同时，并不会删除容器中元素
-       * 当elem2为尾后迭代器，而elem1不是时，会删除从elem1至elem2中所有元素
-       * */
-     static void exercise_9_25();
+    /**
+     * @title
+     * 练习9.25
+     * @description
+     * 对于第312页中删除一个范围内的元素的程序，如果elem1与elem2相等会发生什么？
+     * 如果elem2是尾后迭代器，或者elem1和elem2皆为尾后迭代器，又会发生什么？
+     */
+    /*
+     * 当elem1和elem2相同时，并不会删除容器中元素
+     * 当elem2为尾后迭代器，而elem1不是时，会删除从elem1至elem2中所有元素
+     * */
+    static void exercise_9_25();
 
-     /**
-      * @title
-      * 练习9.26
-      * @description
-      * 使用下面代码定义的ia,将ia拷贝到一个vector和一个list中。使用单迭代器版本的erase从list中删除奇数元素，
-      * 从vector中删除偶数元素。
-      * @code
-      * int ia[]={0,1,1,2,3,5,8,13,21,55,89};
-      */
-      static void exercise_9_26();
+    /**
+     * @title
+     * 练习9.26
+     * @description
+     * 使用下面代码定义的ia,将ia拷贝到一个vector和一个list中。使用单迭代器版本的erase从list中删除奇数元素，
+     * 从vector中删除偶数元素。
+     * @code
+     * int ia[]={0,1,1,2,3,5,8,13,21,55,89};
+     */
+    static void exercise_9_26();
 
-      /**
-       * @title
-       * 9.3.4 特殊的forward_list操作 练习
-       */
+    /**
+     * @title
+     * 9.3.4 特殊的forward_list操作 练习
+     */
 
-      /**
-       * @title
-       * 练习9.27
-       * @description
-       * 编写程序，查找并删除forward_list<int>中的奇数元素
-       */
-      static void exercise_9_27();
+    /**
+     * @title
+     * 练习9.27
+     * @description
+     * 编写程序，查找并删除forward_list<int>中的奇数元素
+     */
+    static void exercise_9_27();
 
-      /**
-       * @title
-       * 练习9.28
-       * @description
-       * 编写函数，接受一个forward_list<string>和两个string共三个参数。
-       * 函数应在链表中查找第一个string,并将第二个string插入到紧接着第一个string之后的位置。
-       * 若第一个string未在链表中，则将第二个string插入到链表末尾。
-       */
-       static void exercise_9_28();
+    /**
+     * @title
+     * 练习9.28
+     * @description
+     * 编写函数，接受一个forward_list<string>和两个string共三个参数。
+     * 函数应在链表中查找第一个string,并将第二个string插入到紧接着第一个string之后的位置。
+     * 若第一个string未在链表中，则将第二个string插入到链表末尾。
+     */
+    static void exercise_9_28();
 
-       /**
-        * @title
-        * 9.3.5 改变容器大小 练习
-        */
+    /**
+     * @title
+     * 9.3.5 改变容器大小 练习
+     */
 
-       /**
-        * @title
-        * 练习9.29
-        * @description
-        * 假定vec包含25个元素，那么vec.resize(100)会做什么？如果接下来调用vec.resize(10)会做什么？
-        */
-        /*
-         * 首先，调用vec.resize(100)，那么vec将会新创建90个默认初始化的元素于容器尾部，
-         * 调用vec.resize(10)那么会删除容器后90个元素，剩下元素为vec最先的10个元素
-         * */
-       static void meaninglessFunction_1();
+    /**
+     * @title
+     * 练习9.29
+     * @description
+     * 假定vec包含25个元素，那么vec.resize(100)会做什么？如果接下来调用vec.resize(10)会做什么？
+     */
+    /*
+     * 首先，调用vec.resize(100)，那么vec将会新创建90个默认初始化的元素于容器尾部，
+     * 调用vec.resize(10)那么会删除容器后90个元素，剩下元素为vec最先的10个元素
+     * */
+    static void meaninglessFunction_1();
 
-        /**
-         * @title
-         * 练习9.30
-         * @description
-         * 接受单个参数的resize版本对元素类型有什么限制（如果有的话）？
-         */
-         /* 如果容器中元素类型为类类型，则该类需要存在默认构造函数 */
-       static void meaninglessFunction_2();
+    /**
+     * @title
+     * 练习9.30
+     * @description
+     * 接受单个参数的resize版本对元素类型有什么限制（如果有的话）？
+     */
+    /* 如果容器中元素类型为类类型，则该类需要存在默认构造函数 */
+    static void meaninglessFunction_2();
 
+    /**
+     * @title
+     * 9.3.6 容器操作可能使迭代器失效
+     */
 
+    /**
+     * @title
+     * 练习9.31
+     * @description
+     * 第316页中删除偶数值元素并复制奇数值元素的程序不能用于list或者forward_list。
+     * 为什么？修改程序，使之也能用于这些类型。
+     */
+    /*
+     * list容器下，迭代器无法使用复合赋值
+     * forward_list容器下，其具有特殊的操作函数
+     * */
+    static void exercise_9_31();
+
+    /**
+     * @title
+     * 练习 9.32
+     * @description
+     * 在第316页的程序中，向下面语句这样调用insert是否合法？如果不合法，为什么？
+     * @code
+     * iter=vi.insert(iter,*iter++);
+     */
+    /*
+     * 根据编译器的不同，其产生的效果可能不同。
+     * 例如，在这里我使用的是g++ 11.2.0，那么使用该表达式得到：
+     * 1 1 2 3 3 4 5 5 6 7 7 8 9 9 10 (测试内容为1 2 3 4 5 6 7 8 9 10）
+     * 因为很多编译器（例如我使用的gcc）对实参求值、向形参传递的处理顺序是由右至左的。
+     * 这意味着，编译器在编译上述代码时，首先对*iter++求值，传递给insert第二个形参，
+     * 此时iter已指向当前奇数的下一个元素，因此传递给insert的第一个参数的迭代器指向的是错误位置，程序执行会发生混乱，最终崩溃。
+     * 因此，若将代码改为iter = vi.insert(iter++, *iter);，或是使用由左至右求值、传递参数的编译器，代码的运行结果是正确的。
+     * 当然，这样的代码在逻辑上是毫无道理的。
+     * */
+    static void meaninglessFunction_3();
+
+    /**
+     * @title
+     * 练习9.33
+     * @description
+     * 在本节最后一个例子中，如果不将insert的结果赋予begin，将会发生什么？
+     * 编写程序，去掉此赋值语句，验证你的答案。
+     */
+    static void exercise_9_33();
+
+    /**
+     * @title
+     * 练习9.34
+     * @description
+     * 假定vi是一个保存int的容器，其中有偶数值也有奇数值，分析下面循环的行为，然后编写程序验证你的分析是否正确。
+     * @code
+     * iter=vi.begin();
+     * while(iter!=vi.end())
+     *     if(*iter%2)
+     *         iter=vi.insert(iter,*iter);
+     *     ++iter;
+     */
+    /*
+     * 无论我们是否将++iter表达式放在while循环结构中，程序都是错误的。
+     * 程序将会一直在容器前部位置添加元素（值为1），因为迭代器类似一直在循环
+     * */
+    static void exercise_9_34();
 };
 #endif  // CPP_PRIMER_STUDYING_9_3_HPP
