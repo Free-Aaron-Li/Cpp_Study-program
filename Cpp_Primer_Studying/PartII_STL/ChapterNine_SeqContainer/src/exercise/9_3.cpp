@@ -7,6 +7,9 @@
 // please let me know: <fly_aaron.li@outlook.com>.
 #include "9_3.hpp"
 
+void Exercise_9_3::meaninglessFunction_1() {}
+void Exercise_9_3::meaninglessFunction_2() {}
+
 void Exercise_9_3::exercise_9_18() {
     std::deque<std::string> deque;
     std::string             str;

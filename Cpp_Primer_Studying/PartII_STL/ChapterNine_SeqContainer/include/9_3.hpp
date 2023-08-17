@@ -152,5 +152,32 @@ class Exercise_9_3 {
        */
        static void exercise_9_28();
 
+       /**
+        * @title
+        * 9.3.5 改变容器大小 练习
+        */
+
+       /**
+        * @title
+        * 练习9.29
+        * @description
+        * 假定vec包含25个元素，那么vec.resize(100)会做什么？如果接下来调用vec.resize(10)会做什么？
+        */
+        /*
+         * 首先，调用vec.resize(100)，那么vec将会新创建90个默认初始化的元素于容器尾部，
+         * 调用vec.resize(10)那么会删除容器后90个元素，剩下元素为vec最先的10个元素
+         * */
+       static void meaninglessFunction_1();
+
+        /**
+         * @title
+         * 练习9.30
+         * @description
+         * 接受单个参数的resize版本对元素类型有什么限制（如果有的话）？
+         */
+         /* 如果容器中元素类型为类类型，则该类需要存在默认构造函数 */
+       static void meaninglessFunction_2();
+
+
 };
 #endif  // CPP_PRIMER_STUDYING_9_3_HPP
