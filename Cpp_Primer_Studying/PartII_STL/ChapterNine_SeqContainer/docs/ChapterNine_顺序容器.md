@@ -610,3 +610,68 @@ list.resize(10); /* 删除list后部10个元素，c大小为10，所有元素值
 	  **总是会失效**
 	- 如果在一个循环中插入/删除deque、string或者vector中的元素，**不要缓存end返回的迭代器** 
 
+### 9.4 vector对象是如何增长的
+
+vector容器本身支持快速随机访问。为了支持这一特性，那么vector容器将元素连续存储。同时vector又支持容器大小可变，那么如果容器需要新增元素，不可能在容器尾后随意新建连续空间，vector容器必须新建一个空间，并将原本元素和新元素添加入新内存空间。但是如果每次新增一个元素就需要移动内存空间，对于性能要求是不可接受的。
+
+在此基础上，C++标准库开发者设计了可以减少容器空间重新分配次数的策略。在创建vector和string上实际的内存空间比需求空间更大。预留的空间用于备用，以此可以保留更多元素。
+
+那么这里就存在管理内存容器的操作了，所以vector和string提供一些成员函数，其允许我们对容器实现中内存分配部分互动。
+
+|     容器大小管理操作      |            解释            |
+|:-----------------:|:------------------------:|
+|   c.capacity()    | 不重新分配内存空间的情况下，c可以保存多少元素  |
+| c.shrink_to_fit() | 将capacity()减少与size()相同大小 |
+|   c.reserve(n)    |     分配至少能容纳n个元素的内存空间     |
+
+> 注意
+> 
+> shrink_to_fit仅支持vector、string和deque容器，capacity和reserve仅支持vector和string容器。
+> reserve并不会改变容器中元素的数量，仅影响vector预先分配多大的内存空间。（注意一个是元素数量，一个是容器内存空间大小）
+
+在实际对容器大小管理上，总结来讲：只有当需要的内存空间超过当前容量时，reserve调用才会改变vector的容量，如果需求大小大于当前容量，reserve至少分配与需求一样大的内存空间（可能更大）。
+
+具体来讲：
+
+- 如果需求大小小于或者等于当前容量，reserve什么也不会做。
+  - 特别的，当需求大小小于当前容量时，容器不会退回内存空间。所以，在调用reserve之后，capacity将会大于或者等于传递给reserve的参数。
+  - 调用reserve永远不会减少容器占用的内存空间。
+- C++11下，通过shrink_to_fit函数可以溢出多余的内存空间，但是具体实现下这是可以忽略的，也就是说调用该函数不一定退回内存空间。
+
+在前面我们就提到size和capacity是两个不同的概念，size用于指代容器中已经保存的元素数量，而capacity用于指代容器中在不分配新内存空间下最多可以保存的元素（也就是说，capacity数量=size数量+预留数量）。
+
+例如：
+```cpp
+#include <iostream>
+#include <vector>
+
+int main() {
+    std::vector<int> vector;
+
+    std::cout << "the size is: " << vector.size() << ",and the capacity is: " << vector.capacity() << "\n";
+
+    for (std::vector<int>::size_type i = 0; i != 10; ++i) {
+        vector.push_back(i);
+    }
+
+    std::cout << "now,the size is: " << vector.size() << ",and the capacity is: " << vector.capacity() << "\n";
+}
+```
+其结果为：
+```markdown
+the size is: 0,and the capacity is: 0
+now,the size is: 10,and the capacity is: 16
+```
+
+从上述结果可以看出，标准库会根据其具体实现为容器多分配一些内存空间。当需求数量超过capacity数量时，那么就必须为vector分配新空间，且**标准库实现策略是将新分配空间的大小设置为原空间的两倍**。
+
+> 从某种意义上来讲，当我们存储大量数据于vector时，该标准库实现策略是显得不够“聪明”的，因为这样可能会浪费内存资源，但是相较于重新分配空间，这样又显得合理。
+> 
+> 我们可以为每个vector实现选择自己的内存分配策略，但是需要注意：只有在迫不得已的情况下才分配新的内存空间。
+
+
+
+
+
+
+
