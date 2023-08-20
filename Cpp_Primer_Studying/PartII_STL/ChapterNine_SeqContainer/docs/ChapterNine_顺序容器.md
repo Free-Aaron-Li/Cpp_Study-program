@@ -608,7 +608,7 @@ list.resize(10); /* 删除list后部10个元素，c大小为10，所有元素值
 - 不要保存end返回的迭代器
 	- 当我们添加/删除vector或者string的元素后，或者deque中首元素之外任何位置添加/删除元素后，原来end返回的迭代器
 	  **总是会失效**
-	- 如果在一个循环中插入/删除deque、string或者vector中的元素，**不要缓存end返回的迭代器** 
+	- 如果在一个循环中插入/删除deque、string或者vector中的元素，**不要缓存end返回的迭代器**
 
 ### 9.4 vector对象是如何增长的
 
@@ -625,7 +625,7 @@ vector容器本身支持快速随机访问。为了支持这一特性，那么ve
 |   c.reserve(n)    |     分配至少能容纳n个元素的内存空间     |
 
 > 注意
-> 
+>
 > shrink_to_fit仅支持vector、string和deque容器，capacity和reserve仅支持vector和string容器。
 > reserve并不会改变容器中元素的数量，仅影响vector预先分配多大的内存空间。（注意一个是元素数量，一个是容器内存空间大小）
 
@@ -634,17 +634,15 @@ vector容器本身支持快速随机访问。为了支持这一特性，那么ve
 具体来讲：
 
 - 如果需求大小小于或者等于当前容量，reserve什么也不会做。
-  - 特别的，当需求大小小于当前容量时，容器不会退回内存空间。所以，在调用reserve之后，capacity将会大于或者等于传递给reserve的参数。
-  - 调用reserve永远不会减少容器占用的内存空间。
+	- 特别的，当需求大小小于当前容量时，容器不会退回内存空间。所以，在调用reserve之后，capacity将会大于或者等于传递给reserve的参数。
+	- 调用reserve永远不会减少容器占用的内存空间。
 - C++11下，通过shrink_to_fit函数可以溢出多余的内存空间，但是具体实现下这是可以忽略的，也就是说调用该函数不一定退回内存空间。
 
 在前面我们就提到size和capacity是两个不同的概念，size用于指代容器中已经保存的元素数量，而capacity用于指代容器中在不分配新内存空间下最多可以保存的元素（也就是说，capacity数量=size数量+预留数量）。
 
 例如：
-```cpp
-#include <iostream>
-#include <vector>
 
+```cpp
 int main() {
     std::vector<int> vector;
 
@@ -657,21 +655,173 @@ int main() {
     std::cout << "now,the size is: " << vector.size() << ",and the capacity is: " << vector.capacity() << "\n";
 }
 ```
+
 其结果为：
+
 ```markdown
 the size is: 0,and the capacity is: 0
 now,the size is: 10,and the capacity is: 16
 ```
 
-从上述结果可以看出，标准库会根据其具体实现为容器多分配一些内存空间。当需求数量超过capacity数量时，那么就必须为vector分配新空间，且**标准库实现策略是将新分配空间的大小设置为原空间的两倍**。
+从上述结果可以看出，标准库会根据其具体实现为容器多分配一些内存空间。当需求数量超过capacity数量时，那么就必须为vector分配新空间，且
+**标准库实现策略是将新分配空间的大小设置为原空间的两倍**。
 
 > 从某种意义上来讲，当我们存储大量数据于vector时，该标准库实现策略是显得不够“聪明”的，因为这样可能会浪费内存资源，但是相较于重新分配空间，这样又显得合理。
-> 
+>
 > 我们可以为每个vector实现选择自己的内存分配策略，但是需要注意：只有在迫不得已的情况下才分配新的内存空间。
 
+## 9.5 额外的string操作
+
+额外的string操作大部分是针对string类和C风格字符数组之间的相互转换和允许使用下标替代迭代器。
+
+### 构造string的其他方法
+
+除了在3.2.1节已经了解过的构造方式，以及与其他顺序容器相同的构造方式，string还有：
+
+|       构造string方式       |                                               解释                                                |
+|:----------------------:|:-----------------------------------------------------------------------------------------------:|
+|     string s(cp,n)     |                                s是cp指向的数组中n个字符的拷贝，cp指向数组至少包含n个字符                                 |
+|   string s(s2,pos2)    |                      s是string s2从下标pos2开始的字符的拷贝，若pos2>s2.size()，构造函数的行为未定义                      |
+| string s(s2,pos2,len2) | s是string s2从下标pos2开始len2个字符的拷贝。若pos2>s2.size()，构造函数行为未定义。不管len2的值是多少，构造函数至多拷贝s2.size()-pos2个字符。 |
+
+示例：
+
+```cpp
+int main() {
+    const char*c ="hello world!";
+    char cl[]={'h','e','l','l','o'};
+    std::string s1(c); /* hello world! */
+    std::string s2(cl,2); /* he */
+    std::string s3(c,5); /* hello */
+    std::string s4(c,5,6); /*  world */
+    std::string s5(cl); /* 未定义 */
+    std::string s6(c,16); /* abnormal: out_of_range */
+}
+```
+
+> 注意
+>
+> C风格字符是在文本末尾添加一个空格作为结尾，所以指针指向的数组（cl）必须一空字符结尾，拷贝操作在遇到空字符停止。
+>
+> 存在这种情况，如果我们传递给构造函数一个计数值，那么数组就可以不用空字符结尾。但是，如果我们没有传递计数值且数组也没有以空字符结尾，或者给定计数值大于数组大小，则该构造函数行为未定义。
+
+substr操作用于返回一个string，其为原本string的一部分或者全部的拷贝，可以通过传递一个开始位置和计数值获得。
+
+|     子字符串操作      |                          解释                           |
+|:---------------:|:-----------------------------------------------------:|
+| s.substr(pos,n) | 返回一个string,包含s中从pos开始的n个字符的拷贝。pos默认0,n默认s.size()-pos。 |
+
+示例：
+
+```cpp
+std::string str{“hello world!"};
+std::string substr=str.substr(0,5); /* hello */
+```
+
+> 如果开始位置超过string大小，抛出out_of_range。如果开始位置加上计数值大于string大小，则substr函数会调整计数值，让其只能拷贝到string的末尾。
+
+### 改变string的其他方法
+
+总结来说：
+
+|             修改string的操作             |                                       解释                                        |
+|:-----------------------------------:|:-------------------------------------------------------------------------------:|
+|  s.insert(<i>pos</i>,<i>args</i>)   | 在pos**之前**插入args指定的字符。pos可以是一个下标或者迭代器。接受下标的版本返回一个指向s的引用；接受迭代器的版本返回指向第一个插入字符的迭代器 |
+|   s.erase(<i>pos</i>,<i>len</i>)    |          删除**从**位置pos开始的len个字符。如果len被省略，则删除从pos开始直至s末尾的所有字符。返回一个指向s的引用          |
+|        s.assign(<i>args</i>)        |                          将s中的字符替换为args指定的字符。返回一个指向s的引用                          |
+|        s.append(<i>args</i>)        |                              将args追加到s.返回一个指向s的引用                               |
+| s.replace(<i>range</i>,<i>args</i>) |       删除s中范围range内的字符，替换为args指定的字符。range可以是一个下标和一个长度，或者是一对迭代器。返回一个指向s的引用        |
+
+> args可以是下列形式之一，append和assign可以使用下列所有形式。
+>
+> str不能与s相同，迭代器b和e不能指向s。
+>
+> |     形式      |           解释           |
+> |:-----------:|:----------------------:|
+> |     str     |          字符串           |
+> | str,pos,len |   str中从pos开始最多len个字    |
+> |   cp,len    | 从cp指向的字符数组的前（最多）len个字符 |
+> |     cp      |    cp指向的以空字符结尾的字符数组    |
+> |     n,c     |         n个字符c          |
+> |     b,e     |    迭代器b和e指定的范围内的字符     |
+> |    初始化列表    |   花括号包围的，以逗号分隔的字符列表    |
+>
+> replace和insert所允许的args形式依赖于range和pos是如何指定的。
+>
+> |     replace     |  replace   |   insert   |   insert    |   args可以是   |
+> |:---------------:|:----------:|:----------:|:-----------:|:-----------:|
+> | (pos,len,args)  | (b,e,args) | (pos,args) | (iter,args) |             |
+> |        是        |     是      |     是      |      否      |     str     |
+> |        是        |     否      |     是      |      否      | str,pos,len |
+> |        是        |     是      |     是      |      否      |   cp,len    |
+> |        是        |     是      |     否      |      否      |     cp      |
+> |        是        |     是      |     是      |      是      |     n,c     |
+> |        否        |     是      |     否      |      是      |    b2,e2    |
+> |        否        |     是      |     否      |      是      |    初始化列表    |
+
+
+string类型除了常规的操作外，还定义了额外的insert和erase版本。
+
+string支持接受下标版本：
+
+```cpp
+s.insert(s.size(),5,'!'); /* 在s末尾插入5个！*/
+s.erase(s.size()-5,5); /* 从s末尾倒数删除5个字符 */
+```
+
+当然也接受C风格字符数组：
+
+```cpp
+const char *cp="hello";
+s.assign(cp,2); /* he */
+s.insert(s.size(),cp+2); /* hello */
+```
+
+同时可以插入其他string：
+
+```cpp
+string s1="some string",s2="some other string";
+s.insert(0,s2); /* 在s[0]之前插入s2的拷贝 */
+s.insert(0,s2,0,s2.size()); /* 在s[0]之前插入s2[0]开始的s2.size()个字符 */
+```
+
+结果：
+
+```markdown
+some other string
+some other stringsome other string 
+```
+
+总的来说，参数一为目标string下标开头，参数二为内容string开头，在目标string前插入string。
+
+#### append和replace函数
+
+append函数是在string末尾进行插入操作的简写方式。
+
+常规在string末尾插入string，使用：`s.insert(s.size,"this");`，而append简写为：`s.append("this");`。
+
+replace操作则是调用erase和insert的简写方式：
+
+```cpp
+// 将hello.world! 修改为hello,world!
+s.erase(5,1);
+s.insert(5,",");
+// 简写方式
+s.replace(5,1,","); /* 位置5,删除字符数1,插入“,” */
+```
+
+#### 改变string的多种重载函数
+
+根据前文的表格总结来说，
+
+assign和append函数无须指定要替换string中哪个部分：assign总是替换string中的所有内容，append总是将新字符追加到string末尾。
+
+replace函数提供了两种指定删除元素范围的方式。可以通过一个位置和一个长度来指定范围，也可以通过一个迭代器范围来指定。insert函数允许我们用两种方式指定插入点：用一个下标或一个迭代器。在两种情况下，新元素都会插入到给定下标（或迭代器）之前的位置。
+
+可以用几种方式来指定要添加到string中的字符。新字符可以来自另一个string,来自一个字符指针（指向的字符数组），来自一个花括号包围的字符列表，或者是一个字符和一个计数值。当字符来自一个string或一个字符指针时，我们可以传递一个额外的参数来控制是拷贝部分还是全部字符。
+
+并不是每个函数都支持所有形式的参数。
 
 
 
-
-
-
+ 

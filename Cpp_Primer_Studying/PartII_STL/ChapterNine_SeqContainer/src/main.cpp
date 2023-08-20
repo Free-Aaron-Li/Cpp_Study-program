@@ -8,6 +8,7 @@
 #include "9_2.hpp"
 #include "9_3.hpp"
 #include "9_4.hpp"
+#include "9_5.hpp"
 
 void test_9_2() {
     // Exercise_9_2::exercise_9_4();
@@ -37,9 +38,16 @@ void test_9_3() {
 
 void test_9_4() { Exercise_9_4::exercise_9_38(); }
 
+void test_9_5() {
+    // Exercise_9_5::exercise_9_41();
+    //   Exercise_9_5::exercise_9_43();
+    Exercise_9_5::exercise_9_44();
+}
+
 int main() {
     // test_9_2();
     // test_9_3();
-    test_9_4();
+    // test_9_4();
+    test_9_5();
     return 0;
 }
