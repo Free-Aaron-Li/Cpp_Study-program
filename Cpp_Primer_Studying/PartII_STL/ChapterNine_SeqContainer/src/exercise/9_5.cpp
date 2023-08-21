@@ -1,6 +1,5 @@
 // This file is part of Cpp_Primer_Studying project.
-// This program is called:9_5.
-// If there are no special instructions, this file is used as an exercise and test file.
+// This program is called:9_5. If there are no special instructions, this file is used as an exercise and test file.
 
 // Copyright (C) 2023 aaron
 // This program is under the GPL-3.0 license,if you have not received it or the program has a bug,
@@ -69,4 +68,32 @@ void Exercise_9_5::exercise_9_44() {
     std::cout << s << "\n";
     exercise_43_sub(s, "thru", "though");
     std::cout << s << "\n";
+}
+
+std::string exercise_45_sub(const std::string& str, const std::string& prefix, const std::string& suffix) {
+    std::string s(str);
+    s.insert(s.begin(), prefix.cbegin(), prefix.cend());
+    s.append(" ");
+    s.append(suffix.cbegin(), suffix.cend());
+    return s;
+}
+
+void Exercise_9_5::exercise_9_45() {
+    std::string str("Tom");
+    std::cout << exercise_45_sub(str, "Mr.", "Jr.") << "\n";
+    std::cout << exercise_45_sub("Ashley", "Ms.", "III") << "\n";
+}
+
+std::string exercise_46_sub(const std::string& str, const std::string& prefix, const std::string& suffix) {
+    std::string s(str);
+    s.insert(s.begin(), prefix.cbegin(), prefix.cend());
+    s.insert(s.size(), " ");
+    s.insert(s.size(), suffix);
+    return s;
+}
+
+void Exercise_9_5::exercise_9_46() {
+    std::string str("Tom");
+    std::cout << exercise_45_sub(str, "Mr.", "Jr.") << "\n";
+    std::cout << exercise_45_sub("Ashley", "Ms.", "III") << "\n";
 }

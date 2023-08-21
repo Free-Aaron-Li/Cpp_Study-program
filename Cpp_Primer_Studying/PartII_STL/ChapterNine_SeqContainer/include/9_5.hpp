@@ -61,5 +61,22 @@ class Exercise_9_5{
         */
         static void exercise_9_44();
 
+        /**
+         * @title
+         * 练习9.45
+         * @description
+         * 编写一个函数，接受一个表示名字的string参数和两个分别表示前缀（如“Mr.”或“Ms.”）
+         * 和后缀（如“Jr.”或“III”）的字符串。使用迭代器及insert和append函数将前缀和后最添加到给定名字中，
+         * 将生成的新string返回。
+         */
+        static void exercise_9_45();
+
+        /**
+         * @title
+         * 练习9.46
+         * @description
+         * 重写上一题的函数，这次使用位置和长度来管理string,并只使用insert。
+         */
+        static void exercise_9_46();
 };
 #endif  // CPP_PRIMER_STUDYING_9_5_HPP
