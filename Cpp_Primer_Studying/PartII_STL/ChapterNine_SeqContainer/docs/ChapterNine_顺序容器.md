@@ -887,10 +887,24 @@ std::cout << "found number at index: " << pos << " element is " << name[pos] << 
 // found number at index: 10 element is T
 ```
 
+### compare函数
+
+compare函数与C标准库中`strcmp`函数类似，根据string对象是否等于、大于或者小于参数指定的字符串，返回0、正数或者负数。
+
+ compare函数有六个参数版本：
+
+|   s.compare的参数形式   |                   解释                   |
+|:------------------:|:--------------------------------------:|
+|         s2         |                 比较s和s2                 |
+|     pos1,n1,s2     |        将s中从pos1开始的n1个字符与s2进行比较         |
+| pos1,n1,s2,pos2,n2 | 将s中从pos1开始的n1个字符与s2中从pos2开始的n2个字符进行比较  |
+|         cp         |          比较s与cp指向的以空字符结尾的字符数组          |
+|     pos1,n1,cp     | 将s中从pos1开始的n1个字符与cp指向的以空白字符结尾的字符数组进行比较 |
+|   pos1,n1,cp,n2    |  将s中从pos1开始的n1个字符与cp指向的地址开始的n2个字符进行比较  |
 
 
 
 
 
 
- 
+
