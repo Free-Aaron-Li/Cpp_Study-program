@@ -11,7 +11,7 @@
 
 void test_8_1() {
     /* redirect std::cin,so enter linux command:
-     * $ ./Primer_ChapterEight < ../assert/test.txt
+     * $ ./Primer_ChapterEight < ../asset/test.txt
      * */
     Exercise_8_1::exercise_8_1();
 }
@@ -35,7 +35,7 @@ void test_8_3() {
  * you could:
  * Run -> Edit Configuration -> Program arguments
  * for example:
- * my program arguments is : ../assert/sales.txt ../assert/output.txt
+ * my program arguments is : ../asset/sales.txt ../asset/output.txt
  * */
 int main(int argc, char* argv[]) {
     // test_8_1();

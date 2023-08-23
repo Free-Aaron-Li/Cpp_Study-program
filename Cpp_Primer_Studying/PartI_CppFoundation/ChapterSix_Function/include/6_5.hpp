@@ -111,10 +111,10 @@ class Exercise_6_5 {
        * @code
        * string s;
        * while(cin >> s && s != sought) { }      // 空函数体
-       * assert(cin);
+       * asset(cin);
        */
        /* 用于判断输入值是否为sought或者输入值是否为EOF，如果判断失败，则会执行assert函数。但是，这是不合理的，应该改成：
-        * assert(!cin);assert(s==sought);
+        * asset(!cin);asset(s==sought);
         * */
 };
 #endif  // CPP_PRIMER_STUDYING_6_5_HPP

@@ -822,6 +822,75 @@ replace函数提供了两种指定删除元素范围的方式。可以通过一�
 
 并不是每个函数都支持所有形式的参数。
 
+### string搜索功能
+
+|             string操作             |            解释             |
+|:--------------------------------:|:-------------------------:|
+|       s.find(<i>args</i>)        |     查找s中args第一次出现的位置      |
+|       s.rfind(<i>args</i>)       |     查找s中args最后一次出现的位置     |
+|   s.find_first_of(<i>args</i>)   | 在s中查找args中任何一个字符第一次出现的位置  |
+|   s.find_last_of(<i>args</i>)    | 在s中查找args中任何一个字符最后一次出现的位置 |
+| s.find_first_not_of(<i>args</i>) |    在s中查找第一个不在args中的字符     |
+| s.find_last_not_of(<i>args</i>)  |    在s中查找最后一个不在args中的字符    |
+
+搜索操作返回指定字符出现的下标，如果未找到则返回npos。
+
+其中，<i>args</i>必须是一下形式之一：
+
+|   args   |                    解释                    |
+|:--------:|:----------------------------------------:|
+|  c,pos   |         从s中位置pos开始查找字符c。pos默认为0          |
+|  s2,pos  |        从s中位置pos开始查找字符串s2。pos默认为0         |
+|  cp,pos  | 从s中位置pos开始查找指针cp指向的以空字符结尾的C风格字符串。pos默认为0 |
+| cp,pos,n |  从s中位置pos开始查找指针cp指向的数组的前n个字符。pos和n无默认值   |
+
+总结来说，string类一共提供6个搜索函数，每个函数有4个重载版本。每个搜索操作返回一个string::size_type值，用于表示匹配位置下标，如果失败，则返回一个string::npos的static成员。
+
+> 标准库将npos定义为const string::size_type类型，且初始值为-1。同时由于npos是一个unsigned类型，所以该初始值意味着npos等于任何string最大的可能大小。
+
+示例：
+```cpp
+string name("Tom Li1");
+auto pos_1=name.find("Tom"); // pos_1=0
+string numbers("0123456789");
+auto pos_2=name.find_first_not_of(numbers); //pos_2=0
+```
+> 注意：搜索函数以及其他string操作对大小写敏感。
+
+从上述的args可选列表中，我们可以发现在前三项都存在一个pos参数，用于指定从哪个位置进行搜索。存在一个常见的程序设计模式，其便是运用该可选参数进行循环搜索子字符串出现的所有位置。
+
+示例：
+```cpp
+std::string::size_type pos=0;
+std::string name("Tom II is Tom father");
+std::string find_string("Tom");
+while ((pos=name.find(find_string,pos))!=std::string::npos) {
+    std::cout<<"found number at index: "<<pos
+            <<" element is "<<name[pos]<<"\n";
+    ++pos;
+}
+// 结果为：
+// found number at index: 0 element is T
+// found number at index: 10 element is T
+```
+
+除了从左向右的搜索方式外，也可以使用函数`rfind`、`find_last_of`和`find_last_not_of`实现从右向左的搜索方式。
+
+示例：
+```cpp
+std::string::size_type pos = 0;
+std::string            name("Tom II is Tom father moT");
+std::string            find_string("Tom");
+pos = name.rfind(find_string);
+std::cout << "found number at index: " << pos << " element is " << name[pos] << "\n";
+// 结果为：
+// found number at index: 10 element is T
+```
+
+
+
+
+
 
 
  

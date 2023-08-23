@@ -43,7 +43,10 @@ void test_9_5() {
     //   Exercise_9_5::exercise_9_43();
     // Exercise_9_5::exercise_9_44();
     // Exercise_9_5::exercise_9_45();
-    Exercise_9_5::exercise_9_46();
+    // Exercise_9_5::exercise_9_46();
+    // Exercise_9_5::exercise_9_47();
+    // Exercise_9_5::exercise_9_48();
+    Exercise_9_5::exercise_9_49();
 }
 
 int main() {

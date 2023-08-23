@@ -10,7 +10,10 @@
 #include "sales_data_public.hpp"
 
 void Exercise_8_2::exercise_8_4() {
-    std::string              file("../assert/test.txt");
+    std::string filename;
+    std::cout << "please input filename:";
+    std::cin >> filename;
+    std::string              file(filename);
     std::ifstream            input(file);
     std::vector<std::string> vector;
     std::string              data;
@@ -28,7 +31,7 @@ void Exercise_8_2::exercise_8_4() {
 }
 
 void Exercise_8_2::exercise_8_5() {
-    std::string       file("../assert/test.txt");
+    std::string       file("../asset/test.txt");
     std::ifstream     input(file);
     std::vector<char> vector;
     char              data;
@@ -48,7 +51,8 @@ void Exercise_8_2::exercise_8_5() {
 void Exercise_8_2::exercise_8_6(const std::string &str) {
     std::ifstream input(str);
 
-    if (!input) std::cerr << "couldn't open: " + str;
+    if (!input)
+        std::cerr << "couldn't open: " + str;
 
     SalesData total(input);
     if (total.isbn().empty()) {
@@ -72,7 +76,8 @@ void Exercise_8_2::exercise_8_7(const std::string &str_1, const std::string &str
     std::ifstream input(str_1);
     std::ofstream output(str_2);
 
-    if (!input) std::cerr << "couldn't open: " + str_1;
+    if (!input)
+        std::cerr << "couldn't open: " + str_1;
 
     SalesData total(input);
     if (total.isbn().empty()) {
@@ -96,7 +101,8 @@ void Exercise_8_2::exercise_8_8(const std::string &str_1, const std::string &str
     std::ifstream input(str_1);
     std::ofstream output(str_2, std::ofstream::app);
 
-    if (!input) std::cerr << "couldn't open: " + str_1;
+    if (!input)
+        std::cerr << "couldn't open: " + str_1;
 
     SalesData total(input);
     if (total.isbn().empty()) {

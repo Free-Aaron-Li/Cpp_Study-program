@@ -13,9 +13,11 @@
  * 9.5 额外的string操作
  */
 
+#include <fstream>
+
 #include "9.hpp"
 
-class Exercise_9_5{
+class Exercise_9_5 {
  public:
     /**
      * @title
@@ -28,55 +30,87 @@ class Exercise_9_5{
      * @description
      * 编写程序，从一个vector<char>初始化一个string。
      */
-     static void exercise_9_41();
+    static void exercise_9_41();
 
-     /**
-      * @title
-      * 练习9.42
-      * @description
-      * 假定你希望每次读取一个字符存入一个string中，而且知道最少需要读取100个字符，应该如何提高程序的性能？
-      */
-      static void exercise_9_42();
+    /**
+     * @title
+     * 练习9.42
+     * @description
+     * 假定你希望每次读取一个字符存入一个string中，而且知道最少需要读取100个字符，应该如何提高程序的性能？
+     */
+    static void exercise_9_42();
 
-      /**
-       * @title
-       * 9.5.2 改变string的其他方法 练习
-       */
+    /**
+     * @title
+     * 9.5.2 改变string的其他方法 练习
+     */
 
-      /**
-       * @title
-       * 练习9.43
-       * @description
-       * 编写一个函数，接受三个string参数s、oldVal和newVal。使用迭代器及
-       * insert和erase函数将s中所有oldVal替换为newVal.测试你的程序，用它替换通用的简写形式，
-       * 如，将“tho”替换为“though”，将“thru”替换为“through”。
-       */
-       static void exercise_9_43();
+    /**
+     * @title
+     * 练习9.43
+     * @description
+     * 编写一个函数，接受三个string参数s、oldVal和newVal。使用迭代器及
+     * insert和erase函数将s中所有oldVal替换为newVal.测试你的程序，用它替换通用的简写形式，
+     * 如，将“tho”替换为“though”，将“thru”替换为“through”。
+     */
+    static void exercise_9_43();
 
-       /**
-        * @title
-        * 练习9.44
-        * @description
-        * 重写上一题的函数，这次使用一个下标和replace。
-        */
-        static void exercise_9_44();
+    /**
+     * @title
+     * 练习9.44
+     * @description
+     * 重写上一题的函数，这次使用一个下标和replace。
+     */
+    static void exercise_9_44();
 
-        /**
-         * @title
-         * 练习9.45
-         * @description
-         * 编写一个函数，接受一个表示名字的string参数和两个分别表示前缀（如“Mr.”或“Ms.”）
-         * 和后缀（如“Jr.”或“III”）的字符串。使用迭代器及insert和append函数将前缀和后最添加到给定名字中，
-         * 将生成的新string返回。
-         */
-        static void exercise_9_45();
+    /**
+     * @title
+     * 练习9.45
+     * @description
+     * 编写一个函数，接受一个表示名字的string参数和两个分别表示前缀（如“Mr.”或“Ms.”）
+     * 和后缀（如“Jr.”或“III”）的字符串。使用迭代器及insert和append函数将前缀和后最添加到给定名字中，
+     * 将生成的新string返回。
+     */
+    static void exercise_9_45();
 
-        /**
-         * @title
-         * 练习9.46
-         * @description
-         * 重写上一题的函数，这次使用位置和长度来管理string,并只使用insert。
-         */
-        static void exercise_9_46();
+    /**
+     * @title
+     * 练习9.46
+     * @description
+     * 重写上一题的函数，这次使用位置和长度来管理string,并只使用insert。
+     */
+    static void exercise_9_46();
+
+    /**
+     * @title
+     * 9.5.3 string搜索操作
+     */
+
+    /**
+     * @title
+     * 练习9.47
+     * @description
+     * 编写程序，首先查找string "ab2c3d7R4E6"中的每个数字字符，然后查找其中每个字母字符。
+     * 编写两个版本的程序,第一个要使用find_first_of，第二个要使用find_first_not_of。
+     */
+    static void exercise_9_47();
+
+    /**
+     * @title
+     * 练习9.48
+     * @description
+     * 假定name和numbers的定义如325页所示，numbers.find(name)返回什么？
+     */
+    static void exercise_9_48();
+
+    /**
+     * @title
+     * 练习9.49
+     * @description
+     * 如果一个字母延伸到中线之上，如d或f,则称其有上出头部分（ascender）。
+     * 如果一个字母延伸到中线之下，如p或g,则称其有下出头部分（descender）。
+     * 编写程序，读入一个单词文件，输出最长的既不包含上出头部分，也不包含下出头部分的单词。
+     */
+    static void exercise_9_49();
 };
 #endif  // CPP_PRIMER_STUDYING_9_5_HPP

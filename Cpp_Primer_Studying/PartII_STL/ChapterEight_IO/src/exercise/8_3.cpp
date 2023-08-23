@@ -24,7 +24,10 @@ void Exercise_8_3::exercise_8_9() {
 }
 
 void Exercise_8_3::exercise_8_10() {
-    std::string              file("../assert/test.txt");
+    std::string filename;
+    std::cout << "please input filename:";
+    std::cin >> filename;
+    std::string              file(filename);
     std::ifstream            input(file);
     std::vector<std::string> vector;
 
@@ -52,7 +55,7 @@ struct PersonInfo {
 };
 
 void Exercise_8_3::exercise_8_11() {
-    std::string             file("../assert/phone_number.txt");
+    std::string             file("../asset/phone_number.txt");
     std::ifstream           input(file);
     std::string             line, word;
     std::vector<PersonInfo> people;
@@ -82,9 +85,11 @@ void Exercise_8_3::exercise_8_11() {
 }
 
 bool valid(const std::string& str) {
-    if (str.size() != 10) return false;
+    if (str.size() != 10)
+        return false;
     for (const auto& c : str) {
-        if (!isdigit(c)) return false;
+        if (!isdigit(c))
+            return false;
     }
     return true;
 }
@@ -95,13 +100,14 @@ std::string format(const std::string& str) {
     for (const auto& c : str) {
         ++index;
         result += c;
-        if (index == 2) result += "-";
+        if (index == 2)
+            result += "-";
     }
     return result;
 }
 
 void Exercise_8_3::exercise_8_13() {
-    std::string             file("../assert/phone_number.txt");
+    std::string             file("../asset/phone_number.txt");
     std::ifstream           input(file);
     std::vector<PersonInfo> people;
     std::string             line, word;

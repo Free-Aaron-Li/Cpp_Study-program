@@ -1,6 +1,5 @@
 // This file is part of Cpp_Primer_Studying project.
-// This program is called:9_5.
-// If there are no special instructions, this file is used as an exercise and test file.
+// This program is called:9_5. If there are no special instructions, this file is used as an exercise and test file.
 
 // Copyright (C) 2023 aaron
 // This program is under the GPL-3.0 license,if you have not received it or the program has a bug,
@@ -97,4 +96,86 @@ void Exercise_9_5::exercise_9_46() {
     std::string str("Tom");
     std::cout << exercise_45_sub(str, "Mr.", "Jr.") << "\n";
     std::cout << exercise_45_sub("Ashley", "Ms.", "III") << "\n";
+}
+
+void exercise_47_sub_first_version(const std::string& str, const std::string& matching_entry) {
+    std::string::size_type position = 0;
+    while ((position = str.find_first_of(matching_entry, position)) != std::string::npos) {
+        std::cout << str[position] << " ";
+        ++position;
+    }
+}
+
+void exercise_47_sub_second_version(const std::string& str, const std::string& matching_entry) {
+    std::string::size_type position        = 0;
+    std::string::size_type before_position = 0;
+    while ((position = str.find_first_not_of(matching_entry, position)) != std::string::npos) {
+        for (auto i = before_position; i != position; ++i) {
+            std::cout << str[i] << " ";
+        }
+        before_position = ++position;
+    }
+    for (auto i = before_position; i != str.size(); ++i) {
+        std::cout << str[before_position] << " ";
+    }
+}
+
+void searchCharacter(const std::string& str) {
+    const std::string numbers("0123456789");
+    const std::string alphabets{
+      "abcdefghijklmnopqrstuvwxyz"
+      "ABCDEFGHIJKLMNOPQRSTUVWXYZ"};
+
+    std::cout << "The First version:\n";
+    std::cout << "numbers:";
+    exercise_47_sub_first_version(str, numbers);
+    std::cout << "\nsingle word:";
+    exercise_47_sub_first_version(str, alphabets);
+    std::cout << "\nThe Second version:\n";
+    std::cout << "numbers:";
+    exercise_47_sub_second_version(str, numbers);
+    std::cout << "\nsingle word:";
+    exercise_47_sub_second_version(str, alphabets);
+}
+
+void Exercise_9_5::exercise_9_47() {
+    const std::string title("ab2c3d7R4E6");
+    searchCharacter(title);
+}
+
+void Exercise_9_5::exercise_9_48() {
+    const std::string name("r2d2");
+    const std::string numbers("0123456789");
+    auto              index = numbers.find(name);
+    if (index == std::string::npos)
+        std::cout << "the character is npos";
+    else
+        std::cout << numbers[index];
+}
+
+bool exercise_49_sub_containAscenderOrDescender(const std::string& str) {
+    const std::string matching_entry("bdfghijklpqty");
+    return str.find_first_of(matching_entry) != std::string::npos;
+}
+
+void Exercise_9_5::exercise_9_49() {
+    std::string filename;
+    std::cout << "please input the file name: ";
+    std::cin >> filename;
+    std::ifstream in(filename);
+    if (in.is_open()) {
+        std::string longest_word, word;
+        while (in >> word)
+            if (!exercise_49_sub_containAscenderOrDescender(word) && word.size() > longest_word.size())
+                longest_word = word;
+        if (longest_word.empty())
+            std::cout << "This file is called " << filename << ",no word in this file exclude ascender or descender!"
+                      << "\n";
+
+        else
+            std::cout << "This file is called " << filename << ",the longest word in this file exclude ascender or descender is "
+                      << "\"" << longest_word << "\"\n";
+    } else {
+        std::cerr << "can't open file: " << filename << "\n";
+    }
 }
