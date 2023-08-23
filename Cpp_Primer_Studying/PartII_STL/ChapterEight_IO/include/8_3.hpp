@@ -86,8 +86,5 @@ class Exercise_8_3 {
        * 同时，遍历的目的仅进行读操作，所以添加const。
        * */
      static void meaninglessFunction_2();
-
-
-
 };
 #endif  // CPP_PRIMER_STUDYING_8_3_HPP

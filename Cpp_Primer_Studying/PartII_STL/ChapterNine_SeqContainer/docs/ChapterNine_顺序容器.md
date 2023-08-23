@@ -849,17 +849,20 @@ replace函数提供了两种指定删除元素范围的方式。可以通过一�
 > 标准库将npos定义为const string::size_type类型，且初始值为-1。同时由于npos是一个unsigned类型，所以该初始值意味着npos等于任何string最大的可能大小。
 
 示例：
+
 ```cpp
 string name("Tom Li1");
 auto pos_1=name.find("Tom"); // pos_1=0
 string numbers("0123456789");
 auto pos_2=name.find_first_not_of(numbers); //pos_2=0
 ```
+
 > 注意：搜索函数以及其他string操作对大小写敏感。
 
 从上述的args可选列表中，我们可以发现在前三项都存在一个pos参数，用于指定从哪个位置进行搜索。存在一个常见的程序设计模式，其便是运用该可选参数进行循环搜索子字符串出现的所有位置。
 
 示例：
+
 ```cpp
 std::string::size_type pos=0;
 std::string name("Tom II is Tom father");
@@ -877,6 +880,7 @@ while ((pos=name.find(find_string,pos))!=std::string::npos) {
 除了从左向右的搜索方式外，也可以使用函数`rfind`、`find_last_of`和`find_last_not_of`实现从右向左的搜索方式。
 
 示例：
+
 ```cpp
 std::string::size_type pos = 0;
 std::string            name("Tom II is Tom father moT");
@@ -891,7 +895,7 @@ std::cout << "found number at index: " << pos << " element is " << name[pos] << 
 
 compare函数与C标准库中`strcmp`函数类似，根据string对象是否等于、大于或者小于参数指定的字符串，返回0、正数或者负数。
 
- compare函数有六个参数版本：
+compare函数有六个参数版本：
 
 |   s.compare的参数形式   |                   解释                   |
 |:------------------:|:--------------------------------------:|
@@ -902,7 +906,23 @@ compare函数与C标准库中`strcmp`函数类似，根据string对象是否等�
 |     pos1,n1,cp     | 将s中从pos1开始的n1个字符与cp指向的以空白字符结尾的字符数组进行比较 |
 |   pos1,n1,cp,n2    |  将s中从pos1开始的n1个字符与cp指向的地址开始的n2个字符进行比较  |
 
+### 数值转换
 
+字符串中包含数值的字符可以通过标准库函数转换为整数或者浮点数，即为数值转换。
+
+|                                 string和数值之间的转换                                  |                                                                       解释                                                                       |
+|:-------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------------------------------------------------------:|
+|                                 to_string(val)                                  |                                        一组重载函数，返回数值val的string表示。val可以是任何算术类型，其均有相应的to_string。同时，小整型将会被提升                                        |
+| stoi(s,p,b)<br/>stol(s,p,b)<br/>stoul(s,p,b)<br/>stoll(s,p,b)<br/>stoull(s,p,b) | 返回s的其实字串（表示整数内容）的数值，返回值类型分别是int、long、unsigned long、long long、unsigned long long。b表示转换所有的基数，默认值为10。p是size_t指针，用来保存s中第一个非数值字符的下标，p默认为0,即，函数不保存下标 |
+|                     stof(s,p)<br/>stod(s,p)<br/>stold(s,p)                      |                                    返回s的起始字串（表示浮点数内容）的数值，返回值类型分别是float、double或者long double。参数p的作用与整数转换函数中一样                                     |
+
+> string参数中第一个非空白符必须是符号（+或者-）或者是数字。当然它也可以是用0x或者0X开头表示十六进制数。
+>
+> 对于将字符串转换为浮点数的函数，string参数也可以以“.”开头，同时可以使用e或者E表示指数部分。
+>
+> 对于将字符串转换为整数的函数，根据基数的不同，string参数可以包含字母字符，对应大于数字9的数。
+>
+> 最后，如果string无法转换为一个数值，函数将会抛出invalid_argument异常，如果转换得到的数值无法用任何类型表示，则抛出out_of_range异常。
 
 
 

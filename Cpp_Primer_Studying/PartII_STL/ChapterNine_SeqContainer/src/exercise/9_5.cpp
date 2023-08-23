@@ -179,3 +179,14 @@ void Exercise_9_5::exercise_9_49() {
         std::cerr << "can't open file: " << filename << "\n";
     }
 }
+
+void Exercise_9_5::exercise_9_50() {
+    std::vector<int> integers{23, 24, 231, 1235, 13, 134, 131, 512, 1341, 1341, 13};
+    int              sum = 0;
+    for (auto const& c : integers) {
+        sum += c;
+    }
+    std::cout << std::to_string(sum);
+}
+
+void Exercise_9_5::exercise_9_51() {}

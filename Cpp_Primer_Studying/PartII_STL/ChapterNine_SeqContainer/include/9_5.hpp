@@ -112,5 +112,29 @@ class Exercise_9_5 {
      * 编写程序，读入一个单词文件，输出最长的既不包含上出头部分，也不包含下出头部分的单词。
      */
     static void exercise_9_49();
+
+    /**
+     * @title
+     * 9.5.5 数值转换
+     */
+
+    /**
+     * @title
+     * 练习9.50
+     * @description
+     * 编写程序处理一个vector<string>，其元素都表示整型值。计算vector中所有元素之和。
+     * 修改程序,使之计算表示浮点值的string之和。
+     */
+    static void exercise_9_50();
+
+    /**
+     * @title
+     * 练习5.51
+     * @description
+     * 设计一个类，它有三个unsigned成员，分别表示年、月和日。为其编写构造函数，接受一个表示日期的string参数。
+     * 你的构造函数应该能够处理不同数据格式，如january 1,1900、1/1/1990、Jan 1 1900等。
+     */
+     static void exercise_9_51();
+
 };
 #endif  // CPP_PRIMER_STUDYING_9_5_HPP
