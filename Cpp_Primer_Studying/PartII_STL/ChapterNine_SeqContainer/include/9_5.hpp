@@ -14,7 +14,6 @@
  */
 
 #include <fstream>
-
 #include "9.hpp"
 
 class Exercise_9_5 {
@@ -135,6 +134,5 @@ class Exercise_9_5 {
      * 你的构造函数应该能够处理不同数据格式，如january 1,1900、1/1/1990、Jan 1 1900等。
      */
      static void exercise_9_51();
-
 };
 #endif  // CPP_PRIMER_STUDYING_9_5_HPP
