@@ -14,5 +14,8 @@
  */
 
 #include <iostream>
+#include <algorithm>
+#include <vector>
+#include <list>
 
 #endif  // CPP_PRIMER_STUDYING_10_HPP
