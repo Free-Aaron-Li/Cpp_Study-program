@@ -6,13 +6,21 @@
 // This program is under the GPL-3.0 license,if you have not received it or the program has a bug,
 // please let me know: <fly_aaron.li@outlook.com>.
 #include "10_1.hpp"
+#include "10_2.hpp"
 
 void test_10_1() {
     // Exercise_10_1::exercise_10_1();
     Exercise_10_1::exercise_10_2();
 }
 
+void test_10_2() {
+    // Exercise_10_2::exercise_10_3();
+    // Exercise_10_2::exercise_10_4();
+    Exercise_10_2::exercise_10_5();
+}
+
 int main() {
-    test_10_1();
+    // test_10_1();
+    test_10_2();
     return 0;
 }
