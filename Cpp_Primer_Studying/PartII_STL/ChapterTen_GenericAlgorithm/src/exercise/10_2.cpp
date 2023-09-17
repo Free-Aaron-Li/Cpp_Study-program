@@ -7,6 +7,8 @@
 // please let me know: <fly_aaron.li@outlook.com>.
 #include "10_2.hpp"
 
+void Exercise_10_2::meaninglessFunction_1() {}
+
 void Exercise_10_2::exercise_10_3() {
     std::vector<int> vector{1, 2, 3, 4, 5, 6, 7, 8};
     int              sum = std::accumulate(vector.cbegin(), vector.cend(), 0);
@@ -68,4 +70,11 @@ void Exercise_10_2::exercise_10_5() {
     // One library string and one C-style string, compare the value
     std::cout << "The two sequences are " << (std::equal(roster_1.cbegin(), roster_1.cend(), roster4.cbegin()) ? "equal." : "not equal.")
               << std::endl;  // equal
+}
+
+void Exercise_10_2::exercise_10_6() {
+    std::vector<int> vector{1, 2, 3, 4, 5, 6, 7};
+    std::fill_n(vector.begin(), vector.size(), 0);
+    for (auto const &c : vector)
+        std::cout << c << " ";
 }

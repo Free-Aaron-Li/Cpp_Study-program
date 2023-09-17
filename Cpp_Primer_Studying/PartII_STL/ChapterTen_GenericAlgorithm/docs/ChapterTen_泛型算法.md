@@ -16,9 +16,11 @@
 
 大多数的算法都定义在`algorithm`中，其中在`numeric`头文件中定义了一组数值泛型算法。
 
-算法是如何独立于特定的容器的呢？回想一下，每个容器都存在迭代器，通过迭代器我们可以自由访问、操作容器。所以，实际上算法并不会直接操作容器，而是通过迭代器**间接**操作容器。
+算法是如何独立于特定的容器的呢？回想一下，每个容器都存在迭代器，通过迭代器我们可以自由访问、操作容器。所以，实际上算法并不会直接操作容器，而是通过迭代器
+**间接**操作容器。
 
 例如，find算法（用于查找某项值），其算法便是通过迭代器指定一个元素范围，通过**遍历**范围进行查找。
+
 ```cpp
 #include <iostream>
 #include <vector>
@@ -59,7 +61,8 @@ int *result=std::find(std::begin(assemble),std::end(assemble),value);
 
 从上面步骤我们可以看出，find算法在所有步骤上都**不依赖**容器中所保存的元素类型。因此，只要通过迭代器访问元素，find算法就完全不依赖容器类型，甚至无需理会其是否是不是容器。
 
-但是，虽然通过迭代器算法不依赖于容器，但是算法**依赖于元素类型的操作**。这听起来挺奇怪的，为什么呢？正像上面例子一样，`result==vector.cend()`，find算法在实际运行中，使用`==`运算符对元素进行判断。类似于find，大多数算法都会使用到一个（或者多个）元素类型的操作，所以算法依赖于元素类型的操作，但并不依赖于容器。
+但是，虽然通过迭代器算法不依赖于容器，但是算法**依赖于元素类型的操作
+**。这听起来挺奇怪的，为什么呢？正像上面例子一样，`result==vector.cend()`，find算法在实际运行中，使用`==`运算符对元素进行判断。类似于find，大多数算法都会使用到一个（或者多个）元素类型的操作，所以算法依赖于元素类型的操作，但并不依赖于容器。
 
 ### 算法永远不会执行容器操作
 
@@ -81,7 +84,8 @@ int *result=std::find(std::begin(assemble),std::end(assemble),value);
 
 #### accumulate算法
 
-该算法定义在`numeric`头文件中。其接受三个参数，前两个参数确定输入范围，第三个参数作为和的初值。第三个参数类型**决定函数该使用哪种加法运算符以及返回值类型**。
+该算法定义在`numeric`头文件中。其接受三个参数，前两个参数确定输入范围，第三个参数作为和的初值。第三个参数类型*
+*决定函数该使用哪种加法运算符以及返回值类型**。
 
 ```cpp
 #include <iostream>
@@ -97,7 +101,8 @@ int main(){
 }
 ```
 
-accumulate算法中第三个参数作为求和起点，正如上面所描述的代码，其蕴含一个编程**假设**：该第三参数类型必须能够与输入范围内元素相加，也就是必须能与之匹配（或者转换）。如：输入范围内元素类型为int，那么第三参数类型可以为double、long long等等。
+accumulate算法中第三个参数作为求和起点，正如上面所描述的代码，其蕴含一个编程**假设
+**：该第三参数类型必须能够与输入范围内元素相加，也就是必须能与之匹配（或者转换）。如：输入范围内元素类型为int，那么第三参数类型可以为double、long long等等。
 
 另外一个例子：
 
@@ -123,7 +128,7 @@ int main(){
 
 equal，译为平等。该算法作用为比较两个序列是否相等。同样该算法具有三个参数，前两个参数用于确定第一个序列的输入范围，第三个参数则用于确定第二个序列的首元素。
 
-这里同样存在一个隐含编程假设：那就是**假设第二序列的长度与第一序列长度一致**，因为equal算法仅确定第二序列的首元素，并没有确定其尾元素。
+这里同样存在一个隐含编程假设：那就是**假设第二序列的长度至少与第一序列长度一样长**，或者更长，因为equal算法仅确定第二序列的首元素，并没有确定其尾元素。
 
 ```cpp
 #include <iostream>
@@ -139,6 +144,146 @@ int main(){
 }
 ```
 
+> 迭代器参数
+>
+> 1. 算法仅要求能够比较两个序列中的元素，并不会对序列属于那种类型做出要求，同时也不会严格要求两比较序列中元素相同。
+> 2. 在操作两个序列的算法中，如果某些算法仅接受三个迭代器，那么默认前两个参数确定第一序列的元素范围，第三个参数确定第二个序列中的首元素。如果接受四个迭代器，则前两个参数确定第一个序列元素范围，后两个参数确定第二个序列的元素范围。
+> 3. 仅接受单一迭代器表示第二个序列的算法都**假定**第二个序列至少和第一个序列一样长，算法并不做出保证（这是程序员的责任）。
 
+一个很有趣的现象是在完成10.5练习题时，会发现equal算法其实对“==”运算符做了重载，所以无论是对string还是C风格字符串进行比较都是可行的。
+
+在早些版本的标准库中，equal算法并不能对C风格字符串中元素进行比较，其比较的是指针位置。
+
+### 写容器元素的算法
+
+一些算法会将新值赋予序列中的元素（注意：不是改变容器的大小，所以赋予新值数目必定会比原容器中元素数目小，或者相等）。
+
+这些算法本质上仅仅改变容器中已存在的元素，不会越界所以并不危险。
+
+例如，fill（填满）算法就是将第三参数替换输入范围内所有元素。
+
+```cpp
+#include <vector>
+#include <list>
+#include <string>
+#include <iostream>
+
+int main(){
+    std::vector<int> vector{1,2,3,4,5,6,7};
+    std::fill(vector.begin(),vector.end(),0);
+    for(auto const &c:vector)
+        std::cout << c << " ";
+}
+```
+
+#### 算法不检查写操作
+
+如标题所言，算法在执行过程中都会假定参数是正确的，例如：fill_n算法（其接受一个目的位置，并向该序列中赋予指定数目的新值）。
+
+```cpp
+#include <vector>
+#include <list>
+#include <string>
+#include <iostream>
+
+int main(){
+    std::vector<int> vector(10);
+    // 向vector序列中赋予10个1
+    std::fill_n(vector.begin(),10,1);
+    for(auto const &c:vector)
+        std::cout << c << " ";
+}
+```
+
+在上面的代码中，我们写明了vector容器中含有10个元素，但是假如我们将vector设置为空呢：
+
+```bash
+ './main' terminated by signal SIGSEGV (Address boundary error)
+```
+
+g++给出如上的提示，告诉我们越界了，说明fill_n算法执行（同样说明算法并不会检查写操作）。
+
+#### 介绍back_inserter
+
+在前面我们学习的迭代器都是为了指向一个确切元素，但是显然在某些情况下并不能满足实际需求，这个时候我们就需要使用到
+**插入迭代器**（insert_iterator）。插入迭代器的目的就是向容器中添加元素。
+
+使用插入迭代器，我们需要通过**back_inserter**函数，其定义在iterator文件中。
+
+back_inserter接受一个指向容器的引用，返回一个与该容器绑定的插入迭代器。当向此迭代器赋值时，赋值运算符会调用push_back将一个具有个顶值的元素添加到容器中。
+
+```cpp
+#include <vector>
+#include <iostream>
+#include <iterator>
+
+int main(){
+    std::vector<int> vector;
+    auto insert_iterator=std::back_inserter(vector);
+    insert_iterator=12;
+    for(auto const &c:vector)
+        std::cout << c << " ";
+}
+```
+
+回到我们所讨论的fill_n算法，由于无法通过`vec.begin()`作为目的位置为空容器进行写操作，那么这个时候我们就需要通过back_inserter函数来创建一个迭代器，作为算法的目的位置使用。
+
+```cpp
+#include <vector>
+#include <iostream>
+#include <iterator>
+
+int main(){
+    std::vector<int> vector;
+    std::fill_n(back_inserter(vector),10,1);
+    for(auto const &c:vector)
+        std::cout << c << " ";
+}
+```
+
+每次迭代，back_inserter返回的插入迭代器都会调用push_back成员在容器末尾添加指定函数。
+
+#### 拷贝算法
+
+拷贝（copy）算法作用便是向另一个指定目的位置的迭代器所指向输出序列中的元素中写入数据。
+
+该算法接受三个迭代器，所以隐含被拷贝对象的长度至少比输入序列的长度长，或者相等。
+
+```cpp
+#include <iostream>
+
+#include <vector>
+#include <list>
+
+
+int main(){
+    std::vector<int> vector{1,2,3,4,5};
+    std::list<int> list{0,9,8,7,6,5};
+
+    auto post_tail=copy(vector.cbegin(),vector.cend(),list.begin());
+    for(auto const &c:list)
+        std::cout << c << " ";
+}
+```
+
+copy算法返回其目的位置迭代器的值（当然，这个值是经过递增后的），即list的尾后迭代器。
+
+在有些算法中，其“拷贝”版本，并不会将其放在输入序列的末尾，而是创建一个新序列保存。
+
+如，replace算法，其本身是替换序列中元素。
+
+```cpp
+replace(vector.begin(),vector.end(),0,1);
+```
+
+将vector容器中所有值为0的元素替换为1
+
+如果我们希望原序列不变，那么我们可以使用replace_copy算法。
+
+```cpp
+replace_copy(vector.cbegin(),vector.cend(),back_inserter(list),0,1)
+```
+
+通过`back_inserter`创建一个新序列，其原序列vector不变，拷贝一份vector中元素于list中，且其中值为0的元素被替换为1。
 
 
