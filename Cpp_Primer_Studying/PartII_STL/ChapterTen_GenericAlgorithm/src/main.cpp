@@ -7,6 +7,7 @@
 // please let me know: <fly_aaron.li@outlook.com>.
 #include "10_1.hpp"
 #include "10_2.hpp"
+#include "10_3.hpp"
 
 void test_10_1() {
     // Exercise_10_1::exercise_10_1();
@@ -17,12 +18,19 @@ void test_10_2() {
     // Exercise_10_2::exercise_10_3();
     // Exercise_10_2::exercise_10_4();
     // Exercise_10_2::exercise_10_5();
-    //Exercise_10_2::exercise_10_6();
+    // Exercise_10_2::exercise_10_6();
     Exercise_10_2::exercise_10_9();
+}
+
+void test_10_3() {
+    // Exercise_10_3::exercise_10_11();
+    // Exercise_10_3::exercise_10_12();
+    Exercise_10_3::exercise_10_13();
 }
 
 int main() {
     // test_10_1();
-    test_10_2();
+    // test_10_2();
+    test_10_3();
     return 0;
 }
