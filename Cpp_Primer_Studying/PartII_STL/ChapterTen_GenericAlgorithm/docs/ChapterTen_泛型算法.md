@@ -287,3 +287,11 @@ replace_copy(vector.cbegin(),vector.cend(),back_inserter(list),0,1)
 通过`back_inserter`创建一个新序列，其原序列vector不变，拷贝一份vector中元素于list中，且其中值为0的元素被替换为1。
 
 
+### 重排容器元素的算法
+
+sort算法，其通过利用元素类型的<运算符实现排序。
+
+unique算法，覆盖重复元素。
+
+
+

@@ -78,3 +78,13 @@ void Exercise_10_2::exercise_10_6() {
     for (auto const &c : vector)
         std::cout << c << " ";
 }
+
+void Exercise_10_2::exercise_10_9() {
+    std::vector<std::string> vector{"the","quick","red","fox","jumps","over","the","slow","red","turtle"};
+    std::sort(vector.begin(),vector.end());
+    auto end_unique=std::unique(vector.begin(),vector.end());
+    vector.erase(end_unique,vector.end());
+    for (auto const& c :vector) {
+        cout<<c<<" ";
+    }
+}
