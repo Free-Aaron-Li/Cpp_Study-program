@@ -1,5 +1,7 @@
 # all
 /**/.idea/
+/**/.fleet/
+/**/.cache/
 
 # docs
 /**/docs/**/
