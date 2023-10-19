@@ -25,7 +25,13 @@ void test_10_2() {
 void test_10_3() {
     // Exercise_10_3::exercise_10_11();
     // Exercise_10_3::exercise_10_12();
-    Exercise_10_3::exercise_10_13();
+    // Exercise_10_3::exercise_10_13();
+    // Exercise_10_3::exercise_10_14();
+    // Exercise_10_3::exercise_10_15();
+    // Exercise_10_3::exercise_10_16();
+    // Exercise_10_3::exercise_10_17();
+    //Exercise_10_3::exercise_10_18();
+    Exercise_10_3::exercise_10_19();
 }
 
 int main() {

@@ -50,6 +50,60 @@ class Exercise_10_3 {
        */
       static void exercise_10_13();
 
+      /**
+       * @title
+       * lambda表达式
+       */
+
+      /**
+       * @title
+       * 练习10.14
+       * @description
+       * 编写一个lambda，接受两个int，返回它们的和。
+       */
+      static void exercise_10_14();
+
+      /**
+       * @title
+       * 练习10.15
+       * @description
+       * 编写一个lambda，捕获它所在函数的int，并接受一个int参数。lambda应该返回捕获的int和int参数的和。
+       */
+    static void exercise_10_15();
+
+    /**
+     * @title
+     * 练习10.16
+     * @description
+     * 使用lambda编写你自己版本的biggies。
+     */
+    static void exercise_10_16();
+
+    /**
+     * @title
+     * 练习10.17
+     * @description
+     * 重写10.3.1节练习10.12的程序，在对sort的调用中使用lambda来代替函数compareIsbn。
+     */
+     static void exercise_10_17();
+
+     /**
+      * @title
+      * 练习10.18
+      * @description
+      * 重写biggies，用partition代替find_if。我们在10.3.1节练习10.13中介绍了partition算法。
+      */
+
+     static void exercise_10_18();
+
+     /**
+      * @title
+      * 练习10.19
+      * @description
+      * 用stable_partition重写前一题的程序，与stable_sort类似，在划分后的序列中维持原有元素的顺序。
+      */
+
+     static void exercise_10_19();
 };
 
 #endif  // CPP_PRIMER_STUDYING_10_3_HPP
