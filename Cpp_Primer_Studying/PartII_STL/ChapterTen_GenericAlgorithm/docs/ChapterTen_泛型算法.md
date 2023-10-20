@@ -431,6 +431,31 @@ auto c=[=,&a](const string&s){return s.size>=a+b;};
 | [&,<i>identifier_list</i>] | <i>identifier_list</i>是一个逗号分隔的列表，包含0个或多个来自所在函数的变量。这些变量采用值捕获的方式，而任何隐式捕获的变量都采用引用方式捕获。<i>identifier_list</i>中的名字前面不能使用& |
 | [=,<i>identifier_list</i>] |      <i>identifier_list</i>中的变量都采用引用方式捕获，而任何隐式捕获的变量都采用值方式捕获。<i>identifier_list</i>中的名字**不能包括this**,且这些名字之前必须使用&      |
 
+#### 可变lambda
+
+默认情况下，对于一个被值捕获的变量，是不会被修改的。但是如果希望修改，则需要在参数列表尾加上关键字mutable。
+
+例如：
+
+```cpp
+size_t v1=42;
+auto f=[v1]()mutable{return ++v1;};
+v1=0;
+auto j=f();
+std::cout << j << std::endl;
+return 0;
+```
+
+对于引用捕获的变量是否可以修改依赖于此引用指向的是一个const类型还是非const类型。
+
+例如：
+
+```cpp
+size_t v1=42;
+auto f=[&v1]{return ++v1;};
+v1=0;
+auto j=f(); // j为1
+```
 
 
 
