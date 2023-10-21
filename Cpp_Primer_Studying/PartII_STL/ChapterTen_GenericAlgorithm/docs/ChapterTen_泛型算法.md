@@ -457,6 +457,30 @@ v1=0;
 auto j=f(); // j为1
 ```
 
+#### 指定lambda返回类型
 
+> 默认情况下，**如果一个lambda体包含return之外的任何语句，则编译器假定此lambda返回void
+**。与其他返回void的函数类似，被推断返回void的lambda不能返回值。
 
+所以，如果lambda体含有多行表达式，则必须使用尾置返回类型确定返回类型。
+
+例如：
+
+```cpp
+/* 将v1中每个负数替换为其绝对值 */
+// transform算法将一个序列中元素进行替换。
+transform(v1.begin(),v1.end(),v1.begin,
+		[](int i){return i<0?-i:i;}); // true
+transform(v1.begin(),v1.end(),v1.begin,
+		[](int i){if (i<0) return -i; else return i;); // false
+```
+
+在第二个transform算法中，由于lambda表达式返回为void，但是其本应该返回int值。所以编译器编译错误。
+
+修改为：
+
+```cpp
+transform(v1.begin(),v1.end(),v1.begin,
+		[](int i) -> int {if (i<0) return -i; else return i;); 
+```
 

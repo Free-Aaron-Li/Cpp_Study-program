@@ -52,7 +52,7 @@ class Exercise_10_3 {
 
       /**
        * @title
-       * lambda表达式
+       * 10.3.2 lambda表达式
        */
 
       /**
@@ -104,6 +104,29 @@ class Exercise_10_3 {
       */
 
      static void exercise_10_19();
+
+     /**
+      * @title
+      * 10.3.3 lambda捕获和返回
+      */
+
+     /**
+      * @title
+      * 练习10.20
+      * @description
+      * 标准库定义了一个名为count_if的算法。类似find_if,此函数接受一对迭代器，表示一个输入范围，还接受一个谓词，会对输入范围中每个元素执行。
+      * count_if返回一个计数器，表示谓词有多少次为真。使用count_if重写我们程序中统计有多少个单词长度超过6的部分。
+      */
+
+     static void exercise_10_20();
+
+     /** @title
+      * 练习10.21
+      * @description
+      * 编写一个lambda，捕获一个局部int变量，并递减变量值，直至它变为0。一旦变量变为0，在调用lambda应该不再递减变量。
+      * lambda应该返回一个bool值，指出捕获的变量是否为0。
+      */
+     static void exercise_10_21();
 };
 
 #endif  // CPP_PRIMER_STUDYING_10_3_HPP

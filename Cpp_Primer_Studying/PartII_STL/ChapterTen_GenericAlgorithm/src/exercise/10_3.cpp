@@ -45,7 +45,7 @@ bool string_greater_than_four(const std::string &str) { return str.size() >= 5; 
 
 void Exercise_10_3::exercise_10_13() {
     std::vector<std::string> vector{"hello", "is", "good", "word", "is", "right", "?"};
-    auto                     end_target_sequence = std::partition(vector.begin(), vector.end(), string_greater_than_four);
+    auto end_target_sequence = std::partition(vector.begin(), vector.end(), string_greater_than_four);
     vector.erase(end_target_sequence, vector.end());
     for (const auto &c : vector) {
         std::cout << c << " ";
@@ -68,9 +68,10 @@ void biggies(std::vector<std::string> &words, std::vector<std::string>::size_typ
     /** Sort word by dictionary and remove duplicate words */
     elimDups(words);
     /** Gets an iterator where words of the same length maintain lexicographic order */
-    std::stable_sort(words.begin(), words.end(), [](const std::string &a, const std::string &b) { return a.size() < b.size(); });
+    std::stable_sort(
+      words.begin(), words.end(), [](const std::string &a, const std::string &b) { return a.size() < b.size(); });
     /** Gets the iterator pointed to by the first element that satisfies size()>=sz */
-    auto wc    = std::find_if(words.begin(), words.end(), [sz](const std::string &a) { return a.size() >= sz; });
+    auto wc = std::find_if(words.begin(), words.end(), [sz](const std::string &a) { return a.size() >= sz; });
     /** print */
     std::for_each(wc, words.end(), [](const std::string &s) { std::cout << s << " "; });
 }
@@ -97,9 +98,10 @@ void biggies_2(std::vector<std::string> &words, std::vector<std::string>::size_t
     /** Sort word by dictionary and remove duplicate words */
     elimDups(words);
     /** Gets an iterator where words of the same length maintain lexicographic order */
-    std::stable_sort(words.begin(), words.end(), [](const std::string &a, const std::string &b) { return a.size() < b.size(); });
+    std::stable_sort(
+      words.begin(), words.end(), [](const std::string &a, const std::string &b) { return a.size() < b.size(); });
     /** Gets the iterator pointed to by the first element that satisfies size()>=sz */
-    auto wc    = std::partition(words.begin(), words.end(), [sz](const std::string &s) -> bool { return s.size() < sz; });
+    auto wc = std::partition(words.begin(), words.end(), [sz](const std::string &s) -> bool { return s.size() < sz; });
     /** print */
     std::for_each(wc, words.end(), [](const std::string &s) { std::cout << s << " "; });
 }
@@ -113,7 +115,8 @@ void biggies_3(std::vector<std::string> &words, std::vector<std::string>::size_t
     /** Sort word by dictionary and remove duplicate words */
     elimDups(words);
     /** Gets an iterator where words of the same length maintain lexicographic order */
-    auto wc    = std::stable_partition(words.begin(), words.end(), [sz](const std::string &s) -> bool { return s.size() < sz; });
+    auto wc
+      = std::stable_partition(words.begin(), words.end(), [sz](const std::string &s) -> bool { return s.size() < sz; });
     /** print */
     std::for_each(wc, words.end(), [](const std::string &s) { std::cout << s << " "; });
 }
@@ -121,4 +124,24 @@ void biggies_3(std::vector<std::string> &words, std::vector<std::string>::size_t
 void Exercise_10_3::exercise_10_19() {
     std::vector<std::string> words{"hello", "worlds", "this", "is", "new", "life"};
     biggies_3(words, 4);
+}
+
+void Exercise_10_3::exercise_10_20() {
+    std::vector<std::string> data{"hello,is", "good", "word", "is,right", "?"};
+    auto count = std::count_if(data.begin(), data.end(), [](const std::string &s) -> bool { return s.size() > 6; });
+    std::cout << count << "\n";
+}
+
+void Exercise_10_3::exercise_10_21() {
+    int  i         = 10;
+    auto i_is_zero = [i]() mutable -> bool {
+        while (i != 0)
+            --i;
+        if (i == 0)
+            return true;
+        else
+            return false;
+    };
+
+    std::cout << "i is zero? " << (i_is_zero() ? "yes" : "no") << "\n";
 }
