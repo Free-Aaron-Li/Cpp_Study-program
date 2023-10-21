@@ -28,7 +28,7 @@ AllowShortFunctionsOnASingleLine: All
 # 允许短的if语句保持在同一行
 AllowShortIfStatementsOnASingleLine: Never
 # 允许短的lambda语句保持在同一行
-AllowShortLambdasOnASingleLine: Inline
+AllowShortLambdasOnASingleLine: All
 # 允许短的循环保持在同一行
 AllowShortLoopsOnASingleLine: false
 # 总是在定义返回类型后换行(deprecated)
@@ -88,7 +88,7 @@ BreakAfterJavaFieldAnnotations: false
 # 打破字符串字面量
 BreakStringLiterals: true
 # 每行字符的限制，0表示没有限制
-ColumnLimit: 140
+ColumnLimit: 120
 # 描述具有特殊意义的注释的正则表达式，它不应该被分割为多行或以其它方式改变
 CommentPragmas: '^ IWYU pragma:'
 # 构造函数的初始化列表要么都在同一行，要么都各自一行
