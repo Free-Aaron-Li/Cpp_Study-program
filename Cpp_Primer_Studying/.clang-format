@@ -1,4 +1,6 @@
 ---
+# 建议使用clang-format 13及以上版本，否则存在某些配置不生效情况！！！
+# clang-format 13 or later is recommended. Otherwise, some configurations may not take effect!!
 BasedOnStyle: Google
 # 语言: None, Cpp, Java, JavaScript, ObjC, Proto, TableGen, TextProto
 Language: Cpp
