@@ -7,6 +7,8 @@
 // please let me know: <fly_aaron.li@outlook.com>.
 #include "10_3.hpp"
 
+void Exercise_10_3::meaninglessFunction_1() {}
+
 void elimDups(std::vector<std::string> &words) {
     std::sort(words.begin(), words.end());
     /** Returns an iterator to the first position after the unrepeated region */
@@ -144,4 +146,32 @@ void Exercise_10_3::exercise_10_21() {
     };
 
     std::cout << "i is zero? " << (i_is_zero() ? "yes" : "no") << "\n";
+}
+
+bool isShorter_2(const std::string &s, const size_t &c) { return s.size() > c; }
+
+void Exercise_10_3::exercise_10_22() {
+    std::vector<std::string> data{"hello,is", "good", "word", "is,right", "?"};
+    auto count = std::count_if(data.begin(), data.end(), std::bind(isShorter_2, std::placeholders::_1, 6));
+    std::cout << "The number of words with length greater than 6 in data are: " << count << "\n";
+}
+
+bool check_size(const int &string_size, const int &i) { return i > 0 && i > string_size; }
+
+void Exercise_10_3::exercise_10_24() {
+    std::string      str("hello,world!");
+    std::vector<int> data{2, 4, 6, 8, 10, 12, 24};
+    auto result = std::find_if(data.begin(), data.end(), std::bind(check_size, str.size(), std::placeholders::_1));
+    std::cout << *result << "\n";
+}
+
+bool          check_size_v2(const std::string &s, const int &i) { return i > 0 && i > s.size(); }
+std::ostream &print_v2(std::ostream &os, const std::string &s, char c) { return os << s << c; }
+
+void Exercise_10_3::exercise_10_25() {
+    std::vector<std::string> data{"hello,is", "good", "word", "is,right", "?"};
+    elimDups(data);
+    std::stable_sort(data.begin(), data.end(), std::bind(isShorter, std::placeholders::_1, std::placeholders::_2));
+    auto result = std::partition(data.begin(), data.end(), std::bind(check_size_v2, std::placeholders::_1, 6));
+    std::for_each(result, data.end(), std::bind(print_v2, std::ref(std::cout), std::placeholders::_1, '\n'));
 }

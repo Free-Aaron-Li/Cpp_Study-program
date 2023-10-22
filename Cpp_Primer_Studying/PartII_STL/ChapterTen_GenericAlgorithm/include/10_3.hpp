@@ -127,6 +127,48 @@ class Exercise_10_3 {
       * lambda应该返回一个bool值，指出捕获的变量是否为0。
       */
      static void exercise_10_21();
+
+     /**
+      * @title
+      * 10.3.4 参数绑定
+      */
+
+     /**
+      * @title
+      * 练习10.22
+      * @description
+      * 重写统计长度小于等于6的单词数量的程序，使用函数代替lambda。
+      */
+    static void exercise_10_22();
+
+    /**
+     * @title
+     * 练习10.23
+     * @description
+     * bind接受几个参数？
+     */
+    /*
+     * bind是可变参数的。它接受的第一个参数是一个可调用对象，即实际工作函数A，返回供算法使用的新可调用对象B。
+     * 若A接受x个参数，则bind的参数个数应该是x+1，即除了A外，其他参数应一一对应A所接受的参数。
+     * 这些参数中有一部分来自B（_n），另外一些来自所处函数的局部变量。
+     * */
+    static void meaninglessFunction_1();
+
+    /**
+     * @title
+     * 练习10.24
+     * @description
+     * 给定一个string，使用bind和check_size在一个int的vector中查找第一个大于string长度的值。
+     */
+    static void exercise_10_24();
+
+    /**
+     * @title
+     * 练习10.25
+     * @description
+     * 在10.3.2节的练习中，编写了一个使用partition的biggies版本。使用check_size和bind重写此函数。
+     */
+    static void exercise_10_25();
 };
 
 #endif  // CPP_PRIMER_STUDYING_10_3_HPP

@@ -20,5 +20,6 @@
 
 #include <algorithm>
 #include <numeric>
+#include <functional>
 
 #endif  // CPP_PRIMER_STUDYING_10_HPP

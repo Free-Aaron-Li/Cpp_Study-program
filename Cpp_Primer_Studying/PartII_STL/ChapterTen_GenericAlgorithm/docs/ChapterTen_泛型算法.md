@@ -311,6 +311,10 @@ unique算法，覆盖重复元素。
 
 ### lambda表达式
 
+> 使用场景
+>
+> 对于那种只在一两个地方使用的简单操作，lambda表达式是最有用的。
+
 无论是一元还是二元谓词，我们传递必须严格执行接受参数的数目，显然，在某些情况下这受到了限制。
 
 例如，我们有一种需求：求大于等于一个给定的单词，打印符合要求的单词。
@@ -483,4 +487,83 @@ transform(v1.begin(),v1.end(),v1.begin,
 transform(v1.begin(),v1.end(),v1.begin,
 		[](int i) -> int {if (i<0) return -i; else return i;); 
 ```
+
+### 参数绑定
+
+为了解决某个函数中调用对象（如函数）必须接受单一参数问题，标准库定义bind函数（定义在functional头文件中）来解决该问题。
+
+可以将bind看作一个通用的函数适配器，它接受一个可调用对象，生成一个新可调用对象来“适应”原对象的参数列表。
+
+一般形式：
+
+```cpp
+auto newCallable=bind(callable,arg_list);
+```
+
+<i>arg_list</i>表示一个含有逗号隔离的参数列表，对应给定的callable的参数。在arg_list中可能包含形如“_n”，其中n是一个整数。这些参数称为“占位符”，用于表示newCallable的参数，其占据传递给newCallable的参数的“位置”。
+
+例如：
+
+```cpp
+// check6是一个可调用对象，接受一个string类型的参数
+auto check6=bind(check_size,_1,6);
+```
+
+_1出现在arg_list的第一个位置，表示check6的此参数对应check_size的第一个参数。加入该参数是一个const string&。那么，调用check6时必须传递给它一个string类型的参数。
+
+完整代码：
+
+```cpp
+#include <iostream>
+#include <functional>
+
+bool check_size(const std::string& s,size_t size){
+    return s.size()>size;
+}
+int main () {
+    std::string str("hello world!");
+    auto check6=std::bind(check_size,std::placeholders::_1,6);
+    std::cout << "The size of str is greater than 6 ? "<<(check6(str)?"yes":"no") << std::endl;
+}
+```
+
+在完整代码中，我们注意到在“_1”前增加了命名空间“placeholders”。这个命名空间本身定义在std命名空间中。名字_n都定义在上述的命名空间中。
+
+在实际开发过程中，每次都书写声明占位符很麻烦，这个时候我们可以运用到using声明：
+
+`using namespace namespace_name;`
+
+bind除了可以修正参数外，还可以对可调用对象中的参数进行排序。
+
+```cpp
+// 存在g可调用对象，其存在5个参数
+auto g=bind(f,a,b,_2,c,_1);
+// 调用g，实际上映射到bind上为：bind(f,a,b,Y,c,X);
+g(X,Y);
+```
+
+实例：
+
+```cpp
+// 按照单词长度升序
+sort(words.begin(),words.end(),isShorter);
+// 按照单词长度降序
+sort(words.begin(),words.end(),bind(isShorter,_2,_1));
+```
+
+如果我们希望绑定的参数以引用方式传递，或者希望被绑定的参数为const，那么需要用到标准库中的ref和cref函数。（两函数均定义在functional头文件中）
+
+- ref函数：返回一个对象，包含给定的引用，此对象是可以拷贝的
+- cref函数：生成一个保存const引用的类
+
+实例：
+
+```cpp
+ostream &print(ostream &os,const string &s,char c){
+	return os<<s<<c;
+}
+
+for_each(words.begin(),words.end(),bind(print,ref(os),_1,' '));
+```
+
 
