@@ -566,4 +566,61 @@ ostream &print(ostream &os,const string &s,char c){
 for_each(words.begin(),words.end(),bind(print,ref(os),_1,' '));
 ```
 
+## 10.4 再探迭代器
+
+- 插入迭代器
+  > 绑定到一个容器上，向容器插入元素
+- 流迭代器
+  > 绑定到输入输出流上，可用来遍历所有关联的IO流
+- 反向迭代器
+  > 迭代器向后移动，除了forward_list之外的容器均有反向迭代器
+- 移动迭代器
+  > 专用迭代器，不是拷贝元素而是移动元素
+
+### 插入迭代器
+
+插入器（插入迭代器）是一种**迭代器适配器**，其接受一个容器，生成一个迭代器，实现向给定容器添加元素。
+
+> 通过插入迭代器进行赋值时，迭代器**调用容器操作**向给定容器的指定位置插入元素。
+
+|    插入迭代器操作    |                                                         解释                                                          |
+|:-------------:|:-------------------------------------------------------------------------------------------------------------------:|
+|     it=t      | 在it指定的当前位置插入值t。假设c是it绑定的容器，依赖于插入迭代器的不同种类，才赋值会分别调用c.push_back(t)、c.push_front(t)或c.insert(t,p)，其中p为传递给inserter的迭代器位置 |
+| *it,++it,it++ |                                                  不会对it做任何事情，均返回it                                                   |
+
+插入器有三种：
+
+- back_inserter
+	- 创建一个使用push_back的迭代器
+- front_inserter
+	- 创建一个使用push_front的迭代器
+    - 元素总是插入到容器第一个元素之前
+- inserter
+	- 创建一个使用insert的迭代器。函数接受第二参数，其参数必须是一个指向给定容器的迭代器。元素将被插入到给定迭代器所表示的元素**之前**
+
+示例：
+```cpp
+#include <iostream>
+#include <list>
+
+int main(){
+    std::list<int> list_1={1,2,3,4};
+    std::list<int> list_2,list_3;
+    std::copy(list_1.cbegin(),list_1.cend(),std::front_inserter(list_2));
+    std::copy(list_1.cbegin(),list_1.cend(),std::inserter(list_3,list_3.begin()));
+
+    // 4 3 2 1 
+    for(auto const& var : list_2) {
+        std::cout << var<<" ";
+    }
+    std::cout << std::endl;
+    // 1 2 3 4
+    for(auto const& var : list_3) {
+        std::cout << var << " ";
+    }
+}
+```
+
+
+
 
