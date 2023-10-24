@@ -50,9 +50,16 @@ class Exercise_10_4{
      * @title
      * 练习10.27
      * @description
-     * 除了unique之外，标准库还定义了unique_copy的函数，它接受第三个迭代器，表示拷贝不重复元素的目的位置。编写
-     * 一个程序，使用unique_copy将一个vector中不重复的元素拷贝到一个初始为空的list中。
+     * 除了unique之外，标准库还定义了unique_copy的函数，它接受第三个迭代器，表示拷贝不重复元素的目的位置。编写一个程序，使用unique_copy将一个vector中不重复的元素拷贝到一个初始为空的list中。
      */
     static void exercise_10_27();
+
+    /**
+     * @title
+     * 练习10.28
+     * @description
+     * 一个vector中保存1到9，将其拷贝到三个其他容器中。分别使用inserter、back_inserter和front_inserter将元素添加到三个容器中。对每种inserter，估计输出序列是怎么样的，运行程序验证你的估计是否正确。
+     */
+    static void exercise_10_28();
 };
 #endif  // CPP_PRIMER_STUDYING_10_4_HPP
