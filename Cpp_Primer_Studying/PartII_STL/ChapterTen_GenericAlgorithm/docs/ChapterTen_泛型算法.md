@@ -594,12 +594,14 @@ for_each(words.begin(),words.end(),bind(print,ref(os),_1,' '));
 	- 创建一个使用push_back的迭代器
 - front_inserter
 	- 创建一个使用push_front的迭代器
-    - 元素总是插入到容器第一个元素之前
+	- 元素总是插入到容器第一个元素之前
 - inserter
-	- 创建一个使用insert的迭代器。函数接受第二参数，其参数必须是一个指向给定容器的迭代器。元素将被插入到给定迭代器所表示的元素**之前**
+	- 创建一个使用insert的迭代器。函数接受第二参数，其参数必须是一个指向给定容器的迭代器。元素将被插入到给定迭代器所表示的元素
+	  **之前**
 
 示例：
-```cpp
+
+```c++
 #include <iostream>
 #include <list>
 
@@ -621,6 +623,9 @@ int main(){
 }
 ```
 
+```c++
+#include <iostream>
 
+```
 
 
