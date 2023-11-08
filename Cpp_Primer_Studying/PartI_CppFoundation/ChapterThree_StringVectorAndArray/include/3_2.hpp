@@ -4,6 +4,9 @@
  * @license GPL-3.0
  */
 
+// Copyright (c) 2023. aaron.
+// This program is under the GPL-3.0 license,if you have not received it or the program has a bug,
+// please let me know: <fly_aaron.li@outlook.com>.
 #ifndef CPP_PRIMER_3_2_HPP
 #define CPP_PRIMER_3_2_HPP
 
@@ -14,7 +17,7 @@
  * 3.2节 标准库类型string
  */
 class Exercise_3_2 {
-public:
+ public:
     /**
      * @title
      * 3.2.2节练习
@@ -76,46 +79,46 @@ public:
      * @description
      * 就上一题完成的程序而言，如果将循环控制变量的类型设为char将会发生什么？先估计一下结果，然后实际编程进行验证
      */
-     /* 仅改变其控制变量c的副本，无法修改原本字符串内容 */
-     static void characterInstead_1();
+    /* 仅改变其控制变量c的副本，无法修改原本字符串内容 */
+    static void characterInstead_1();
 
-     /**
-      * @title
-      * 练习3.8
-      * @description
-      * 分别用while循环和传统的for循环重写第一题的程序，你觉得哪种形式更好呢？为什么？
-      */
-     static void characterInstead_2();
+    /**
+     * @title
+     * 练习3.8
+     * @description
+     * 分别用while循环和传统的for循环重写第一题的程序，你觉得哪种形式更好呢？为什么？
+     */
+    static void characterInstead_2();
 
-     /**
-      * @title
-      * 练习3.9
-      * @description
-      * 下面的程序有何作用？它合法吗？如果不合法，为什么？
-      * @code
-      * string s;
-      * count << s[0] << endl;
-      */
-      /* 合法，输出为“\0”。由于定义了s为string类型 */
+    /**
+     * @title
+     * 练习3.9
+     * @description
+     * 下面的程序有何作用？它合法吗？如果不合法，为什么？
+     * @code
+     * string s;
+     * count << s[0] << endl;
+     */
+    /* 合法，输出为“\0”。由于定义了s为string类型 */
 
-      /**
-       * @title
-       * 练习3.10
-       * @description
-       * 编写一段程序，读入一个包含标点字符的字符串，将标点符号去除后输出字符串剩余的部分。
-       */
-      static void punctuationRemoval();
+    /**
+     * @title
+     * 练习3.10
+     * @description
+     * 编写一段程序，读入一个包含标点字符的字符串，将标点符号去除后输出字符串剩余的部分。
+     */
+    static void punctuationRemoval();
 
-      /**
-       * @title
-       * 练习3.11
-       * @description
-       * 下面的范围for语句合法吗？如果合法，c的类型是什么？
-       * @code
-       * const string s="Keep out!"
-       * for (auto &c : s) { ... }
-       */
-       /* 合法，c类型为“const char &” */
+    /**
+     * @title
+     * 练习3.11
+     * @description
+     * 下面的范围for语句合法吗？如果合法，c的类型是什么？
+     * @code
+     * const string s="Keep out!"
+     * for (auto &c : s) { ... }
+     */
+    /* 合法，c类型为“const char &” */
 };
 
-#endif //CPP_PRIMER_3_2_HPP
+#endif  // CPP_PRIMER_3_2_HPP

@@ -34,6 +34,10 @@
  * until they have read those chapters.
 */
 
+
+// Copyright (c) 2023. aaron.
+// This program is under the GPL-3.0 license,if you have not received it or the program has a bug,
+// please let me know: <fly_aaron.li@outlook.com>.
 #ifndef SALESITEM_H
 // we're here only if SALESITEM_H has not yet been defined 
 #define SALESITEM_H

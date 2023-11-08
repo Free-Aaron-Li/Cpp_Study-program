@@ -2,7 +2,7 @@
 // This program is called:4_2.
 // If there are no special instructions, this file is used as an exercise and test file.
 
-// Copyright (C) 2023 AaronLi
+// Copyright (c) 2023. aaron.
 // This program is under the GPL-3.0 license,if you have not received it or the program has a bug,
 // please let me know: <fly_aaron.li@outlook.com>.
 
@@ -19,8 +19,10 @@ void Exercise_4_2::exercise_4_6() {
     std::cout << "请输入一个整数：";
     int number = 0;
     std::cin >> number;
-    if (number % 2 == 0) std::cout << "该整数为偶数";
-    else std::cout << "该整数为奇数";
+    if (number % 2 == 0)
+        std::cout << "该整数为偶数";
+    else
+        std::cout << "该整数为奇数";
 }
 
 void Exercise_4_2::exercise_4_7() {

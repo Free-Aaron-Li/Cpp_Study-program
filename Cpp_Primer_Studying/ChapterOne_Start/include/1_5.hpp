@@ -1,7 +1,6 @@
-//
-// Created by AaronLi on 23-4-5.
-//
-
+// Copyright (c) 2023. aaron.
+// This program is under the GPL-3.0 license,if you have not received it or the program has a bug,
+// please let me know: <fly_aaron.li@outlook.com>.
 #ifndef CPP_PRIMER_1_5_HPP
 #define CPP_PRIMER_1_5_HPP
 
@@ -16,7 +15,7 @@
 typedef int ElemType;
 
 class Exercise_1_5 {
-public:
+ public:
     /**
      * @title
      * <p> 1.5.1节练习——Sales_item类 </P>
@@ -26,7 +25,8 @@ public:
      * @title
      * <p> 练习1.20 </P>
      * @description
-     *  根据《C++ Primer》提供的第一章源代码中头文件Sales_item.h。编写一个程序，读取一组书籍销售记录，将每条记录打印在标准输出上
+     *  根据《C++
+     * Primer》提供的第一章源代码中头文件Sales_item.h。编写一个程序，读取一组书籍销售记录，将每条记录打印在标准输出上
      */
 
     static void Book();
@@ -50,12 +50,12 @@ public:
      * @title
      * <p> 1.5.2节练习——初识成员函数 </P>
      */
-/**
- * @title
- * <p> 练习1.23 </P>
- * @description
- *  编写程序，读取多条销售记录，并统计每个ISBN（每本书）有几条销售记录
- */
+    /**
+     * @title
+     * <p> 练习1.23 </P>
+     * @description
+     *  编写程序，读取多条销售记录，并统计每个ISBN（每本书）有几条销售记录
+     */
     static void SalesRecordSum();
     /**
      * @title
@@ -66,4 +66,4 @@ public:
     // 具体实现见上一个方法
 };
 
-#endif //CPP_PRIMER_1_5_HPP
+#endif  // CPP_PRIMER_1_5_HPP

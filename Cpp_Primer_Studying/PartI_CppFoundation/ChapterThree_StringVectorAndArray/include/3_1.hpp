@@ -4,6 +4,9 @@
  * @license GPL-3.0
  */
 
+// Copyright (c) 2023. aaron.
+// This program is under the GPL-3.0 license,if you have not received it or the program has a bug,
+// please let me know: <fly_aaron.li@outlook.com>.
 #ifndef CPP_PRIMER_3_1_HPP
 #define CPP_PRIMER_3_1_HPP
 
@@ -13,8 +16,8 @@
  * @title
  * 3.1 命名空间的using声明
  */
-class Exercise_3_1{
-public:
+class Exercise_3_1 {
+ public:
     /**
      * @title
      * 练习3.1
@@ -24,4 +27,4 @@ public:
     /* TODO 23-5-17 使用using方式重写2.6.2节练习 */
     static void range();
 };
-#endif //CPP_PRIMER_3_1_HPP
+#endif  // CPP_PRIMER_3_1_HPP

@@ -3,6 +3,10 @@
  * @data 2023-05-30-下午8:00
  * @license GPL-3.0
  */
+
+// Copyright (c) 2023. aaron.
+// This program is under the GPL-3.0 license,if you have not received it or the program has a bug,
+// please let me know: <fly_aaron.li@outlook.com>.
 #ifndef CPP_PRIMER_3_4_HPP
 #define CPP_PRIMER_3_4_HPP
 
@@ -11,13 +15,13 @@
  * 3.4 迭代器介绍
  */
 
-#include <iostream>
-#include <vector>
-#include <string>
 #include <cctype>
+#include <iostream>
+#include <string>
+#include <vector>
 
 class Exercise_3_4 {
-public:
+ public:
     /**
      * @title
      * 3.4.1节练习
@@ -77,4 +81,4 @@ public:
     /* beg是无法和end进行加法 */
 };
 
-#endif //CPP_PRIMER_3_4_HPP
+#endif  // CPP_PRIMER_3_4_HPP

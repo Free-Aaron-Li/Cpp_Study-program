@@ -2,7 +2,7 @@
 // This program is called:main.
 // If there are no special instructions, this file is used as an exercise and test file.
 
-// Copyright (C) 2023 AaronLi
+// Copyright (c) 2023. aaron.
 // This program is under the GPL-3.0 license,if you have not received it or the program has a bug,
 // please let me know: <fly_aaron.li@outlook.com>.
 
@@ -15,8 +15,7 @@
  * @description
  * 在4.1基础中提到左值和右值，虽然其本身概念继承于C语言，但是其概念在C++中得以扩展。
  */
-void
-test_RvalueAndLvalue() {
+void test_RvalueAndLvalue() {
     /**
      * 广义上的左右值指的是运算符左侧对象称为左值，运算符右侧对象称为右值。其目的本质上是为了帮助程序员记忆。<br>
      * 在C++中提到左值表达式的求值结果是一个对象或者一个函数，但凡是必有例外：某些左值，例如常量对象实际上不能作为赋值语句的左侧运算对象。<br>
@@ -57,8 +56,8 @@ test_RvalueAndLvalue() {
      * 虽然本质上左值和右值是帮助程序员记忆方便，但是在某些情况下如果不能弄清楚运算符的运算对象的左右值，可能会造成不必要的麻烦。
      */
     int                                      number_3, number_4;
-    decltype(number_3 = number_1 + number_2) i =
-      number_1; /* 使用decltype关键字，如果其作用于一个表达式，返回一个引用类型，例如这里的int & */
+    decltype(number_3 = number_1 + number_2) i
+      = number_1; /* 使用decltype关键字，如果其作用于一个表达式，返回一个引用类型，例如这里的int & */
     int           *p_2 = &number_1;
     int           *p_3 = &number_2;
     decltype(*p_2) j   = number_2; /* int &，解引用符号生成的是左值 */
@@ -68,21 +67,14 @@ test_RvalueAndLvalue() {
 
 int test_number = 1;
 
-int
-test_evaluationOrder_test_1() {
-    return test_number++;
-}
-int
-test_evaluationOrder_test_2() {
-    return test_number += 3;
-}
+int test_evaluationOrder_test_1() { return test_number++; }
+int test_evaluationOrder_test_2() { return test_number += 3; }
 
 
 /**
  * 求值顺序的探讨
  */
-void
-test_evaluationOrder() {
+void test_evaluationOrder() {
     int i = 0;
     /**
      * <<运算符并未明确规定何时以及如何对运算对象进行求值，没有明确的执行顺序，那么该表达式就是错误的。因为您无法确定是i先执行还是++i先执行，得到的答案不论如何都是错误的
@@ -100,8 +92,7 @@ test_evaluationOrder() {
 /**
  * 对算术运算异常和溢出的探讨
  */
-void
-test_ArithmeticOperations() {
+void test_ArithmeticOperations() {
     /* 若short类型占16位，那么short最大数值为32767 */
     short value = 32767;
     value++;
@@ -111,8 +102,7 @@ test_ArithmeticOperations() {
      */
 }
 
-void
-test_assignmentOperation() {
+void test_assignmentOperation() {
     int k = {};
     /**
      * 无论左侧运算对象的类型是什么，初始值列表都可以为空。此时，编译器创建一个值初始化的临时量并将其赋给左侧运算对象。
@@ -123,12 +113,13 @@ test_assignmentOperation() {
      * 赋值运算符的返回值
      */
     int i;
-    if (i = 1024) std::cout << "true";
-    else std::cout << "false";
+    if (i = 1024)
+        std::cout << "true";
+    else
+        std::cout << "false";
 }
 
-void
-test_iterator() {
+void test_iterator() {
     std::vector<std::string>           vector{10, "1"};
     std::vector<int>                   vector_1{10, 1};
     std::vector<std::string>::iterator i = vector.begin();
@@ -141,15 +132,13 @@ test_iterator() {
     std::cout << i++->empty() << "\n";
 }
 
-void
-test_4_23() {
+void test_4_23() {
     std::string s  = "word";
     std::string p1 = s + ((s[s.size() - 1] == 's') ? "" : "s");
     std::cout << p1;
 }
 
-int
-main() {
+int main() {
     // test_RvalueAndLvalue();
     // test_evaluationOrder();
     // test_ArithmeticOperations();

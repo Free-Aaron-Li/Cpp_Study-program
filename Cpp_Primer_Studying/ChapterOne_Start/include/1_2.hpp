@@ -1,7 +1,6 @@
-//
-// Created by AaronLi on 23-3-29.
-//
-
+// Copyright (c) 2023. aaron.
+// This program is under the GPL-3.0 license,if you have not received it or the program has a bug,
+// please let me know: <fly_aaron.li@outlook.com>.
 #ifndef CPP_PRIMER_1_2_HPP
 #define CPP_PRIMER_1_2_HPP
 
@@ -14,9 +13,9 @@ typedef int ElemType; /** 元素类型，默认为int */
 #include <iostream>
 
 class Exercise_1_2 {
-public:
+ public:
     /**
-     * @description 
+     * @description
      * <p> 隔离带 </P>
      */
     static void IsolationZone();
@@ -46,7 +45,7 @@ public:
     static void Output();
 
     /**
-     * @description 
+     * @description
      * <p> 练习1.6 </P>
      * @def
      *  解释下面程序片段是否合法。
@@ -57,7 +56,6 @@ public:
      * }</pre>
      */
     static void legal();
-
 };
 
 #endif  // CPP_PRIMER_1_2_HPP

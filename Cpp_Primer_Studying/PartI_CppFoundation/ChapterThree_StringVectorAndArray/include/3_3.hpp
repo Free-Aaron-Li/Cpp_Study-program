@@ -4,6 +4,9 @@
  * @license GPL-3.0
  */
 
+// Copyright (c) 2023. aaron.
+// This program is under the GPL-3.0 license,if you have not received it or the program has a bug,
+// please let me know: <fly_aaron.li@outlook.com>.
 #ifndef CPP_PRIMER_3_3_HPP
 #define CPP_PRIMER_3_3_HPP
 
@@ -11,17 +14,18 @@
  * @title
  * 3.3 标准库类型vector
  */
-#include <iostream>
-#include <vector>
 #include <cxxabi.h>
 
+#include <iostream>
+#include <vector>
+
 class Exercise_3_3 {
-public:
+ public:
     /**
      * @title
      * 3.3.1节练习
      */
-/**
+    /**
      * @title
      * 练习3.12
      * @description
@@ -132,4 +136,4 @@ public:
     static void inputVector_3();
 };
 
-#endif //CPP_PRIMER_3_3_HPP
+#endif  // CPP_PRIMER_3_3_HPP

@@ -2,7 +2,7 @@
 // This program is called:4_7.
 // If there are no special instructions, this file is used as an exercise and test file.
 
-// Copyright (C) 2023 AaronLi
+// Copyright (c) 2023. aaron.
 // This program is under the GPL-3.0 license,if you have not received it or the program has a bug,
 // please let me know: <fly_aaron.li@outlook.com>.
 
@@ -69,4 +69,4 @@ class Exercise_4_7 {
      * */
     static void meaninglessFunction_2(); /* TODO 23-6-5 没有搞明白条件运算符满足左结合律的推理过程 */
 };
-#endif                                   // CPP_PRIMER_STUDYING_4_7_HPP
+#endif  // CPP_PRIMER_STUDYING_4_7_HPP

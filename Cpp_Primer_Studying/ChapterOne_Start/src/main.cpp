@@ -3,6 +3,10 @@
  * @date 2023-03-26-下午7:32
  * @license GPL-3.0
  */
+
+// Copyright (c) 2023. aaron.
+// This program is under the GPL-3.0 license,if you have not received it or the program has a bug,
+// please let me know: <fly_aaron.li@outlook.com>.
 #include "1_2.hpp"
 #include "1_3.hpp"
 #include "1_4.hpp"

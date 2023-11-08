@@ -1,4 +1,8 @@
 // 可以通过命令 "g++ -o main -g friend.cpp”运行程序
+
+// Copyright (c) 2023. aaron.
+// This program is under the GPL-3.0 license,if you have not received it or the program has a bug,
+// please let me know: <fly_aaron.li@outlook.com>.
 #include <iostream>
 #include <vector>
 #include <string>

@@ -3,6 +3,10 @@
  * @data 2023-06-01-下午1:01
  * @license GPL-3.0
  */
+
+// Copyright (c) 2023. aaron.
+// This program is under the GPL-3.0 license,if you have not received it or the program has a bug,
+// please let me know: <fly_aaron.li@outlook.com>.
 #include <iostream>
 #include <iterator>
 #include <vector>
@@ -41,8 +45,12 @@ void test_array() {
 
     constexpr size_t array_size = 10;
     int              ia[array_size];
-    for (size_t i = 0; i <= array_size; ++i) { ia[i] = i; }
-    for (int i = 0; i <= 10; ++i) { std::cout << ia[i] << " "; }
+    for (size_t i = 0; i <= array_size; ++i) {
+        ia[i] = i;
+    }
+    for (int i = 0; i <= 10; ++i) {
+        std::cout << ia[i] << " ";
+    }
 }
 
 void test_interface() {
@@ -59,7 +67,9 @@ void test_interface() {
 
     std::string str_5 = "this is good time";
     const char *str_6 = str_5.c_str();
-    for (auto i = str_6; *i != '\0'; ++i) { std::cout << *i; }
+    for (auto i = str_6; *i != '\0'; ++i) {
+        std::cout << *i;
+    }
 }
 
 int main() {

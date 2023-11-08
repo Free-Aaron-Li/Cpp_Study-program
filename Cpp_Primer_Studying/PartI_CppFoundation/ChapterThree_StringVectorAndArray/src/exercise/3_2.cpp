@@ -3,6 +3,10 @@
  * @data 2023-05-17-下午11:29
  * @license GPL-3.0
  */
+
+// Copyright (c) 2023. aaron.
+// This program is under the GPL-3.0 license,if you have not received it or the program has a bug,
+// please let me know: <fly_aaron.li@outlook.com>.
 #include "3_2.hpp"
 
 void Exercise_3_2::readInWords() {
@@ -12,7 +16,8 @@ void Exercise_3_2::readInWords() {
     std::string str;
     while (getline(std::cin, str)) {
         std::cout << str << "\n";
-        if (std::cin.get() == '\n')break;
+        if (std::cin.get() == '\n')
+            break;
     }
 
     std::cout << "----------\n"
@@ -21,7 +26,8 @@ void Exercise_3_2::readInWords() {
     std::string word;
     while (std::cin >> word) {
         std::cout << word << "\n";
-        if (std::cin.get() == '\n')break;
+        if (std::cin.get() == '\n')
+            break;
     }
 }
 
@@ -38,8 +44,10 @@ void Exercise_3_2::compareStrings() {
     if (str_1 == str_2) {
         std::cout << "二者相同！\n";
     } else {
-        if (str_1 > str_2)std::cout << "字符串1更大，其值为：" << str_1 << "\n";
-        else std::cout << "字符串2更大，其值为：" << str_2 << "\n";
+        if (str_1 > str_2)
+            std::cout << "字符串1更大，其值为：" << str_1 << "\n";
+        else
+            std::cout << "字符串2更大，其值为：" << str_2 << "\n";
     }
 
     std::cout << "----------\n"
@@ -53,8 +61,10 @@ void Exercise_3_2::compareStrings() {
     if (str_1.size() == str_2.size()) {
         std::cout << "二者长度相同！";
     } else {
-        if (str_1.size() > str_2.size())std::cout << "字符串1的长度更长，其值为：" << str_1 << "\n";
-        else std::cout << "字符串2的长度更长，其值为：" << str_2 << "\n";
+        if (str_1.size() > str_2.size())
+            std::cout << "字符串1的长度更长，其值为：" << str_1 << "\n";
+        else
+            std::cout << "字符串2的长度更长，其值为：" << str_2 << "\n";
     }
 }
 
@@ -86,7 +96,7 @@ void Exercise_3_2::characterInstead() {
     std::string str;
     getline(std::cin, str);
 
-    for (auto &c: str) {
+    for (auto &c : str) {
         if (!std::isspace(c))
             c = 'X';
     }
@@ -99,7 +109,7 @@ void Exercise_3_2::characterInstead_1() {
     std::string str;
     getline(std::cin, str);
 
-    for (char c: str) {
+    for (char c : str) {
         if (!std::isspace(c))
             c = 'X';
     }
@@ -124,7 +134,8 @@ void Exercise_3_2::characterInstead_2() {
     }
 
     for (index = 0; index < str.size(); ++index) {
-        if (!std::isspace(str[index])) str[index] = 'X';
+        if (!std::isspace(str[index]))
+            str[index] = 'X';
     }
 
     std::cout << "字符全部替换为X后的字符串为：" << str << "\n";
@@ -136,7 +147,7 @@ void Exercise_3_2::punctuationRemoval() {
     getline(std::cin, str);
     std::string new_string;
 
-    for (char &c: str) {
+    for (char &c : str) {
         if (!std::ispunct(c))
             new_string += c;
     }

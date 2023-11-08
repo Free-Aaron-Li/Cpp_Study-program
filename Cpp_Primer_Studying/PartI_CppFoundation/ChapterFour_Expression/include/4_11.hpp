@@ -2,7 +2,7 @@
 // This program is called:4_11.
 // If there are no special instructions, this file is used as an exercise and test file.
 
-// Copyright (C) 2023 AaronLi
+// Copyright (c) 2023. aaron.
 // This program is under the GPL-3.0 license,if you have not received it or the program has a bug,
 // please let me know: <fly_aaron.li@outlook.com>.
 
@@ -69,7 +69,7 @@ class Exercise_4_11 {
      * @description
      * 假设i是int类型，d是double类型，书写表达式i*=d使其执行整数类型的乘法而非浮点类型的乘法。
      */
-     /* i*=static_cast<int>d */
+    /* i*=static_cast<int>d */
     static void meaninglessFunction_2();
 
     /**
@@ -82,11 +82,11 @@ class Exercise_4_11 {
      * (a) pv=(void*)ps;                (b) i=int(*pc);
      * (c) pv=&d;                       (d) pc=(char *)pv;
      */
-     /* a：pv=static_cast<void *>ps;
-      * b：i=static_cast<int>*pc;
-      * c：pv=static_cast<void *>d;
-      * d：pc=static_cast<char *>pv;
-      * */
+    /* a：pv=static_cast<void *>ps;
+     * b：i=static_cast<int>*pc;
+     * c：pv=static_cast<void *>d;
+     * d：pc=static_cast<char *>pv;
+     * */
     static void meaninglessFunction_3();
 
     /**
@@ -97,8 +97,7 @@ class Exercise_4_11 {
      * @code
      * double slope=static_cast<double>(j/i);
      */
-     /* 将j/i得到的字面值强制类型转换为double类型赋值给slope */
+    /* 将j/i得到的字面值强制类型转换为double类型赋值给slope */
     static void meaninglessFunction_4();
-
 };
 #endif  // CPP_PRIMER_STUDYING_4_11_HPP
