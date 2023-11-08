@@ -15,7 +15,7 @@
  * 再探迭代器
  */
 
-#include "Sales_item_10.h"
+// #include "Sales_item_10.h"
 #include "10.hpp"
 
 class Exercise_10_4 {
@@ -102,5 +102,13 @@ class Exercise_10_4 {
      */
     /* TODO 23-11-8 Multiple definition */
     static void exercise_10_32();
+
+    /**
+     * @title
+     * 练习10.33
+     * @description
+     * 编写程序，接受三个参数：一个输入文件和两个输出文件的文件名。输入文件保存的应该是整数。使用istream_iterator读取输入文件。使用ostream_iterator将奇数写入第一个输出文件，每个值都跟着一个空格。将偶数写入第二个输出文件，每个值都独占一行。
+     */
+    static void exercise_10_33();
 };
 #endif  // CPP_PRIMER_STUDYING_10_4_HPP

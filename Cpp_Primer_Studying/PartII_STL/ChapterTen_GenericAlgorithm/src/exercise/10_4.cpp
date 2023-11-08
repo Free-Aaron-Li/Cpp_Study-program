@@ -86,7 +86,7 @@ void Exercise_10_4::exercise_10_31() {
 
 
 void Exercise_10_4::exercise_10_32() {
-    std::istream_iterator<Sales_item_10> in_iter(std::cin), eof;
+    /*std::istream_iterator<Sales_item_10> in_iter(std::cin), eof;
     std::vector<Sales_item_10>           trans(in_iter, eof);
     if (trans.empty()) {
         std::cerr << "No data!\n";
@@ -100,5 +100,20 @@ void Exercise_10_4::exercise_10_32() {
         end
           = std::find_if_not(begin, trans.end(), [begin](const Sales_item_10& a) { return a.isbn() == begin->isbn(); });
         out_iter = std::accumulate(begin, end, Sales_item_10(begin->isbn()));
+    }*/
+}
+
+void Exercise_10_4::exercise_10_33() {
+    std::cout << "input file name:";
+    std::string filename;
+    std::cin >> filename;
+    std::ifstream in(filename);
+    if (!in.is_open()) {
+        std::cerr << "Can't open file: " << filename << "\n";
+        return;
     }
+    std::ofstream              out_odd("../assert/odd_number.txt"), out_even("../assert/even_number.txt");
+    std::istream_iterator<int> in_iter(in), eof;
+    std::ostream_iterator<int> out_odd_iter(out_odd, " "), out_even_iter(out_even, " ");
+    std::for_each(in_iter, eof, [&](int i) { i % 2 ? out_odd_iter = i : out_even_iter = i; });
 }

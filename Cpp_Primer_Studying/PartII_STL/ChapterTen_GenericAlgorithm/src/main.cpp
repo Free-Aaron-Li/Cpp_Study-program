@@ -48,7 +48,8 @@ void test_10_4() {
     // Exercise_10_4::exercise_10_29();
     // Exercise_10_4::exercise_10_30();
     // Exercise_10_4::exercise_10_31();
-    Exercise_10_4::exercise_10_32();
+    // Exercise_10_4::exercise_10_32();
+    Exercise_10_4::exercise_10_33();
 }
 
 int main() {
