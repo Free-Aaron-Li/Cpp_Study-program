@@ -1,10 +1,11 @@
+// Copyright (c) 2023. aaron.
+//
+// This program is under the GPL-3.0 license,if you have not received it or the program has a bug,
+// please let me know: <communicate_aaron@outlook.com>.
+
 // This file is part of Cpp_Primer_Studying project.
 // This program is called:5_4.
 // If there are no special instructions, this file is used as an exercise and test file.
-
-// Copyright (c) 2023. aaron.
-// This program is under the GPL-3.0 license,if you have not received it or the program has a bug,
-// please let me know: <fly_aaron.li@outlook.com>.
 
 #ifndef CPP_PRIMER_STUDYING_5_4_HPP
 #define CPP_PRIMER_STUDYING_5_4_HPP
@@ -75,43 +76,43 @@ class Exercise_5_4 {
      * 假设有两个包含整数的vector对象，编写一段程序，检验其中一个vector对象是否是另一个的前缀。为了实现这一目标，对于两个不等长的vector对象，只需挑出长度较短的那个，
      * 把它的所有元素和另一个vector对象比较即可。例如，如果两个vector对象的元素分别是0、1、1、2和0、1、1、2、3、5、8，则程序的返回结果应该为真。
      */
-     static void exercise_5_17();
+    static void exercise_5_17();
 
-     /**
-      * @title
-      * 5.4.4节练习
-      */
+    /**
+     * @title
+     * 5.4.4节练习
+     */
 
-     /**
-      * @title
-      * 练习5.18
-      * @description
-      * 说明下列循环的含义并改正其中的错误。
-      * @code
-      * (a) do
-      *         int v1,v2;
-      *         cout<<"Please enter two numbers to sum:";
-      *         if(cin>>v1>>v2)
-      *             cout<<"Sum is: "<<v1+v2<<endl;
-      *     while(cin);
-      * (b) do {
-      *         ...
-      *     }while(int ival=get_response());
-      * (c) do {
-      *         int ival=get_response();
-      *     } while (ival);
-      */
-      /* a：输入两个数据并进行加法运算，将结果输出（如果输入正确，进行迭代执行语句）。应该在do和while之间添加作用域，否则v1v2无法在输入流中运用。
-       * b：C++不允许在条件部分定义变量，因为如果变量的使用在定义之前，则显然是不合理的。应该将ival定义在do-while之前。
-       * c：ival的作用域在do后面的块中，while中使用的ival在其作用域之外，无效。应该将ival定义在do-while之前。
-       * */
+    /**
+     * @title
+     * 练习5.18
+     * @description
+     * 说明下列循环的含义并改正其中的错误。
+     * @code
+     * (a) do
+     *         int v1,v2;
+     *         cout<<"Please enter two numbers to sum:";
+     *         if(cin>>v1>>v2)
+     *             cout<<"Sum is: "<<v1+v2<<endl;
+     *     while(cin);
+     * (b) do {
+     *         ...
+     *     }while(int ival=get_response());
+     * (c) do {
+     *         int ival=get_response();
+     *     } while (ival);
+     */
+    /* a：输入两个数据并进行加法运算，将结果输出（如果输入正确，进行迭代执行语句）。应该在do和while之间添加作用域，否则v1v2无法在输入流中运用。
+     * b：C++不允许在条件部分定义变量，因为如果变量的使用在定义之前，则显然是不合理的。应该将ival定义在do-while之前。
+     * c：ival的作用域在do后面的块中，while中使用的ival在其作用域之外，无效。应该将ival定义在do-while之前。
+     * */
 
-     /**
-      * @title
-      * 练习5.19
-      * @description
-      * 编写一段程序，使用do while循环重复地执行下述任务：首先提示用户输入两个string对象，然后挑出较短的那个并输出它。
-      */
-      static void exercise_5_19();
+    /**
+     * @title
+     * 练习5.19
+     * @description
+     * 编写一段程序，使用do while循环重复地执行下述任务：首先提示用户输入两个string对象，然后挑出较短的那个并输出它。
+     */
+    static void exercise_5_19();
 };
 #endif  // CPP_PRIMER_STUDYING_5_4_HPP

@@ -1,10 +1,12 @@
+// Copyright (c) 2023. aaron.
+//
+// This program is under the GPL-3.0 license,if you have not received it or the program has a bug,
+// please let me know: <communicate_aaron@outlook.com>.
+
 //
 // Created by AaronLi on 23-4-20.
 //
 
-// Copyright (c) 2023. aaron.
-// This program is under the GPL-3.0 license,if you have not received it or the program has a bug,
-// please let me know: <fly_aaron.li@outlook.com>.
 #ifndef CPP_PRIMER_2_4_HPP
 #define CPP_PRIMER_2_4_HPP
 

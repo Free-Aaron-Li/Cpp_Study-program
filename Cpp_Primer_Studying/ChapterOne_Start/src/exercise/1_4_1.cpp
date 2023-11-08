@@ -1,12 +1,14 @@
+// Copyright (c) 2023. aaron.
+//
+// This program is under the GPL-3.0 license,if you have not received it or the program has a bug,
+// please let me know: <communicate_aaron@outlook.com>.
+
 /**
  * @author AaronLi
  * @date 2023-04-01-下午10:57
  * @license GPL-3.0
  */
 
-// Copyright (c) 2023. aaron.
-// This program is under the GPL-3.0 license,if you have not received it or the program has a bug,
-// please let me know: <fly_aaron.li@outlook.com>.
 #include "1_4.hpp"
 
 void Exercise_1_4::SumFiftyToHundred() {
