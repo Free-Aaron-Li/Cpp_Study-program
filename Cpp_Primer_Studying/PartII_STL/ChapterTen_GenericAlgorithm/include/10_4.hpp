@@ -15,13 +15,14 @@
  * 再探迭代器
  */
 
+#include "Sales_item_10.h"
 #include "10.hpp"
 
-class Exercise_10_4{
+class Exercise_10_4 {
  public:
     /**
      * @title
-     * 插入迭代器
+     * 10.4.1 插入迭代器
      */
 
     /**
@@ -64,6 +65,42 @@ class Exercise_10_4{
      */
     static void exercise_10_28();
 
+    /**
+     * @title
+     * 10.4.2 iostream迭代器
+     */
 
+    /**
+     * @title
+     * 练习10.29
+     * @description
+     * 编写程序，使用迭代器读取一个文本文件，存入一个vector中的string里。
+     */
+    static void exercise_10_29();
+
+    /**
+     * @title
+     * 练习10.30
+     * @description
+     * 使用流迭代器、sort和copy从标准输入读取一个整数序列，将其排序、并将结果写到标准输出。
+     */
+    static void exercise_10_30();
+
+    /**
+     * @title
+     * 练习10.31
+     * @description
+     * 修改前一题的程序，使其只打印不重复的元素。你的程序应使用unique_copy
+     */
+    static void exercise_10_31();
+
+    /**
+     * @title
+     * 练习10.32
+     * @description
+     * 重写1.6节中的书店程序，使用一个vector保存交易记录，使用不同算法完成处理。使用sort和10.3.1节中的compareIsbn函数来排序交易记录，然后使用find和accumulate求和。
+     */
+    /* TODO 23-11-8 Multiple definition */
+    static void exercise_10_32();
 };
 #endif  // CPP_PRIMER_STUDYING_10_4_HPP

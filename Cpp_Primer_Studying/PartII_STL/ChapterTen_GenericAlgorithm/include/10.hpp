@@ -16,13 +16,14 @@
  */
 
 #include <iostream>
+#include <fstream>
 
 #include <vector>
 #include <list>
 
 #include <algorithm>
-#include <numeric>
 #include <functional>
 #include <iterator>
+#include <numeric>
 
 #endif  // CPP_PRIMER_STUDYING_10_HPP

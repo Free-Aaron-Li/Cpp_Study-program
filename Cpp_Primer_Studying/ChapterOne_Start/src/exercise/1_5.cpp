@@ -14,12 +14,13 @@
 
 void Exercise_1_5::Book() {
     Sales_item book;
-    ElemType number = 1;
+    ElemType   number = 1;
     std::cout << "请输入书籍销售记录：（ISBN编码 销售量 销售单价）" << std::endl;
     while (std::cin >> book) {
         std::cout << "第" << number << "记录：" << book << std::endl;
         ++number;
-        if (std::cin.get() == '\n')break;
+        if (std::cin.get() == '\n')
+            break;
     }
 }
 
@@ -37,7 +38,8 @@ void Exercise_1_5::BooksSum() {
     if (std::cin >> sum) {
         while (std::cin >> book) {
             sum += book;
-            if (std::cin.get() == '\n')break;
+            if (std::cin.get() == '\n')
+                break;
         }
     }
     std::cout << "所有记录之和为：" << sum << std::endl;
@@ -45,7 +47,7 @@ void Exercise_1_5::BooksSum() {
 
 void Exercise_1_5::SalesRecordSum() {
     Sales_item target_item;
-    ElemType sum = 1;
+    ElemType   sum = 1;
     std::cout << "请输入销售记录：" << std::endl;
     if (std::cin >> target_item) {
         Sales_item item;
@@ -55,8 +57,9 @@ void Exercise_1_5::SalesRecordSum() {
             } else {
                 std::cout << "ISBN为：" << target_item.isbn() << "的销售记录有：" << sum << "条" << std::endl;
                 target_item = item;
-                sum = 1;
-                if (std::cin.get() == '\n')break;
+                sum         = 1;
+                if (std::cin.get() == '\n')
+                    break;
             }
         }
         std::cout << "ISBN为：" << target_item.isbn() << "的销售记录有：" << sum << "条" << std::endl;

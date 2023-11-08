@@ -8,7 +8,57 @@
 // If there are no special instructions, this file is used as an exercise and test file.
 
 #include "10_3.hpp"
+class Sales_data;
+std::istream &read(std::istream &, Sales_data &);
 
+class Sales_data {
+    friend Sales_data    add(const Sales_data &, const Sales_data &);
+    friend std::istream &read(std::istream &, Sales_data &);
+    friend std::ostream &print(std::ostream &, const Sales_data &);
+
+ public:
+    Sales_data() : Sales_data("", 0, 0.0) {}
+    explicit Sales_data(const std::string &no) : Sales_data(no, 0, 0.0) {}
+    Sales_data(const std::string &no, unsigned us, double price) : bookNo(no), units_sold(us), revenue(price * us) {}
+    explicit Sales_data(std::istream &is) : Sales_data() { read(is, *this); }
+
+    std::string isbn() const { return bookNo; }
+    Sales_data &combine(const Sales_data &);
+
+ private:
+    double      avg_price() const;
+    std::string bookNo;
+    unsigned    units_sold = 0;
+    double      revenue    = 0.0;
+};
+
+Sales_data &Sales_data::combine(const Sales_data &rhs) {
+    units_sold += rhs.units_sold;
+    revenue += rhs.revenue;
+    return *this;
+}
+
+Sales_data add(const Sales_data &lhs, const Sales_data &rhs) {
+    Sales_data sum = lhs;  // Use default copy constructor
+    sum.combine(rhs);
+    return sum;
+}
+
+std::istream &read(std::istream &is, Sales_data &item) {
+    double price;
+    is >> item.bookNo >> item.units_sold >> price;
+    item.revenue = item.units_sold * price;
+    return is;
+}
+
+std::ostream &print(std::ostream &os, const Sales_data &item) {
+    os << item.isbn() << " " << item.units_sold << " " << item.revenue << " " << item.avg_price();
+    return os;
+}
+
+inline double Sales_data::avg_price() const { return units_sold ? revenue / units_sold : 0; }
+
+bool compareIsbn(const Sales_data &sd1, const Sales_data &sd2) { return sd1.isbn() < sd2.isbn(); }
 void Exercise_10_3::meaninglessFunction_1() {}
 
 void elimDups(std::vector<std::string> &words) {
@@ -30,16 +80,16 @@ void Exercise_10_3::exercise_10_11() {
     }
 }
 
-bool compareIsbn(const SalesData_pr &data_1, const SalesData_pr &data_2) { return data_1.isbn() < data_2.isbn(); }
+bool compareIsbn_v1(const Sales_data &data_1, const Sales_data &data_2) { return data_1.isbn() < data_2.isbn(); }
 
 void Exercise_10_3::exercise_10_12() {
-    std::vector<SalesData_pr> vector;
+    std::vector<Sales_data> vector;
     vector.emplace_back("01", 12, 12.0);
     vector.emplace_back("01000000", 12, 12.0);
     vector.emplace_back("0100", 12, 12.0);
     vector.emplace_back("01000", 12, 12.0);
     vector.emplace_back("010000", 12, 12.0);
-    std::stable_sort(vector.begin(), vector.end(), compareIsbn);
+    std::stable_sort(vector.begin(), vector.end(), compareIsbn_v1);
     for (const auto &c : vector) {
         print(std::cout, c) << "\n";
     }
@@ -86,16 +136,16 @@ void Exercise_10_3::exercise_10_16() {
 }
 
 void Exercise_10_3::exercise_10_17() {
-    std::vector<SalesData_pr> data;
+    std::vector<Sales_data> data;
     data.emplace_back("01", 12, 12.0);
     data.emplace_back("01000000", 12, 12.0);
     data.emplace_back("0100", 12, 12.0);
     data.emplace_back("01000", 12, 12.0);
     data.emplace_back("010000", 12, 12.0);
-    std::stable_sort(data.begin(), data.end(), [](const SalesData_pr &data_1, const SalesData_pr &data_2) -> bool {
+    std::stable_sort(data.begin(), data.end(), [](const Sales_data &data_1, const Sales_data &data_2) -> bool {
         return data_1.isbn() < data_2.isbn();
     });
-    std::for_each(data.begin(), data.end(), [](const SalesData_pr &data) { print(std::cout, data) << "\n"; });
+    std::for_each(data.begin(), data.end(), [](const Sales_data &data) { print(std::cout, data) << "\n"; });
 }
 
 void biggies_2(std::vector<std::string> &words, std::vector<std::string>::size_type sz) {

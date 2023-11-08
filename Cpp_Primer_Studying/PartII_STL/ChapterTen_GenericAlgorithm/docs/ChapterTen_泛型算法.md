@@ -736,6 +736,7 @@ int main() {
 |       *out,++out,out++       |       这些运算符允许存在，但无法对out做任何操作，每个运算符都返回out        |
 
 实例：
+
 ```cpp
 #include <iostream>  
 #include <iterator>
@@ -749,8 +750,9 @@ int main() {
     std::cout;
 }
 ```
->RUN
-> 
+
+> RUN
+>
 > ```cpp
 > $ g++ -o main -g main.cpp
 > $ ./main
@@ -760,3 +762,5 @@ int main() {
 > 虽然解引用与自增运算符对ostream_iterator并无作用，`*out++=var`与`out=var`并不区别。但是，在第一种写法更符合迭代器主流写法，与其他迭代器保持一致。方便阅读与修改。
 
 #### 使用流迭代器处理类类型
+
+我们可以为任何定义了输入运算符（>>）的类型创建istream_iterator对象，同样，也可以为任何任何定义输出运算符（<<)的类型创建ostream_iterator对象。

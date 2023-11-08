@@ -46,3 +46,59 @@ void Exercise_10_4::exercise_10_28() {
     std::for_each(test_3.cbegin(), test_3.cend(), [](int const& c) { std::cout << c << " "; });
     std::cout << "\n";
 }
+
+void Exercise_10_4::exercise_10_29() {
+    std::string filename;
+    /* The file is located in the bin directory
+     * so,you can enter ../assert/test.txt
+     * */
+    std::cout << "input file name:";
+    std::cin >> filename;
+    std::ifstream in(filename);
+
+    if (!in.is_open()) {
+        std::cerr << "Can't open file: " << filename << "\n";
+        return;
+    }
+
+    std::istream_iterator<std::string> in_iter(in), eof;
+    std::vector<std::string>           data(in_iter, eof);
+    for (auto const& val : data) {
+        std::cout << val << " ";
+    }
+}
+
+void Exercise_10_4::exercise_10_30() {
+    std::istream_iterator<int> in_iter(std::cin), eof;
+    std::vector<int>           data(in_iter, eof);
+    std::sort(data.begin(), data.end(), [](const int& a, const int& b) -> int { return a > b; });
+    std::ostream_iterator<int> out_iter(std::cout, " ");
+    std::copy(data.begin(), data.end(), out_iter);
+}
+
+void Exercise_10_4::exercise_10_31() {
+    std::istream_iterator<int> in_iter(std::cin), eof;
+    std::vector<int>           data(in_iter, eof);
+    std::sort(data.begin(), data.end(), [](const int& a, const int& b) -> int { return a > b; });
+    std::ostream_iterator<int> out_iter(std::cout, " ");
+    std::unique_copy(data.begin(), data.end(), out_iter);
+}
+
+
+void Exercise_10_4::exercise_10_32() {
+    std::istream_iterator<Sales_item_10> in_iter(std::cin), eof;
+    std::vector<Sales_item_10>           trans(in_iter, eof);
+    if (trans.empty()) {
+        std::cerr << "No data!\n";
+        return;
+    }
+    std::sort(trans.begin(), trans.end(), [](const Sales_item_10& a, const Sales_item_10& b) -> bool {
+        return a.isbn() < b.isbn();
+    });
+    std::ostream_iterator<Sales_item_10> out_iter(std::cout, "\n");
+    for (auto begin = trans.begin(), end = begin; begin != trans.end(); begin = end) {
+        end
+          = std::find_if_not(begin, trans.end(), [begin](const Sales_item_10& a) { return a.isbn() == begin->isbn(); });
+        out_iter = std::accumulate(begin, end, Sales_item_10(begin->isbn()));
+    }
+}
