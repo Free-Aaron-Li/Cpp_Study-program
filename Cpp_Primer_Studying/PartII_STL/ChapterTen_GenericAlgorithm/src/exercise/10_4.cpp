@@ -32,15 +32,15 @@ void Exercise_10_4::exercise_10_28() {
     std::copy(data.cbegin(), data.cend(), std::front_inserter(test_3));
 
     // test_1
-    std::cout<<"test_1 is:\n";
+    std::cout << "test_1 is:\n";
     std::for_each(test_1.cbegin(), test_1.cend(), [](int const& c) { std::cout << c << " "; });
-    std::cout<<"\n";
+    std::cout << "\n";
     // test_2
-    std::cout<<"test_2 is:\n";
+    std::cout << "test_2 is:\n";
     std::for_each(test_2.cbegin(), test_2.cend(), [](int const& c) { std::cout << c << " "; });
-    std::cout<<"\n";
+    std::cout << "\n";
     // test_3
-    std::cout<<"test_3 is:\n";
+    std::cout << "test_3 is:\n";
     std::for_each(test_3.cbegin(), test_3.cend(), [](int const& c) { std::cout << c << " "; });
-    std::cout<<"\n";
+    std::cout << "\n";
 }

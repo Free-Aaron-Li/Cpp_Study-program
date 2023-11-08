@@ -61,5 +61,7 @@ class Exercise_10_4{
      * 一个vector中保存1到9，将其拷贝到三个其他容器中。分别使用inserter、back_inserter和front_inserter将元素添加到三个容器中。对每种inserter，估计输出序列是怎么样的，运行程序验证你的估计是否正确。
      */
     static void exercise_10_28();
+
+
 };
 #endif  // CPP_PRIMER_STUDYING_10_4_HPP

@@ -4,8 +4,7 @@
 
 // Copyright (C) 2023 aaron
 // This program is under the GPL-3.0 license,if you have not received it or the program has a bug,
-// please let me know: <fly_aaron.li@outlook.com>.
-#include "10_3.hpp"
+/* please let me know: <fly_aaron.li@outlook.com>. */ #include "10_3.hpp"
 
 void Exercise_10_3::meaninglessFunction_1() {}
 

@@ -4,7 +4,6 @@ project(Cpp_Workspace)
 set(CMAKE_CXX_STANDARD 11)
 
 add_subdirectory(Essential_Cpp)
-add_subdirectory(StudyNotes)
 add_subdirectory(Game_Workspace)
 add_subdirectory(Cpp_Primer_Studying)
 add_subdirectory(ClassWork)

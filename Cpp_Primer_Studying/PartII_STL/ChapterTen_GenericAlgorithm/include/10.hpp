@@ -21,5 +21,6 @@
 #include <algorithm>
 #include <numeric>
 #include <functional>
+#include <iterator>
 
 #endif  // CPP_PRIMER_STUDYING_10_HPP
