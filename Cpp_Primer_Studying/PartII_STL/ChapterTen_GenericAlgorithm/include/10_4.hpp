@@ -110,5 +110,42 @@ class Exercise_10_4 {
      * 编写程序，接受三个参数：一个输入文件和两个输出文件的文件名。输入文件保存的应该是整数。使用istream_iterator读取输入文件。使用ostream_iterator将奇数写入第一个输出文件，每个值都跟着一个空格。将偶数写入第二个输出文件，每个值都独占一行。
      */
     static void exercise_10_33();
+
+    /**
+     * @title
+     * 10.4.3 反向迭代器
+     */
+
+    /**
+     * @title
+     * 练习10.34
+     * @description
+     * 使用reverse_iterator逆序打印一个vector。
+     */
+    static void exercise_10_34();
+
+    /**
+     * @title
+     * 练习10.35
+     * @description
+     * 使用普通迭代器逆序打印一个vector。
+     */
+    static void exercise_10_35();
+
+    /**
+     * @title
+     * 练习10.36
+     * @description
+     * 使用find在一个int的list中查找最后一个值为0的元素。
+     */
+    static void exercise_10_36();
+
+    /**
+     * @title
+     * 练习10.37
+     * @description
+     * 给定一个包含10个元素的vector，将位置3到7之间的元素按逆序拷贝到一个list中。
+     */
+    static void exercise_10_37();
 };
 #endif  // CPP_PRIMER_STUDYING_10_4_HPP

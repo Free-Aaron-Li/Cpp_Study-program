@@ -765,3 +765,43 @@ int main() {
 
 我们可以为任何定义了输入运算符（>>）的类型创建istream_iterator对象，同样，也可以为任何任何定义输出运算符（<<)的类型创建ostream_iterator对象。
 
+### 反向迭代器
+
+除了forward_list之外，其他容器均支持反向迭代器。
+
+示例：
+
+```cpp
+#include <iostream>
+#include <iterator>
+#include <vector>
+
+int main(){
+    std::vector<int> data{1,2,3,4,5,6,7,8};
+    for(auto r_iter=data.crbegin();r_iter!=data.crend();++r_iter){
+        std::cout << *r_iter << " ";
+    }
+}
+```
+
+> RUN
+>
+> ```cpp
+> $ gcc -o main -g main.cpp
+> $ ./main
+> 8 7 6 5 4 3 2 1 ⏎
+> ```
+
+如果希望将反向迭代器转为普通迭代器，可以使用base成员函数。
+
+图示：
+
+![反向迭代器关系](../assert/img/反向迭代器关系.png)
+
+从上图中可以看出，为了实现左闭合区间，rcomma和rcomma.base()为相邻位置，而非相同位置。这就引出一个特性：由于反向迭代器目的是表示元素范围（这些范围是不对称的），那么当我们从普通迭代器与反向迭代器相互转换时，<b>二者迭代器所指向的并不是同一个元素</b>。
+
+
+
+
+
+
