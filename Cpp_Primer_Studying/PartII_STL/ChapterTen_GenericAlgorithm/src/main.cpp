@@ -11,6 +11,7 @@
 #include "10_2.hpp"
 #include "10_3.hpp"
 #include "10_4.hpp"
+#include "10_6.hpp"
 
 void test_10_1() {
     // Exercise_10_1::exercise_10_1();
@@ -56,10 +57,13 @@ void test_10_4() {
     Exercise_10_4::exercise_10_37();
 }
 
+void test_10_6() { Exercise_10_6::exercise_10_42(); }
+
 int main() {
     // test_10_1();
     // test_10_2();
     // test_10_3();
-    test_10_4();
+    // test_10_4();
+    test_10_6();
     return 0;
 }
