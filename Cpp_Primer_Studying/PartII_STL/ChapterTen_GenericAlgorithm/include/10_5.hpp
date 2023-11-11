@@ -65,6 +65,30 @@ class Exercise_10_5 {
      * unique：前向迭代器
      * */
     static void meaninglessFunction_3();
+
+    /**
+     * @title
+     * 10.5.2 算法形参模式
+     */
+
+    /**
+     * @title
+     * 练习10.41
+     * @description
+     * 仅根据算法和参数的名字，描述下面每个标准库算法执行什么操作：
+     * @code
+     * replace(beg,end,old_val,new_val);
+     * replace(beg,end,pred,new_val);
+     * replace_copy(beg,end,dest,old_val,new_val);
+     * replace(beg,end,dest,pred,new_val);
+     */
+    /*
+     * 1. 在[beg,end)范围内，将old_val替换为new_val
+     * 2. 在[beg,end)范围内，将pred所指定的元素替换为new_val
+     * 3. 在[beg,end)范围内，将old_val替换为new_val，且将写入位置设定为dest
+     * 4. 在[beg,end)范围内，将pred所指定的元素替换为new_val，且将写入位置设定为dest
+     * */
+    static void meaninglessFunction_4();
 };
 
 #endif  // CPP_PRIMER_STUDYING_10_5_HPP

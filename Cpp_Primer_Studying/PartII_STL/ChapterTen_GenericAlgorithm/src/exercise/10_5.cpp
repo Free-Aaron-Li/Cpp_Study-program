@@ -11,3 +11,4 @@
 void Exercise_10_5::meaninglessFunction_1() {}
 void Exercise_10_5::meaninglessFunction_2() {}
 void Exercise_10_5::meaninglessFunction_3() {}
+void Exercise_10_5::meaninglessFunction_4() {}
