@@ -1,7 +1,7 @@
 // Copyright (c) 2023. aaron.
 //
-// This program is under the GPL-3.0 license,if you have not received it or the program has a bug,
-// please let me know: <communicate_aaron@outlook.com>.
+// This program is under the GPL-3.0 license.
+// if you have not received it or the program has a bug,please let me know: <communicate_aaron@outlook.com>.
 
 // This file is part of Cpp_Primer_Studying project.
 // This program is called:5_5.
@@ -52,5 +52,7 @@ int get_size() { return 2; }
 void Exercise_5_5::exercise_5_22() {
     int sz;
 
-    do { sz = get_size(); } while (sz <= 0);
+    do {
+        sz = get_size();
+    } while (sz <= 0);
 }

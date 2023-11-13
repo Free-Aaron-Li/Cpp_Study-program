@@ -1,7 +1,7 @@
 // Copyright (c) 2023. aaron.
 //
-// This program is under the GPL-3.0 license,if you have not received it or the program has a bug,
-// please let me know: <communicate_aaron@outlook.com>.
+// This program is under the GPL-3.0 license.
+// if you have not received it or the program has a bug,please let me know: <communicate_aaron@outlook.com>.
 
 // This file is part of Cpp_Primer_Studying project.
 // This program is called:5_4.
@@ -20,7 +20,9 @@ void Exercise_5_4::exercise_4_16() {
     int value = 10;
 
     std::cout << "这是使用for循环语句输出0~9：";
-    for (int i = 0; i < value; ++i) { std::cout << i << " "; }
+    for (int i = 0; i < value; ++i) {
+        std::cout << i << " ";
+    }
 
     std::cout << "\n这是使用while循环改写：";
     int i = 0;
@@ -38,7 +40,8 @@ void Exercise_5_4::exercise_4_16() {
     }
 
     std::cout << "\n这是使用for循环改写：";
-    for (auto index = string.begin(); index != string.end(); ++index) std::cout << *index << " ";
+    for (auto index = string.begin(); index != string.end(); ++index)
+        std::cout << *index << " ";
 }
 
 void Exercise_5_4::exercise_5_17() { /* TODO 23-6-7 当前的求解思路无法解决，留给后续使用其他方法解决 */

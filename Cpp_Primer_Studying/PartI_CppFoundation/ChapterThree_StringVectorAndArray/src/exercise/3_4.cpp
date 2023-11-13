@@ -1,17 +1,13 @@
 // Copyright (c) 2023. aaron.
 //
-// This program is under the GPL-3.0 license,if you have not received it or the program has a bug,
-// please let me know: <communicate_aaron@outlook.com>.
-
-/**
- * @author AaronLi
- * @data 2023-05-30-下午7:59
- * @license GPL-3.0
- */
+// This program is under the GPL-3.0 license.
+// if you have not received it or the program has a bug,please let me know: <communicate_aaron@outlook.com>.
+*@author AaronLi *@data 2023 - 05 - 30 - 下午7 : 59 * @license GPL
+  - 3.0 * /
 
 #include "3_4.hpp"
 
-void Exercise_3_4::outputVector() {
+      void Exercise_3_4::outputVector() {
     std::vector<int>         v1;
     std::vector<int>         v2(10);
     std::vector<int>         v3(10, 42);

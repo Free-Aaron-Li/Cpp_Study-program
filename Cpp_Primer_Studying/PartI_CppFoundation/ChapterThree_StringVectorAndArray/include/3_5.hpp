@@ -1,13 +1,9 @@
 // Copyright (c) 2023. aaron.
 //
-// This program is under the GPL-3.0 license,if you have not received it or the program has a bug,
-// please let me know: <communicate_aaron@outlook.com>.
-
-/**
- * @author AaronLi
- * @data 2023-06-02-下午2:10
- * @license GPL-3.0
- */
+// This program is under the GPL-3.0 license.
+// if you have not received it or the program has a bug,please let me know: <communicate_aaron@outlook.com>.
+*@author AaronLi* @data 2023 - 06 - 02 - 下午2 : 10 * @license GPL
+  - 3.0 * /
 
 #ifndef CPP_PRIMER_3_5_HPP
 #define CPP_PRIMER_3_5_HPP
@@ -22,7 +18,7 @@
 #include <string>
 #include <vector>
 
-class Exercise_3_5 {
+      class Exercise_3_5 {
  public:
     /**
      * @title

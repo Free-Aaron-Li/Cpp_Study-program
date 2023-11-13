@@ -1,19 +1,15 @@
 // Copyright (c) 2023. aaron.
 //
-// This program is under the GPL-3.0 license,if you have not received it or the program has a bug,
-// please let me know: <communicate_aaron@outlook.com>.
-
-/**
- * @author AaronLi
- * @data 2023-06-01-下午1:01
- * @license GPL-3.0
- */
+// This program is under the GPL-3.0 license.
+// if you have not received it or the program has a bug,please let me know: <communicate_aaron@outlook.com>.
+*@author AaronLi *@data 2023 - 06 - 01 - 下午1 : 01 * @license GPL
+  - 3.0 * /
 
 #include <iostream>
 #include <iterator>
 #include <vector>
 
-void test_add() {
+      void test_add() {
     std::vector<int> vector_1;
     std::vector<int> vector_2;
 

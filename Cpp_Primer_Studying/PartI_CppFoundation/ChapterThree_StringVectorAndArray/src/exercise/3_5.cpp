@@ -1,19 +1,16 @@
 // Copyright (c) 2023. aaron.
 //
-// This program is under the GPL-3.0 license,if you have not received it or the program has a bug,
-// please let me know: <communicate_aaron@outlook.com>.
-
-/**
- * @author AaronLi
- * @data 2023-06-02-下午2:10
- * @license GPL-3.0
- */
+// This program is under the GPL-3.0 license.
+// if you have not received it or the program has a bug,please let me know: <communicate_aaron@outlook.com>.
+*@author AaronLi *@data 2023 - 06 - 02 - 下午2 : 10 * @license GPL
+  - 3.0 * /
 
 #include "3_5.hpp"
 
 #include <cstring>
 
-void Exercise_3_5::meaninglessFunction_1() {}
+      void Exercise_3_5::meaninglessFunction_1() {
+}
 
 void Exercise_3_5::meaninglessFunction_2() {}
 

@@ -1,17 +1,13 @@
 // Copyright (c) 2023. aaron.
 //
-// This program is under the GPL-3.0 license,if you have not received it or the program has a bug,
-// please let me know: <communicate_aaron@outlook.com>.
-
-/**
- * @author AaronLi
- * @data 2023-05-17-下午11:29
- * @license GPL-3.0
- */
+// This program is under the GPL-3.0 license.
+// if you have not received it or the program has a bug,please let me know: <communicate_aaron@outlook.com>.
+*@author AaronLi *@data 2023 - 05 - 17 - 下午11 : 29 * @license GPL
+  - 3.0 * /
 
 #include "3_2.hpp"
 
-void Exercise_3_2::readInWords() {
+      void Exercise_3_2::readInWords() {
     std::cout << "----------\n"
                  "练习3.2——壹\n";
     std::cout << "请输入一段文字！\n";

@@ -1,7 +1,7 @@
 // Copyright (c) 2023. aaron.
 //
-// This program is under the GPL-3.0 license,if you have not received it or the program has a bug,
-// please let me know: <communicate_aaron@outlook.com>.
+// This program is under the GPL-3.0 license.
+// if you have not received it or the program has a bug,please let me know: <communicate_aaron@outlook.com>.
 
 // This file is part of Cpp_Primer_Studying project.
 // This program is called:main.
@@ -51,9 +51,9 @@ void test_5_18() {
     do {
         int v1, v2;
         std::cout << "enter:";
-        if (std::cin >> v1 >> v2) std::cout << "sum is: " << v1 + v2 << "\n";
+        if (std::cin >> v1 >> v2)
+            std::cout << "sum is: " << v1 + v2 << "\n";
     } while (std::cin);
-
 };
 
 

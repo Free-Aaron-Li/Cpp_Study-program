@@ -13,6 +13,7 @@ set_directory_properties(${PROJECT_SOURCE_DIR}/assert)
 
 set(SOURCES
         src/main.cpp
+        src/exercise/11_1.cpp
 )
 
 #------------------------------------

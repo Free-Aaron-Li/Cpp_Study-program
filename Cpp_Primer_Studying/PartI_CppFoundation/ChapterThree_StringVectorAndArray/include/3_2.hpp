@@ -1,24 +1,20 @@
 // Copyright (c) 2023. aaron.
 //
-// This program is under the GPL-3.0 license,if you have not received it or the program has a bug,
-// please let me know: <communicate_aaron@outlook.com>.
-
-/**
- * @author AaronLi
- * @data 2023-05-17-下午11:26
- * @license GPL-3.0
- */
+// This program is under the GPL-3.0 license.
+// if you have not received it or the program has a bug,please let me know: <communicate_aaron@outlook.com>.
+*@author AaronLi* @data 2023 - 05 - 17 - 下午11 : 26 * @license GPL
+  - 3.0 * /
 
 #ifndef CPP_PRIMER_3_2_HPP
 #define CPP_PRIMER_3_2_HPP
 
 #include <iostream>
 
-/**
- * @title
- * 3.2节 标准库类型string
- */
-class Exercise_3_2 {
+      /**
+       * @title
+       * 3.2节 标准库类型string
+       */
+      class Exercise_3_2 {
  public:
     /**
      * @title

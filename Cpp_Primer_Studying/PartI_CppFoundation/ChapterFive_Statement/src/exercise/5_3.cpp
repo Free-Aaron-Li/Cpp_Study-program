@@ -1,7 +1,7 @@
 // Copyright (c) 2023. aaron.
 //
-// This program is under the GPL-3.0 license,if you have not received it or the program has a bug,
-// please let me know: <communicate_aaron@outlook.com>.
+// This program is under the GPL-3.0 license.
+// if you have not received it or the program has a bug,please let me know: <communicate_aaron@outlook.com>.
 
 // This file is part of Cpp_Primer_Studying project.
 // This program is called:5_3.
@@ -30,14 +30,18 @@ Start:
     if (achievement > 100) {
         std::cout << "你输入的成绩有误！请重新输入：";
         goto Start;
-    }
-    else if (achievement == 100) result = *(iter + 5);
-    else if (achievement < 60) result = *iter;
+    } else if (achievement == 100)
+        result = *(iter + 5);
+    else if (achievement < 60)
+        result = *iter;
     else {
         decltype(achievement) number = (achievement - 50) / 10;
-        if (achievement % 10 >= 7) result = *(iter + number) + "+";
-        else if (achievement % 10 <= 3) result = *(iter + number) + "-";
-        else result = *(iter + number);
+        if (achievement % 10 >= 7)
+            result = *(iter + number) + "+";
+        else if (achievement % 10 <= 3)
+            result = *(iter + number) + "-";
+        else
+            result = *(iter + number);
     }
 
     std::cout << "你的成绩等级为：" << result << "\n";
