@@ -58,13 +58,14 @@ class Exercise_11 {
      * @description
      * 编写你自己的单词计数程序。
      */
-    static void exercise_11_3();
+    static void exercise_11_3(const std::vector<std::string>& words);
 
     /**
      * @title
-     *
+     * 练习11.4
      * @description
-     *
+     * 扩展你的程序，忽略大小写和标点。例如，“example.”、“example,”和“Example”应该递增相同的计数器。
      */
+    static void exercise_11_4(const std::vector<std::string>& words);
 };
 #endif  // CPP_PRIMER_STUDYING_11_1_HPP

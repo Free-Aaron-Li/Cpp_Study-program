@@ -15,7 +15,9 @@
  */
 
 #include <iostream>
-
+#include <fstream>
+#include <iterator>
+#include <vector>
 #include <map>
 #include <set>
 

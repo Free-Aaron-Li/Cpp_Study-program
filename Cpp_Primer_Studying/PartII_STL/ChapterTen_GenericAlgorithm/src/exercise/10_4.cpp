@@ -50,7 +50,7 @@ void Exercise_10_4::exercise_10_28() {
 void Exercise_10_4::exercise_10_29() {
     std::string filename;
     /* The file is located in the bin directory
-     * so,you can enter ../assert/test_file/test.txt
+     * so,you can enter ../asset/test_file/test.txt
      * */
     std::cout << "input file name:";
     std::cin >> filename;
@@ -112,7 +112,7 @@ void Exercise_10_4::exercise_10_33() {
         std::cerr << "Can't open file: " << filename << "\n";
         return;
     }
-    std::ofstream out_odd("../assert/test_file/odd_number.txt"), out_even("../assert/test_file/even_number.txt");
+    std::ofstream out_odd("../asset/test_file/odd_number.txt"), out_even("../asset/test_file/even_number.txt");
     std::istream_iterator<int> in_iter(in), eof;
     std::ostream_iterator<int> out_odd_iter(out_odd, " "), out_even_iter(out_even, " ");
     std::for_each(in_iter, eof, [&](int i) { i % 2 ? out_odd_iter = i : out_even_iter = i; });

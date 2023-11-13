@@ -8,7 +8,20 @@
 // If there are no special instructions, this file is used as an exercise and test file.
 #include "11_1.hpp"
 
-void test_11_1() { Exercise_11::exercise_11_3(); };
+void test_11_1() {
+    std::string filename;
+    std::cout << "Please enter filename: ";
+    // you can enter : ../asset/test/hello.txt
+    std::cin >> filename;
+    std::ifstream in(filename);
+    if (!in.is_open())
+        std::cerr << "Can't open file: " << filename << "\n";
+    std::istream_iterator<std::string> in_iter(in), eof;
+    std::vector<std::string>           words{in_iter, eof};
+
+    // Exercise_11::exercise_11_3(words);
+    Exercise_11::exercise_11_4(words);
+};
 
 int main() {
     test_11_1();
