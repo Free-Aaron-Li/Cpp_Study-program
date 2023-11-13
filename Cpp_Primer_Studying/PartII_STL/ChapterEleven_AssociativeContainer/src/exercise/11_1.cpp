@@ -10,4 +10,13 @@
 
 void Exercise_11::meaninglessFunction_1() {}
 void Exercise_11::meaninglessFunction_2() {}
-void Exercise_11::exercise_11_3() {}
+void Exercise_11::exercise_11_3() {
+    std::map<std::string, std::size_t> word_count{};
+    std::string                        word{};
+    while (std::cin >> word)
+        ++word_count[word];
+    std::cout << "\n";
+    for (const auto& val : word_count) {
+        std::cout << "The \"" << val.first << "\" have " << ((val.second > 1) ? " time" : " times") << "\n";
+    }
+}
