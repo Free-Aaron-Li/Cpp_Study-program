@@ -20,5 +20,6 @@
 #include <vector>
 #include <map>
 #include <set>
+#include <algorithm>
 
 #endif  // CPP_PRIMER_STUDYING_11_HPP

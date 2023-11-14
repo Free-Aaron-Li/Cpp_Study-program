@@ -16,7 +16,7 @@
 
 #include "11.hpp"
 
-class Exercise_11 {
+class Exercise_11_1 {
  public:
     /**
      * @title

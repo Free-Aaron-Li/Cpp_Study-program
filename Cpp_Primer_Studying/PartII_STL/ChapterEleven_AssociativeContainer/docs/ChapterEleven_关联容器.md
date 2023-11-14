@@ -118,16 +118,74 @@ int main(){
 > $ ./main
 > hello world !
 > this is bad !
-> this is good !
+> this is good 
 > 
 > bad occurs 1 time
 > good occurs 1 time
 > hello occurs 1 time
 > this occurs 2 times
 > world occurs 1 time
-
-```
+> ```
 
 调用find函数会返回一个迭代器，如果找到word迭代器指向该关键字，否则返回一个尾后迭代器。
 
+## 11.2 关联容器概述
 
+常规的[容器操作](../../ChapterNine_SeqContainer/docs/ChapterNine_顺序容器.md#92-容器库概览) 关联容器能够支持，但是，对于顺序容器位置相关的操作（如：push_front、push_back）、插入操作等不支持。
+
+关联容器的迭代器都是双向的。
+
+### 11.2.1 定义关联容器
+
+每个关联容器都定义了一个默认构造函数，它创建一个指定类型的空容器。
+
+初始化关联容器必须能够将初始化器转换为容器中元素的类型。特别的：初始化map,必须提供关键字类型和值类型，且将每个关键字——值对包围在花括号中。
+
+示例：
+
+```cpp
+// 空容器
+std::map<std::string,std::size_t> word_count;
+// 列表初始化
+std::set<std::string> filter = { "The","But","And","Or","An","A","Is","!",
+                                 "the","but","and","or","an","a","is"};
+// map初始化
+std::map<std::string,std::string> authors = {   {"Joyce","James"},
+												{"Austen","Jane"},
+												{"Dickens","Charles"}};
+```
+
+#### 初始化multimap或multiset
+
+对于map和set来说，对于一个给定的关键字，只能有一个元素的关键字等于它。但是，对于multimap和multiset则没有此限制。例如：在统计单词数量时，每个单词最多拥有一个元素。但在词典中，特定单词可能含有多重释义。
+
+示例：
+
+```cpp
+#include <iostream>
+#include <set>
+#include <vector>
+
+int main(){
+    std::vector<int> i_vec;
+    for(std::vector<int>::size_type i=0;i!=10;++i){
+        i_vec.push_back(i);
+        i_vec.push_back(i);
+    }
+    std::set<int> i_set(i_vec.cbegin(),i_vec.cend());
+    std::multiset<int> i_mset(i_vec.cbegin(),i_vec.cend());
+
+    std::cout<<"vector size: "<<i_vec.size()<<" set size: "
+        <<i_set.size()<<" multiset size: "<<i_mset.size()<<"\n";
+}
+```
+
+> RUN
+>
+> ```cpp
+> $ gcc -o main -g main.cpp
+> $ ./main
+> vector size: 20 set size: 10 multiset size: 20
+> ```
+
+在上述示例中，multiset允许重复关键字。
