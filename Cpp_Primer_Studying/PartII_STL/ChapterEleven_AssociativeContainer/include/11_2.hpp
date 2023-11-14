@@ -61,5 +61,40 @@ class Exercise_11_2 {
      * 编写一个程序，在一个vector而不是一个set中保存不重复的单词。使用set的优点是什么？
      */
     static void exercise_11_8(const std::vector<std::string>& data);
+
+    /**
+     * @title
+     * 11.2.2 关键字类型的要求
+     */
+
+    /**
+     * @title
+     * 练习10.9
+     * @description
+     * 定义一个map,将单词与一个行号的list关联，list中保存的是单词所出现的行号。
+     */
+    static void exercise_11_9();
+
+    /**
+     * @title
+     * 练习11.10
+     * @description
+     * 可以定义一个vector<int>::iterator到int的map吗？list<int>::iterator到int的map呢？对于两种情况，如果不能，解释为什么？
+     */
+    /*
+     * 对于vector::iterator可以，因为vector迭代器支持<操作，但是对于list::iterator则不行，因为List元素不是连续存储的，其迭代器不支持比操作。
+     * */
+    static void meaninglessFunction_3();
+
+    /**
+     * @title
+     * 练习11.11
+     * @description
+     * 不使用decltype重新定义bookstore。
+     */
+    /*
+     * multiset<Sales_data, bool (*)(const Sales_data &, const Sales_data &)>
+     * */
+    static void meaninglessFunction_4();
 };
 #endif  // CPP_PRIMER_STUDYING_11_2_HPP

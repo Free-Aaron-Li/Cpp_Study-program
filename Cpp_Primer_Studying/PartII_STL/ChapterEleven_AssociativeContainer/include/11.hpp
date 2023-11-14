@@ -18,6 +18,7 @@
 #include <fstream>
 #include <iterator>
 #include <vector>
+#include <list>
 #include <map>
 #include <set>
 #include <algorithm>

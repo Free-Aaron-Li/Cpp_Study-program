@@ -10,6 +10,8 @@
 
 void Exercise_11_2::meaninglessFunction_1() {}
 void Exercise_11_2::meaninglessFunction_2() {}
+void Exercise_11_2::meaninglessFunction_3() {}
+void Exercise_11_2::meaninglessFunction_4() {}
 
 //------------------------------------------------------------------------------------------------
 
@@ -65,7 +67,16 @@ void Exercise_11_2::exercise_11_8(const std::vector<std::string>& data) {
     std::sort(words.begin(), words.end());
     auto end_unique = std::unique(words.begin(), words.end());
     words.erase(end_unique, words.end());
-    for (const auto& word : words) {
+    for (const auto& word : words)
         std::cout << word << " ";
+}
+
+void Exercise_11_2::exercise_11_9() {
+    std::map<std::string, std::list<int>> words{{"abc", {1, 2}}, {"def", {3, 4}}, {"ghl", {5, 6}}};
+    for (const auto& val : words) {
+        std::cout << val.first << ":";
+        for (const auto& c : val.second)
+            std::cout << " " << c;
+        std::cout << "\n";
     }
 }
