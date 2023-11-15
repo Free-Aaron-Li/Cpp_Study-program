@@ -256,6 +256,8 @@ map<std::string,int>::mapped_type v4; // int
 map<std::string,int>::value_type v5; // pair<const string,int>
 ```
 
+### 关联容器迭代器
+
 对于解引用一个关联迭代器时，我们会得到一个类型为容器的value_type的值的引用。
 
 ```cpp
@@ -299,4 +301,57 @@ int main(){
 > ```
 
 通常来说，不会对关联容器使用泛型算法。在实际编程中，如果我们真要对一个关联容器使用算法，要么是将它当作一个<b>源序列</b>，要么当作一个<b>目的位置</b>。例如：使用泛型copy算符拷贝一个关联容器到另一个序列，或是使用inserter将一个插入器绑定到一个关联容器，依次将关联容器当作一个目的位置来调用另一个算法。
+
+### 添加元素
+
+关联容器中insert成员会向容器中添加一个元素或一个元素范围。insert有两个版本，「1」接受一对迭代器，「2」接受一个初始化列表。
+
+```cpp
+set_1.insert(vec.cbegin(),vec.cend());
+set_2.insert({1,2,3,4});
+```
+
+对于map、set极其对应的无序列表来说，对于一个给定的关键字，只有第一个带此关键字的元素才能被插入到容器中。
+
+示例：
+
+```cpp
+#include <iostream>
+#include <iterator>
+#include <map>
+
+int main(){
+    std::map<std::string,int> word_count{{"c",1},{"b",2},{"a",3}};
+    word_count.insert({"c",4});
+    auto map_iter=word_count.cbegin();
+    while(map_iter!=word_count.cend()){
+        std::cout<<map_iter->first<<" "<<map_iter->second<<"\n";
+        ++map_iter;
+    }
+}
+```
+
+> ```cpp
+> $ g++ main.cpp
+> $ ./a.out
+> a 3
+> b 2
+> c 1
+> ```
+
+#### 向map添加元素
+
+向map插入元素，注意元素类型为pair。
+
+```cpp
+map_1.insert({1,2});
+map_2.insert(std::make_pair(1,2));
+map_3.insert(std::pair<int,int>(1,2));
+map_4.insert(std::map<int,int>::value_type(1,2));
+```
+
+|  关联容器insert操作   |                      解释                       |
+|:---------------:|:---------------------------------------------:|
+|   c.insert(v)   |        v是value_type类型的对象；args用来构造一个元素         |
+| c.emplace(args) | 对于map和set,只有当元素的关键字不在c中时才插入（或构造）元素。函数返回一个pair |
 
