@@ -30,7 +30,9 @@ void test_11_1() {
 void test_11_2() {
     // Exercise_11_2::exercise_11_7(file());  // names.txt
     // Exercise_11_2::exercise_11_8(file());  // hello.txt
-    Exercise_11_2::exercise_11_9();
+    // Exercise_11_2::exercise_11_9();
+    // Exercise_11_2::exercise_11_12();
+    Exercise_11_2::exercise_11_14(file());  // names_plus.txt
 }
 
 int main() {

@@ -80,3 +80,72 @@ void Exercise_11_2::exercise_11_9() {
         std::cout << "\n";
     }
 }
+void Exercise_11_2::exercise_11_12() {
+    std::vector<std::pair<std::string, int>> sequence;
+    std::vector<int>                         numbers{1, 2};
+    std::vector<std::string>                 strings{"hello", "world"};
+
+    for (int i = 0; i < 2; ++i)
+        sequence.push_back({strings[i], numbers[i]});
+
+    for (const auto& val : sequence)
+        std::cout << val.first << " " << val.second << "\n";
+}
+
+void Exercise_11_2::exercise_11_13() {
+    std::vector<std::pair<std::string, int>> sequence;
+    std::vector<int>                         numbers{1, 2};
+    std::vector<std::string>                 strings{"hello", "world"};
+
+    for (int i = 0; i < 2; ++i) {
+        // sequence.push_back({strings[i], numbers[i]}); // 1.
+        sequence.push_back(std::make_pair(strings[i], numbers[i]));  // 2.
+        // sequence.push_back(std::pair<std::string,int>(strings[i],numbers[i])); //3.
+    }
+
+    for (const auto& val : sequence)
+        std::cout << val.first << " " << val.second << "\n";
+}
+
+//------------------------------------------------------------------------------------------------
+
+typedef std::map<std::string, std::vector<std::pair<std::string, std::string>>> family_plus_type;
+void add_family(family_plus_type& families, const std::string& name) {
+    families.insert({name, std::vector<std::pair<std::string, std::string>>()});
+}
+
+void add_member(
+  family_plus_type& families, const std::string& family_name, const std::string& member_name,
+  const std::string birthday) {
+    auto iter = families.find(family_name);
+    if (iter != families.end())
+        iter->second.push_back(std::make_pair(member_name, birthday));
+    else
+        std::cerr << "Error: No family <" << family_name << "> for member <" << member_name << ">\n";
+}
+
+void Exercise_11_2::exercise_11_14(const std::vector<std::string>& data) {
+    std::multimap<std::string, std::string> separation_names{};
+    separation_name(separation_names, data);
+
+    family_plus_type families;
+    for (const auto& val : separation_names) {
+        add_family(families, val.first);
+        if (val.second.begin() == val.second.end())
+            continue;
+        std::string last_name = std::string(val.second.begin(), val.second.end() - 10);
+        std::string birthday  = std::string(val.second.end() - 10, val.second.end());
+        add_member(families, val.first, last_name, birthday);
+    }
+
+    for (const auto& family : families) {
+        std::cout << "The members of " << family.first << " family have: \n";
+        for (const auto& member : family.second) {
+            /* TODO 23-11-15 How do I determine if a pair is empty */
+            std::cout << "name is: " << family.first << member.first << ", birthday is: " << member.second << "\n";
+        }
+        std::cout << "\n";
+    }
+}
+
+//------------------------------------------------------------------------------------------------

@@ -96,5 +96,37 @@ class Exercise_11_2 {
      * multiset<Sales_data, bool (*)(const Sales_data &, const Sales_data &)>
      * */
     static void meaninglessFunction_4();
+
+    /**
+     * @title
+     * 11.2.3 pair类型
+     */
+
+    /**
+     * @title
+     * 练习11.12
+     * @description
+     * 编写程序，读入string和int的序列，将每个string和int存入一个pair中，pair保存在一个vector中。
+     */
+    static void exercise_11_12();
+
+    /**
+     * @title
+     * 练习11.13
+     * @description
+     * 在上一题的程序中，至少有三种创建pair的方法。编写此程序的三个版本，分别采用不同的方法创建pair。解释你认为哪种形式最易于编写和理解，为什么？
+     */
+    /*
+     * 私认为采用make_pair方式创建pair方式最好。其一、易于理解；其二、由编译器推断类型；
+     * */
+    static void exercise_11_13();
+
+    /**
+     * @title
+     * 练习11.14
+     * @description
+     * 扩展你在11.2.1节练习中编写的孩子姓到名的map,添加一个pair的vector,保存孩子的名和生日。
+     */
+    static void exercise_11_14(const std::vector<std::string>& data);
 };
 #endif  // CPP_PRIMER_STUDYING_11_2_HPP
