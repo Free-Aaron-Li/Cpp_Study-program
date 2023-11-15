@@ -782,7 +782,7 @@ int main(){
 > RUN
 >
 > ```cpp
-> $ gcc -o main -g main.cpp
+> $ g++ -o main -g main.cpp
 > $ ./main
 > 8 7 6 5 4 3 2 1 ⏎
 > ```

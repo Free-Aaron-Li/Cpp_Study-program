@@ -66,7 +66,7 @@ int main(){
 > RUN
 >
 > ```cpp
-> $ gcc -o main -g main.cpp
+> $ g++ -o main -g main.cpp
 > $ ./main
 > hello world !
 > this is good !
@@ -114,7 +114,7 @@ int main(){
 > RUN
 >
 > ```cpp
-> $ gcc -o main -g main.cpp
+> $ g++ -o main -g main.cpp
 > $ ./main
 > hello world !
 > this is bad !
@@ -183,7 +183,7 @@ int main(){
 > RUN
 >
 > ```cpp
-> $ gcc -o main -g main.cpp
+> $ g++ -o main -g main.cpp
 > $ ./main
 > vector size: 20 set size: 10 multiset size: 20
 > ```
@@ -237,4 +237,66 @@ pair的数据成员为public,其成员分别命名为first和second。
 |        p.first         |              返回p的名为first的（公有）数据成员               |
 |        p.second        |              返回p的名为second的（公有）数据成员              |
 |   p1==p2<br/>p1!=p2    | 当first和second成员分别相等时，两个pair相等。相等性判断利用元素的==运算符实现 |
+
+## 11.3 关联容器操作
+
+| 关联容器额外的类型别名 |                              解释                               |
+|:-----------:|:-------------------------------------------------------------:|
+|  key_type   |                          此容器类型的关键字类型                          |
+| mapped_type |                      每个关键字关联的类型；只适用于map                       |
+| value_type  | 对于set,与key_type相同<br/>对于map,为pair<const key_type,mapped_type> |
+
+需要注意到：对于value_type,我们不能改变一个元素的关键字，所以这些pair的关键字部分是const的。
+
+```cpp
+set<std::string>::key_type v1; // string
+set<std::string>::value_type v2; // string
+map<std::string,int>::key_type v3; // string
+map<std::string,int>::mapped_type v4; // int
+map<std::string,int>::value_type v5; // pair<const string,int>
+```
+
+对于解引用一个关联迭代器时，我们会得到一个类型为容器的value_type的值的引用。
+
+```cpp
+map<std::string,std::size_t> word_count;
+auto map_iter=word_count.begin(); // 指向pair<const string,size_t>对象的引用
+std::cout<<map_iter->first; // string
+std::cout<<" "<<map_iter->second; // size_t
+map_iter->first="new key"; // error
+++map_iter->second; // true
+```
+
+虽然set类型同时定义了iterator和const_iterator类型，但是两种类型都只允许只读访问set中的元素。一个set中的关键字也是const。
+
+在进行常规编历时，使用迭代器进行遍历一个map、multimap、set和multiset时，迭代器按照**关键字升序**遍历元素。
+
+示例：
+
+```cpp
+#include <iostream>
+#include <iterator>
+#include <map>
+
+int main(){
+    std::map<std::string,int> word_count{{"c",1},{"b",2},{"a",3}};
+    auto map_iter=word_count.cbegin();
+    while(map_iter!=word_count.cend()){
+        std::cout<<map_iter->first<<" "<<map_iter->second<<"\n";
+        ++map_iter;
+    }
+}
+```
+
+> RUN
+>
+> ```cpp
+> $ g++ main.cpp
+> $ ./a.out
+> a 3
+> b 2
+> c 1
+> ```
+
+通常来说，不会对关联容器使用泛型算法。在实际编程中，如果我们真要对一个关联容器使用算法，要么是将它当作一个<b>源序列</b>，要么当作一个<b>目的位置</b>。例如：使用泛型copy算符拷贝一个关联容器到另一个序列，或是使用inserter将一个插入器绑定到一个关联容器，依次将关联容器当作一个目的位置来调用另一个算法。
 
