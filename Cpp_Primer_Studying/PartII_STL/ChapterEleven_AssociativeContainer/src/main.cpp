@@ -36,7 +36,14 @@ void test_11_2() {
     Exercise_11_2::exercise_11_14(file());  // names_plus.txt
 }
 
-void test_11_3() { Exercise_11_3::exercise_11_16(); }
+void test_11_3() {
+    // Exercise_11_3::exercise_11_16();
+    // Exercise_11_3::exercise_11_20(file());  // hello.txt
+    // Exercise_11_3::exercise_11_23(file());  // names.txt
+    // Exercise_11_3::exercise_11_26();
+    // Exercise_11_3::exercise_11_28();
+    Exercise_11_3::exercise_11_31(file());  // author.txt
+}
 
 int main() {
     // test_11_1();

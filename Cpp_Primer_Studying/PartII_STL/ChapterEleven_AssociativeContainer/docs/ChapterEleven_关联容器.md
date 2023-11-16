@@ -331,6 +331,8 @@ int main(){
 }
 ```
 
+> RUN
+>
 > ```cpp
 > $ g++ main.cpp
 > $ ./a.out
@@ -350,8 +352,141 @@ map_3.insert(std::pair<int,int>(1,2));
 map_4.insert(std::map<int,int>::value_type(1,2));
 ```
 
-|  关联容器insert操作   |                      解释                       |
-|:---------------:|:---------------------------------------------:|
-|   c.insert(v)   |        v是value_type类型的对象；args用来构造一个元素         |
-| c.emplace(args) | 对于map和set,只有当元素的关键字不在c中时才插入（或构造）元素。函数返回一个pair |
+|             关联容器insert操作             |                                                                     解释                                                                      |
+|:------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------:|
+|             c.insert(v)              |                                                       v是value_type类型的对象；args用来构造一个元素                                                        |
+|           c.emplace(args)            | 对于map和set,只有当元素的关键字不在c中时才插入（或构造）元素。函数返回一个pair,包含一个迭代器，指向具有指定关键字的元素，以及一个指示插入是否成功的bool值。<br/>对于multimap和multiset，总会插入（或构造）给定元素，并返回一个指向新元素的迭代器 |
+|    c.insert(b,e)<br/>c.insert(il)    |             b和e是迭代器，表示一个c::value_type类型值的范围；il是这种值的花括号列表。函数返回void<br/>对于map和set,只插入关键字不在c中的元素。对于multimap和multiset,则会插入范围中的每个元素              |
+| c.insert(p,v) <br/>c.emplace(p,args) |                             类似于insert(v)（或emplace(args)），但将迭代器p作为一个指示，指出从哪里开始搜索新元素应该存储的位置。返回一个迭代器，指向具有给定关键字的元素                              |
+
+#### 检测insert的返回值
+
+insert（或emplace）返回的值依赖于容器类型和参数。
+
+对于不包含重复关键词的容器，添加单一元素返回pair,pair的first成员为迭代器，指向具有给定关键词的元素；second成员是一个bool值，指出元素是否插入成功。
+
+示例：
+
+```cpp
+#include <iostream>
+#include <iterator>
+#include <map>
+
+int main(){
+    std::map<std::string,int> word_count{{"c",1},{"b",2},{"a",3}};
+    auto result_1=word_count.insert({"c",4});
+    auto result_2=word_count.insert({"d",4});
+    auto map_iter=word_count.cbegin();
+    while(map_iter!=word_count.cend()){
+        std::cout<<map_iter->first<<" "<<map_iter->second<<"\n";
+        ++map_iter;
+    }
+    std::cout<<"result_1 is: "<<(result_1.second?"true":"false")
+             <<",result_2 is: "<<(result_2.second?"true":"false")<<"\n";
+}
+```
+
+> ```cpp
+> $ g++ main.cpp
+> $ ./a.out
+> a 3
+> b 2
+> c 1
+> d 4
+> result_1 is: false,result_2 is: true
+> ```
+
+### 删除元素
+
+关联容器定义了三个版本的erase。
+
+前两个版本与顺序容器的操作非常类似：都是通过一个迭代器或一个迭代器对进行删除一个元素或一个元素范围，函数返回迭代器。关联容器提供了一个额外的erase操作，其接受key_type参数。此版本删除匹配给定关键词的元素，返回实际删除的元素数量。
+
+|  从关联容器删除元素   |                                       解释                                       |
+|:------------:|:------------------------------------------------------------------------------:|
+|  c.erase(k)  |                   从c中删除每个关键字为k的元素。返回一个size_type值，指出删除的元素的数量                    |
+|  c.erase(p)  | 从c中删除迭代器p指定的元素。p必须指向c中一个真实元素，不能等于c.end()。返回一个指向p之后元素的迭代器，若p指向c中的尾元素，则返回c.end() |
+| c.erase(b,e) |                            删除迭代器对b和e所表示的范围中的元素。返回e                             |
+
+示例：
+
+```cpp
+#include <iostream>
+#include <map>
+
+int main(){
+    std::multimap<std::string,int> word_count{{"c",1},{"b",2},{"a",3},{"c",4}};
+    std::string removeal_word="c";
+    auto removeal_num=word_count.erase(removeal_word);
+    if(removeal_num)
+        std::cout<<"ok: "<<removeal_word<<" removed,removeal num is "<<removeal_num<<"\n";
+    else 
+        std::cout<<"oops: "<<removeal_word<<"no found!\n";
+}
+```
+
+> RUN
+>
+> ```cpp
+> $ g++ main.cpp
+> $ ./a.out
+> ok: c removed,removeal num is 2
+> ```
+
+### map的下标操作
+
+map和unordered_map容器提供下标运算符和对应的at函数。
+
+| map和unordered_map的下标操作 |                      解释                      |
+|:----------------------:|:--------------------------------------------:|
+|          c[k]          | 返回关键字为k的元素；如果k不在c中，**添加**一个关键字为k的元素，对其进行值初始化 |
+|        c.at(k)         |  访问关键字为k的元素，带参数检查；若k不再c中，抛出一个out_of_range异常  |
+
+> 需要注意到的是，如果关键字不再map中会创建一个元素并插入到map中，关联值将进行值初始化。
+>
+> ```cpp
+> map<string,size_t> word_count; // 空容器
+> word_count["a"]=1; // 创建元素，关键字为a,值为1
+> ```
+> 详细流程：
+> 1. 在word_count中搜索关键字为a的元素，未找到。
+> 2. 将一个新的关键字-值对插入到word_count中。关键字是一个const string，保存a。值进行值初始化，上述例子中为0
+> 3. 提取出新插入的元素，并将1赋予它。
+>
+> 注意：由于下标运算符可能插入一个新元素，所以仅可以对非const的map使用下标操作。
+
+通常情况，解引用一个迭代器所返回的类型与下标运算符返回的类型一样。但对map不然：<b>当对一个map进行下标操作时，会获得一个mapped_type对象；但当解引用一个map迭代器时，会得到一个value_type对象</b>。
+
+### 访问元素
+
+关联容器提供多钟查找一个指定元素的方法。
+
+| 在一个关联容器中查找元素的操作  |                                   解释                                    |
+|:----------------:|:-----------------------------------------------------------------------:|
+|    c.find(k)     |                 返回一个迭代器，指向第一个关键字为k的元素，若k不再容器中，则返回为后迭代器                  |
+|    c.count(k)    |                 返回关键字等于k的元素的数量。对于不允许重复关键字的容器，返回值永远是0或1                  |
+| c.lower_bound(k) |                         返回一个迭代器，指向第一个关键字不小于k的元素                         |
+| c.upper_bound(k) |                         返回一个迭代器，指向第一个关键字大于k的元素                          |
+| c.equal_range(k) | 返回一个迭代器pair,表示关键字等于k的元素的范围。若k不存在，pair的两个成员均等于c.end()（准确来说：指向关键字可以插入的位置） |
+
+> 注意：lower_bound和upper_bound不适用于无序容器。下标和at操作只适用于非const的map和unordered_map。
+
+这么多查找方式，应该根据解决问题思考。如果我们关心只不过是一个特定元素是否已在容器中，可能find是最佳选择。对于count和find,如果不需要计数，最好使用find。
+
+#### 对map使用find代替下标操作
+
+由于下标操作的严重副作用，除非使用下标符合你的预期，最好使用find查找map中的元素。
+
+#### 在multimap或multiset中查找元素
+
+如果一个multimap或multiset中有多个元素具有给定关键字，而这些元素在容器中会<b>相邻存储</b>。
+
+lower_bound返回的迭代器指向第一个具有给定关键词的元素，upper_bound返回的迭代器指向最后一个匹配给定关键词的元素。
+
+如果关键字不再multimap中，则lower_bound和upper_bound会返回相等的迭代器——指向一个不影响排序的关键字插入位置。这两个操作返回的迭代器可能是容器的尾后迭代器。如果关键字不存在且大于容器中任何关键字，则lower_bound返回尾后迭代器；如果查找的元素最大，upper_bound返回的也是尾后迭代器。
+
+> 注意：<b>lower_bound和upper_bound都不会报告关键字是否存在</b>。如果不存在,lower_bound将会指向第一个关键字大于给定关键字的元素，有可能是尾后迭代器；upper_bound指向最后一个匹配给定关键字的元素之后的元素，有可能是尾后迭代器。
+>
+> 如果lower_bound和upper_bound返回相同的迭代器，则给定关键字不存在容器中。
+
 
