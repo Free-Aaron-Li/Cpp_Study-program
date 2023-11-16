@@ -8,9 +8,12 @@
 // If there are no special instructions, this file is used as an exercise and test file.
 #include "11_1.hpp"
 
-void Exercise_11_1::meaninglessFunction_1() {}
-void Exercise_11_1::meaninglessFunction_2() {}
-void Exercise_11_1::exercise_11_3(const std::vector<std::string>& words) {
+void
+Exercise_11_1::meaninglessFunction_1() {}
+void
+Exercise_11_1::meaninglessFunction_2() {}
+void
+Exercise_11_1::exercise_11_3(const std::vector<std::string>& words) {
     std::map<std::string, std::size_t> word_count{};
     for (const auto& val : words) {
         ++word_count[val];
@@ -21,7 +24,8 @@ void Exercise_11_1::exercise_11_3(const std::vector<std::string>& words) {
                   << "\n";
     }
 }
-std::string filter(std::string str) {
+std::string
+filter(std::string str) {
     std::string punctuation{"\"'`:*-_;,.?!()[]{}"};
     for (auto& val : str)
         if (val >= 'A' && val <= 'Z')
@@ -32,7 +36,8 @@ std::string filter(std::string str) {
     size_t end_position = str.find_last_not_of(punctuation);
     return str.substr(begin_position, end_position - begin_position + 1);
 }
-void Exercise_11_1::exercise_11_4(const std::vector<std::string>& words) {
+void
+Exercise_11_1::exercise_11_4(const std::vector<std::string>& words) {
     std::map<std::string, std::size_t> word_count{};
     for (auto& val : words) {
         ++word_count[filter(val)];

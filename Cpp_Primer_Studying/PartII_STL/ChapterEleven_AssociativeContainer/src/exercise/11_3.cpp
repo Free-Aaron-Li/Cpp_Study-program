@@ -8,27 +8,41 @@
 // If there are no special instructions, this file is used as an exercise and test file.
 #include "11_3.hpp"
 
-void Exercise_11_3::meaninglessFunction_1() {}
-void Exercise_11_3::meaninglessFunction_2() {}
-void Exercise_11_3::meaninglessFunction_3() {}
-void Exercise_11_3::meaninglessFunction_4() {}
-void Exercise_11_3::meaninglessFunction_5() {}
-void Exercise_11_3::meaninglessFunction_6() {}
-void Exercise_11_3::meaninglessFunction_7() {}
-void Exercise_11_3::meaninglessFunction_8() {}
-void Exercise_11_3::meaninglessFunction_9() {}
-void Exercise_11_3::meaninglessFunction_10() {}
-void Exercise_11_3::meaninglessFunction_11() {}
-void Exercise_11_3::meaninglessFunction_12() {}
+void
+Exercise_11_3::meaninglessFunction_1() {}
+void
+Exercise_11_3::meaninglessFunction_2() {}
+void
+Exercise_11_3::meaninglessFunction_3() {}
+void
+Exercise_11_3::meaninglessFunction_4() {}
+void
+Exercise_11_3::meaninglessFunction_5() {}
+void
+Exercise_11_3::meaninglessFunction_6() {}
+void
+Exercise_11_3::meaninglessFunction_7() {}
+void
+Exercise_11_3::meaninglessFunction_8() {}
+void
+Exercise_11_3::meaninglessFunction_9() {}
+void
+Exercise_11_3::meaninglessFunction_10() {}
+void
+Exercise_11_3::meaninglessFunction_11() {}
+void
+Exercise_11_3::meaninglessFunction_12() {}
 
-void Exercise_11_3::exercise_11_16() {
+void
+Exercise_11_3::exercise_11_16() {
     std::map<std::string, int> val{{"hello", 0}};
     auto                       map_iter = val.begin();
     map_iter->second                    = 1;
     std::cout << map_iter->first << " " << map_iter->second << "\n";
 }
 
-void Exercise_11_3::exercise_11_20(const std::vector<std::string>& data) {
+void
+Exercise_11_3::exercise_11_20(const std::vector<std::string>& data) {
     std::map<std::string, std::size_t> word_count;
     std::string                        word;
     for (const auto& val : data) {
@@ -45,8 +59,8 @@ void Exercise_11_3::exercise_11_20(const std::vector<std::string>& data) {
 
 //------------------------------------------------------------------------------------------------
 
-std::multimap<std::string, std::string>& separation_name_v2(
-  std::multimap<std::string, std::string>& name_list, const std::vector<std::string> data) {
+std::multimap<std::string, std::string>&
+separation_name_v2(std::multimap<std::string, std::string>& name_list, const std::vector<std::string> data) {
     std::string first_name, last_name;
     for (auto& val : data) {
         first_name = val.substr(0, 3);
@@ -57,11 +71,13 @@ std::multimap<std::string, std::string>& separation_name_v2(
 }
 
 typedef std::multimap<std::string, std::vector<std::string>> family_type;
-void add_family_v2(family_type& families, const std::string& name) {
+void
+add_family_v2(family_type& families, const std::string& name) {
     families.insert({name, std::vector<std::string>()});
 }
 
-void add_member_v2(family_type& families, const std::string& family_name, const std::string& member_name) {
+void
+add_member_v2(family_type& families, const std::string& family_name, const std::string& member_name) {
     auto iter = families.find(family_name);
     if (iter != families.end())
         iter->second.push_back(member_name);
@@ -69,7 +85,8 @@ void add_member_v2(family_type& families, const std::string& family_name, const 
         std::cerr << "Error: No family <" << family_name << "> for member <" << member_name << ">\n";
 }
 
-void Exercise_11_3::exercise_11_23(const std::vector<std::string>& data) {
+void
+Exercise_11_3::exercise_11_23(const std::vector<std::string>& data) {
     std::multimap<std::string, std::string> separation_names{};
     separation_name_v2(separation_names, data);
 
@@ -94,14 +111,16 @@ void Exercise_11_3::exercise_11_23(const std::vector<std::string>& data) {
 
 //------------------------------------------------------------------------------------------------
 
-void Exercise_11_3::exercise_11_26() {
+void
+Exercise_11_3::exercise_11_26() {
     std::map<std::string, std::size_t> word_count{};
     std::string                        val{"hello"};              // string
     auto                               result = word_count[val];  // size_t
 }
 
 
-void Exercise_11_3::exercise_11_28() {
+void
+Exercise_11_3::exercise_11_28() {
     std::map<std::string, std::vector<int>> data{{"a", {1, 2}}};
     auto                                    result = data.find("a");
     std::cout << "first: " << result->first << " ,second: " << result->second.front() << " " << result->second.back();
@@ -110,7 +129,8 @@ void Exercise_11_3::exercise_11_28() {
 //------------------------------------------------------------------------------------------------
 
 typedef std::multimap<std::string, std::string> book_type;
-book_type& separation_name_v3(book_type& name_list, const std::vector<std::string> data) {
+book_type&
+separation_name_v3(book_type& name_list, const std::vector<std::string> data) {
     std::string author_name, book_name;
     for (auto& val : data) {
         auto index  = val.find("《");
@@ -121,14 +141,16 @@ book_type& separation_name_v3(book_type& name_list, const std::vector<std::strin
     return name_list;
 }
 
-void print(book_type& data) {
+void
+print(book_type& data) {
     std::cout << " All the book are: \n";
     for (const auto& val : data) {
         std::cout << "Author: " << val.first << "\t,Book: " << val.second << "\n";
     }
 }
 
-void Exercise_11_3::exercise_11_31(const std::vector<std::string>& data) {
+void
+Exercise_11_3::exercise_11_31(const std::vector<std::string>& data) {
     book_type name_list{};
     separation_name_v3(name_list, data);
 
