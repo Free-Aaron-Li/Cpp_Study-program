@@ -253,6 +253,44 @@ class Exercise_11_3 {
      * 实现你自己版本的单词转换程序。
      */
     static void exercise_11_33(std::ifstream& rule_dictionary, std::ifstream& input_file);
+
+    /**
+     * @title
+     * 练习11.34
+     * @description
+     * 如果你将transform函数中的find替换为下标运算符，会发生什么情况？
+     */
+    /*
+     * 由于下标运算的副作用：当关键字未找到，将自动构造一个pair（值初始化）
+     * 所以，对于不是我们所找的关键字，采用下标运算也会将word添加如规则map中，这显然不是所期望的。
+     * */
+    static void meaninglessFunction_13();
+
+    /**
+     * @title
+     * 练习11.35
+     * @description
+     * 在buildMap中，如果进行如下改写，会有什么效果？
+     * @code
+     * trans_map[key]=value.substr(1);
+     * 改为：trans_map.insert({key,value.substr(1)});
+     */
+    /*
+     * 在buildMap中我们合理利用了下标运算的副作用，当trans_map中关键字不存在会自动添加。
+     * 如果采用insert方式，那么会导致trans_map中无任何关键字，不符合期望
+     * */
+    static void meaninglessFunction_14();
+
+    /**
+     * @title
+     * 练习11.36
+     * @description
+     * 我们的程序并没有检查输入文件的合法性。特别是，它假定转换规则文件中的规则都是有意义的。如果文件中的某一行包含一个关键字、一个空格，然后就结束了，会发生什么？预测程序的行为并进行验证，再与你的程序进行比较。
+     */
+    /*
+     * 其实书中buildMap函数中已经检测了这种情况，“value.size()>1”。如果出现上述的问题，会抛出一个异常。
+     * */
+    static void meaninglessFunction_15();
 };
 
 #endif  // CPP_PRIMER_STUDYING_11_3_HPP

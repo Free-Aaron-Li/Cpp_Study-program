@@ -32,6 +32,12 @@ void
 Exercise_11_3::meaninglessFunction_11() {}
 void
 Exercise_11_3::meaninglessFunction_12() {}
+void
+Exercise_11_3::meaninglessFunction_13() {}
+void
+Exercise_11_3::meaninglessFunction_14() {}
+void
+Exercise_11_3::meaninglessFunction_15() {}
 
 void
 Exercise_11_3::exercise_11_16() {
@@ -203,5 +209,7 @@ Exercise_11_3::exercise_11_33(std::ifstream& rule_dictionary, std::ifstream& inp
         std::cout << "\n";
     }
 }
+
+
 
 //------------------------------------------------------------------------------------------------
