@@ -240,6 +240,19 @@ class Exercise_11_3 {
      * 查看exercise_11_31程序中print()函数
      * */
     static void meaninglessFunction_12();
+
+    /**
+     * @title
+     * 11.3.6 一个单词转换的map
+     */
+
+    /**
+     * @title
+     * 练习11.33
+     * @description
+     * 实现你自己版本的单词转换程序。
+     */
+    static void exercise_11_33(std::ifstream& rule_dictionary, std::ifstream& input_file);
 };
 
 #endif  // CPP_PRIMER_STUDYING_11_3_HPP

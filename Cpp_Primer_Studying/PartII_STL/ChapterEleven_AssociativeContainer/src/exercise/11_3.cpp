@@ -162,3 +162,46 @@ Exercise_11_3::exercise_11_31(const std::vector<std::string>& data) {
     name_list.erase(remove_range.first, remove_range.second);
     print(name_list);
 }
+
+//------------------------------------------------------------------------------------------------
+
+const std::string&
+transform(const std::string& word, const std::map<std::string, std::string>& rule_list) {
+    auto map_iter = rule_list.find(word);
+    if (map_iter != rule_list.end())
+        return map_iter->second;
+    else
+        return word;
+}
+
+std::map<std::string, std::string>
+build_map(std::ifstream& rule_dictionary) {
+    std::map<std::string, std::string> rule_map;
+    std::string                        key, value;
+    while (rule_dictionary >> key && getline(rule_dictionary, value))
+        if (value.size() > 1)
+            rule_map[key] = value.substr(1);
+        else
+            throw std::runtime_error("no rule for " + key);
+    return rule_map;
+}
+
+void
+Exercise_11_3::exercise_11_33(std::ifstream& rule_dictionary, std::ifstream& input_file) {
+    auto        rule_map = build_map(rule_dictionary);
+    std::string text, word;
+    while (getline(input_file, text)) {
+        std::istringstream stream(text);
+        bool               has_no_space = true;
+        while (stream >> word) {
+            if (has_no_space)
+                has_no_space = false;
+            else
+                std::cout << " ";
+            std::cout << transform(word, rule_map);
+        }
+        std::cout << "\n";
+    }
+}
+
+//------------------------------------------------------------------------------------------------
