@@ -131,7 +131,7 @@ int main(){
 
 ## 11.2 关联容器概述
 
-常规的[容器操作](../../ChapterNine_SeqContainer/docs/ChapterNine_顺序容器.md#92-容器库概览) 关联容器能够支持，但是，对于顺序容器位置相关的操作（如：push_front、push_back）、插入操作等不支持。
+常规的[容器操作](https://www.cnblogs.com/aaroncoding/p/17596720.html) 关联容器能够支持，但是，对于顺序容器位置相关的操作（如：push_front、push_back）、插入操作等不支持。
 
 关联容器的迭代器都是双向的。
 
@@ -311,7 +311,7 @@ set_1.insert(vec.cbegin(),vec.cend());
 set_2.insert({1,2,3,4});
 ```
 
-对于map、set极其对应的无序列表来说，对于一个给定的关键字，只有第一个带此关键字的元素才能被插入到容器中。
+对于map、set及其对应的无序列表来说，对于一个给定的关键字，只有<b>第一个</b>带此关键字的元素才能被插入到容器中。
 
 示例：
 
@@ -400,7 +400,7 @@ int main(){
 
 关联容器定义了三个版本的erase。
 
-前两个版本与顺序容器的操作非常类似：都是通过一个迭代器或一个迭代器对进行删除一个元素或一个元素范围，函数返回迭代器。关联容器提供了一个额外的erase操作，其接受key_type参数。此版本删除匹配给定关键词的元素，返回实际删除的元素数量。
+前两个版本与顺序容器的操作非常类似：都是通过一个迭代器或一个迭代器对进行删除一个元素或一个元素范围，函数返回迭代器。关联容器提供了一个额外的erase操作，其接受key_type参数。此版本删除匹配给定关键词的元素，返回实际删除的<b>元素数量</b>。
 
 |  从关联容器删除元素   |                                       解释                                       |
 |:------------:|:------------------------------------------------------------------------------:|
@@ -491,7 +491,7 @@ lower_bound返回的迭代器指向第一个具有给定关键词的元素，upp
 
 ### 一个单词转换的map
 
-查看：[test](../src/exercise/11_3.cpp)
+查看：[test](https://github.com/Free-Aaron-Li/Cpp_Study-program/blob/master/Cpp_Primer_Studying/PartII_STL/ChapterEleven_AssociativeContainer/src/exercise/11_3.cpp#L175)
 
 ## 11.4 无序容器
 
