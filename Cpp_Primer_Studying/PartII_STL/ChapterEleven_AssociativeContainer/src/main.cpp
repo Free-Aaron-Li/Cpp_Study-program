@@ -9,6 +9,7 @@
 #include "11_1.hpp"
 #include "11_2.hpp"
 #include "11_3.hpp"
+#include "11_4.hpp"
 
 #define TEST_PATH "../asset/test/"
 std::vector<std::string>
@@ -52,10 +53,16 @@ test_11_3() {
     Exercise_11_3::exercise_11_33(rule_dictionary, input_file);
 }
 
+void
+test_11_4() {
+    Exercise_11_4::exercise_11_38(file());  // hello.txt
+}
+
 int
 main() {
     // test_11_1();
     // test_11_2();
-    test_11_3();
+    // test_11_3();
+    test_11_4();
     return 0;
 }
