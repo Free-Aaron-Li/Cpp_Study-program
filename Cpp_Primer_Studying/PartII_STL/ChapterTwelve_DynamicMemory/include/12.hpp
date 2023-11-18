@@ -14,6 +14,8 @@
  * 第十二章 动态内存
  */
 
+#include "StrBlob.hpp"
 #include <iostream>
+#include <memory>
 
 #endif  // CPP_PRIMER_STUDYING_12_HPP
