@@ -17,5 +17,6 @@
 #include "StrBlob.hpp"
 #include <iostream>
 #include <memory>
+#include <vector>
 
 #endif  // CPP_PRIMER_STUDYING_12_HPP

@@ -10,7 +10,9 @@
 
 void
 test_12_1() {
-    Exercise_12_1::exercise_12_2();
+    // Exercise_12_1::exercise_12_2();
+    // Exercise_12_1::exercise_12_6();
+    Exercise_12_1::exercise_12_7();
 }
 
 int

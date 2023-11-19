@@ -16,6 +16,10 @@ void
 Exercise_12_1::meaninglessFunction_3() {}
 void
 Exercise_12_1::meaninglessFunction_4() {}
+void
+Exercise_12_1::meaninglessFunction_5() {}
+void
+Exercise_12_1::meaninglessFunction_6() {}
 
 //------------------------------------------------------------------------------------------------
 
@@ -75,6 +79,78 @@ Exercise_12_1::exercise_12_2() {
     std::cout << "strBlob_4 is:\n";
     testStrBlob(strBlob_4);
     std::cout << "\n-----------------------------------\n";
+}
+
+//------------------------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------------------------
+
+std::vector<int>*
+factory() {
+    return new std::vector<int>;
+}
+
+void
+set_vector(std::vector<int>* data) {
+    int i;
+    while (std::cin >> i) {
+        data->push_back(i);
+        if (std::cin.get() == '\n')
+            break;
+    }
+}
+
+void
+print_vector(std::vector<int>* data) {
+    for (const auto& val : *data) {
+        std::cout << val << " ";
+    }
+    std::cout << "\n";
+}
+
+void
+Exercise_12_1::exercise_12_6() {
+    auto* data = factory();
+    set_vector(data);
+    print_vector(data);
+    delete data;
+    data = nullptr;
+}
+
+//------------------------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------------------------
+
+typedef std::shared_ptr<std::vector<int>> shared_ptr;
+
+shared_ptr
+factory_v2() {
+    return std::make_shared<std::vector<int>>();
+}
+
+void
+set_vector(shared_ptr data) {
+    int i;
+    while (std::cin >> i) {
+        data->push_back(i);
+        if (std::cin.get() == '\n')
+            break;
+    }
+}
+
+void
+print_vector(shared_ptr data) {
+    for (const auto& val : *data) {
+        std::cout << val << " ";
+    }
+    std::cout << "\n";
+}
+
+void
+Exercise_12_1::exercise_12_7() {
+    auto data = factory_v2();
+    set_vector(data);
+    print_vector(data);
 }
 
 //------------------------------------------------------------------------------------------------
