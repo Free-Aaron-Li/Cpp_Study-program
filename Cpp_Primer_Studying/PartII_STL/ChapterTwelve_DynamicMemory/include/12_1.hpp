@@ -148,6 +148,78 @@ class Exercise_12_1 {
      * 这样，前者的引用计数变为0，其占用的内存空间会被释放，不会造成内存泄漏。而后者的引用计数变为2，也不会因为r2和q2之一的销毁而释放它的内存空间，因此也不会造成空悬指针的问题。
      * */
     static void meaninglessFunction_6();
+
+    /**
+     * @title
+     * 12.1.3 shared_ptr和new结合使用
+     */
+
+    /**
+     * @title
+     * 练习12.10
+     * @description
+     * 下面的代码调用了第413页中定义的process函数，解释此调用是否正确。如果不正确，应如何修改？
+     * @code
+     * shared_ptr<int> p(new int(42));
+     * process(shared_ptr<int>(p));
+     */
+    /*
+     * 此调用是正确的，利用p创建一个临时的shared_ptr赋予process的参数ptr,p和ptr都指向相同的int对象，引用计数被正确地置为2。
+     * process执行完毕后，ptr被销毁，引用计数建1,只有p指向动态内存
+     * */
+    static void meaninglessFunction_7();
+
+    /**
+     * @title
+     * 练习12.11
+     * @description
+     * 如果我们像下面这样调用process,会发生什么？
+     * @code
+     * process(shared_ptr<int>(p.get());
+     */
+    /*
+     * 这样调用是错误的。p.get获得普通指针，指向p所共享的int对象。
+     * 这样利用此指针创建一个shared_ptr，与正常利用p创建一个shared_ptr区别在于不会形成正确的动态对象共享。
+     * 编译器会认为p和ptr是使用两个地址创建的两个不相干的shared_ptr，而非共享同一个动态对象。二者均为1,当process执行完毕后，
+     * ptr引用计数为0，所管理的内存被释放，同时p管理相同的内存，导致p成为一个空悬指针。
+     * */
+    static void meaninglessFunction_8();
+
+    /**
+     * @title
+     * 练习12.12
+     * @description
+     * p和sp的定义如下，对于接下来的process的每个调用，如果合法，解释它做了什么，如果不合法，解释错误原因：
+     * @code
+     * auto p = new int();
+     * auto sp = make_shared<int>();
+     * (a) process(sp);
+     * (b) process(new int());
+     * (c) process(p);
+     * (d) process(shared_ptr<int>(p));
+     */
+    /*
+     * a. 合法，值传递给process一个shared_ptr
+     * b. 不合法，普通指针无法隐式转换为智能指针
+     * c. 不合法，普通指针无法隐式转换为智能指针
+     * d. 不合法，将普通指针交由智能指针管理，其引用计数为1,当函数结束，引用计数为0并释放p所指向的内存，p成为空悬指针。
+     * */
+    static void exercise_12_12();
+
+    /**
+     * @title
+     * 练习12.13
+     * @description
+     * 如果执行下面的代码，会发生什么？
+     * @code
+     * auto sp = make_shared<int>();
+     * auto p = sp.get();
+     * delete p;
+     */
+    /*
+     * 将智能指针转换为普通指针，为p提供访问sp指向内存的权限。通过p删除sp指向的内存，导致sp成为空悬指针。
+     * */
+    static void meaninglessFunction_9();
 };
 
 #endif  // CPP_PRIMER_STUDYING_12_1_HPP
