@@ -220,6 +220,27 @@ class Exercise_12_1 {
      * 将智能指针转换为普通指针，为p提供访问sp指向内存的权限。通过p删除sp指向的内存，导致sp成为空悬指针。
      * */
     static void meaninglessFunction_9();
+
+    /**
+     * @title
+     * 12.1.4 智能指针和异常
+     */
+
+    /**
+     * @title
+     * 练习12.14
+     * @description
+     * 编写你自己版本的用shared_ptr管理connection的函数。
+     */
+    static void exercise_12_14();
+
+    /**
+     * @title
+     * 练习12.15
+     * @description
+     * 重写第一题的程序，用lambda代替end_connection函数。
+     */
+    static void exercise_12_15();
 };
 
 #endif  // CPP_PRIMER_STUDYING_12_1_HPP

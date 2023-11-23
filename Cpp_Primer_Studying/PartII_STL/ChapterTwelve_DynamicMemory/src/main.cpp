@@ -13,7 +13,9 @@ test_12_1() {
     // Exercise_12_1::exercise_12_2();
     // Exercise_12_1::exercise_12_6();
     // Exercise_12_1::exercise_12_7();
-    Exercise_12_1::exercise_12_12();
+    // Exercise_12_1::exercise_12_12();
+    // Exercise_12_1::exercise_12_14();
+    Exercise_12_1::exercise_12_15();
 }
 
 int

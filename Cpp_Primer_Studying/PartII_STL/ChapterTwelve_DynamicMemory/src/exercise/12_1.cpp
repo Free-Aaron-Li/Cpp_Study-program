@@ -135,7 +135,7 @@ factory_v2() {
 }
 
 void
-set_vector(shared_ptr data) {
+set_vector(const shared_ptr& data) {
     int i;
     while (std::cin >> i) {
         data->push_back(i);
@@ -145,7 +145,7 @@ set_vector(shared_ptr data) {
 }
 
 void
-print_vector(shared_ptr data) {
+print_vector(const shared_ptr& data) {
     for (const auto& val : *data) {
         std::cout << val << " ";
     }
@@ -162,7 +162,7 @@ Exercise_12_1::exercise_12_7() {
 //------------------------------------------------------------------------------------------------
 
 void
-process(std::shared_ptr<int> ptr) {
+process(const std::shared_ptr<int>& ptr) {
     *ptr += 1;
 }
 
@@ -176,10 +176,10 @@ Exercise_12_1::exercise_12_12() {
     // executed, destory `ptr` and decrease the reference count.
     process(sp);
 
-    // (b) Error. Cannot implicitly convert a ordinary pointer to a smart pointer.
+    // (b) Error. Cannot implicitly convert an ordinary pointer to a smart pointer.
     // process(new int());
 
-    // (c) Error. Cannot implicitly convert a ordinary pointer to a smart pointer.
+    // (c) Error. Cannot implicitly convert an ordinary pointer to a smart pointer.
     // process(p);
 
     // (d) Error. Initialize a shared pointer `ptr` inside function `process`
@@ -190,4 +190,61 @@ Exercise_12_1::exercise_12_12() {
     process(std::shared_ptr<int>(p));
 
     std::cout << "p is: " << *p << ", sp is: " << *sp << "\n";
+}
+
+//------------------------------------------------------------------------------------------------
+
+/* The target that needs to be connected */
+struct Destination {
+    unsigned id;
+    explicit Destination(unsigned destination_id = 0) : id(destination_id) {}
+};
+
+/* information of connection */
+struct Connection {
+    Destination* destination;
+};
+
+Connection
+connect(Destination* des) {
+    Connection new_connection{};
+    new_connection.destination = des;
+    std::cout << "Setup connection to " << new_connection.destination->id << "\n";
+}
+
+void
+disconnect(Connection connection) {
+    std::cout << "Stop connection to " << connection.destination->id << "\n";
+    connection.destination = nullptr;
+}
+
+void
+end_connection(Connection* p) {
+    disconnect(*p);
+}
+
+void
+f(Destination& d) {
+    Connection                  c = connect(&d);
+    std::shared_ptr<Connection> p(&c, end_connection);
+}
+
+void
+Exercise_12_1::exercise_12_14() {
+    Destination destination(5);
+    f(destination);
+}
+
+//------------------------------------------------------------------------------------------------
+
+void
+f_v2(Destination& d) {
+    Connection                  c = connect(&d);
+    std::shared_ptr<Connection> p(&c, [](Connection* p) { disconnect(*p); });
+}
+
+void
+Exercise_12_1::exercise_12_15() {
+    Destination destination(6);
+    f_v2(destination);
 }
