@@ -26,6 +26,10 @@ void
 Exercise_12_1::meaninglessFunction_8() {}
 void
 Exercise_12_1::meaninglessFunction_9() {}
+void
+Exercise_12_1::meaninglessFunction_10() {}
+void
+Exercise_12_1::meaninglessFunction_11() {}
 
 //------------------------------------------------------------------------------------------------
 
@@ -210,7 +214,7 @@ connect(Destination* des) {
     Connection new_connection{};
     new_connection.destination = des;
     std::cout << "Setup connection to " << new_connection.destination->id << "\n";
-}
+};
 
 void
 disconnect(Connection connection) {
@@ -247,4 +251,16 @@ void
 Exercise_12_1::exercise_12_15() {
     Destination destination(6);
     f_v2(destination);
+}
+
+void
+Exercise_12_1::exercise_12_16() {
+    std::unique_ptr<int> p1(new int(42));
+    /*
+     *  error: use of deleted function ‘std::unique_ptr<_Tp, _Dp>::unique_ptr(const std::unique_ptr<_Tp, _Dp>&) [with
+     * _Tp = int; _Dp = std::default_delete<int>]’ unique_ptr(const unique_ptr&) = delete;
+     *  */
+    // std::unique_ptr<int> p2(p1);
+    // std::unique_ptr<int> p3;
+    // p3 = p1;
 }

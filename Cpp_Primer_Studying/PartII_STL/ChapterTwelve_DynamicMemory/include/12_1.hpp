@@ -241,6 +241,56 @@ class Exercise_12_1 {
      * 重写第一题的程序，用lambda代替end_connection函数。
      */
     static void exercise_12_15();
+
+    /**
+     * @title
+     * 12.1.5 unique_ptr
+     */
+
+    /**
+     * @title
+     * 练习12.16
+     * @description
+     * 如果你试图拷贝或赋值unique_ptr，编译器并不总是能给出易于理解的错误信息。编写包含这种错误的程序，观察编译器如何诊断这种错误。
+     */
+    /*
+     * 错误原因：程序调用了delete函数。
+     * 原因是，标准库为了禁止unique_ptr的拷贝和赋值，将其拷贝构造函数和赋值函数声明为delete
+     * */
+    static void exercise_12_16();
+
+    /**
+     * @title
+     * 练习12.17
+     * @description
+     * 下面的unique_ptr声明中，哪些是合法的，哪些可能导致后续的程序错误？解释每个错误的问题在哪里。
+     * @code
+     * int ix = 1024, *pi = &ix, *pi2 = new int(2014);
+     * typedef unique_ptr<int> IntP;
+     * (a) IntP p0(ix);             (b) IntP p1(pi);
+     * (c) IntP p2(pi2);            (d) IntP p3(&ix);
+     * (e) IntP p4(new int(2048));  (f) IntP p5(p2.get());
+     */
+    /*
+     * a. 不合法，无法将int转换为指针
+     * b. 合法，从程序结构上合法，但是逻辑上非法。pi指向的非动态内存，智能指针无法释放非动态内存
+     * c. 合法
+     * d. 与b项一致
+     * e. 合法
+     * f. 合法，从程序结构上合法，但逻辑上非法。会造成空悬指针
+     * */
+    static void meaninglessFunction_10();
+
+    /**
+     * @title
+     * 练习12.18
+     * @description
+     * shared_ptr为什么没有release成员？
+     */
+    /*
+     * 因为我们可以让尽可能多的shared_ptr指向同一个内存。因此，内存的所有权不需要由一个指针释放并传递给另一个指针。
+     * */
+    static void meaninglessFunction_11();
 };
 
 #endif  // CPP_PRIMER_STUDYING_12_1_HPP

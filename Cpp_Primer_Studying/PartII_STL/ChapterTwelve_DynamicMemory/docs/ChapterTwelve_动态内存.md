@@ -342,8 +342,80 @@ void f(destination &d){
 > - 如果你使用智能指针管理的资源不是new分配的内存，记住传递给它一个删除器
 >> 智能指针默认调用delete操作销毁内存
 
+### unique_ptr
 
+一个“unique_ptr”“拥有”它所指向的一个对象。
 
+|             unique_ptr特有操作              |                                 解释                                  |
+|:---------------------------------------:|:-------------------------------------------------------------------:|
+| unique_ptr<T> u1<br/>unique_ptr<T,D> u2 | 空unique_ptr,可以指向类型为T的对象。u1会使用delete来释放它的指针；u2会使用一个类型为D的可调用对象来释放它的指针 |
+|          unique_ptr<T,D> u(d)           |               空unique_ptr,指向类型为T的对象，用类型为D的对象d代替delete               |
+|                u=nullptr                |                           释放u指向的对象，将u置为空                            |
+|                u.release                |                        u放弃对指针的控制权，返回指针并将u置为空                        |
+|                u.reset()                |                              释放u指向的对象                               |
+|     u.reset(q)<br/>u.reset(nullptr)     |                     如果提供了内置指针q,令u指向这个对象；否则将u置为空                     |
+
+无法使用类似make_shared的标准库函数返回一个unique_ptr。所以当定义一个unique_ptr时，需要绑定到一个new返回的指针上。
+
+```cpp
+unique_ptr<int> p(new int(42)); 
+```
+
+由于unique_ptr拥有它指向的对象，所以unique_ptr不支持普通的拷贝或赋值操作
+
+```cpp
+unique_ptr<int> p1(new int(42));
+unique_ptr<int> p2(p1); // false
+unique_ptr<int> p3;
+p3=p1; // false
+```
+
+但是可以通过release或reset实现指针控制权的转移：
+
+```cpp
+// 将控制权从p1转移到p2
+unique_ptr<int> p2(p1.release()); // release将p1置为空，且返回指针
+unique_ptr<int> p3(new int(42));
+// 将控制权从p3转移到p2
+p2.reset(p3.release()); // reset释放p2原本指向内存
+```
+
+调用release函数会切断unique_ptr和它原本管理的对象间的联系。release返回的指针（一般为内置指针）通常被用来初始化另一个智能指针或给另一个智能指针赋值。这仅仅是简单的权力交接，但是，如果不用一个智能指针保存release返回的指针，则需要负责资源的释放。
+
+不能拷贝unique_ptr规则的一个例外：可以拷贝或赋值一个将要被销毁的unique_ptr：
+
+```cpp
+unique_ptr<int> clone(int p){
+	return unique_ptr<int>(new int(p)); // 从int*创建一个unique_ptr<int>
+}
+
+unique_ptr<int> clone(int p){
+	unique_ptr<int> ret(new int(p));
+	// ...
+	return ret;
+}
+```
+
+编译器知道要返回的对象将要被销毁，所以在这种特殊的情况下，编译器执行一种特殊的“拷贝”。
+
+#### 向unique_ptr传递删除器
+
+类似于shared_ptr,unique_ptr默认情况下用delete释放其对象，也可以重载unique_ptr中的默认删除器。但是,unique_ptr管理删除器的方式与shared_ptr不同。
+
+重载一个unique_ptr中的删除器会影响到unique_ptr类型以及如何构造该类型的对象。所以必须在尖括号中unique_ptr指向类型之后提供删除器类型。在创建或reset一个这种unique_ptr类型的对象时，必须提供一个指向类型的可调用对象（删除器）：
+
+```cpp
+unique_ptr<objT,delT> p(new objT,fun);
+```
+
+例如：
+
+```cpp
+void f(Destination &d){
+	Connection c = connect(&d);
+	unique_ptr<Connection, decltype(end_connection)*> p (&c,end_connection);
+}
+```
 
 
 
