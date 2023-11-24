@@ -264,3 +264,5 @@ Exercise_12_1::exercise_12_16() {
     // std::unique_ptr<int> p3;
     // p3 = p1;
 }
+void
+Exercise_12_1::meaninglessFunction_12() {}

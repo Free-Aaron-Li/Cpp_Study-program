@@ -417,6 +417,18 @@ void f(Destination &d){
 }
 ```
 
+### weak_ptr
 
+weak_ptr是一种不控制所指向对象生存周期的智能指针，它指向由一个shared_ptr管理的对象。其具有<b>“弱”共享对象</b>的特点：<b>绑定</b>到某个shared_ptr上并不会改变该shared_ptr引用计数；即使weak_ptr还指向某个对象，当指向该对象的shared_ptr被销毁时，该对象也会被释放。并不会因为weak_ptr关系而不释放。
 
+|     weak_ptr      |                           解释                           |
+|:-----------------:|:------------------------------------------------------:|
+|   weak_ptr<T> w   |                  空weak_ptr可以指向类型为T的对象                  |
+| weak_ptr<T> w(sp) |       与shared_ptr指向相同对象的weak_ptr。T必须能转换为sp指向的类型        |
+|        w=p        |         p可以是一个shared_ptr或一个weak_ptr。赋值后w与p共享对象         |
+|     w.reset()     |                         将w置为空                          |
+|   w.use_count()   |                  与w共享对象的shared_ptr的数量                  |
+|    w.expired()    |           若w.use_count()为0,返回true,否则返回false            |
+|     w.lock()      | 如果expired为true，返回一个空shared_ptr；否则返回一个指向w的对象的shared_ptr |
 
+由于weak_ptr“弱”共享的特性，存在weak_ptr指向内存已经被释放情况。所以，weak_ptr不能直接访问对象，需要调用lock函数检查weak_ptr指向对象是否存在，如果存在返回指向共享内存的shared_ptr。

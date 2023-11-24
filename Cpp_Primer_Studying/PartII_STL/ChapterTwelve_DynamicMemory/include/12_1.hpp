@@ -291,6 +291,19 @@ class Exercise_12_1 {
      * 因为我们可以让尽可能多的shared_ptr指向同一个内存。因此，内存的所有权不需要由一个指针释放并传递给另一个指针。
      * */
     static void meaninglessFunction_11();
+
+    /**
+     * @title
+     * 12.1.6 weak_ptr
+     */
+
+    /**
+     * @title
+     * 练习12.19
+     * @description
+     * 定义你自己版本的StrBlobPtr，更新StrBlob类，加入恰当的friend声明及begin和end成员
+     */
+    static void meaninglessFunction_12();
 };
 
 #endif  // CPP_PRIMER_STUDYING_12_1_HPP
