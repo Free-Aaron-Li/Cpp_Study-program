@@ -30,9 +30,11 @@ void
 Exercise_12_1::meaninglessFunction_10() {}
 void
 Exercise_12_1::meaninglessFunction_11() {}
+void
+Exercise_12_1::meaninglessFunction_12() {}
 
 //------------------------------------------------------------------------------------------------
-
+//
 void
 testStrBlob(StrBlob& strBlob) {
     try {
@@ -90,11 +92,11 @@ Exercise_12_1::exercise_12_2() {
     testStrBlob(strBlob_4);
     std::cout << "\n-----------------------------------\n";
 }
-
+//
 //------------------------------------------------------------------------------------------------
 
 //------------------------------------------------------------------------------------------------
-
+//
 std::vector<int>*
 factory() {
     return new std::vector<int>;
@@ -126,11 +128,11 @@ Exercise_12_1::exercise_12_6() {
     delete data;
     data = nullptr;
 }
-
+//
 //------------------------------------------------------------------------------------------------
 
 //------------------------------------------------------------------------------------------------
-
+//
 typedef std::shared_ptr<std::vector<int>> shared_ptr;
 
 shared_ptr
@@ -162,7 +164,7 @@ Exercise_12_1::exercise_12_7() {
     set_vector(data);
     print_vector(data);
 }
-
+//
 //------------------------------------------------------------------------------------------------
 
 void
@@ -197,7 +199,7 @@ Exercise_12_1::exercise_12_12() {
 }
 
 //------------------------------------------------------------------------------------------------
-
+//
 /* The target that needs to be connected */
 struct Destination {
     unsigned id;
@@ -238,7 +240,7 @@ Exercise_12_1::exercise_12_14() {
     Destination destination(5);
     f(destination);
 }
-
+//
 //------------------------------------------------------------------------------------------------
 
 void
@@ -267,7 +269,7 @@ Exercise_12_1::exercise_12_16() {
 
 
 //------------------------------------------------------------------------------------------------
-
+//
 void
 testStrBlob_v2(StrBlob& strBlob) {
     try {
@@ -346,5 +348,47 @@ Exercise_12_1::exercise_12_19() {
     testStrBlobPtr(strBlobPtr_2);
     std::cout << "\n-----------------------------------\n";
 }
+//
+//------------------------------------------------------------------------------------------------
 
+#define TEST_PATH "./../asset/"
+void
+Exercise_12_1::exercise_12_20() {
+    std::cout << "Input the file name: ";
+    std::string filename;
+    std::cin >> filename;
+    std::ifstream in(TEST_PATH + filename);
+    if (!in.is_open()) {
+        std::cerr << "Cannot open file: " << filename << "\n";
+        return;
+    }
+    StrBlob     words;
+    std::string line;
+    while (std::getline(in, line))
+        words.push_back(line);
+    StrBlobPtr begin = words.begin();
+    for (StrBlob::size_type pos = 0; pos != words.size(); ++pos, begin.incr())
+        std::cout << "line " << pos + 1 << ":\t" << begin.deref() << "\n";
+}
+
+//------------------------------------------------------------------------------------------------
+//
+void
+testConstStrBlobPtr(ConstStrBlobPtr& constStrBlobPtr) {
+    try {
+        for (auto val = constStrBlobPtr;; val.inc())
+            std::cout << "deref: " << val.deref() << "\n";
+    } catch (std::out_of_range error) {
+        std::cerr << error.what() << ", the type is out_of_range\n";
+    } catch (std::exception error) { std::cerr << error.what() << "\n"; }
+}
+
+void
+Exercise_12_1::exercise_12_22() {
+    const StrBlob   csb({"This", "Blob"});
+    ConstStrBlobPtr csbp(csb, csb.size());
+    testConstStrBlobPtr(csbp);
+    std::cout << "\n";
+}
+//
 //------------------------------------------------------------------------------------------------

@@ -304,6 +304,41 @@ class Exercise_12_1 {
      * 定义你自己版本的StrBlobPtr，更新StrBlob类，加入恰当的friend声明及begin和end成员
      */
     static void exercise_12_19();
+
+    /**
+     * @title
+     * 练习12.20
+     * @description
+     * 编写程序，逐行读入一个输入文件，将文件存入一个StrBlob中，用一个StrBlobPtr打印出StrBlob中的每个元素。
+     */
+    static void exercise_12_20();
+
+    /**
+     * @title
+     * 练习12.21
+     * @description
+     * 也可以这样编写StrBlobPtr的deref成员：
+     * @code
+     * std:string& deref() const{
+     *      return (*check(curr,"dereference past end"))[curr];
+     * }
+     * 你认为哪个版本更好？为什么？
+     */
+    /*
+     * 书中的方式更好一些。将合法性检查与元素获取和返回语句分离开来，代码更清晰易读，当执行到第二条语句时，已确保p是存在的vector，curr是合法的位置，
+     * 可安全地获取元素并返回。这种清晰的结构也更有利于修改不同的处理逻辑。
+     * 本题中的版本将合法性检查和元素获取及返回合在一条语句中，不易读，也不易修改。
+     */
+    static void meaninglessFunction_12();
+
+    /**
+     * @title
+     * 练习12.22
+     * @description
+     * 为了能让StrBLobPtr使用const StrBlob，你觉得应该如何修改？定义一个名为ConstStrBlobPtr的类，使其能够指向const
+     * StrBlob。
+     */
+    static void exercise_12_22();
 };
 
 #endif  // CPP_PRIMER_STUDYING_12_1_HPP

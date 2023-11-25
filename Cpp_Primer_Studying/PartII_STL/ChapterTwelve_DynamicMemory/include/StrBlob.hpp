@@ -10,12 +10,14 @@
 #define CPP_PRIMER_STUDYING_STRBLOB_HPP
 
 class StrBlobPtr;
+class ConstStrBlobPtr;
 #include <iostream>
 #include <vector>
 #include <memory>
 
 class StrBlob {
     friend class StrBlobPtr;
+    friend class ConstStrBlobPtr;
 
  public:
     typedef std::vector<std::string>::size_type size_type;
