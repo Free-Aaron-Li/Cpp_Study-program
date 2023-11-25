@@ -21,5 +21,6 @@
 #include <fstream>
 #include <memory>
 #include <vector>
+#include <cstring>
 
 #endif  // CPP_PRIMER_STUDYING_12_HPP

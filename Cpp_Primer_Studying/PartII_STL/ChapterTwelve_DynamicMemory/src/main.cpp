@@ -7,6 +7,7 @@
 // This program is called:'main'.
 // If there are no special instructions, this file is used as an exercise and test file.
 #include "12_1.hpp"
+#include "12_2.hpp"
 
 void
 test_12_1() {
@@ -22,8 +23,15 @@ test_12_1() {
     Exercise_12_1::exercise_12_22();
 }
 
+void
+test_12_2() {
+    // Exercise_12_2::exercise_12_23();
+    Exercise_12_2::exercise_12_24();
+}
+
 int
 main() {
-    test_12_1();
+    // test_12_1();
+    test_12_2();
     return 0;
 }
