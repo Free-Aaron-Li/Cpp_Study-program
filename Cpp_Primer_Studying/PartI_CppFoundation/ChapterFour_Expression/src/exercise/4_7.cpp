@@ -1,22 +1,26 @@
 // Copyright (c) 2023. aaron.
 //
 // This program is under the GPL-3.0 license.
-// if you have not received it or the program has a bug,please let me know: <communicate_aaron@outlook.com>.
+// if you have not received it or the program has a bug, please let me know: <communicate_aaron@outlook.com>.
 
 #include "4_7.hpp"
 
-void Exercise_4_7::meaninglessFunction_1() {}
+void
+Exercise_4_7::meaninglessFunction_1() {}
 
-void Exercise_4_7::meaninglessFunction_2() {}
+void
+Exercise_4_7::meaninglessFunction_2() {}
 
-void Exercise_4_7::exercise_4_21() {
+void
+Exercise_4_7::exercise_4_21() {
     std::vector<int> vector{-1, 1, 3, 4, 5, 6, 7, 8, 10, 23, 44};
     for (auto c : vector) {
         std::cout << ((c % 2 == 0) ? c : c * 2) << " ";
     }
 }
 
-void Exercise_4_7::exercise_4_22() {
+void
+Exercise_4_7::exercise_4_22() {
     std::cout << "请输入一个分数：";
     int number;
     std::cin >> number;

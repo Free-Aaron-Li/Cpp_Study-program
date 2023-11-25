@@ -1,7 +1,7 @@
 // Copyright (c) 2023. aaron.
 //
 // This program is under the GPL-3.0 license.
-// if you have not received it or the program has a bug,please let me know: <communicate_aaron@outlook.com>.
+// if you have not received it or the program has a bug, please let me know: <communicate_aaron@outlook.com>.
 *@author AaronLi *@data 2023 - 06 - 02 - 下午2 : 10 * @license GPL
   - 3.0 * /
 
@@ -9,24 +9,33 @@
 
 #include <cstring>
 
-      void Exercise_3_5::meaninglessFunction_1() {
+      void
+      Exercise_3_5::meaninglessFunction_1() {
 }
 
-void Exercise_3_5::meaninglessFunction_2() {}
+void
+Exercise_3_5::meaninglessFunction_2() {}
 
-void Exercise_3_5::meaninglessFunction_3() {}
+void
+Exercise_3_5::meaninglessFunction_3() {}
 
-void Exercise_3_5::meaninglessFunction_4() {}
+void
+Exercise_3_5::meaninglessFunction_4() {}
 
-void Exercise_3_5::meaninglessFunction_5() {}
+void
+Exercise_3_5::meaninglessFunction_5() {}
 
-void Exercise_3_5::meaninglessFunction_6() {}
+void
+Exercise_3_5::meaninglessFunction_6() {}
 
-void Exercise_3_5::meaninglessFunction_7() {}
+void
+Exercise_3_5::meaninglessFunction_7() {}
 
-void Exercise_3_5::meaninglessFunction_8() {}
+void
+Exercise_3_5::meaninglessFunction_8() {}
 
-void Exercise_3_5::exercise_3_31() {
+void
+Exercise_3_5::exercise_3_31() {
     int array[10] = {};
     int i         = 0;
     for (auto &c : array) {
@@ -37,7 +46,8 @@ void Exercise_3_5::exercise_3_31() {
     }
 }
 
-void Exercise_3_5::exercise_3_32() {
+void
+Exercise_3_5::exercise_3_32() {
     int array[10] = {};
     int i         = 0;
     for (auto &c : array) {
@@ -67,7 +77,8 @@ void Exercise_3_5::exercise_3_32() {
     }
 }
 
-void Exercise_3_5::exercise_3_35() {
+void
+Exercise_3_5::exercise_3_35() {
     std::cout << "数组原本内容为：";
     int array[] = {1, 2, 3, 4, 5};
     for (auto c : array) {
@@ -84,7 +95,8 @@ void Exercise_3_5::exercise_3_35() {
     }
 }
 
-void Exercise_3_5::exercise_3_36() {
+void
+Exercise_3_5::exercise_3_36() {
     int array_1[] = {1, 2, 3, 4, 5};
     int array_2[] = {1, 2, 3, 4, 6};
 
@@ -128,7 +140,8 @@ void Exercise_3_5::exercise_3_36() {
         std::cout << "二者数组不相同";
 }
 
-void Exercise_3_5::exercise_3_39() {
+void
+Exercise_3_5::exercise_3_39() {
     std::string str_1 = "this is good time!";
     std::string str_2 = "this is good time!";
 
@@ -148,7 +161,8 @@ void Exercise_3_5::exercise_3_39() {
         std::cout << "两个字符串不相同";
 }
 
-void Exercise_3_5::exercise_3_40() {
+void
+Exercise_3_5::exercise_3_40() {
     const char str_1[] = "this is";
     const char str_2[] = " good time!";
     char       str_3[strlen(str_1) + strlen(str_2) + 1];
@@ -159,7 +173,8 @@ void Exercise_3_5::exercise_3_40() {
     }
 }
 
-void Exercise_3_5::exercise_3_41() {
+void
+Exercise_3_5::exercise_3_41() {
     int              array[] = {1, 2, 3};
     std::vector<int> vector(std::begin(array), std::end(array));
     for (auto c : vector) {
@@ -167,7 +182,8 @@ void Exercise_3_5::exercise_3_41() {
     }
 }
 
-void Exercise_3_5::exercise_3_42() {
+void
+Exercise_3_5::exercise_3_42() {
     std::vector<int> vector{1, 2, 3};
     int              array[vector.size()];
     int              i = 0;

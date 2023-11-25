@@ -1,7 +1,7 @@
 // Copyright (c) 2023. aaron.
 //
 // This program is under the GPL-3.0 license.
-// if you have not received it or the program has a bug,please let me know: <communicate_aaron@outlook.com>.
+// if you have not received it or the program has a bug, please let me know: <communicate_aaron@outlook.com>.
 
 /**
  * @author AaronLi
@@ -17,7 +17,7 @@
  * 2.5 处理类型
  */
 class Exercise_2_5 {
-public:
+ public:
     /**
      * @title
      * 2.5.2节练习
@@ -33,7 +33,8 @@ public:
      *  (b) d=42; e=42; g=42;
      */
     /* a. a为整型，所以a=42；b为整型，所以b=42；c为整型，所以c=42；
-     * b. d为整型指针，错误；e为指向整型常量的指针，即含有底层const，为指针常量，错误；g为整型常量引用，无法被非常量赋值，当g含有顶层const才能被赋值,错误。
+     * b.
+     * d为整型指针，错误；e为指向整型常量的指针，即含有底层const，为指针常量，错误；g为整型常量引用，无法被非常量赋值，当g含有顶层const才能被赋值,错误。
      * */
 
     /**
@@ -55,8 +56,8 @@ public:
      *  (c) const auto j2=i,&k2=i;
      */
     /* a. i为整型常量，值为42；
-     * b. j为整型变量，值为42，auto为int；k为常量引用，auto为int；p为指向整型常量的指针，拥有底层const，auto为const int；
-     * c. j2为整型常量，值为42，auto为int；ke为整型引用；
+     * b. j为整型变量，值为42，auto为int；k为常量引用，auto为int；p为指向整型常量的指针，拥有底层const，auto为const
+     * int； c. j2为整型常量，值为42，auto为int；ke为整型引用；
      * */
 
     /**
@@ -114,4 +115,4 @@ public:
      * */
 };
 
-#endif //CPP_PRIMER_2_5_HPP
+#endif  // CPP_PRIMER_2_5_HPP

@@ -1,7 +1,7 @@
 // Copyright (c) 2023. aaron.
 //
 // This program is under the GPL-3.0 license.
-// if you have not received it or the program has a bug,please let me know: <communicate_aaron@outlook.com>.
+// if you have not received it or the program has a bug, please let me know: <communicate_aaron@outlook.com>.
 *@author AaronLi *@data 2023 - 06 - 01 - 下午1 : 01 * @license GPL
   - 3.0 * /
 
@@ -9,7 +9,8 @@
 #include <iterator>
 #include <vector>
 
-      void test_add() {
+      void
+      test_add() {
     std::vector<int> vector_1;
     std::vector<int> vector_2;
 
@@ -32,13 +33,15 @@
     std::cout << (iterator_1 > iterator_2) << "\n";
 }
 
-void test_iterator_add() {
+void
+test_iterator_add() {
     std::vector<int> vector_1{1, 2, 3, 4, 5, 6, 7};
     auto             iterator_1 = vector_1.begin();
     auto             iterator_2 = vector_1.end();
 }
 
-void test_array() {
+void
+test_array() {
     int array[2 * 7 - 14];
 
     constexpr size_t array_size = 10;
@@ -51,7 +54,8 @@ void test_array() {
     }
 }
 
-void test_interface() {
+void
+test_interface() {
     const char  str_1[]   = {'1', '2', '3', '\0'};
     const char  str_1_c[] = {'9', '8', '7'};
     std::string str_2;
@@ -70,7 +74,8 @@ void test_interface() {
     }
 }
 
-int main() {
+int
+main() {
     // test_add();
     test_interface();
     return 0;

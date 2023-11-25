@@ -1,13 +1,15 @@
 // Copyright (c) 2023. aaron.
 //
 // This program is under the GPL-3.0 license.
-// if you have not received it or the program has a bug,please let me know: <communicate_aaron@outlook.com>.
+// if you have not received it or the program has a bug, please let me know: <communicate_aaron@outlook.com>.
 
 #include "4_9.hpp"
 
-void Exercise_4_9::meaninglessFunction_1() {}
+void
+Exercise_4_9::meaninglessFunction_1() {}
 
-void Exercise_4_9::exercise_4_28() {
+void
+Exercise_4_9::exercise_4_28() {
     int         i;
     double      j;
     float       k;
@@ -32,7 +34,8 @@ void Exercise_4_9::exercise_4_28() {
     std::cout << "long double is " << sizeof e << "\n";
 }
 
-void Exercise_4_9::exercise_4_29() {
+void
+Exercise_4_9::exercise_4_29() {
     int x[10], *p = x;
     std::cout << sizeof(x) / sizeof(*p) << "\n";
     std::cout << sizeof(p) << "\n";

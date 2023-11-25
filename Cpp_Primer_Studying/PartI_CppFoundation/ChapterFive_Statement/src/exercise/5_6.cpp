@@ -1,7 +1,7 @@
 // Copyright (c) 2023. aaron.
 //
 // This program is under the GPL-3.0 license.
-// if you have not received it or the program has a bug,please let me know: <communicate_aaron@outlook.com>.
+// if you have not received it or the program has a bug, please let me know: <communicate_aaron@outlook.com>.
 
 // This file is part of Cpp_Primer_Studying project.
 // This program is called:5_6.
@@ -9,7 +9,8 @@
 
 #include "5_6.hpp"
 
-void Exercise_5_6::exercise_5_23() {
+void
+Exercise_5_6::exercise_5_23() {
     int number_1, number_2;
 
     std::cout << "请输入两个整数：";
@@ -17,7 +18,8 @@ void Exercise_5_6::exercise_5_23() {
     std::cout << "二者之比为：" << number_1 / number_2 << "\n";
 }
 
-void Exercise_5_6::exercise_5_24() {
+void
+Exercise_5_6::exercise_5_24() {
     int number_1, number_2;
 
     std::cout << "请输入两个整数：";
@@ -27,7 +29,8 @@ void Exercise_5_6::exercise_5_24() {
     std::cout << "二者之比为：" << number_1 / number_2 << "\n";
 }
 
-void Exercise_5_6::exercise_5_25() {
+void
+Exercise_5_6::exercise_5_25() {
     int number_1, number_2;
 
     std::cout << "请输入两个整数：";
@@ -38,8 +41,7 @@ void Exercise_5_6::exercise_5_25() {
             std::cout << "二者之比为：" << number_1 / number_2 << "\n";
             if (std::cin.get() == '\n')
                 break;
-        }
-        catch (std::runtime_error &error) {
+        } catch (std::runtime_error &error) {
             std::cout << "是否需要输入新数？";
             char option;
             std::cin >> option;

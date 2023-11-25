@@ -1,7 +1,7 @@
 // Copyright (c) 2023. aaron.
 //
 // This program is under the GPL-3.0 license.
-// if you have not received it or the program has a bug,please let me know: <communicate_aaron@outlook.com>.
+// if you have not received it or the program has a bug, please let me know: <communicate_aaron@outlook.com>.
 *@author AaronLi* @data 2023 - 05 - 17 - 下午1 : 22 * @license GPL
   - 3.0 * /
 
@@ -10,7 +10,8 @@
       using std::cin;
 using std::cout;
 
-void Exercise_3_1::range() {
+void
+Exercise_3_1::range() {
     cout << "请输入两个整数：";
     double range_left, range_right;
     cin >> range_left;

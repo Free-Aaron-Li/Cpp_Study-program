@@ -1,7 +1,7 @@
 // Copyright (c) 2023. aaron.
 //
 // This program is under the GPL-3.0 license.
-// if you have not received it or the program has a bug,please let me know: <communicate_aaron@outlook.com>.
+// if you have not received it or the program has a bug, please let me know: <communicate_aaron@outlook.com>.
 
 /**
  * @author AaronLi
@@ -20,7 +20,7 @@
  */
 
 class Exercise_2_6 {
-public:
+ public:
     /**
      * @title
      * 2.6.1节练习
@@ -64,20 +64,20 @@ public:
      * @description
      *  使用你自己的Sales_data类重写1.5.1节、1.5.2节和1.6节的练习。眼下先把Sales——data类的定义和main函数放在同一个文件里。
      */
-     /* TODO 23-5-17 编写Sales_data类完成练习2.41 */
+    /* TODO 23-5-17 编写Sales_data类完成练习2.41 */
 
-     /**
-      * @title
-      * 2.6.3节练习
-      */
+    /**
+     * @title
+     * 2.6.3节练习
+     */
 
-     /**
-      * @title
-      * 练习2.42
-      * @description
-      *  根据你自己的理解重写一个Sales_data.h头文件，并依次为基础重做2.6.2节的练习。
-      */
+    /**
+     * @title
+     * 练习2.42
+     * @description
+     *  根据你自己的理解重写一个Sales_data.h头文件，并依次为基础重做2.6.2节的练习。
+     */
 
-     /* TODO 23-5-17 重写Sales_data.h，重做2.6.2节练习 */
-}; 
-#endif //CPP_PRIMER_2_6_HPP
+    /* TODO 23-5-17 重写Sales_data.h，重做2.6.2节练习 */
+};
+#endif  // CPP_PRIMER_2_6_HPP

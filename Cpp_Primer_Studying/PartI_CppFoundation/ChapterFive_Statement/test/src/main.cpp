@@ -1,7 +1,7 @@
 // Copyright (c) 2023. aaron.
 //
 // This program is under the GPL-3.0 license.
-// if you have not received it or the program has a bug,please let me know: <communicate_aaron@outlook.com>.
+// if you have not received it or the program has a bug, please let me know: <communicate_aaron@outlook.com>.
 
 // This file is part of Cpp_Primer_Studying project.
 // This program is called:main.
@@ -10,7 +10,8 @@
 #include <iostream>
 #include <string>
 
-void test_switch() {
+void
+test_switch() {
     char character;
     int  number = 0;
     std::cin >> character;
@@ -23,7 +24,8 @@ void test_switch() {
     std::cout << "number is " << number << "\n";
 }
 
-void test_switch_Internal_definition() {
+void
+test_switch_Internal_definition() {
     bool index = false;
     // switch (index) {
     //     case true:
@@ -39,15 +41,20 @@ void test_switch_Internal_definition() {
     // }
 }
 
-void test_statement() {
+void
+test_statement() {
     int ix, sz = 10;
     for (; ix != sz; ++ix) {}
     std::cout << ix;
 }
 
-int get_response() { return 2; }
+int
+get_response() {
+    return 2;
+}
 
-void test_5_18() {
+void
+test_5_18() {
     do {
         int v1, v2;
         std::cout << "enter:";
@@ -57,7 +64,8 @@ void test_5_18() {
 };
 
 
-int main() {
+int
+main() {
     // test_switch();
     // test_switch_Internal_definition();
     // test_statement();

@@ -1,18 +1,21 @@
 // Copyright (c) 2023. aaron.
 //
 // This program is under the GPL-3.0 license.
-// if you have not received it or the program has a bug,please let me know: <communicate_aaron@outlook.com>.
+// if you have not received it or the program has a bug, please let me know: <communicate_aaron@outlook.com>.
 
 #include "4_2.hpp"
 
-void Exercise_4_2::meaninglessFunction_3() {}
+void
+Exercise_4_2::meaninglessFunction_3() {}
 
-void Exercise_4_2::exercise_4_4() {
+void
+Exercise_4_2::exercise_4_4() {
     int a = 12 / 3 * 4 + 5 * 15 + 24 % 4 / 2;
     std::cout << "the a is " << a << "\n";
 }
 
-void Exercise_4_2::exercise_4_6() {
+void
+Exercise_4_2::exercise_4_6() {
     std::cout << "请输入一个整数：";
     int number = 0;
     std::cin >> number;
@@ -22,7 +25,8 @@ void Exercise_4_2::exercise_4_6() {
         std::cout << "该整数为奇数";
 }
 
-void Exercise_4_2::exercise_4_7() {
+void
+Exercise_4_2::exercise_4_7() {
     std::cout << "超出short类型的最大数值32767:\n";
     short short_number = 32767;
     ++short_number;

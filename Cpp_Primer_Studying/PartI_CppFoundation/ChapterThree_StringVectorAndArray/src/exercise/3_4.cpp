@@ -1,13 +1,14 @@
 // Copyright (c) 2023. aaron.
 //
 // This program is under the GPL-3.0 license.
-// if you have not received it or the program has a bug,please let me know: <communicate_aaron@outlook.com>.
+// if you have not received it or the program has a bug, please let me know: <communicate_aaron@outlook.com>.
 *@author AaronLi *@data 2023 - 05 - 30 - 下午7 : 59 * @license GPL
   - 3.0 * /
 
 #include "3_4.hpp"
 
-      void Exercise_3_4::outputVector() {
+      void
+      Exercise_3_4::outputVector() {
     std::vector<int>         v1;
     std::vector<int>         v2(10);
     std::vector<int>         v3(10, 42);
@@ -51,7 +52,8 @@
     }
 }
 
-void Exercise_3_4::outputText() {
+void
+Exercise_3_4::outputText() {
     std::vector<std::string> text{"this", "", "is", "", "good", "", "time!"};
 
     std::cout << "the old text is:\n";
@@ -71,7 +73,8 @@ void Exercise_3_4::outputText() {
     }
 }
 
-void Exercise_3_4::iterateVector() {
+void
+Exercise_3_4::iterateVector() {
     std::vector<int> vector_1(10, 11);
     for (auto iter = vector_1.begin(); iter != vector_1.end(); ++iter) {
         *iter *= *iter;
@@ -81,7 +84,8 @@ void Exercise_3_4::iterateVector() {
     }
 }
 
-void Exercise_3_4::outputVector2() {
+void
+Exercise_3_4::outputVector2() {
     std::vector<int> number_vector;
     int              number;
 
@@ -119,7 +123,8 @@ void Exercise_3_4::outputVector2() {
 }
 
 
-void Exercise_3_4::exercise_3_25() {
+void
+Exercise_3_4::exercise_3_25() {
     std::cout << "请输入分数集合：";
     std::vector<int> score_vector;
     int              score;

@@ -1,7 +1,7 @@
 // Copyright (c) 2023. aaron.
 //
 // This program is under the GPL-3.0 license.
-// if you have not received it or the program has a bug,please let me know: <communicate_aaron@outlook.com>.
+// if you have not received it or the program has a bug, please let me know: <communicate_aaron@outlook.com>.
 
 //
 // Created by AaronLi on 23-4-20.
@@ -16,7 +16,7 @@
  */
 
 class Exercise_2_4 {
-public:
+ public:
     /**
      * @title
      * <p> 2.4节练习 </P>
@@ -29,10 +29,10 @@ public:
      *  下面哪些句子是合法的？如果有不合法的句子，请说明为什么？
      * @code
      *  (a) const int buf;       (b) int cnt = 0;
-     *  (c) const int sz=cnt;    (d) ++cnt; ++sz; 
+     *  (c) const int sz=cnt;    (d) ++cnt; ++sz;
      */
 
-    /* 
+    /*
      * a：不合法，const对象必须初始化
      * b：合法，初始化int类型对象
      * c：合法，初始化const对象
@@ -60,7 +60,7 @@ public:
      * a：不合法，r作为引用对象，无法直接引用数值
      * b：
      * */
-  
+
     /**
      * @title
      * <p> 练习2.28 </P>
@@ -71,7 +71,7 @@ public:
      *  (c) const int ic, &r = ic;  (d) const int *const p3;
      *  (e) const int *p;
      */
-     
+
     /*
      * 不合法，常量指针cp未初始化
      * 不合法，常量指针p2未初始化
@@ -147,8 +147,8 @@ public:
      * @code
      *  int null=0,*p=null;
      */
-     /* 非法，应该改为：int null=0,*p=&null
-      * */
+    /* 非法，应该改为：int null=0,*p=&null
+     * */
 };
 
-#endif //CPP_PRIMER_2_4_HPP
+#endif  // CPP_PRIMER_2_4_HPP

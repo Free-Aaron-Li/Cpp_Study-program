@@ -1,13 +1,14 @@
 // Copyright (c) 2023. aaron.
 //
 // This program is under the GPL-3.0 license.
-// if you have not received it or the program has a bug,please let me know: <communicate_aaron@outlook.com>.
+// if you have not received it or the program has a bug, please let me know: <communicate_aaron@outlook.com>.
 *@author AaronLi *@data 2023 - 06 - 03 - 下午6 : 44 * @license GPL
   - 3.0 * /
 
 #include "3_6.hpp"
 
-      void Exercise_3_6::exercise_3_43() {
+      void
+      Exercise_3_6::exercise_3_43() {
     int array[3][4] = {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}};
 
     std::cout << "版本1：\n";
@@ -35,7 +36,8 @@
     }
 }
 
-void Exercise_3_6::exercise_3_44() {
+void
+Exercise_3_6::exercise_3_44() {
     int array[3][4] = {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}};
     using int_array = int[4];
 
@@ -64,7 +66,8 @@ void Exercise_3_6::exercise_3_44() {
     }
 }
 
-void Exercise_3_6::exercise_3_45() {
+void
+Exercise_3_6::exercise_3_45() {
     int array[3][4] = {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}};
     using int_array = int[4];
 

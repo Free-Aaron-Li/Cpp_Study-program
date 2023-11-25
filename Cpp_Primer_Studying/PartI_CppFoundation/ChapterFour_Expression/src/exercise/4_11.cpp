@@ -1,16 +1,21 @@
 // Copyright (c) 2023. aaron.
 //
 // This program is under the GPL-3.0 license.
-// if you have not received it or the program has a bug,please let me know: <communicate_aaron@outlook.com>.
+// if you have not received it or the program has a bug, please let me know: <communicate_aaron@outlook.com>.
 
 #include "4_11.hpp"
 
-void Exercise_4_11::meaninglessFunction_1() {}
-void Exercise_4_11::meaninglessFunction_2() {}
-void Exercise_4_11::meaninglessFunction_3() {}
-void Exercise_4_11::meaninglessFunction_4() {}
+void
+Exercise_4_11::meaninglessFunction_1() {}
+void
+Exercise_4_11::meaninglessFunction_2() {}
+void
+Exercise_4_11::meaninglessFunction_3() {}
+void
+Exercise_4_11::meaninglessFunction_4() {}
 
-void Exercise_4_11::exercise_4_34() {
+void
+Exercise_4_11::exercise_4_34() {
     float  fval = 10.0;
     int    ival = 12;
     double dval = 12.00;

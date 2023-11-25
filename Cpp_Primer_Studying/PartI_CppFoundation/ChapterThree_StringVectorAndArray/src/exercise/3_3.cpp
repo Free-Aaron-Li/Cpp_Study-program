@@ -1,13 +1,14 @@
 // Copyright (c) 2023. aaron.
 //
 // This program is under the GPL-3.0 license.
-// if you have not received it or the program has a bug,please let me know: <communicate_aaron@outlook.com>.
+// if you have not received it or the program has a bug, please let me know: <communicate_aaron@outlook.com>.
 *@author AaronLi *@data 2023 - 05 - 23 - 下午11 : 36 * @license GPL
   - 3.0 * /
 
 #include "3_3.hpp"
 
-      void Exercise_3_3::inputVector() {
+      void
+      Exercise_3_3::inputVector() {
     std::cout << "请输入一串整数（用空格隔开每个数）：";
     int              number;
     std::vector<int> number_array;
@@ -22,7 +23,8 @@
     }
 }
 
-void Exercise_3_3::inputVector_1() {
+void
+Exercise_3_3::inputVector_1() {
     std::cout << "请输入一串字符串（用空格隔开每个字符串）：";
     std::string              str;
     std::vector<std::string> number_array;
@@ -38,7 +40,8 @@ void Exercise_3_3::inputVector_1() {
     std::cout << "\n元素个数为：" << number_array.size();
 }
 
-void Exercise_3_3::outputVector() {
+void
+Exercise_3_3::outputVector() {
     std::vector<int>         v1;
     std::vector<int>         v2(10);
     std::vector<int>         v3(10, 42);
@@ -87,7 +90,8 @@ void Exercise_3_3::outputVector() {
     std::cout << "\nv7 type is: " << abi::__cxa_demangle(typeid(v7).name(), nullptr, nullptr, nullptr) << "\n";
 }
 
-void Exercise_3_3::inputVector_2() {
+void
+Exercise_3_3::inputVector_2() {
     std::vector<char> character_array;
     std::string       str;
     getline(std::cin, str);
@@ -105,7 +109,8 @@ void Exercise_3_3::inputVector_2() {
     }
 }
 
-void Exercise_3_3::inputVector_3() {
+void
+Exercise_3_3::inputVector_3() {
     std::cout << "请输入一组整数：";
     std::vector<int> numbers;
     int              number;
@@ -128,6 +133,8 @@ void Exercise_3_3::inputVector_3() {
         std::cout << numbers[numbers.size() / 2];
 }
 
-void Exercise_3_3::meaninglessFunction_1() {}
+void
+Exercise_3_3::meaninglessFunction_1() {}
 
-void Exercise_3_3::meaninglessFunction_2() {}
+void
+Exercise_3_3::meaninglessFunction_2() {}

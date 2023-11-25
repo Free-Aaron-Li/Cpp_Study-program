@@ -1,7 +1,7 @@
 // Copyright (c) 2023. aaron.
 //
 // This program is under the GPL-3.0 license.
-// if you have not received it or the program has a bug,please let me know: <communicate_aaron@outlook.com>.
+// if you have not received it or the program has a bug, please let me know: <communicate_aaron@outlook.com>.
 
 // This file is part of Cpp_Primer_Studying project.
 // This program is called:5_5.
@@ -9,7 +9,8 @@
 
 #include "5_5.hpp"
 
-void Exercise_5_5::exercise_5_20() {
+void
+Exercise_5_5::exercise_5_20() {
     std::string word, same_word;
 
     std::cout << "请输入单词集合：";
@@ -26,7 +27,8 @@ void Exercise_5_5::exercise_5_20() {
     }
 }
 
-void Exercise_5_5::exercise_5_21() {
+void
+Exercise_5_5::exercise_5_21() {
     std::string word, same_word;
 
     std::cout << "请输入单词集合：";
@@ -47,9 +49,13 @@ void Exercise_5_5::exercise_5_21() {
     }
 }
 
-int get_size() { return 2; }
+int
+get_size() {
+    return 2;
+}
 
-void Exercise_5_5::exercise_5_22() {
+void
+Exercise_5_5::exercise_5_22() {
     int sz;
 
     do {

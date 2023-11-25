@@ -1,7 +1,7 @@
 // Copyright (c) 2023. aaron.
 //
 // This program is under the GPL-3.0 license.
-// if you have not received it or the program has a bug,please let me know: <communicate_aaron@outlook.com>.
+// if you have not received it or the program has a bug, please let me know: <communicate_aaron@outlook.com>.
 
 // This file is part of Cpp_Primer_Studying project.
 // This program is called:5_3.
@@ -9,11 +9,15 @@
 
 #include "5_3.hpp"
 
-void Exercise_5_3::meaninglessFunction_1() {}
-void Exercise_5_3::meaninglessFunction_2() {}
-void Exercise_5_3::meaninglessFunction_3() {}
+void
+Exercise_5_3::meaninglessFunction_1() {}
+void
+Exercise_5_3::meaninglessFunction_2() {}
+void
+Exercise_5_3::meaninglessFunction_3() {}
 
-void Exercise_5_3::exercise_5_5() {
+void
+Exercise_5_3::exercise_5_5() {
     /**
      * 规定：<br>
      * 成绩实行百分制，小于60分成绩为F，每10分为一档，90~100为A，80~90位B，70~80位C，60~70位D。<br>
@@ -47,7 +51,8 @@ Start:
     std::cout << "你的成绩等级为：" << result << "\n";
 }
 
-void Exercise_5_3::exercise_5_6() {
+void
+Exercise_5_3::exercise_5_6() {
     std::cout << "请输入一个分数（100以内的正整数）：";
     unsigned int             achievement;                            /* 定义成绩 */
     std::string              result;                                 /* 成绩等级 */
@@ -71,7 +76,8 @@ Start:
     std::cout << "你的成绩等级为：" << result << "\n";
 }
 
-void Exercise_5_3::exercise_5_9() {
+void
+Exercise_5_3::exercise_5_9() {
     std::string line;
     int         sum = 0;
     std::cout << "请输入一串字母：";
@@ -90,7 +96,8 @@ void Exercise_5_3::exercise_5_9() {
     std::cout << "输入的元音字母有" << sum << "个\n";
 }
 
-void Exercise_5_3::exercise_5_10() {
+void
+Exercise_5_3::exercise_5_10() {
     std::string line;
     int         sum = 0;
     std::cout << "请输入一串字母：";
@@ -114,7 +121,8 @@ void Exercise_5_3::exercise_5_10() {
     std::cout << "输入的元音字母有" << sum << "个\n";
 }
 
-void Exercise_5_3::exercise_5_11() {
+void
+Exercise_5_3::exercise_5_11() {
     int  sum = 0;
     char character;
     std::cout << "请输入一串字母：";
@@ -140,7 +148,8 @@ void Exercise_5_3::exercise_5_11() {
     std::cout << "\n输入的元音字母有" << sum << "个\n";
 }
 
-void Exercise_5_3::exercise_5_12() {
+void
+Exercise_5_3::exercise_5_12() {
     std::string line;
     char        element;
     auto        iter_begin = line.begin();

@@ -1,7 +1,7 @@
 // Copyright (c) 2023. aaron.
 //
 // This program is under the GPL-3.0 license.
-// if you have not received it or the program has a bug,please let me know: <communicate_aaron@outlook.com>.
+// if you have not received it or the program has a bug, please let me know: <communicate_aaron@outlook.com>.
 
 /*
  * This file contains code from "C++ Primer, Fifth Edition", by Stanley B.
@@ -38,8 +38,6 @@
  * Readers shouldn't try to understand the code in this file
  * until they have read those chapters.
  */
-
-
 
 
 
@@ -82,35 +80,44 @@ class Sales_item {
 };
 
 // used in chapter 10
-inline bool compareIsbn(const Sales_item& lhs, const Sales_item& rhs) { return lhs.isbn() == rhs.isbn(); }
+inline bool
+compareIsbn(const Sales_item& lhs, const Sales_item& rhs) {
+    return lhs.isbn() == rhs.isbn();
+}
 
 // nonmember binary operator: must declare a parameter for each operand
-Sales_item operator+(const Sales_item&, const Sales_item&);
+Sales_item
+operator+(const Sales_item&, const Sales_item&);
 
-inline bool operator==(const Sales_item& lhs, const Sales_item& rhs) {
+inline bool
+operator==(const Sales_item& lhs, const Sales_item& rhs) {
     // must be made a friend of Sales_item
     return lhs.units_sold == rhs.units_sold && lhs.revenue == rhs.revenue && lhs.isbn() == rhs.isbn();
 }
 
-inline bool operator!=(const Sales_item& lhs, const Sales_item& rhs) {
+inline bool
+operator!=(const Sales_item& lhs, const Sales_item& rhs) {
     return !(lhs == rhs);  // != defined in terms of operator==
 }
 
 // assumes that both objects refer to the same ISBN
-Sales_item& Sales_item::operator+=(const Sales_item& rhs) {
+Sales_item&
+Sales_item::operator+=(const Sales_item& rhs) {
     units_sold += rhs.units_sold;
     revenue += rhs.revenue;
     return *this;
 }
 
 // assumes that both objects refer to the same ISBN
-Sales_item operator+(const Sales_item& lhs, const Sales_item& rhs) {
+Sales_item
+operator+(const Sales_item& lhs, const Sales_item& rhs) {
     Sales_item ret(lhs);  // copy (|lhs|) into a local object that we'll return
     ret += rhs;           // add in the contents of (|rhs|)
     return ret;           // return (|ret|) by value
 }
 
-std::istream& operator>>(std::istream& in, Sales_item& s) {
+std::istream&
+operator>>(std::istream& in, Sales_item& s) {
     double price;
     in >> s.bookNo >> s.units_sold >> price;
     // check that the inputs succeeded
@@ -121,12 +128,14 @@ std::istream& operator>>(std::istream& in, Sales_item& s) {
     return in;
 }
 
-std::ostream& operator<<(std::ostream& out, const Sales_item& s) {
+std::ostream&
+operator<<(std::ostream& out, const Sales_item& s) {
     out << s.isbn() << " " << s.units_sold << " " << s.revenue << " " << s.avg_price();
     return out;
 }
 
-double Sales_item::avg_price() const {
+double
+Sales_item::avg_price() const {
     if (units_sold)
         return revenue / units_sold;
     else
