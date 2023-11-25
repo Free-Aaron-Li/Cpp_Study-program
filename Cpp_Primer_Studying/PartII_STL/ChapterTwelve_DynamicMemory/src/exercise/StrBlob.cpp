@@ -7,6 +7,7 @@
 // This program is called:'StrBlob'.
 // If there are no special instructions, this file is used as an exercise and test file.
 #include "StrBlob.hpp"
+#include "StrBlobPtr.hpp"
 
 StrBlob::StrBlob() : data(std::make_shared<std::vector<std::string>>()) {}
 StrBlob::StrBlob(std::initializer_list<std::string> initializerList)
@@ -51,4 +52,13 @@ const std::string &
 StrBlob::back() const {
     check(0, "back on empty StrBlob!");
     data->back();
+}
+
+StrBlobPtr
+StrBlob::begin() {
+    return StrBlobPtr(*this);
+}
+StrBlobPtr
+StrBlob::end() {
+    return StrBlobPtr(*this, data->size());
 }

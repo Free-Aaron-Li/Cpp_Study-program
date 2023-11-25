@@ -15,6 +15,7 @@
  */
 
 #include "StrBlob.hpp"
+#include "StrBlobPtr.hpp"
 #include <iostream>
 #include <memory>
 #include <vector>

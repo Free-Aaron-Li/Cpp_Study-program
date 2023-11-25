@@ -264,5 +264,87 @@ Exercise_12_1::exercise_12_16() {
     // std::unique_ptr<int> p3;
     // p3 = p1;
 }
+
+
+//------------------------------------------------------------------------------------------------
+
 void
-Exercise_12_1::meaninglessFunction_12() {}
+testStrBlob_v2(StrBlob& strBlob) {
+    try {
+        strBlob.push_back("abc");
+        std::cout << "front: " << strBlob.front() << " back: " << strBlob.back() << "\n";
+        strBlob.pop_back();
+        std::cout << "front: " << strBlob.front() << " back: " << strBlob.back() << "\n";
+        strBlob.begin().deref() = "transform";
+        for (auto val = strBlob.begin();; val.incr())
+            std::cout << "dereference: " << val.deref() << "\n";
+    } catch (std::out_of_range error) {
+        std::cerr << error.what() << ", the type is out_of_range\n";
+    } catch (std::exception error) { std::cerr << error.what() << "\n"; }
+}
+
+void
+testStrBlob_V3(const StrBlob& strBlob) {
+    try {
+        std::cout << "front is: " << strBlob.front() << ", and back is: " << strBlob.back() << "\n";
+    } catch (std::out_of_range error) {
+        std::cerr << error.what() << ", the type is out_of_range\n";
+    } catch (std::exception error) { std::cerr << error.what() << "\n"; }
+}
+
+void
+testStrBlobPtr(StrBlobPtr& strBlobPtr) {
+    try {
+        strBlobPtr.deref() = "transform2";
+        for (auto val = strBlobPtr;; val.incr())
+            std::cout << "dereference: " << val.deref() << "\n";
+    } catch (std::out_of_range error) {
+        std::cerr << error.what() << ", the type is out_of_range\n";
+    } catch (std::exception error) { std::cerr << error.what() << "\n"; }
+}
+
+void
+Exercise_12_1::exercise_12_19() {
+    StrBlob strBlob_1;
+    StrBlob strBlob_2{"hello", "world"};
+    StrBlob strBlob_3 = {"wuhu", "best", "ok"};
+    StrBlob strBlob_4({"ni", "hao"});
+
+    std::cout << "strBlob_1 is:\n";
+    testStrBlob_v2(strBlob_1);
+    std::cout << "\n-----------------------------------\n";
+
+    std::cout << "strBlob_2 is:\n";
+    testStrBlob_v2(strBlob_2);
+    std::cout << "\n-----------------------------------\n";
+
+    std::cout << "strBlob_3 is:\n";
+    testStrBlob_v2(strBlob_3);
+    std::cout << "\n-----------------------------------\n";
+
+    std::cout << "strBlob_4 is:\n";
+    testStrBlob_v2(strBlob_4);
+    std::cout << "\n-----------------------------------\n";
+
+    const StrBlob const_strBlob_1;
+    const StrBlob const_strBlob_2{"yes", "you", "right"};
+    std::cout << "const_strBlob_1 is:\n";
+    testStrBlob_V3(const_strBlob_1);
+    std::cout << "\n-----------------------------------\n";
+
+    std::cout << "const_strBlob_2 is:\n";
+    testStrBlob_V3(const_strBlob_2);
+    std::cout << "\n-----------------------------------\n";
+
+    StrBlobPtr strBlobPtr_1;
+    std::cout << "strBlobPtr_1 is:\n";
+    testStrBlobPtr(strBlobPtr_1);
+    std::cout << "\n-----------------------------------\n";
+
+    StrBlobPtr strBlobPtr_2(strBlob_1);
+    std::cout << "strBlobPtr_2 is:\n";
+    testStrBlobPtr(strBlobPtr_2);
+    std::cout << "\n-----------------------------------\n";
+}
+
+//------------------------------------------------------------------------------------------------

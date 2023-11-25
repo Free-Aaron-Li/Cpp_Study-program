@@ -303,7 +303,7 @@ class Exercise_12_1 {
      * @description
      * 定义你自己版本的StrBlobPtr，更新StrBlob类，加入恰当的friend声明及begin和end成员
      */
-    static void meaninglessFunction_12();
+    static void exercise_12_19();
 };
 
 #endif  // CPP_PRIMER_STUDYING_12_1_HPP

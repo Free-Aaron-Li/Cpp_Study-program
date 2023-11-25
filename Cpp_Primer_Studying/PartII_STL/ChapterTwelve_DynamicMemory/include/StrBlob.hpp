@@ -9,11 +9,14 @@
 #ifndef CPP_PRIMER_STUDYING_STRBLOB_HPP
 #define CPP_PRIMER_STUDYING_STRBLOB_HPP
 
+class StrBlobPtr;
 #include <iostream>
 #include <vector>
 #include <memory>
 
 class StrBlob {
+    friend class StrBlobPtr;
+
  public:
     typedef std::vector<std::string>::size_type size_type;
 
@@ -31,10 +34,12 @@ class StrBlob {
     std::string       &back();
     const std::string &back() const;
 
+    StrBlobPtr begin();
+    StrBlobPtr end();
+
  private:
     std::shared_ptr<std::vector<std::string>> data;
     void                                      check(size_type position, const std::string &message) const;
 };
-
 
 #endif  // CPP_PRIMER_STUDYING_STRBLOB_HPP
