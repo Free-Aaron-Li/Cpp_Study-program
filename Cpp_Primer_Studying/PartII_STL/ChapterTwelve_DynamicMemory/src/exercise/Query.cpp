@@ -10,9 +10,10 @@
 
 TextQuery::TextQuery(std::ifstream& in) : _text(std::make_shared<std::vector<std::string>>()), _lines() {
     _line_on_type ln = 0;
-    for (std::string line; std::getline(in, line); _text->push_back(line), ++ln) {
+    std::string   line, word;
+    for (; std::getline(in, line); _text->push_back(line), ++ln) {
         std::istringstream iss(line);
-        for (std::string word; iss >> word;) {
+        for (; iss >> word;) {
             if (_lines.find(word) == _lines.end())
                 _lines.insert({word, std::make_shared<std::set<_line_on_type>>()});
             _lines.at(word)->insert(ln);
@@ -21,20 +22,20 @@ TextQuery::TextQuery(std::ifstream& in) : _text(std::make_shared<std::vector<std
 }
 
 QueryResult
-TextQuery::query(const std::string& word) const {
-    auto iter = _lines.find(word);
+TextQuery::query(const std::string& target_word) const {
+    auto iter = _lines.find(target_word);
     if (iter == _lines.end()) {
-        std::cerr << "Cannot find word: " << word << "\n";
-        return QueryResult(word);
+        std::cerr << "Cannot find word: " << target_word << "\n";
+        return QueryResult(target_word);
     }
     _line_on_type total = 0;
     for (const auto& val : *(iter->second)) {
         std::istringstream iss((*_text)[val]);
-        for (std::string total_word; iss >> total_word;)
-            if (word == total_word)
+        for (std::string word; iss >> word;)
+            if (word == target_word)
                 ++total;
     }
-    return {word, total, iter->second, _text};
+    return {target_word, total, iter->second, _text};
 }
 
 std::string

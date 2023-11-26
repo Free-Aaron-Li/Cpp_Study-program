@@ -28,7 +28,7 @@ class TextQuery {
 
     explicit TextQuery(std::ifstream &in);
 
-    QueryResult query(const std::string &word) const;
+    QueryResult query(const std::string &target_word) const;
 
  private:
     /// Save input file text
