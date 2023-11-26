@@ -13,6 +13,7 @@ class QueryResult;
 
 #include <iostream>
 #include <fstream>
+#include <utility>
 #include <vector>
 #include <string>
 #include <map>
@@ -20,6 +21,7 @@ class QueryResult;
 #include <memory>
 #include <sstream>
 
+/// Save input file and Inquire
 class TextQuery {
  public:
     typedef std::vector<std::string>::size_type _line_on_type;
@@ -29,30 +31,41 @@ class TextQuery {
     QueryResult query(const std::string &word) const;
 
  private:
+    /// Save input file text
     std::shared_ptr<std::vector<std::string>>                       _text;
+    /// Associate each word in that file to the set of line numbers on which that word appears
     std::map<std::string, std::shared_ptr<std::set<_line_on_type>>> _lines;
 };
 
+///  Save Inquire result
 class QueryResult {
     friend std::ostream &print(std::ostream &os, const QueryResult &queryResult);
 
  public:
     typedef TextQuery::_line_on_type _line_on_type;
 
-    QueryResult() {}
-    explicit QueryResult(const std::string &word) : _word(word), _total(0), _line_numbers(), _line_text() {}
+    QueryResult() = default;
+    explicit QueryResult(std::string word) : _word(std::move(word)), _total(0), _line_numbers(), _line_text() {}
     QueryResult(
-      const std::string &word, _line_on_type type, std::shared_ptr<const std::set<_line_on_type>> line_numbers,
+      std::string word, _line_on_type type, std::shared_ptr<const std::set<_line_on_type>> line_numbers,
       std::shared_ptr<const std::vector<std::string>> line_text)
-        : _word(word), _total(type), _line_numbers(line_numbers), _line_text(line_text) {}
+        : _word(std::move(word)),
+          _total(type),
+          _line_numbers(std::move(line_numbers)),
+          _line_text(std::move(line_text)) {}
 
  private:
+    /// Query target word
     std::string                                     _word;
-    _line_on_type                                   _total;
+    /// The number of lines in which the target word appears
+    _line_on_type                                   _total{};
+    /// lines number
     std::shared_ptr<const std::set<_line_on_type>>  _line_numbers;
+    /// Line text that contains the target word
     std::shared_ptr<const std::vector<std::string>> _line_text;
 };
 
 std::ostream &
 print(std::ostream &os, const QueryResult &queryResult);
+
 #endif  // CPP_PRIMER_STUDYING_QUERY_HPP

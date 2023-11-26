@@ -23,8 +23,10 @@ TextQuery::TextQuery(std::ifstream& in) : _text(std::make_shared<std::vector<std
 QueryResult
 TextQuery::query(const std::string& word) const {
     auto iter = _lines.find(word);
-    if (iter == _lines.end())
+    if (iter == _lines.end()) {
+        std::cerr << "Cannot find word: " << word << "\n";
         return QueryResult(word);
+    }
     _line_on_type total = 0;
     for (const auto& val : *(iter->second)) {
         std::istringstream iss((*_text)[val]);
@@ -32,11 +34,11 @@ TextQuery::query(const std::string& word) const {
             if (word == total_word)
                 ++total;
     }
-    return QueryResult(word, total, iter->second, _text);
+    return {word, total, iter->second, _text};
 }
 
 std::string
-make_plural(int num, const std::string& str, const std::string& postfix = "s") {
+make_plural(std::vector<std::string>::size_type num, const std::string& str, const std::string& postfix = "s") {
     return num > 1 ? str + postfix : str;
 }
 
