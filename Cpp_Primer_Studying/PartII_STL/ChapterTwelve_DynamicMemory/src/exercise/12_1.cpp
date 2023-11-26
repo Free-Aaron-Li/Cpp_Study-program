@@ -351,7 +351,6 @@ Exercise_12_1::exercise_12_19() {
 //
 //------------------------------------------------------------------------------------------------
 
-#define TEST_PATH "./../asset/"
 void
 Exercise_12_1::exercise_12_20() {
     std::cout << "Input the file name: ";

@@ -23,4 +23,6 @@
 #include <vector>
 #include <cstring>
 
+#define TEST_PATH "./../asset/"
+
 #endif  // CPP_PRIMER_STUDYING_12_HPP

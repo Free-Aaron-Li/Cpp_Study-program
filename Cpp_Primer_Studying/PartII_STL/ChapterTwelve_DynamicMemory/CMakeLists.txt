@@ -17,8 +17,10 @@ set(SOURCES
         src/exercise/StrBlob.cpp
         src/exercise/StrBlobPtr.cpp
         src/exercise/ConstStrBlobPtr.cpp
+        src/exercise/Query.cpp
         src/exercise/12_1.cpp
         src/exercise/12_2.cpp
+        src/exercise/12_3.cpp
 )
 
 #------------------------------------

@@ -522,3 +522,65 @@ for(size_t i=0; i!=10;++i)
 	*(sp.get()+i = i;
 ```
 
+### allocator类
+
+new将内存分配和对象构造组合在一起，delete操作将对象析构和内存释放组合在一起。这带来一定的局限性。当分配单个对象时，通常希望上述操作合并起来，因为我们几乎肯定知道对象有什么值。但是当分配一大块内存时，我们通常需要事先计划，等到真正执行对象时才执行创建操作。
+
+标准库提供allocator类，其将内存分配和对象构造分离，通过提供一种类型感知的内存分配方法，其分配的内存是原始的、未构造的。
+
+allocator本身是一个模板，当分配内存时，它会根据给定的对象类型来确定恰当的内存大小和对齐位置。
+
+```cpp
+allocator<string> alloc;
+auto const p=alloc.allocate(n); // 分配n个未初始化的string
+```
+
+|     标准库allocator类及其算法      |                                                          解释                                                          |
+|:--------------------------:|:--------------------------------------------------------------------------------------------------------------------:|
+|       allocator<T> a       |                                         定义了一个名为a的allocator对象，它可以为类型为T的对象分配内存                                         |
+|       a.allocate(n)        |                                              分配一段原始的、未构造的内存，保存n个类型为T的对象                                              |
+|     a.deallocate(p,n)      | 释放从T*指针p中地址开始的内存，这块内存保存了n个类型为T的对象；p必须是一个先前由allocate返回的指针，且n必须是p创建时所要求的大小。在调用deallocate之前，用户必须对每个在这块内存中创建的对象调用destroy |
+| a.construct(p,<i>args</i>) |                           p必须是一个类型为T*的指针，指向一块原始内存；<i>arg</i>被传递给类型为T的构造函数，用来在p指向的内存中构造一个对象                           |
+|        a.destroy(p)        |                                              p为T*类型的指针，此算法对p指向的对象执行析构函数                                              |
+
+allocator分配的内存是未构造的，按需要在此内存中构造对象。
+
+```cpp
+auto q = p; // q指向最后构造的元素之后的位置
+alloc.construct(q++); // *q为空字符串
+alloc.construct(q++,2,'c'); // *q为cc
+alloc.construct(q++,"hi"); // *q为hi
+```
+
+对未构造的对象使用原始内存是错误的！
+
+当用完对象后，必须使用每个构造的元素调用destroy销毁它们。当元素被销毁，那么可以选择重新使用这部分内存也可以通过调用deallocate释放内存。
+
+```cpp
+while(q!=p)
+	alloc.destroy(--q);
+	
+alloc.deallocate(p,n);
+```
+
+在标准库中还为allocator类定义了两个伴随算法，可以在未初始化内存中创建对象。
+
+|         allocator算法          |                                解释                                |
+|:----------------------------:|:----------------------------------------------------------------:|
+|  uninitialized_copy(b,e,b2)  | 从迭代器b和e指出的输入范围中拷贝元素到迭代器b2指定的未构造的原始内存中。b2指向的内存必须足够大，能容纳输入序列中元素的拷贝 |
+| uninitialized_copy_n(b,n,b2) |                   从迭代器b指向的元素开始，拷贝n个元素到b2开始的内存中                   |
+|  uninitialized_fill(b,e,t)   |                 在迭代器b和e指定的原始内存范围中创建对象，对象的值均为t的拷贝                 |
+| uninitialized_fill_n(b,n,t)  |        从迭代器b指向的内存地址开始创建n个对象。b必须指向足够大的未构造的原始内存，能够容纳给定数量的对象        |
+
+例如：
+
+```cpp
+// vi为int的vector
+allocator<int> alloc;
+auto p = alloc.allocate(vi.size()*2);
+auto q = uninitialized_copy(vi.begin(),vi.end(),p);
+uninitialized_fill_n(q.vi.size(),42);
+```
+
+## 12.3 使用标准库：文本查询程序
+

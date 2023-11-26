@@ -51,5 +51,18 @@ class Exercise_12_2 {
      * delete [] pa;
      * */
     static void meaninglessFunction_1();
+
+    /**
+     * @title
+     * 12.2.2 allocator类
+     */
+
+    /**
+     * @title
+     * 练习12.26
+     * @description
+     * 用allocator重写第427页中的程序。
+     */
+    static void exercise_12_26();
 };
 #endif  // CPP_PRIMER_STUDYING_12_2_HPP

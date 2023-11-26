@@ -60,3 +60,25 @@ Exercise_12_2::exercise_12_24() {
     for (std::size_t j = 0; j < i; ++j)
         std::cout << data[j];
 }
+
+void
+Exercise_12_2::exercise_12_26() {
+    std::allocator<std::string> alloc;
+    std::size_t                 n = 10;
+    std::string                 string;
+    auto const                  p = alloc.allocate(n);
+    auto                        q = p;
+    while (std::cin >> string && q != p + n) {
+        if (std::cin.get() == '\n')
+            break;
+        alloc.construct(q++, string);
+    }
+
+    const std::size_t size = q - p;
+    for (auto pos = p; pos != q; ++pos)
+        std::cout << *pos << "\n";
+    std::cout << "size is: " << size << "\n";
+    while (q != p)
+        alloc.destroy(--q);
+    alloc.deallocate(p, n);
+}
