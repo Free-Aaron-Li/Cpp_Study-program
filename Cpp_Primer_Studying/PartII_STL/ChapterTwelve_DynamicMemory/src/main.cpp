@@ -33,9 +33,9 @@ test_12_2() {
 
 void
 test_12_3() {
-    // Exercise_12_3::exercise_12_27();  // QuotesInEnglish.txt
+    Exercise_12_3::exercise_12_27();  // QuotesInEnglish.txt
     // Exercise_12_3::exercise_12_28();  // QuotesInEnglish.txt
-    Exercise_12_3::exercise_12_29();  // QuotesInEnglish.txt
+    // Exercise_12_3::exercise_12_29();  // QuotesInEnglish.txt
 }
 
 int

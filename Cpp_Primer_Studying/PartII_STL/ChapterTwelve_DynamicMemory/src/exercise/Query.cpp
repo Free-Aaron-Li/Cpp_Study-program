@@ -25,7 +25,7 @@ QueryResult
 TextQuery::query(const std::string& target_word) const {
     auto iter = _lines.find(target_word);
     if (iter == _lines.end()) {
-        std::cerr << "Cannot find word: " << target_word << "\n";
+        std::cerr << "Cannot find word: " << target_word;
         return QueryResult(target_word);
     }
     _line_on_type total = 0;

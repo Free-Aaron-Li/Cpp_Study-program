@@ -584,3 +584,57 @@ uninitialized_fill_n(q.vi.size(),42);
 
 ## 12.3 使用标准库：文本查询程序
 
+实现一个简单的文本查询程序：允许用户在一个给定的文件中查询单词，查询结果为单词在文件中出现的次数及其所在行的列表。
+
+例如：
+
+```cpp
+Enter the file name to look up: QuotesInEnglish.txt
+Enter word to look for, or 'q' to exit: the
+"the" occurs 17 times:
+(line 5) 2、Variety is the spice of life.
+(line 17) 5、Doubt is the key to knowledge.
+(line 49) 13、Life is the art of drawing sufficient conclusions form insufficient premises.
+(line 65) 17、Life is a great big canvas, and you should throw all the paint on it you can.
+(line 77) 20、The wealth of the mind is the only wealth.
+(line 105) 27、Wealth is the test of a man's character.
+(line 109) 28、The best hearts are always the bravest.
+(line 117) 30、There's only one corner of the universe you can be sure of improving, and that's your own self.
+(line 125) 32、Death comes to all, but great achievements raise a monument which shall endure until the sun grows old.
+(line 133) 34、Suffering is the most powerful teacher of life.
+(line 149) 38、A fall into the pit, a gain in your wit.
+(line 153) 39、A guest should suit the convenience of the host.
+(line 161) 41、All rivers run into the sea.
+(line 169) 43、An apple a day keeps the doctor away.
+(line 181) 46、Behind the mountains there are people to be found.
+
+Enter word to look for, or 'q' to exit: q
+
+进程已结束，退出代码为 0
+```
+
+### 文本查询程序的设计
+
+|[源代码](https://github.com/Free-Aaron-Li/Cpp_Study-program/blob/master/Cpp_Primer_Studying/PartII_STL/ChapterTwelve_DynamicMemory/src/main.cpp#L36C9-L36C9)|
+
+<b>开发一个程序在设计上的一种好方法是列出程序的操作</b>，了解需要哪些操作会帮助我们分析出需要什么样的数据结构。
+
+- 当程序读取输入文件时，它必须<b>记住单词出现的每一行</b>。因此，程序需要<b>逐行读取</b>输入文件，并将每一行分解为独立的单词。
+- 当程序生成输出时，
+	- 它必须能提取每个单词所<b>关联的行号</b>
+	- 行号必须按照升序出现且<b>无重复</b>
+	- 它必须能打印给定行号中的文本
+
+对此，可以这样实现：
+
+- 使用一个vector<string>来保存整个输入文件的一份拷贝。输入文件中的每行保存为vector中的一个元素。当需要打印一行时，可以用行号作为下标来提取行文本。
+- 使用一个istringstream来将每行分解为单词
+- 使用一个set来保存每个单词在输入文本中出现的行号。这保证了每行只出现一次且行号按照升序保存
+- 使用一个map来将每个单词与它出现的行号set关联起来。这样我们就可以方便地提取任意单词的set
+- 为了实现类之间共享数据，使用shared_ptr来反映数据结构中的共享关系
+
+## 总结
+
+分配动态内存的同时需要负责释放内存，在释放时存在空悬指针、多次delete等问题。智能指针是解决动态内存的好方式，在使用动态指针时，根据计数器会自动释放内存。
+
+现代C++程序应尽可能使用智能指针。

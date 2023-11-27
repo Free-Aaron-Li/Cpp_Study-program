@@ -9,6 +9,15 @@
 #include "12_3.hpp"
 
 void
+Exercise_12_3::meaninglessFunction_1() {}
+void
+Exercise_12_3::meaninglessFunction_2() {}
+void
+Exercise_12_3::meaninglessFunction_3() {}
+void
+Exercise_12_3::meaninglessFunction_4() {}
+
+void
 runQueries(std::ifstream& infile) {
     TextQuery textQuery(infile);
     while (true) {
