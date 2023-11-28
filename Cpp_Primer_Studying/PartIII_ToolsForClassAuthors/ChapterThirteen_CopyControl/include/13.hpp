@@ -4,17 +4,17 @@
 // if you have not received it or the program has a bug, please let me know: <communicate_aaron@outlook.com>.
 
 // This file is part of 'Cpp_Primer_Studying' project.
-// This program is called:'main'.
+// This program is called:'13'.
 // If there are no special instructions, this file is used as an exercise and test file.
-#include "13_1.hpp"
+#ifndef CPP_PRIMER_STUDYING_13_HPP
+#define CPP_PRIMER_STUDYING_13_HPP
 
-void
-test_13_1() {
-    Exercise_13_1::exercise_13_5();
-}
+/**
+ * @title
+ * 第十三章 拷贝控制
+ */
 
-int
-main() {
-    test_13_1();
-    return 0;
-}
+#include <iostream>
+#include <string>
+
+#endif  // CPP_PRIMER_STUDYING_13_HPP
