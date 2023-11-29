@@ -16,11 +16,17 @@ void
 Exercise_13_1::meaninglessFunction_3() {}
 void
 Exercise_13_1::meaninglessFunction_4() {}
+void
+Exercise_13_1::meaninglessFunction_5() {}
+void
+Exercise_13_1::meaninglessFunction_6() {}
 
 class HasPtr {
  public:
     HasPtr(const std::string &s = std::string()) : ps(new std::string(s)), i(0) {}
     HasPtr(const HasPtr &obj) : ps(new std::string(*obj.ps)), i(obj.i) {}
+
+    HasPtr &operator=(const HasPtr &obj);
 
     const std::string &get() const { return *ps; }
     void               set(const std::string &s) { *ps = s; }
@@ -30,8 +36,24 @@ class HasPtr {
     int          i;
 };
 
+HasPtr &
+HasPtr::operator=(const HasPtr &obj) {
+    delete ps;
+    ps = new std::string(*obj.ps);
+    i  = obj.i;
+    return *this;
+}
+
 void
 Exercise_13_1::exercise_13_5() {
+    HasPtr hasPtr_1 = std::string("world");
+    HasPtr hasPtr_2 = hasPtr_1;
+    hasPtr_1.set("hello");
+    std::cout << hasPtr_1.get() << " " << hasPtr_2.get() << "\n";
+}
+
+void
+Exercise_13_1::exercise_13_8() {
     HasPtr hasPtr_1 = std::string("world");
     HasPtr hasPtr_2 = hasPtr_1;
     hasPtr_1.set("hello");
