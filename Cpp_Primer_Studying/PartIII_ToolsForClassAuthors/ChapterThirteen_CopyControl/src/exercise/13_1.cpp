@@ -86,22 +86,29 @@ void
 function_v1(X x) {}
 void
 function_v2(X &x) {}
+
 void
 Exercise_13_1::exercise_13_13() {
     std::cout << "Local variable: \n";
-    X x;
+    X x;  // initialize only
     std::cout << "\nNon-referential parameter passing: \n";
-    function_v1(x);
+    function_v1(x);  // 1. copy initialize 2. destruct
     std::cout << "\nreferential parameter passing: \n";
-    function_v2(x);
+    function_v2(x);  // nothing is done
     std::cout << "\nDynamic allocation: \n";
-    X *px = new X;
+    X *px = new X;  // initialize only
     std::cout << "\nAdd to container: \n";
     std::vector<X> vec;
-    vec.push_back(x);
+    vec.push_back(x);  // copy initialize
     std::cout << "\nReleases the dynamically allocated object: \n";
-    delete px;
+    delete px;  // destruct
     std::cout << "\nIndirect initialization and assignment: \n";
-    X n = x;
-    n   = x;
+    X n = x;  // 1. copy initialize
+    n   = x;  // 2. operator
+
+    std::cout << "\nEND\n";
+    // destruct * 3, is:
+    // 1. local variable x
+    // 2. vector member
+    // 3. local variable n
 }
