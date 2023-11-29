@@ -142,6 +142,90 @@ class Exercise_13_1 {
      * 为13.1.1节练习13.5中的HasPtr类编写赋值运算符。类似拷贝构造函数，你的赋值运算符应该将对象拷贝到ps指向的位置。
      */
     static void exercise_13_8();
+
+    /**
+     * @title
+     * 13.1.3 析构函数
+     */
+
+    /**
+     * @title
+     * 练习13.9
+     * @description
+     * 析构函数是什么？合成析构函数完成什么工作？什么时候会生成合成析构函数？
+     */
+    /*
+     * 析构函数完成与构造函数相反的工作：释放对象使用的资源，销毁非static类型数据成员。
+     * 从语法上看，其是类的一个成员函数，名字由波浪号接类名，没有返回值也不接受参数。
+     *
+     * 当一个类没有定义析构函数时，编译器会为它合成析构函数
+     *
+     * 合成的析构函数体为空，但这并不意味着它什么也不做，当空函数体执行完后，非静态数据成员会逐个销毁。
+     * 也就是说，成员是在析构函数体之后隐含的析构阶段中进行销毁。
+     * */
+    static void meaninglessFunction_7();
+
+    /**
+     * @title
+     * 练习13.10
+     * @description
+     * 当一个StrBlob对象销毁时会发生什么？一个StrBlobPtr对象销毁时呢？
+     */
+    /*
+     * 编译器将生成合成析构函数。
+     *
+     * 对于StrBlob，在合成析构函数空函数体执行完后，会进行隐式析构阶段：
+     *  - 销毁非static数据成员data
+     *  - 调用shared_ptr的析构函数，将其引用计数减1,引用计数变为0,销毁指向的vector对象
+     *
+     * 对于StrBlobPtr，在合成析构函数空函数体执行完后，会进行隐式析构阶段：
+     *  - 调用weak_ptr的析构函数，销毁wptr，引用计数不变
+     *  - 销毁内置类型curr
+     * */
+    static void meaninglessFunction_8();
+
+    /**
+     * @title
+     * 练习13.11
+     * @description
+     * 为前面练习中的HasPtr类添加一个析构函数。
+     */
+    static void exercise_13_11();
+
+    /** @title
+     * 练习13.12
+     * @description
+     * 在下面的代码片段中会发生几次析构函数的调用？
+     * @code
+     * bool fcn(const Sales_data *trans,Sales_data accum){
+     *      Sales_data item1(*trans),item2(accum);
+     *      return item1.isbn() != item2.isbn();
+     * }
+     */
+    /*
+     * 函数结束，item1与item2生命周期结束被销毁。
+     *
+     * 函数结束，accum作为临时对象的生命周期结束，被销毁。
+     *
+     * 共三次。
+     * */
+    static void meaninglessFunction_9();
+
+    /**
+     * @title
+     * 练习13.13
+     * @description
+     * 理解拷贝控制成员和构造函数的一个好方法是定义一个简单的类，为该类定义这些成员，每个成员都打印自己的名字：
+     * @code
+     * struct X{
+     *      X() { std::cout << "X()" << std::endl;}
+     *      X(const X&) { std::cout << "X(const X&)" << std::endl;}
+     * };
+     * 给X添加拷贝赋值运算符和析构函数，并编写一个程序以不同方式使用X的对象：将它们作为非引用和引用参数传递；动态分配它们；
+     * 将它们存在在容器中；诸如此类。观察程序的输出，知道你确认理解了什么时候会使用拷贝控制成员，以及为什么会使用它们。
+     * 当你观察程序输出时，记住编译器可以略过拷贝构造函数的调用。
+     */
+    static void exercise_13_13();
 };
 
 #endif  // CPP_PRIMER_STUDYING_13_1_HPP
