@@ -15,8 +15,10 @@ test_13_1() {
     // Exercise_13_1::exercise_13_11();
     // Exercise_13_1::exercise_13_13();
     // Exercise_13_1::exercise_13_14();
-    Exercise_13_1::exercise_13_15();
+    // Exercise_13_1::exercise_13_15();
     // Exercise_13_1::exercise_13_16();
+    // Exercise_13_1::exercise_13_18();
+    Exercise_13_1::exercise_13_19();
 }
 
 int

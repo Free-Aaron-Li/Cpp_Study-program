@@ -8,6 +8,8 @@
 // If there are no special instructions, this file is used as an exercise and test file.
 #include "13_1.hpp"
 
+#include <utility>
+
 void
 Exercise_13_1::meaninglessFunction_1() {}
 void
@@ -28,6 +30,10 @@ void
 Exercise_13_1::meaninglessFunction_9() {}
 void
 Exercise_13_1::meaninglessFunction_10() {}
+void
+Exercise_13_1::meaninglessFunction_11() {}
+void
+Exercise_13_1::meaninglessFunction_12() {}
 
 class HasPtr {
  public:
@@ -184,6 +190,94 @@ Exercise_13_1::exercise_13_16() {
     f_v2(a);                      // 1
     f_v2(b);                      // 2
     f_v2(c);                      // 3
+}
+//
+//------------------------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------------------------
+//
+class Employee {
+ public:
+    typedef int id_type;
+    Employee() : _name(), _id(++_e_id) {}
+    explicit Employee(std::string name) : _name(std::move(name)), _id(++_e_id) {}
+
+    const std::string &getName() const;
+    id_type            getID() const;
+
+ private:
+    std::string    _name;
+    id_type        _id;
+    static id_type _e_id;
+};
+
+Employee::id_type Employee::_e_id = 0;
+const std::string &
+Employee::getName() const {
+    return _name;
+}
+Employee::id_type
+Employee::getID() const {
+    return _id;
+}
+
+void
+Exercise_13_1::exercise_13_18() {
+    Employee v1;
+    Employee v2("zhang san");
+
+    std::cout << "name: " << v1.getName() << "id: " << v1.getID() << "\n";
+    std::cout << "name: " << v2.getName() << "id: " << v2.getID() << "\n";
+}
+//
+//------------------------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------------------------
+//
+class Employee_v2 {
+ public:
+    typedef int id_type;
+    Employee_v2() : _name(), _id(++_e_id) {}
+    explicit Employee_v2(std::string name) : _name(std::move(name)), _id(++_e_id) {}
+    Employee_v2(const Employee_v2 &obj) : _name(obj._name), _id(++_e_id) {}
+
+    Employee_v2 &operator=(const Employee_v2 &);
+
+    const std::string &getName() const;
+    id_type            getID() const;
+
+ private:
+    std::string    _name;
+    id_type        _id;
+    static id_type _e_id;
+};
+
+Employee_v2::id_type Employee_v2::_e_id = 0;
+const std::string &
+Employee_v2::getName() const {
+    return _name;
+}
+Employee_v2::id_type
+Employee_v2::getID() const {
+    return _id;
+}
+Employee_v2 &
+Employee_v2::operator=(const Employee_v2 &obj) {
+    _name = obj._name;
+    // _id   = obj._id; // keep the old id
+    return *this;
+}
+void
+Exercise_13_1::exercise_13_19() {
+    Employee_v2 v1;
+    Employee_v2 v2("zhang san");
+
+    std::cout << "name: " << v1.getName() << "id: " << v1.getID() << "\n";
+    std::cout << "name: " << v2.getName() << "id: " << v2.getID() << "\n";
+    Employee_v2 v3 = v2;
+    std::cout << "name: " << v3.getName() << "id: " << v3.getID() << "\n";
+    v1 = v3;
+    std::cout << "name: " << v1.getName() << "id: " << v1.getID() << "\n";
 }
 //
 //------------------------------------------------------------------------------------------------

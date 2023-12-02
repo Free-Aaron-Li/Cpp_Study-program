@@ -280,6 +280,65 @@ class Exercise_13_1 {
      * 请查看上述代码⬆️。
      * */
     static void meaninglessFunction_10();
+
+    /**
+     * @title
+     * 13.1.6 阻止拷贝
+     */
+
+    /**
+     * @title
+     * 练习13.18
+     * @description
+     * 定义一个Employee类，它包含雇员的姓名和唯一的雇员证号。为这个类定义默认构造函数，
+     * 以及接受一个表示雇员姓名的string的构造函数。每个构造函数应该通过递增一个static数据成员来生成一个唯一的证号。
+     */
+    static void exercise_13_18();
+
+    /**
+     * @title
+     * 练习13.19
+     * @description
+     * 你的Employee类需要定义它自己的拷贝控制成员吗？如果需要，为什么？
+     * 如果不需要，为什么？实现你认为Employee需要的拷贝控制成员。
+     */
+    static void exercise_13_19();
+
+    /**
+     * @title
+     * 练习13.20
+     * @description
+     * 解释当我们拷贝、赋值或销毁TextQuery和QueryResult类对象时会发生什么？
+     */
+    /*
+     * 当TextQuery销毁时，合成版本会销毁其file和wm成员。对file成员，会将shared_ptr的引用计数减1，
+     * 若变为0，则销毁所管理的动态vector对象（会调用vector和string的析构函数）。对wm，调用map的析构函数（从而调用string、shared_ptr和set的析构函数），
+     * 会正确释放资源。
+     *
+     * 当QueryResult销毁时，合成版本会销毁其sought、lines和file成员。
+     * 类似TextQuery，string、shared_ptr、set、vector的析构函数可能被调用，因为这些类都有设计良好的拷贝控制成员，会正确释放资源。
+     *
+     * 当拷贝一个TextQuery时，合成版本会拷贝file和wm成员。对file，shared_ptr的引用计数会加1。对wm，
+     * 会调用map的拷贝构造函数（继而调用string、shared_ptr和set的拷贝构造函数），因此会正确进行拷贝操作。
+     * 赋值操作类似，只不过会将原来的资源释放掉，例如，原有的file的引用计数会减1。QueryResult的拷贝和赋值类似。
+     * */
+    static void meaninglessFunction_11();
+
+    /**
+     * @title
+     * 练习13.21
+     * @description
+     * 你认为TextQuery和QueryResult类需要定义它们自己版本的拷贝控制成员吗？如果需要，为什么？如果不需要，为什么？
+     * 实现你认为这两个类需要的拷贝控制操作。
+     */
+    /*
+     * 两个类虽然都未定义拷贝控制成员，但它们用智能指针管理共享的动态对象（输入文件内容，查询结果的行号集合），
+     * 用标准库容器保存大量容器。而这些标准库机制都有设计良好的拷贝控制成员，用合成的拷贝控制成员简单的拷贝、赋值、销毁它们，
+     * 即可保证正确的资源管理。因此，这两个类并不需要定义自己的拷贝控制成员。
+     *
+     * 实际上，这两个类的类对象之间就存在资源共享，目前的设计已能很好地实现这种共享，同类对象之间的共享也自然能够解决。
+     * */
+    static void meaninglessFunction_12();
 };
 
 #endif  // CPP_PRIMER_STUDYING_13_1_HPP
