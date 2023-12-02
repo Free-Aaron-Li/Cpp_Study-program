@@ -26,6 +26,8 @@ void
 Exercise_13_1::meaninglessFunction_8() {}
 void
 Exercise_13_1::meaninglessFunction_9() {}
+void
+Exercise_13_1::meaninglessFunction_10() {}
 
 class HasPtr {
  public:
@@ -112,3 +114,76 @@ Exercise_13_1::exercise_13_13() {
     // 2. vector member
     // 3. local variable n
 }
+
+//------------------------------------------------------------------------------------------------
+//
+class numbered {
+ public:
+    numbered() : mysn(++sn) {}
+    int mysn;
+
+ private:
+    static int sn;
+};
+
+int numbered::sn = 0;
+void
+f(numbered s) {
+    std::cout << s.mysn << "\n";
+}
+
+void
+Exercise_13_1::exercise_13_14() {
+    numbered a, b = a, c = b;
+    f(a);  // 1
+    f(b);  // 1
+    f(c);  // 1
+}
+//
+//------------------------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------------------------
+//
+class numbered_v2 {
+ public:
+    numbered_v2() : mysn(++sn) {}
+    numbered_v2(const numbered_v2 &) : mysn(++sn) {}
+    int mysn;
+
+ private:
+    static int sn;
+};
+
+int numbered_v2::sn = 0;
+
+void
+f(numbered_v2 s) {
+    std::cout << s.mysn << "\n";
+}
+
+void
+Exercise_13_1::exercise_13_15() {
+    numbered_v2 a, b = a, c = b;  // a=1, b=2, c=3
+    f(a);                         // 4
+    f(b);                         // 5
+    f(c);                         // 6
+}
+//
+//------------------------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------------------------
+//
+void
+f_v2(const numbered_v2 &s) {
+    std::cout << s.mysn << "\n";
+}
+
+void
+Exercise_13_1::exercise_13_16() {
+    numbered_v2 a, b = a, c = b;  // a=1, b=2, c=3
+    f_v2(a);                      // 1
+    f_v2(b);                      // 2
+    f_v2(c);                      // 3
+}
+//
+//------------------------------------------------------------------------------------------------

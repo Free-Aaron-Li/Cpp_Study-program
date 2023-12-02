@@ -226,6 +226,60 @@ class Exercise_13_1 {
      * 当你观察程序输出时，记住编译器可以略过拷贝构造函数的调用。
      */
     static void exercise_13_13();
+
+    /**
+     * @title
+     * 13.1.4 三/五原则
+     */
+
+
+    /**
+     * @title
+     * 练习13.14
+     * @description
+     * 假定numbered是一个类，它有一个默认构造函数，能为每个对象生成一个唯一的序号，保存在名为mysn的数据成员中。
+     * 假定numbered使用合成的拷贝控制成员，并给定如下函数：
+     * void f (numbered s) { cout << s.mysn <<endl;}
+     * 则下面代码输出什么内容？
+     * @code
+     * numbered a,b = a,c = b;
+     * f(a); f(b); f(c);
+     */
+    /*
+     * 如果依赖合成版本，则简单赋值需要给新对象。让a、b、c三者mysn值一致。
+     * */
+    static void exercise_13_14();
+
+    /**
+     * @title
+     * 练习13.15
+     * @description
+     * 假定numbered定义了一个拷贝构造函数，能生成新的序号。这会改变上一题中调用的输出结果吗？
+     * 如果会改变，为什么？新的输出结果是什么？
+     */
+    static void exercise_13_15();
+
+    /**
+     * @title
+     * 练习13.16
+     * @description
+     * 如果f中的参数是const numbered&，将会怎样？这会改变输出结果吗？如果会改变，为什么？新的输出结果是什么？
+     */
+    /*
+     * 由于f中参数类型由类类型转为引用类型，s指向的都是实参的引用，序号自然是实参的序号。
+     * */
+    static void exercise_13_16();
+
+    /**
+     * @title
+     * 练习13.17
+     * @description
+     * 分别编写前三题中所描述的numbered 和 f，验证你是否正确预测了输出结果。
+     */
+    /*
+     * 请查看上述代码⬆️。
+     * */
+    static void meaninglessFunction_10();
 };
 
 #endif  // CPP_PRIMER_STUDYING_13_1_HPP
