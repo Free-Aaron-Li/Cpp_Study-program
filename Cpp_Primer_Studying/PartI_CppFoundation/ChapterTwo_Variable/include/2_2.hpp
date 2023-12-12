@@ -1,7 +1,8 @@
 // Copyright (c) 2023. aaron.
 //
 // This program is under the GPL-3.0 license.
-// if you have not received it or the program has a bug, please let me know: <communicate_aaron@outlook.com>.
+// if you have not received it or the program has a bug, please let me know:
+// <communicate_aaron@outlook.com>.
 
 //
 // Created by AaronLi on 23-4-8.
@@ -18,9 +19,8 @@
 #include <iostream>
 typedef int ElemType;
 
-class Exercise_2_2{
-public:
-    
+class Exercise_2_2 {
+ public:
     /**
      * @title
      * <p> 2.2.1节练习——变量定义 </P>
@@ -56,8 +56,8 @@ public:
      *  }
      */
 
-    /* global_int 是全局变量，所以初值为 0 。 local_int 是局部变量并且没有初始化，它的初值是未定义的。 
-     * global_str 和 local_str 是 string 类的对象，该对象定义了默认的初始化方式，即初始化为空字符串。 
+    /* global_int 是全局变量，所以初值为 0 。 local_int 是局部变量并且没有初始化，它的初值是未定义的。
+     * global_str 和 local_str 是 string 类的对象，该对象定义了默认的初始化方式，即初始化为空字符串。
      * */
 
     /**
@@ -139,4 +139,4 @@ public:
 
     /* 合法，输出 100 45 */
 };
-#endif //CPP_PRIMER_2_2_H
+#endif  // CPP_PRIMER_2_2_H

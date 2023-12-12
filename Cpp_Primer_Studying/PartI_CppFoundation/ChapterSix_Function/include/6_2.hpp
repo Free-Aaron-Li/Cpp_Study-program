@@ -1,7 +1,8 @@
 // Copyright (c) 2023. aaron.
 //
 // This program is under the GPL-3.0 license.
-// if you have not received it or the program has a bug, please let me know: <communicate_aaron@outlook.com>.
+// if you have not received it or the program has a bug, please let me know:
+// <communicate_aaron@outlook.com>.
 
 // This file is part of Cpp_Primer_Studying project.
 // This program is called:6_2.
@@ -262,9 +263,8 @@ class Exercise_6_2 {
      * @description
      *  在范围for循环中使用initializer_list对象时，应该键循环控制变量声明成引用类型吗？为什么？
      */
-     /* 如果不使用引用方式，则elem对象值则通过拷贝得到，如果initializer_list中元素较少，不使用引用类型依旧可以，
-      * 但是建议使用引用类型。如果initializer_list中元素较多，则应该使用引用方式，节省资源开销
-      * */
-
+    /* 如果不使用引用方式，则elem对象值则通过拷贝得到，如果initializer_list中元素较少，不使用引用类型依旧可以，
+     * 但是建议使用引用类型。如果initializer_list中元素较多，则应该使用引用方式，节省资源开销
+     * */
 };
 #endif  // CPP_PRIMER_STUDYING_6_2_HPP

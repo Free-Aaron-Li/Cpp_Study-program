@@ -1,7 +1,8 @@
 // Copyright (c) 2023. aaron.
 //
 // This program is under the GPL-3.0 license.
-// if you have not received it or the program has a bug, please let me know: <communicate_aaron@outlook.com>.
+// if you have not received it or the program has a bug, please let me know:
+// <communicate_aaron@outlook.com>.
 
 //
 // Created by AaronLi on 23-4-8.
@@ -20,8 +21,7 @@
 typedef int ElemType;
 
 class Exercise_2_3 {
-public:
-
+ public:
     /**
      * @title
      * <p> 2.3.1节练习——引用 </P>
@@ -95,11 +95,11 @@ public:
      *  请说明指针和引用的主要区别
      */
 
-    void test_2_19() {
-        /* ①、指针本身即为对象，而引用无法作为对象
-         * ②、指针可以先后指向多个对象，而引用只能指向一个对象
-         * ③、指针可以在定义时不初始化，而引用必须初始化
-         * */
+    void test_2_19(){
+      /* ①、指针本身即为对象，而引用无法作为对象
+       * ②、指针可以先后指向多个对象，而引用只能指向一个对象
+       * ③、指针可以在定义时不初始化，而引用必须初始化
+       * */
     };
 
     /**
@@ -113,8 +113,8 @@ public:
      *  *p1 = *p1 * *p1;
      */
 
-    void test_2_20() {
-        /* 定义初始化p1指向对象i，解引用p1使得i的值平方,得到i=176 */
+    void test_2_20(){
+      /* 定义初始化p1指向对象i，解引用p1使得i的值平方,得到i=176 */
     };
 
     /**
@@ -167,19 +167,19 @@ public:
      * @description
      *  在下面这段代码中为什么p合法而lp非法？
      * @code
-     *  int i = 42;     void *p = &i;  long *lp = &i;  
+     *  int i = 42;     void *p = &i;  long *lp = &i;
      */
 
     void test_2_24() {
         /* void*是一种特殊的指针类型，可以存放任意对象的地址，所以p指针合法。但是lp指针类型为long，而对象i类型为int，无法将对象i地址赋值给lp指针。
          * */
     }
-    
+
     /**
      * @title
      * <p> 2.3.3节练习——理解复合类型的声明 </P>
      */
-     
+
     /**
      * @title
      * <p> 练习2.25 </P>
@@ -196,4 +196,4 @@ public:
     }
 };
 
-#endif //CPP_PRIMER_2_3_HPP
+#endif  // CPP_PRIMER_2_3_HPP

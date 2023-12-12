@@ -1,7 +1,8 @@
 // Copyright (c) 2023. aaron.
 //
 // This program is under the GPL-3.0 license.
-// if you have not received it or the program has a bug, please let me know: <communicate_aaron@outlook.com>.
+// if you have not received it or the program has a bug, please let me know:
+// <communicate_aaron@outlook.com>.
 
 // This file is part of Cpp_Primer_Studying project.
 // This program is called:6_5.
@@ -66,7 +67,7 @@ class Exercise_6_5 {
      * (a) inline bool eq(const BigInt&,const BigInt&) { ... }
      * (b) void putValues(int *arr,int size);
      */
-     /* 将a放在源文件中，b放在头文件中。因为a函数存在定义，b仅有声明，没有定义。 */
+    /* 将a放在源文件中，b放在头文件中。因为a函数存在定义，b仅有声明，没有定义。 */
     static void meaninglessFunction_3();
 
 
@@ -76,47 +77,47 @@ class Exercise_6_5 {
      * @description
      * 将6.2.2节当isShorter函数改写成内联函数。
      */
-     static void exercise_6_44();
+    static void exercise_6_44();
 
-     /**
-      * @title
-      * 练习6.45
-      * @description
-      * 回顾在前面当练习中你编写当那些函数，它们应该是内联函数吗？如果是，将它们改写成内联函数；如果不是，说明原因。
-      */
-      /* 是 */
-     static void meaninglessFunction_4();
+    /**
+     * @title
+     * 练习6.45
+     * @description
+     * 回顾在前面当练习中你编写当那些函数，它们应该是内联函数吗？如果是，将它们改写成内联函数；如果不是，说明原因。
+     */
+    /* 是 */
+    static void meaninglessFunction_4();
 
-     /**
-      * @title
-      * 练习6.46
-      * @description
-      * 能把isShorter函数定义成constexpr函数吗？如果能，将它改写成constexpr函数；如果不能，说明原因。
-      */
-      /*  不能够，string对象的size方法并不是contempt函数 */
-     static void meaninglessFunction_5();
+    /**
+     * @title
+     * 练习6.46
+     * @description
+     * 能把isShorter函数定义成constexpr函数吗？如果能，将它改写成constexpr函数；如果不能，说明原因。
+     */
+    /*  不能够，string对象的size方法并不是contempt函数 */
+    static void meaninglessFunction_5();
 
-     /**
-      * @title
-      * 6.5.3节练习
-      * @description
-      * 改写6.3.2节练习中使用递归输出vector内容的程序，使其有条件地输出与执行过程有关的信息。例如，每次调用时输出vector对象的大小。分别在打开和
-      * 关闭调试器的情况下编译并执行这个程序。
-      */
-      static void exercise_6_47();
+    /**
+     * @title
+     * 6.5.3节练习
+     * @description
+     * 改写6.3.2节练习中使用递归输出vector内容的程序，使其有条件地输出与执行过程有关的信息。例如，每次调用时输出vector对象的大小。分别在打开和
+     * 关闭调试器的情况下编译并执行这个程序。
+     */
+    static void exercise_6_47();
 
-      /**
-       * @title
-       * 练习5.48
-       * @description
-       * 说明下面这个循环的含义，它对assert的使用合理吗？
-       * @code
-       * string s;
-       * while(cin >> s && s != sought) { }      // 空函数体
-       * asset(cin);
-       */
-       /* 用于判断输入值是否为sought或者输入值是否为EOF，如果判断失败，则会执行assert函数。但是，这是不合理的，应该改成：
-        * asset(!cin);asset(s==sought);
-        * */
+    /**
+     * @title
+     * 练习5.48
+     * @description
+     * 说明下面这个循环的含义，它对assert的使用合理吗？
+     * @code
+     * string s;
+     * while(cin >> s && s != sought) { }      // 空函数体
+     * asset(cin);
+     */
+    /* 用于判断输入值是否为sought或者输入值是否为EOF，如果判断失败，则会执行assert函数。但是，这是不合理的，应该改成：
+     * asset(!cin);asset(s==sought);
+     * */
 };
 #endif  // CPP_PRIMER_STUDYING_6_5_HPP

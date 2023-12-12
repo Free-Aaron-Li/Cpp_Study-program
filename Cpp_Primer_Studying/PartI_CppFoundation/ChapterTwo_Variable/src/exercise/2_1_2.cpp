@@ -1,7 +1,8 @@
 // Copyright (c) 2023. aaron.
 //
 // This program is under the GPL-3.0 license.
-// if you have not received it or the program has a bug, please let me know: <communicate_aaron@outlook.com>.
+// if you have not received it or the program has a bug, please let me know:
+// <communicate_aaron@outlook.com>.
 
 /**
  * @author AaronLi
@@ -11,7 +12,8 @@
 
 #include "2_1.hpp"
 
-void Exercise_2_1::TypeConversion() {
+void
+Exercise_2_1::TypeConversion() {
     unsigned u = 10, u2 = 42;
     std::cout << u2 - u << std::endl; /* 32 */
     /* 得到的无符号数为负数，那么负数会被自动转换为一个合法无符号数 */
@@ -25,7 +27,8 @@ void Exercise_2_1::TypeConversion() {
     std::cout << u - i << std::endl; /* 0 */
 }
 
-void Exercise_2_1::Escape() {
+void
+Exercise_2_1::Escape() {
     std::cout << "*******************" << std::endl;
     std::cout << "2M\012";
     std::cout << "2\012M\012";

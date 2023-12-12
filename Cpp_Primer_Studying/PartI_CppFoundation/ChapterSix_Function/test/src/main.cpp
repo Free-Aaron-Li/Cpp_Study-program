@@ -1,7 +1,8 @@
 // Copyright (c) 2023. aaron.
 //
 // This program is under the GPL-3.0 license.
-// if you have not received it or the program has a bug, please let me know: <communicate_aaron@outlook.com>.
+// if you have not received it or the program has a bug, please let me know:
+// <communicate_aaron@outlook.com>.
 
 // This file is part of Cpp_Primer_Studying project.
 // This program is called:main.
@@ -10,7 +11,8 @@
 #include <iostream>
 #include <string>
 
-int test_1_subFunction(int value) {
+int
+test_1_subFunction(int value) {
     bool        i;
     char        j;
     wchar_t     k;
@@ -39,7 +41,8 @@ int test_1_subFunction(int value) {
 }
 
 /* 对局部对象的探索 */
-void test_1() {
+void
+test_1() {
     int value = 10;
     /* 函数体是一个语句块，自构成一个作用域，其形参和函数体内变量为局部变量，对函数外层作用域同名声明具有隐藏性 */
     test_1_subFunction(value);
@@ -48,7 +51,10 @@ void test_1() {
 }
 
 /* 对函数指针形参简化的探索 */
-std::string view(const std::string &str) { return str + "~~\n"; }
+std::string
+view(const std::string &str) {
+    return str + "~~\n";
+}
 
 typedef decltype(view) name;
 // typedef decltype(view) *name;
@@ -58,11 +64,18 @@ typedef decltype(view) name;
 // using name=std::string(*)(const std::string &);
 
 
-std::string print(const std::string &str, name name1) { return str + name1(" world"); }
+std::string
+print(const std::string &str, name name1) {
+    return str + name1(" world");
+}
 
-void test_2() { std::cout << print("hello", view); }
+void
+test_2() {
+    std::cout << print("hello", view);
+}
 
-int main() {
+int
+main() {
     // test_1();
     test_2();
     return 0;

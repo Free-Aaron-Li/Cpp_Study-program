@@ -1,7 +1,8 @@
 // Copyright (c) 2023. aaron.
 //
 // This program is under the GPL-3.0 license.
-// if you have not received it or the program has a bug, please let me know: <communicate_aaron@outlook.com>.
+// if you have not received it or the program has a bug, please let me know:
+// <communicate_aaron@outlook.com>.
 
 /**
  * @author AaronLi
@@ -11,11 +12,12 @@
 
 #include "2_3.hpp"
 
-void Exercise_2_3::Pointer() {
-    ElemType value_1 = 10;
-    ElemType value_2 = 20;
+void
+Exercise_2_3::Pointer() {
+    ElemType  value_1 = 10;
+    ElemType  value_2 = 20;
     ElemType *pointer_1;
-    pointer_1 = &value_1; //set the value
+    pointer_1 = &value_1;  // set the value
 
     std::cout << "The value of pointer_1 is " << pointer_1 << " and the value of value_1 is " << value_1 << std::endl;
 
