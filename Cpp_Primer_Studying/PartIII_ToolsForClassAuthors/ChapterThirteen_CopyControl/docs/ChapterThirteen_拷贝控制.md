@@ -278,12 +278,74 @@ delete p; // false
 
 ## 13.2 拷贝控制和资源管理
 
-通常，管理类外资源的类必须定义拷贝控制成员。
+通常，管理类外资源的类必须定义拷贝控制成员，因为这种类需要通过析构函数来释放对象所分配的资源，一旦一个类需要析构函数，那么它几乎肯定也需要一个拷贝构造函数和一个拷贝赋值运算符（三/五原则）。
 
 类型对象的拷贝语义通常为两种：一种看起来像一个值，一种看起来像一个指针。
 
 - 类的行为像一个值，意味着它有自己的状态。当拷贝一个像值的对象时，副本与原对象**完全独立**。例如：标准库容器、string类等
 - 类的行为像一个指针，指针类为**共享状态**。当我们拷贝一个这种类的对象时，副本和原对象使用相同的底层数据。改变副本也会改变原对象，反之亦然。例如：shared_ptr类等
+
+对于如何决定一个类是具有类值行为还是类类行为，通常通过如何拷贝其指针成员决定（因为类直接拷贝内置类型（不包括指针）成员，这些成员本身就是值，其行为本身就像值一样）。
+
+### 13.2.1 行为像值的类
+
+简单来说，类值的行为决定每一份类都独立存在。所以，
+
+- 需要定义拷贝构造函数，解决string的拷贝而非指针拷贝
+- 需要析构函数释放string
+- 需要拷贝赋值运算符释放对象当前是string，并从右侧运算符对象拷贝string
+
+```cpp
+class Like_value_HasPtr {
+public:
+  explicit Like_value_HasPtr(const std::string &str = std::string())
+      : _ps(new std::string(str)), _i(0) {}
+  Like_value_HasPtr(const Like_value_HasPtr &obj)
+      : _ps(new std::string(*obj._ps)), _i(obj._i) {}
+
+  Like_value_HasPtr &operator=(const Like_value_HasPtr &);
+  ~Like_value_HasPtr() { delete _ps; }
+
+private:
+  std::string *_ps;
+  int _i{};
+};
+```
+
+构造函数动态分配自己的string副本并将指向string的指针保存在_ps中。拷贝构造函数也与构造函数一样。析构函数则释放类中内存。
+
+**赋值运算符通常组合了析构函数和拷贝构造函数的操作**。
+
+```cpp
+Like_value_HasPtr&
+Like_value_HasPtr::operator=(const Like_value_HasPtr& hasPtr) {
+    auto new_ps = new std::string(*hasPtr._ps);  // copying underlying string
+    delete _ps;                                  // free memory
+    _ps = new_ps;                                // copy data from the right operator object to this object
+    _i  = hasPtr._i;
+    return *this;  // return this object
+}
+```
+
+类似析构函数，赋值操作会释放左侧运算对象的资源，类似拷贝构造函数，赋值操作会将右侧运算对象的数据拷贝给左侧运算对象。需要注意：必须保证上述操作能够以正常顺序执行！（哪怕拷贝自身），例如本例中，我们先拷贝右侧运算对象，使之可以处理自赋值情况。
+
+当然，如果可以我们还需要编写异常处理，使之出现异常能够将左侧运算对象置于有意义的状态。
+
+> 赋值运算符
+>
+> - 如果将一个对象赋予它自身，赋值运算符必须能够正确工作
+> - 大多数赋值运算符组合了析构函数和拷贝构造函数的工作
+>
+> 当编写一个赋值运算符，良好的编写顺序是：
+> 1. 将右侧运算符对象拷贝到一个局部临时对象
+> 2. 销毁左侧运算符对象的现有成员
+> 3. 将右侧运算符对象的数据拷贝到左侧对象中
+> 4. 返回对象
+>
+> 需要注意的是：必须在销毁左侧运算符对象资源之前拷贝右侧运算符对象
+
+
+
 
 
 
