@@ -105,6 +105,8 @@ class Exercise_13_2 {
     /*
      * 查看：Has_Ptr.hpp文件下Like_pointer_HasPtr类
      * */
+    static void meaninglessFunction_5();
+
 
     /**
      * @title

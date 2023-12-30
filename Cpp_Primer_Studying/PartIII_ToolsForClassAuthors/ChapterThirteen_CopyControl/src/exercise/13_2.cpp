@@ -25,6 +25,9 @@ void
 Exercise_13_2::meaninglessFunction_4() {}
 
 void
+Exercise_13_2::meaninglessFunction_5() {}
+
+void
 Exercise_13_2::exercise_13_22() {
     Has_Ptr v1;
     Has_Ptr v2("hello");

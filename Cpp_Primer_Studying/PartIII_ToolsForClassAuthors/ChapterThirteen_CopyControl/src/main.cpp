@@ -9,6 +9,7 @@
 // If there are no special instructions, this file is used as an exercise and test file.
 #include "13_1.hpp"
 #include "13_2.hpp"
+#include "13_3.hpp"
 
 void
 test_13_1() {
@@ -29,9 +30,16 @@ test_13_2() {
     Exercise_13_2::exercise_13_28();
 }
 
+void
+test_13_3() {
+    // Exercise_13_3::exercise_13_30();
+    Exercise_13_3::exercise_13_31();
+}
+
 int
 main() {
     // test_13_1();
-    test_13_2();
+    // test_13_2();
+    test_13_3();
     return 0;
 }

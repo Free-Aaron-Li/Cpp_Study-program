@@ -14,6 +14,8 @@
 #include <string>
 
 class Has_Ptr {
+    friend void swap(Has_Ptr &lhs, Has_Ptr &rhs);
+
  public:
     explicit Has_Ptr(const std::string &str = std::string()) : _ps(new std::string(str)), _i(0) {}
 
@@ -23,6 +25,17 @@ class Has_Ptr {
 
     Has_Ptr &operator=(const Has_Ptr &obj);
 
+    // Has_Ptr &operator=(Has_Ptr obj);
+
+    bool operator<(const Has_Ptr &obj) { return *_ps < *obj._ps; }
+
+    void swap(Has_Ptr &rhs) {
+        using std::swap;
+        swap(_ps, rhs._ps);
+        swap(_i, rhs._i);
+    }
+
+    /* Test request */
     const std::string &get_str() const { return *_ps; }
 
     const int &get_int() const { return _i; }
@@ -37,20 +50,44 @@ class Has_Ptr {
     int          _i;
 };
 
+inline void
+swap(Has_Ptr &lhs, Has_Ptr &rhs) {
+    lhs.swap(rhs);
+}
+
 class Like_value_HasPtr {
+    friend void swap(Like_value_HasPtr &lhs, Like_value_HasPtr &rhs);
+
  public:
-    explicit Like_value_HasPtr(const std::string &str = std::string()) : _ps(new std::string(str)), _i(0) {}
+    Like_value_HasPtr(const std::string &str = std::string()) : _ps(new std::string(str)), _i(0) {}
 
     Like_value_HasPtr(const Like_value_HasPtr &obj) : _ps(new std::string(*obj._ps)), _i(obj._i) {}
 
     Like_value_HasPtr &operator=(const Like_value_HasPtr &);
 
+    bool operator<(const Like_value_HasPtr &obj) const;
+
+    std::string operator*() const;
+
     ~Like_value_HasPtr() { delete _ps; }
+
+    /* Test request */
+    void setI(int i) { _i = i; }
 
  private:
     std::string *_ps;
     int          _i{};
 };
+
+inline void
+swap(Like_value_HasPtr &lhs, Like_value_HasPtr &rhs) {
+    using std::swap;
+    swap(lhs._ps, rhs._ps);
+    swap(lhs._i, rhs._i);
+    std::cout << "After swap:\n";
+    std::cout << "lhs, the ps is: '" << *lhs._ps << "', and the i is: '" << lhs._i << "'.\n";
+    std::cout << "rhs, the ps is: '" << *rhs._ps << "', and the i is: '" << rhs._i << "'.\n";
+}
 
 class Like_pointer_HasPtr {
  public:

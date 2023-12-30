@@ -13,11 +13,18 @@ Has_Ptr::~Has_Ptr() { delete _ps; }
 
 Has_Ptr &
 Has_Ptr::operator=(const Has_Ptr &obj) {
+    auto new_value = new std::string(*obj._ps);
     delete _ps;
-    _ps = new std::string(*obj._ps);
+    _ps = new_value;
     _i  = obj._i;
     return *this;
 }
+
+/*Has_Ptr &
+Has_Ptr::operator=(Has_Ptr obj) {
+    swap(*this, obj);
+    return *this;
+}*/
 
 Like_value_HasPtr &
 Like_value_HasPtr::operator=(const Like_value_HasPtr &hasPtr) {
@@ -27,6 +34,16 @@ Like_value_HasPtr::operator=(const Like_value_HasPtr &hasPtr) {
     _ps = new_ps;                                // 3. copy data from the right operator object to this object
     _i  = hasPtr._i;
     return *this;  // 4. return this object
+}
+
+bool
+Like_value_HasPtr::operator<(const Like_value_HasPtr &obj) const {
+    return *_ps < *obj._ps;
+}
+
+std::string
+Like_value_HasPtr::operator*() const {
+    return *_ps;
 }
 
 Like_pointer_HasPtr &
