@@ -28,3 +28,23 @@ Like_value_HasPtr::operator=(const Like_value_HasPtr &hasPtr) {
     _i  = hasPtr._i;
     return *this;  // 4. return this object
 }
+
+Like_pointer_HasPtr &
+Like_pointer_HasPtr::operator=(const Like_pointer_HasPtr &obj) {
+    ++*obj._use;         // 1. increment the reference count of the operator on th right
+    if (--*_use == 0) {  // 2. decrement the reference count of this object( operator on the left)
+        delete _ps;      // 2.1 if there are on have other users, release the assigned member of this object
+        delete _use;
+    }
+    _ps  = obj._ps;  // 3. copy data from the right operator object to this object
+    _i   = obj._i;
+    _use = obj._use;
+    return *this;  // 4. return this object
+}
+
+Like_pointer_HasPtr::~Like_pointer_HasPtr() {
+    if (--*_use == 0) {
+        delete _ps;
+        delete _use;
+    }
+}

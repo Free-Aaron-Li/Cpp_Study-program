@@ -16,14 +16,18 @@
 class Has_Ptr {
  public:
     explicit Has_Ptr(const std::string &str = std::string()) : _ps(new std::string(str)), _i(0) {}
+
     Has_Ptr(const Has_Ptr &obj) : _ps(new std::string(*obj._ps)), _i(obj._i) {}  // copy constructor
+
     ~Has_Ptr();
 
     Has_Ptr &operator=(const Has_Ptr &obj);
 
     const std::string &get_str() const { return *_ps; }
-    const int         &get_int() const { return _i; }
-    void               set(const std::string &str, const int i) {
+
+    const int &get_int() const { return _i; }
+
+    void set(const std::string &str, const int i) {
         *_ps = str;
         _i   = i;
     }
@@ -36,14 +40,32 @@ class Has_Ptr {
 class Like_value_HasPtr {
  public:
     explicit Like_value_HasPtr(const std::string &str = std::string()) : _ps(new std::string(str)), _i(0) {}
+
     Like_value_HasPtr(const Like_value_HasPtr &obj) : _ps(new std::string(*obj._ps)), _i(obj._i) {}
 
     Like_value_HasPtr &operator=(const Like_value_HasPtr &);
+
     ~Like_value_HasPtr() { delete _ps; }
 
  private:
     std::string *_ps;
     int          _i{};
+};
+
+class Like_pointer_HasPtr {
+ public:
+    explicit Like_pointer_HasPtr(const std::string &str = std::string())
+        : _ps(new std::string(str)), _i(0), _use(new std::size_t(1)) {}
+
+    Like_pointer_HasPtr(const Like_pointer_HasPtr &obj) : _ps(obj._ps), _i(obj._i), _use(obj._use) { ++*_use; }
+
+    Like_pointer_HasPtr &operator=(const Like_pointer_HasPtr &obj);
+    ~Like_pointer_HasPtr();
+
+ private:
+    std::string *_ps;
+    int          _i{};
+    std::size_t *_use;  // reference count
 };
 
 #endif  // CPP_PRIMER_STUDYING_HAS_PTR_HPP

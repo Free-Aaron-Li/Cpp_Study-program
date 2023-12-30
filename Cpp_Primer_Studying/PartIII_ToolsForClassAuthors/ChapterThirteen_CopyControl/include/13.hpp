@@ -18,5 +18,6 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <memory>
 
 #endif  // CPP_PRIMER_STUDYING_13_HPP

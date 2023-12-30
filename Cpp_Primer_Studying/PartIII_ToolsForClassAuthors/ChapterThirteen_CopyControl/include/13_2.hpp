@@ -64,5 +64,54 @@ class Exercise_13_2 {
      * 形成行为像指针的类。如果其中一个对象_ps指向的string被销毁，另一个对象的_ps成为空悬指针。
      * */
     static void meaninglessFunction_2();
+
+    /**
+     * @title
+     * 练习13.25
+     * @description
+     * 假定希望定义StrBlob的类值版本，而且我们希望继续使用shared_ptr,这样我们的StrBlobPtr类就仍能使用指向vector的weak_ptr了。
+     * 你修改后的类将需要一个拷贝构造函数和一个拷贝赋值运算符，但不需要析构函数。解释拷贝构造函数和拷贝赋值函数运算符必须要做什么。
+     * 解释为什么不需要析构函数。
+     */
+    /*
+     * 拷贝构造函数和赋值运算符中应该将数据各拷贝一份，而不是仅仅拷贝shared_ptr，这样得到的对象仍然指向同一个vector。
+     * 不需要析构函数是因为其管理的全部资源仅有string的vector,其由shared_ptr负责管理。当对象被销毁时，会自动调用shared_ptr的析构函数，
+     * 其会正确调整引用计数，当计数为0时，自动释放资源。
+     * */
+    static void meaninglessFunction_3();
+
+    /**
+     * @title
+     * 练习13.26
+     * @description
+     * 对上一题中描述的StrBlob类，编写你自己的版本。
+     */
+    /*
+     * 参考：https://github.com/jaege/Cpp-Primer-5th-Exercises/tree/master/ch13/13.26
+     * */
+    static void meaninglessFunction_4();
+
+    /**
+     * @title
+     * 13.2.2 定义行为像指针的类
+     */
+
+    /**
+     * @title
+     * 练习13.27
+     * @description
+     * 定义你自己的使用引用版本的HasPtr。
+     */
+    /*
+     * 查看：Has_Ptr.hpp文件下Like_pointer_HasPtr类
+     * */
+
+    /**
+     * @title
+     * 练习13.28
+     * @description
+     * 给定下面的类，为其实现一个默认构造函数和必要的拷贝控制成员。
+     */
+    static void exercise_13_28();
 };
 #endif  // CPP_PRIMER_STUDYING_13_2_HPP

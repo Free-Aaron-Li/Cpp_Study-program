@@ -25,7 +25,8 @@ test_13_1() {
 
 void
 test_13_2() {
-    Exercise_13_2::exercise_13_22();
+    // Exercise_13_2::exercise_13_22();
+    Exercise_13_2::exercise_13_28();
 }
 
 int
