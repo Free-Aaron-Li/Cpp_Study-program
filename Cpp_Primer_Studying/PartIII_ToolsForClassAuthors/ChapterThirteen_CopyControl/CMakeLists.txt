@@ -18,6 +18,8 @@ set(SOURCES
         src/exercise/13_2.cpp
         src/exercise/13_3.cpp
         src/exercise/Has_Ptr.cpp
+        src/exercise/Message.cpp
+        src/exercise/Folder.cpp
 )
 
 #------------------------------------
