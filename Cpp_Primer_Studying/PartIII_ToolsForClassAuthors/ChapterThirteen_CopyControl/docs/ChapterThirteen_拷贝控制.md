@@ -437,3 +437,4 @@ Has_Ptr::operator=(Has_Ptr obj) {
 - Message类会提供save和remove操作，来向一个给定的Folder添加一条Message或删除一条Message
 - 当拷贝一份Message时，副本和原对象将是不同的Message对象（类值），但两个Message都出现在相同的Folder中。因此，拷贝Message操作包括消息内容和Folder指针set的拷贝。并且，必须在每个包含此消息的Folder中添加一个指向新创建的Message的指针
 - 当删除一份Message时，必须从包含此消息的所有Folder中删除指向此Message的指针
+- 定义swap操作，避免对contents和folders成员进行不必要的拷贝
