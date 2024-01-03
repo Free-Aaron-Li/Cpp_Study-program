@@ -1,4 +1,4 @@
-// Copyright (c) 2023. aaron.
+// Copyright (c) 2023-2024. aaron.
 //
 // This program is under the GPL-3.0 license.
 // if you have not received it or the program has a bug, please let me know:
@@ -47,10 +47,13 @@ class QueryResult {
     typedef TextQuery::_line_on_type _line_on_type;
 
     QueryResult() = default;
+
     explicit QueryResult(std::string word) : _word(std::move(word)), _total(0), _line_numbers(), _line_text() {}
+
     QueryResult(
       std::string word, _line_on_type total, std::shared_ptr<const std::set<_line_on_type>> line_numbers,
-      std::shared_ptr<const std::vector<std::string>> line_text)
+      std::shared_ptr<const std::vector<std::string>> line_text
+    )
         : _word(std::move(word)),
           _total(total),
           _line_numbers(std::move(line_numbers)),
