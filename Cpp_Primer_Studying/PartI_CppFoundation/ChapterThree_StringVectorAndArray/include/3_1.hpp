@@ -1,29 +1,29 @@
-// Copyright (c) 2023. aaron.
+// Copyright (c) 2023-2024. aaron.
 //
 // This program is under the GPL-3.0 license.
 // if you have not received it or the program has a bug, please let me know:
 // <communicate_aaron@outlook.com>.
-*@author AaronLi* @data 2023 - 05 - 17 - 下午1 : 18 * @license GPL
-  - 3.0 * /
+*@author AaronLi *@data 2023 - 05 - 17 - 下午1 : 18 * @license GPL -
+    3.0 * /
 
 #ifndef CPP_PRIMER_3_1_HPP
 #define CPP_PRIMER_3_1_HPP
 
 #include <iostream>
 
-      /**
-       * @title
-       * 3.1 命名空间的using声明
-       */
-      class Exercise_3_1 {
- public:
-    /**
-     * @title
-     * 练习3.1
-     * @description
-     * 使用恰当的using声明重做1.4.1节和2.5.2节的练习
-     */
-    /* TODO 23-5-17 使用using方式重写2.6.2节练习 */
-    static void range();
+        /**
+         * @title
+         * 3.1 命名空间的using声明
+         */
+        class Exercise_3_1 {
+public:
+  /**
+   * @title
+   * 练习3.1
+   * @description
+   * 使用恰当的using声明重做1.4.1节和2.5.2节的练习
+   */
+  /* TODO 23-5-17 使用using方式重写2.6.2节练习 */
+  static void range();
 };
-#endif  // CPP_PRIMER_3_1_HPP
+#endif // CPP_PRIMER_3_1_HPP
