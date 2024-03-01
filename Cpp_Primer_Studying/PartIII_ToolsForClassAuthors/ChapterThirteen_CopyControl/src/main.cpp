@@ -12,31 +12,35 @@
 #include "13_2.hpp"
 #include "13_3.hpp"
 
-void test_13_1() {
-  // Exercise_13_1::exercise_13_5();
-  // Exercise_13_1::exercise_13_8();
-  // Exercise_13_1::exercise_13_11();
-  // Exercise_13_1::exercise_13_13();
-  // Exercise_13_1::exercise_13_14();
-  // Exercise_13_1::exercise_13_15();
-  // Exercise_13_1::exercise_13_16();
-  // Exercise_13_1::exercise_13_18();
-  Exercise_13_1::exercise_13_19();
+void
+test_13_1() {
+    // Exercise_13_1::exercise_13_5();
+    // Exercise_13_1::exercise_13_8();
+    // Exercise_13_1::exercise_13_11();
+    // Exercise_13_1::exercise_13_13();
+    // Exercise_13_1::exercise_13_14();
+    // Exercise_13_1::exercise_13_15();
+    // Exercise_13_1::exercise_13_16();
+    // Exercise_13_1::exercise_13_18();
+    Exercise_13_1::exercise_13_19();
 }
 
-void test_13_2() {
-  // Exercise_13_2::exercise_13_22();
-  Exercise_13_2::exercise_13_28();
+void
+test_13_2() {
+    // Exercise_13_2::exercise_13_22();
+    Exercise_13_2::exercise_13_28();
 }
 
-void test_13_3() {
-  // Exercise_13_3::exercise_13_30();
-  Exercise_13_3::exercise_13_31();
+void
+test_13_3() {
+    // Exercise_13_3::exercise_13_30();
+    Exercise_13_3::exercise_13_31();
 }
 
-int main() {
-  // test_13_1();
-  // test_13_2();
-  test_13_3();
-  return 0;
+int
+main() {
+    // test_13_1();
+    // test_13_2();
+    test_13_3();
+    return 0;
 }
